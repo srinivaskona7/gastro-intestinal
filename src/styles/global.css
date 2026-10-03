@@ -44,3 +44,9 @@ h1, h2, h3, .font-display { font-family: var(--font-serif); }
 .skip-link { @apply sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-50 focus:rounded focus:bg-teal-deep focus:px-3 focus:py-2 focus:text-white; }
 
 @media print { header, footer, .no-print { display: none !important; } }
+
+/* Diagram and table polish (design review) */
+.diagram pre.mermaid svg { margin-inline: auto; display: block; max-width: 100%; height: auto; }
+.prose :where(th, td) { padding: 0.5rem 0.75rem; }
+.prose :where(td) { vertical-align: top; }
+.dark .diagram { background: #f4f7f6; border-color: #334155; }

@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 const { entry, prev, next } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const { Content, headings } = await render(entry);
-const toc = headings.filter((h) => h.depth === 2);
+const toc = headings.filter((h) => h.depth <= 3);
 const minutes = Math.max(1, Math.round((entry.body ?? '').split(/\s+/).length / 200));
 const partLabel = entry.data.part === 'pathology' ? 'Pathology' : 'Anatomy & physiology';
 ---
@@ -47,7 +47,7 @@ const partLabel = entry.data.part === 'pathology' ? 'Pathology' : 'Anatomy & phy
       <nav class="sticky top-20 text-sm" aria-label="On this page">
         <p class="mb-2 text-xs font-bold uppercase tracking-wider text-slate-500">On this page</p>
         <ul class="space-y-1.5 border-l border-teal-deep/20 pl-3">
-          {toc.map((h) => <li><a href={`#${h.slug}`} class="text-slate-600 hover:text-coral dark:text-slate-300">{h.text}</a></li>)}
+          {toc.map((h) => <li class={h.depth === 3 ? 'pl-3 text-xs' : 'font-medium'}><a href={`#${h.slug}`} class="text-slate-600 hover:text-coral dark:text-slate-300">{h.text}</a></li>)}
         </ul>
       </nav>
     </aside>
