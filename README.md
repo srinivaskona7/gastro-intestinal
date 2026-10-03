@@ -12,6 +12,7 @@ high-yield summary, Mermaid diagrams, tables and a self-test.
 | Styling | Tailwind 4 + typography, self-hosted Newsreader and Inter |
 | Design | Tokens from a Stitch design (`docs/design/`) |
 | Diagrams | Mermaid, lazy-loaded only on pages that have one |
+| Anatomy | Original SVG human figures with leader-line labels (`<Anatomy>`), see docs/CONTENT_GUIDE.md |
 | Search | Pagefind (built into `dist/`, no server) |
 | Hosting | GitHub Pages via `.github/workflows/pages.yml` |
 
@@ -30,7 +31,7 @@ npm run preview      # search only works on a built site
 ```
 data/topics.json          topic list: slug, title, group, order (source of truth)
 src/content/topics/*.mdx  one file per topic
-src/components/           Callout, Mermaid, Flashcards
+src/components/           Callout, Mermaid, Flashcards, anatomy/ (SVG figures)
 src/layouts, src/pages    shell, home, topic index, topic page
 scripts/check-content.mjs structure gate, also run in CI
 docs/CONTENT_GUIDE.md     how to write a topic
