@@ -61,8 +61,8 @@ h1, h2, h3, .font-display { font-family: var(--font-serif); }
 .anatomy-svg .part.hl path:not(.core) { stroke: #e05a47; }
 .anatomy-svg .lbl polyline { stroke: #64748b; stroke-width: 1; }
 .anatomy-svg .lbl circle { fill: #115e59; stroke: #fff; stroke-width: 1; }
-.anatomy-svg .lbl text { font: 600 13px 'Inter Variable', sans-serif; fill: #1e293b; }
-.anatomy-svg .lbl.dim { opacity: .45; }
+.anatomy-svg .lbl text { font: 600 15px 'Inter Variable', sans-serif; fill: #1e293b; paint-order: stroke; stroke: #fbfaf7; stroke-width: 3px; stroke-linejoin: round; }
+.anatomy-svg .lbl.dim { opacity: .7; }
 .anatomy-svg .lbl.hl text { fill: #b4321f; }
 .anatomy-svg .lbl.hl polyline { stroke: #e05a47; stroke-width: 1.6; }
 .anatomy figcaption { @apply mt-2 text-center text-sm italic text-slate-500; }
@@ -80,7 +80,7 @@ h1, h2, h3, .font-display { font-family: var(--font-serif); }
 .anatomy-canvas:focus-visible, .plate-img:focus-visible, .pin-legend li:focus-visible, .anatomy-tabs button:focus-visible { outline: 2px solid #0f766e; outline-offset: 2px; }
 
 /* Numbered pins */
-.pin { position: absolute; transform: translate(-50%, -50%); width: 1.3rem; height: 1.3rem; border-radius: 50%; background: #115e59; color: #fff; border: 2px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,.35); font: 700 0.7rem/1 Inter, sans-serif; display: flex; align-items: center; justify-content: center; pointer-events: none; transition: transform .15s, background .15s; }
+.pin { position: absolute; transform: translate(-50%, -50%); width: 1.6rem; height: 1.6rem; border-radius: 50%; background: #115e59; color: #fff; border: 2px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,.35); font: 700 0.7rem/1 Inter, sans-serif; display: flex; align-items: center; justify-content: center; pointer-events: none; transition: transform .15s, background .15s; }
 .pin.on { background: #e05a47; transform: translate(-50%, -50%) scale(1.45); z-index: 2; }
 .pin-legend { margin: 0.2rem 0 0; padding: 0; list-style: none; counter-reset: pin; font-size: 0.82rem; line-height: 1.35; }
 .pin-legend li { counter-increment: pin; display: flex; gap: 0.5rem; padding: 0.2rem 0.3rem; border-radius: 0.3rem; cursor: default; }
@@ -98,6 +98,7 @@ h1, h2, h3, .font-display { font-family: var(--font-serif); }
   .anatomy-tabs .tab-both { display: block; }
   .anatomy[data-view="both"] { max-width: 60rem; }
   .anatomy[data-view="both"] .anatomy-main { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; align-items: start; }
+  .anatomy[data-view="both"] .anatomy-pane { position: sticky; top: 5rem; }
   .anatomy[data-view="both"] .plates { border-top: 0; border-radius: 0.5rem; }
   .anatomy[data-view="both"] .plates-row { grid-template-columns: 1fr; }
 }
@@ -106,7 +107,7 @@ h1, h2, h3, .font-display { font-family: var(--font-serif); }
 article[data-pagefind-body] { min-width: 0; } /* grid item: do not grow to the min-width SVG */
 @media (max-width: 640px) {
   .anatomy-canvas { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .anatomy-canvas .anatomy-svg { min-width: 36rem; }
+  .anatomy-canvas .anatomy-svg { min-width: 44rem; }
   .anatomy-canvas::after { content: "Scroll sideways or tap to enlarge"; display: block; text-align: center; font-size: 0.7rem; color: #64748b; position: sticky; left: 0; }
 }
 
