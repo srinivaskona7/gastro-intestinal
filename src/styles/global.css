@@ -50,3 +50,19 @@ h1, h2, h3, .font-display { font-family: var(--font-serif); }
 .prose :where(th, td) { padding: 0.5rem 0.75rem; }
 .prose :where(td) { vertical-align: top; }
 .dark .diagram { background: #f4f7f6; border-color: #334155; }
+
+/* Anatomy figures: original SVG illustrations with leader-line labels */
+.anatomy { @apply my-8 mx-auto max-w-[34rem] rounded-xl border border-teal-deep/15 bg-[#fbfaf7] p-3 shadow-sm; }
+.anatomy-svg { display: block; width: 100%; height: auto; }
+.anatomy-svg .part path { transition: opacity .2s, filter .2s; }
+.anatomy-svg .part:hover path { filter: brightness(1.07) saturate(1.1); }
+.anatomy-svg .part.dim path { opacity: .38; }
+.anatomy-svg .part.hl { filter: drop-shadow(0 0 5px rgba(224,90,71,.6)); }
+.anatomy-svg .part.hl path:not(.core) { stroke: #e05a47; }
+.anatomy-svg .lbl polyline { stroke: #64748b; stroke-width: 1; }
+.anatomy-svg .lbl circle { fill: #115e59; stroke: #fff; stroke-width: 1; }
+.anatomy-svg .lbl text { font: 600 13px 'Inter Variable', sans-serif; fill: #1e293b; }
+.anatomy-svg .lbl.dim { opacity: .45; }
+.anatomy-svg .lbl.hl text { fill: #b4321f; }
+.anatomy-svg .lbl.hl polyline { stroke: #e05a47; stroke-width: 1.6; }
+.anatomy figcaption { @apply mt-2 text-center text-sm italic text-slate-500; }

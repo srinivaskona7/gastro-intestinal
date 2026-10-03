@@ -12,6 +12,7 @@ highYield:
   - "Complications are bleeding, perforation, pyloric stenosis and gastric cancer."
 tags: [stomach, gastritis, peptic ulcer, NSAIDs, Curling's ulcer]
 ---
+import Anatomy from '../../components/anatomy/Anatomy.astro';
 import Callout from '../../components/Callout.astro';
 import Mermaid from '../../components/Mermaid.astro';
 import Flashcards from '../../components/Flashcards.astro';
@@ -37,6 +38,8 @@ The stomach lining survives a pH of about 2 because of defences that balance des
   C -- "Yes" --> E["Mucosal injury"]
   E --> F["Gastritis or peptic ulcer"]`}
 />
+
+<Anatomy figure="stomach" highlight={['lesser-curvature', 'duodenal-bulb', 'antrum']} caption="Stomach: lesser curvature, duodenal bulb, antrum" />
 
 ## Gastritis
 

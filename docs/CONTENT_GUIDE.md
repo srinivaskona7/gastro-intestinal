@@ -30,3 +30,14 @@ Reference example: `src/content/topics/mallory-weiss-tear.mdx`.
 - Facts come from the source notes; add only well-established textbook facts needed to
   make a point clear. If the source is wrong or ambiguous, state the standard fact.
 - Never copy sentences, layouts, image credits, URLs or product wording.
+
+## Anatomy figures
+
+Human-anatomy SVGs with leader-line labels live in `src/components/anatomy/figures/*.js` (10 figures). Use one in a topic page:
+
+```mdx
+import Anatomy from '../../components/anatomy/Anatomy.astro';
+<Anatomy figure="anorectal" highlight={['haemorrhoid-internal']} caption="..." />
+```
+
+`highlight` lights the named part ids and dims the rest. `npm run check` (check-figures) rejects unknown figures or part ids, label overlap and labels outside the viewBox. Preview one with `node scripts/render-figure.mjs <name> [ids…]` (writes `/tmp/gi-fig/*.png`, needs python playwright).

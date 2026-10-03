@@ -1,0 +1,14 @@
+---
+// <Anatomy figure="stomach" highlight={['antrum']} show={[...]} caption="..." />
+import { renderFigure } from './render.js';
+interface Props { figure: string; highlight?: string[]; show?: string[]; caption?: string }
+const { figure, highlight = [], show, caption } = Astro.props;
+const mods = import.meta.glob('./figures/*.js', { eager: true }) as Record<string, { default: any }>;
+const def = mods[`./figures/${figure}.js`]?.default;
+if (!def) throw new Error(`Unknown anatomy figure "${figure}"`);
+const svg = renderFigure(def, { highlight, show });
+---
+<figure class="anatomy not-prose">
+  <div class="anatomy-canvas" set:html={svg} />
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>

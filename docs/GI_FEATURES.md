@@ -19,3 +19,6 @@ Static files only. Mermaid (~1 MB chunk) loads only on pages with a diagram.
 - Push the repo and enable Pages with source "GitHub Actions".
 - Clinical review of the content by a qualified person before wide sharing.
 - Decide on licensing: the pages are rewritten from a commercial notes product.
+
+## Anatomy figures
+10 original SVG figures (overview, oesophagus, stomach, biliary-pancreas, portal-system, lower-gi, anorectal, gut-wall, villus, abdominal-regions) with leader-line labels, wired into 53 of 56 topics. Not wired: pilonidal sinus, gastroenteritis, parasitic infections (no useful GI anatomy). Stylised teaching drawings, not to scale. See `docs/CONTENT_GUIDE.md`.

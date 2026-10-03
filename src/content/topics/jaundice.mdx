@@ -11,6 +11,7 @@ highYield:
   - "Age, symptoms and exposure history point to the cause."
 tags: [jaundice, bilirubin, cholestasis, hepatitis]
 ---
+import Anatomy from '../../components/anatomy/Anatomy.astro';
 import Callout from '../../components/Callout.astro';
 import Mermaid from '../../components/Mermaid.astro';
 import Flashcards from '../../components/Flashcards.astro';
@@ -32,6 +33,8 @@ Two kinds of hyperbilirubinaemia exist, depending on which form of bilirubin acc
   B -. "Upstream defect: unconjugated jaundice" .-> X1[Pre-hepatic]
   E -. "Downstream block: conjugated jaundice" .-> X2[Obstructive]`}
 />
+
+<Anatomy figure="biliary-pancreas" highlight={['liver', 'common-bile-duct']} caption="Biliary pancreas: liver, common bile duct" />
 
 ## The two patterns
 
