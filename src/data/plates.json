@@ -1,0 +1,150 @@
+{
+ "plates": {
+  "gray1032": {
+   "file": "gray1032.webp",
+   "w": 500,
+   "h": 559,
+   "page": "https://commons.wikimedia.org/wiki/File:Gray1032.png",
+   "caption": "Oesophagus and its neighbours in the posterior mediastinum",
+   "n": 1032
+  },
+  "gray1035": {
+   "file": "gray1035.webp",
+   "w": 550,
+   "h": 497,
+   "page": "https://commons.wikimedia.org/wiki/File:Gray1035.png",
+   "caption": "Sagittal section of the peritoneal cavity and its reflections",
+   "n": 1035
+  },
+  "gray1043": {
+   "file": "gray1043.webp",
+   "w": 400,
+   "h": 382,
+   "page": "https://commons.wikimedia.org/wiki/File:Gray1043.png",
+   "caption": "Caecum, appendix and ileocaecal folds",
+   "n": 1043
+  },
+  "gray1050": {
+   "file": "gray1050.webp",
+   "w": 500,
+   "h": 327,
+   "page": "https://commons.wikimedia.org/wiki/File:Gray1050.png",
+   "caption": "Stomach opened: rugae, pyloric antrum and pyloric valve",
+   "n": 1050
+  },
+  "gray1051": {
+   "file": "gray1051.webp",
+   "w": 500,
+   "h": 458,
+   "page": "https://commons.wikimedia.org/wiki/File:Gray1051.png",
+   "caption": "Stomach, external view: oesophagus to pylorus",
+   "n": 1051
+  },
+  "gray1057": {
+   "file": "gray1057.webp",
+   "w": 400,
+   "h": 385,
+   "page": "https://commons.wikimedia.org/wiki/File:Gray1057.png",
+   "caption": "Duodenal papilla with probes in the pancreatic and common bile ducts",
+   "n": 1057
+  },
+  "gray1058": {
+   "file": "gray1058.webp",
+   "w": 400,
+   "h": 577,
+   "page": "https://commons.wikimedia.org/wiki/File:Gray1058.png",
+   "caption": "Small-intestine wall in section: villi, glands and muscle layers",
+   "n": 1058
+  },
+  "gray1059": {
+   "file": "gray1059.webp",
+   "w": 300,
+   "h": 404,
+   "page": "https://commons.wikimedia.org/wiki/File:Gray1059.png",
+   "caption": "Single villus: central lacteal, smooth muscle and epithelium",
+   "n": 1059
+  },
+  "gray1061": {
+   "file": "gray1061.webp",
+   "w": 600,
+   "h": 451,
+   "page": "https://commons.wikimedia.org/wiki/File:Gray1061.png",
+   "caption": "Villi with their capillary and lymphatic networks",
+   "n": 1061
+  },
+  "gray1075": {
+   "file": "gray1075.webp",
+   "w": 500,
+   "h": 329,
+   "page": "https://commons.wikimedia.org/wiki/File:Gray1075.png",
+   "caption": "Caecum opened: ileocaecal valve and vermiform process",
+   "n": 1075
+  },
+  "gray1078": {
+   "file": "gray1078.webp",
+   "w": 288,
+   "h": 500,
+   "page": "https://commons.wikimedia.org/wiki/File:Gray1078.png",
+   "caption": "Rectum opened: transverse folds, rectal columns and sphincters",
+   "n": 1078
+  },
+  "gray1081": {
+   "file": "gray1081.webp",
+   "w": 600,
+   "h": 311,
+   "page": "https://commons.wikimedia.org/wiki/File:Gray1081.png",
+   "caption": "Anal canal and rectum: haemorrhoidal plexuses and columns of Morgagni",
+   "n": 1081
+  },
+  "gray1090": {
+   "file": "gray1090.webp",
+   "w": 400,
+   "h": 448,
+   "page": "https://commons.wikimedia.org/wiki/File:Gray1090.png",
+   "caption": "Hepatic lobule: portal vein, hepatic artery and bile duct",
+   "n": 1090
+  },
+  "gray1100": {
+   "file": "gray1100.webp",
+   "w": 600,
+   "h": 427,
+   "page": "https://commons.wikimedia.org/wiki/File:Gray1100.png",
+   "caption": "Pancreas, duodenum and the ducts opening together",
+   "n": 1100
+  }
+ },
+ "figures": {
+  "oesophagus": [
+   "gray1032"
+  ],
+  "stomach": [
+   "gray1051",
+   "gray1050"
+  ],
+  "biliary-pancreas": [
+   "gray1100",
+   "gray1057"
+  ],
+  "portal-system": [
+   "gray1090"
+  ],
+  "lower-gi": [
+   "gray1075",
+   "gray1043"
+  ],
+  "anorectal": [
+   "gray1081",
+   "gray1078"
+  ],
+  "gut-wall": [
+   "gray1058"
+  ],
+  "villus": [
+   "gray1059",
+   "gray1061"
+  ],
+  "gi-overview": [
+   "gray1035"
+  ]
+ }
+}

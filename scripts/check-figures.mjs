@@ -51,3 +51,21 @@ process.exit(bad ? 1 : 0);
   console.log(`${badUse ? 'FAIL' : 'OK'}: ${uses} <Anatomy> use(s) checked`);
   if (badUse) process.exit(1);
 }
+
+// Real-plate gate: every plate in plates.json has a file, a public-domain page URL and a caption; every mapped figure exists.
+{
+  const fs = await import('node:fs');
+  const d = JSON.parse(fs.readFileSync('src/data/plates.json', 'utf8'));
+  const bad = [];
+  for (const [id, p] of Object.entries(d.plates)) {
+    if (!fs.existsSync(`public/plates/${p.file}`)) bad.push(`${id}: missing public/plates/${p.file}`);
+    if (!/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/.test(p.page)) bad.push(`${id}: page is not a Commons file URL`);
+    if (!p.caption) bad.push(`${id}: no caption`);
+  }
+  for (const [f, ids] of Object.entries(d.figures)) {
+    if (!fs.existsSync(`src/components/anatomy/figures/${f}.js`)) bad.push(`figure ${f} unknown`);
+    for (const i of ids) if (!d.plates[i]) bad.push(`figure ${f}: unknown plate ${i}`);
+  }
+  if (bad.length) { console.error('FAIL plates:\n' + bad.join('\n')); process.exit(1); }
+  console.log(`OK: ${Object.keys(d.plates).length} plate(s) checked`);
+}

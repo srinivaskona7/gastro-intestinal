@@ -13,6 +13,7 @@ high-yield summary, Mermaid diagrams, tables and a self-test.
 | Design | Tokens from a Stitch design (`docs/design/`) |
 | Diagrams | Mermaid, lazy-loaded only on pages that have one |
 | Anatomy | Original SVG human figures with leader-line labels (`<Anatomy>`), see docs/CONTENT_GUIDE.md |
+| Real plates | Public-domain Gray's Anatomy plates under each figure, see CREDITS.md |
 | Search | Pagefind (built into `dist/`, no server) |
 | Hosting | GitHub Pages via `.github/workflows/pages.yml` |
 

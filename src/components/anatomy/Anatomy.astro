@@ -1,14 +1,31 @@
 ---
 // <Anatomy figure="stomach" highlight={['antrum']} show={[...]} caption="..." />
+// Under the labelled schematic it shows the matching real plates (src/data/plates.json).
 import { renderFigure } from './render.js';
+import data from '../../data/plates.json';
 interface Props { figure: string; highlight?: string[]; show?: string[]; caption?: string }
 const { figure, highlight = [], show, caption } = Astro.props;
 const mods = import.meta.glob('./figures/*.js', { eager: true }) as Record<string, { default: any }>;
 const def = mods[`./figures/${figure}.js`]?.default;
 if (!def) throw new Error(`Unknown anatomy figure "${figure}"`);
 const svg = renderFigure(def, { highlight, show });
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const plates = ((data.figures as Record<string, string[]>)[figure] ?? []).map((id) => (data.plates as Record<string, any>)[id]);
 ---
 <figure class="anatomy not-prose">
   <div class="anatomy-canvas" set:html={svg} />
   {caption && <figcaption>{caption}</figcaption>}
+  {plates.length > 0 && (
+    <div class="plates">
+      <p class="plates-title">Real anatomy</p>
+      <div class="plates-row">
+        {plates.map((p) => (
+          <a href={p.page} target="_blank" rel="noopener" class="plate">
+            <img src={`${base}plates/${p.file}`} width={p.w} height={p.h} loading="lazy" alt={p.caption} />
+            <span>{p.caption}<small>Gray's Anatomy (1918), plate {p.n}. Public domain, via Wikimedia Commons.</small></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  )}
 </figure>

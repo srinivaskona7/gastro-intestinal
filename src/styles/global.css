@@ -66,3 +66,11 @@ h1, h2, h3, .font-display { font-family: var(--font-serif); }
 .anatomy-svg .lbl.hl text { fill: #b4321f; }
 .anatomy-svg .lbl.hl polyline { stroke: #e05a47; stroke-width: 1.6; }
 .anatomy figcaption { @apply mt-2 text-center text-sm italic text-slate-500; }
+
+/* Real anatomy plates under each schematic */
+.plates { border-top: 1px solid var(--color-line, #e5e2da); padding: 0.9rem 1rem 1rem; background: #fff; }
+.plates-title { margin: 0 0 0.6rem; font: 600 0.72rem/1 Inter, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; }
+.plates-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 1rem; }
+.plate { display: flex; flex-direction: column; gap: 0.4rem; text-decoration: none; color: #1f2937; font-size: 0.85rem; }
+.plate img { width: 100%; height: auto; max-height: 26rem; object-fit: contain; background: #fff; border: 1px solid #e5e2da; border-radius: 0.5rem; }
+.plate small { display: block; color: #6b7280; font-size: 0.72rem; margin-top: 0.15rem; }
