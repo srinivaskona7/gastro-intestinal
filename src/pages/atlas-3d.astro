@@ -93,7 +93,7 @@ const organs = cfg.organs.map((o) => ({
   const info = document.getElementById('atlas3d-info')!;
   const tpl = document.getElementById('organ-topics') as HTMLTemplateElement;
   const rows = [...root.querySelectorAll<HTMLElement>('li[data-organ]')];
-  const colorOf = (id: string) => rows.find((r) => r.dataset.organ === id)!.querySelector<HTMLElement>('span')!.style.background;
+  const colorOf = (id: string) => rows.find((r) => r.dataset.organ === id)?.querySelector<HTMLElement>('span')?.style.background || '#c9a79a';
 
   function fail(msg: string) {
     status.textContent = msg;

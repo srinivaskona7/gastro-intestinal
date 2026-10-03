@@ -8,7 +8,10 @@ function write(key: string, value: unknown) {
   try { localStorage.setItem(P + key, JSON.stringify(value)); } catch { /* private mode: progress just won't persist */ }
 }
 
-export const getLearned = (): Set<string> => new Set(read<string[]>('learned', []));
+export const getLearned = (): Set<string> => {
+  const v = read<unknown>('learned', []);
+  return new Set(Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : []);
+};
 export function setLearned(slug: string, on: boolean) {
   const s = getLearned();
   on ? s.add(slug) : s.delete(slug);
@@ -16,7 +19,13 @@ export function setLearned(slug: string, on: boolean) {
 }
 
 // Leitner boxes 1-3; unseen cards count as box 1.
-export const getBoxes = (): Record<string, number> => read<Record<string, number>>('leitner', {});
+export const getBoxes = (): Record<string, number> => {
+  const v = read<unknown>('leitner', {});
+  const out: Record<string, number> = {};
+  if (v && typeof v === 'object' && !Array.isArray(v))
+    for (const [k, n] of Object.entries(v)) if (n === 1 || n === 2 || n === 3) out[k] = n;
+  return out;
+};
 export function grade(id: string, gotIt: boolean) {
   const b = getBoxes();
   b[id] = gotIt ? Math.min(3, (b[id] ?? 1) + 1) : 1;

@@ -10,17 +10,19 @@ const def = mods[`./figures/${figure}.js`]?.default;
 if (!def) throw new Error(`Unknown anatomy figure "${figure}"`);
 const svg = renderFigure(def, { highlight, show });
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const g = globalThis as any; const uid = `anat-${(g.__anatN = (g.__anatN ?? 0) + 1)}`;
+const DEED: Record<string, string> = { 'CC BY 3.0': 'https://creativecommons.org/licenses/by/3.0/', 'CC BY 4.0': 'https://creativecommons.org/licenses/by/4.0/', 'CC BY-SA 3.0': 'https://creativecommons.org/licenses/by-sa/3.0/', 'CC0': 'https://creativecommons.org/publicdomain/zero/1.0/' };
 const plates: any[] = ((data.figures as Record<string, string[]>)[figure] ?? []).map((id) => (data.plates as Record<string, any>)[id]);
 ---
 <figure class="anatomy not-prose" data-tabs={plates.length > 0 ? '' : undefined}>
   {plates.length > 0 && (
     <div class="anatomy-tabs" role="tablist" aria-label="Figure view" hidden>
-      <button type="button" role="tab" data-view="schem" aria-selected="true" tabindex="0">Schematic</button>
-      <button type="button" role="tab" data-view="real" aria-selected="false" tabindex="-1">Real anatomy</button>
-      <button type="button" role="tab" data-view="both" aria-selected="false" tabindex="-1" class="tab-both">Side by side</button>
+      <button type="button" role="tab" aria-controls={uid} data-view="schem" aria-selected="true" tabindex="0">Schematic</button>
+      <button type="button" role="tab" aria-controls={uid} data-view="real" aria-selected="false" tabindex="-1">Real anatomy</button>
+      <button type="button" role="tab" aria-controls={uid} data-view="both" aria-selected="false" tabindex="-1" class="tab-both">Side by side</button>
     </div>
   )}
-  <div class="anatomy-main">
+  <div class="anatomy-main" id={uid} role={plates.length > 0 ? 'tabpanel' : undefined}>
     <div class="anatomy-pane">
       <div class="anatomy-canvas" data-zoom="svg" role="button" tabindex="0" aria-label="Enlarge schematic" set:html={svg} />
       {caption && <figcaption>{caption}</figcaption>}
@@ -38,7 +40,7 @@ const plates: any[] = ((data.figures as Record<string, string[]>)[figure] ?? [])
                 ))}
               </div>
               <span class="plate-cap">{p.caption}
-                <small>{p.credit ?? `Gray's Anatomy (1918), plate ${p.n}. Public domain, via Wikimedia Commons.`} <a href={p.page} target="_blank" rel="noopener">Source</a></small>
+                <small>{p.credit ?? `Gray's Anatomy (1918), plate ${p.n}. Public domain, via Wikimedia Commons.`} {DEED[p.license] && <>{' '}<a href={DEED[p.license]} target="_blank" rel="noopener license">{p.license}</a>{p.license !== 'CC0' && ' · converted to WebP, resized, pins added'}</>} <a href={p.page} target="_blank" rel="noopener">Source</a></small>
               </span>
               {(p.pins ?? []).length > 0 && (
                 <ol class="pin-legend">

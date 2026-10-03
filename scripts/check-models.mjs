@@ -30,6 +30,8 @@ if (existsSync(glb)) {
     try {
       const json = JSON.parse(b.subarray(20, 20 + b.readUInt32LE(12)).toString('utf8'));
       const names = new Set(json.nodes.map((n) => n.name));
+      const ids = new Set(cfg.organs.map((o) => o.id));
+      for (const n of json.nodes) if (n.mesh !== undefined && !ids.has(n.name)) err(`node "${n.name}" in ${cfg.model} has no organ row`);
       for (const o of cfg.organs) if (!names.has(o.id)) err(`organ "${o.id}" has no node in ${cfg.model}`);
     } catch (e) { err(`${cfg.model} JSON chunk unreadable: ${e.message}`); }
   }
