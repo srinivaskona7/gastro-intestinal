@@ -1,5 +1,7 @@
 # Design system (from Stitch)
 
+Stitch project: `GI Atlas - Gastrointestinal System Study Site` (id `12394957946895887292`), screen `GI Atlas - Home`. `home.html` is the generated mock; the live tokens are in `src/styles/global.css`.
+
 ```json
 {
  "bodyFont": "INTER",
