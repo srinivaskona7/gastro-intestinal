@@ -1,0 +1,19 @@
+{
+  "model": "gi-tract.glb",
+  "budgetBytes": 4194304,
+  "organs": [
+    { "id": "oesophagus", "label": "Oesophagus", "color": "#e59a8d", "topics": ["oesophagitis", "dysphagia-achalasia", "oesophageal-varices", "mallory-weiss-tear", "hiatus-hernia", "gord-barretts-oesophageal-tumours"] },
+    { "id": "stomach", "label": "Stomach", "color": "#e2958a", "topics": ["gastritis-pud", "helicobacter-pylori", "gastric-cancer", "gastrinoma-ze-syndrome"] },
+    { "id": "liver", "label": "Liver", "color": "#a85d49", "topics": ["hepatobiliary-anatomy-physiology", "jaundice", "hepatitis-overview-paracetamol", "viral-hepatitis", "liver-failure-cirrhosis", "portal-hypertension", "liver-cancers", "liver-abscesses-cysts", "familial-liver-diseases", "secondary-liver-disease"] },
+    { "id": "gallbladder", "label": "Gallbladder", "color": "#7fae6a", "topics": ["gallstones-cholecystitis", "gallbladder-carcinoma", "cholangitis", "cholangiocarcinoma"] },
+    { "id": "pancreas", "label": "Pancreas", "color": "#eed37f", "topics": ["pancreatitis", "pancreatic-cancer", "endocrine-pancreatic-tumours", "congenital-pancreatic-abnormalities"] },
+    { "id": "duodenum", "label": "Duodenum", "color": "#e9a56f", "topics": ["gastritis-pud", "coeliac-disease", "gastrinoma-ze-syndrome"] },
+    { "id": "jejunum", "label": "Jejunum", "color": "#f0a58e", "topics": ["gi-absorption", "coeliac-disease"] },
+    { "id": "ileum", "label": "Ileum", "color": "#f4c0a8", "topics": ["inflammatory-bowel-disease", "meckels-diverticulum", "carcinoid-syndrome", "radiation-enteritis"] },
+    { "id": "appendix", "label": "Appendix", "color": "#c9735b", "topics": ["appendicitis"] },
+    { "id": "colon", "label": "Colon", "color": "#d4876f", "topics": ["diverticular-disease", "polyps-colon-cancer", "inflammatory-bowel-disease", "irritable-bowel-syndrome", "pseudomembranous-colitis", "ischaemic-bowel", "hirschsprung-disease"] },
+    { "id": "rectum", "label": "Rectum", "color": "#c97a62", "topics": ["rectal-bleeding", "haemorrhoids", "anal-fistulae", "anal-fissures"] },
+    { "id": "spleen", "label": "Spleen", "color": "#8e5f8a", "topics": ["portal-hypertension"] },
+    { "id": "kidneys", "label": "Kidneys", "color": "#64748b", "topics": [], "note": "Not part of the GI tract; shown for orientation." }
+  ]
+}

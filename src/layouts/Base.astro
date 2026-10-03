@@ -3,6 +3,14 @@ import '../styles/global.css';
 interface Props { title?: string; description?: string }
 const { title, description = 'Free, diagram-rich study notes on the gastrointestinal system for medical students.' } = Astro.props;
 const base = import.meta.env.BASE_URL;
+// Header nav: add a { href, label } entry here to extend it.
+const navLinks = [
+  { href: `${base}topics/#anatomy-physiology`, label: 'Anatomy & physiology' },
+  { href: `${base}topics/#pathology`, label: 'Pathology' },
+  { href: `${base}quiz/`, label: 'Quiz' },
+  { href: `${base}revise/`, label: 'Revise' },
+  { href: `${base}atlas-3d/`, label: '3D atlas' },
+];
 const fullTitle = title ? `${title} · GI Atlas` : 'GI Atlas — gastrointestinal system study notes';
 ---
 <!doctype html>
@@ -22,11 +30,10 @@ const fullTitle = title ? `${title} · GI Atlas` : 'GI Atlas — gastrointestina
   <body class="min-h-screen">
     <a href="#main" class="skip-link">Skip to content</a>
     <header class="sticky top-0 z-30 border-b border-teal-deep/15 bg-paper/97 backdrop-blur dark:bg-[#0f1716]/97">
-      <div class="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3">
+      <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-4 gap-y-1 px-4 py-3">
         <a href={base} class="font-display text-xl font-semibold text-teal-deep dark:text-teal-300">GI Atlas</a>
-        <nav class="ml-2 hidden gap-4 text-sm sm:flex" aria-label="Main">
-          <a href={`${base}topics/#anatomy-physiology`} class="hover:text-coral">Anatomy &amp; physiology</a>
-          <a href={`${base}topics/#pathology`} class="hover:text-coral">Pathology</a>
+        <nav class="order-last -mx-1 flex w-full gap-4 overflow-x-auto px-1 text-sm sm:order-none sm:mx-0 sm:ml-2 sm:w-auto sm:overflow-visible sm:px-0" aria-label="Main">
+          {navLinks.map((l) => <a href={l.href} class="whitespace-nowrap py-1 hover:text-coral">{l.label}</a>)}
         </nav>
         <div class="ml-auto flex items-center gap-2">
           <button id="open-search" class="flex items-center gap-2 rounded-md border border-teal-deep/25 px-3 py-1.5 text-sm text-slate-500 hover:border-teal-deep dark:text-slate-400" aria-label="Search topics">

@@ -68,9 +68,70 @@ h1, h2, h3, .font-display { font-family: var(--font-serif); }
 .anatomy figcaption { @apply mt-2 text-center text-sm italic text-slate-500; }
 
 /* Real anatomy plates under each schematic */
-.plates { border-top: 1px solid var(--color-line, #e5e2da); padding: 0.9rem 1rem 1rem; background: #fff; }
+.plates { border-top: 1px solid var(--color-line, #e5e2da); padding: 0.9rem 1rem 1rem; background: #fff; color: #1f2937; }
 .plates-title { margin: 0 0 0.6rem; font: 600 0.72rem/1 Inter, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; }
 .plates-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 1rem; }
-.plate { display: flex; flex-direction: column; gap: 0.4rem; text-decoration: none; color: #1f2937; font-size: 0.85rem; }
-.plate img { width: 100%; height: auto; max-height: 26rem; object-fit: contain; background: #fff; border: 1px solid #e5e2da; border-radius: 0.5rem; }
+.plate { display: flex; flex-direction: column; gap: 0.4rem; color: #1f2937; font-size: 0.85rem; }
+.plate-img { position: relative; width: 100%; margin: 0 auto; cursor: zoom-in; background: #fff; border: 1px solid #e5e2da; border-radius: 0.5rem; }
+.plate-img img { display: block; width: 100%; height: auto; border-radius: 0.5rem; }
 .plate small { display: block; color: #6b7280; font-size: 0.72rem; margin-top: 0.15rem; }
+.plate small a { color: #115e59; text-decoration: underline; }
+.anatomy-canvas { cursor: zoom-in; }
+.anatomy-canvas:focus-visible, .plate-img:focus-visible, .pin-legend li:focus-visible, .anatomy-tabs button:focus-visible { outline: 2px solid #0f766e; outline-offset: 2px; }
+
+/* Numbered pins */
+.pin { position: absolute; transform: translate(-50%, -50%); width: 1.3rem; height: 1.3rem; border-radius: 50%; background: #115e59; color: #fff; border: 2px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,.35); font: 700 0.7rem/1 Inter, sans-serif; display: flex; align-items: center; justify-content: center; pointer-events: none; transition: transform .15s, background .15s; }
+.pin.on { background: #e05a47; transform: translate(-50%, -50%) scale(1.45); z-index: 2; }
+.pin-legend { margin: 0.2rem 0 0; padding: 0; list-style: none; counter-reset: pin; font-size: 0.82rem; line-height: 1.35; }
+.pin-legend li { counter-increment: pin; display: flex; gap: 0.5rem; padding: 0.2rem 0.3rem; border-radius: 0.3rem; cursor: default; }
+.pin-legend li::before { content: counter(pin); flex: none; width: 1.25rem; height: 1.25rem; border-radius: 50%; background: #115e59; color: #fff; font: 700 0.7rem/1.25rem Inter, sans-serif; text-align: center; }
+.pin-legend li:hover, .pin-legend li:focus { background: #fde8e4; }
+
+/* Schematic / real toggle (progressive: without JS everything stacks) */
+.anatomy-tabs { display: flex; justify-content: center; gap: 2px; margin: 0 auto 0.6rem; padding: 2px; width: fit-content; max-width: 100%; background: #e7e5de; border-radius: 0.6rem; }
+.anatomy-tabs[hidden] { display: none; }
+.anatomy-tabs button { font: 600 0.78rem/1 Inter, sans-serif; padding: 0.5rem 0.75rem; min-height: 2.25rem; border-radius: 0.45rem; color: #334155; background: transparent; cursor: pointer; }
+.anatomy-tabs button[aria-selected="true"] { background: #fff; color: #115e59; box-shadow: 0 1px 2px rgba(0,0,0,.15); }
+.anatomy-tabs .tab-both { display: none; }
+.anatomy[data-view="schem"] .plates, .anatomy[data-view="real"] .anatomy-pane { display: none; }
+@media (min-width: 900px) {
+  .anatomy-tabs .tab-both { display: block; }
+  .anatomy[data-view="both"] { max-width: 60rem; }
+  .anatomy[data-view="both"] .anatomy-main { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; align-items: start; }
+  .anatomy[data-view="both"] .plates { border-top: 0; border-radius: 0.5rem; }
+  .anatomy[data-view="both"] .plates-row { grid-template-columns: 1fr; }
+}
+
+/* Mobile: keep schematic labels readable by letting the canvas scroll sideways */
+article[data-pagefind-body] { min-width: 0; } /* grid item: do not grow to the min-width SVG */
+@media (max-width: 640px) {
+  .anatomy-canvas { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .anatomy-canvas .anatomy-svg { min-width: 36rem; }
+  .anatomy-canvas::after { content: "Scroll sideways or tap to enlarge"; display: block; text-align: center; font-size: 0.7rem; color: #64748b; position: sticky; left: 0; }
+}
+
+/* Lightbox */
+.lightbox { padding: 0; border: 0; border-radius: 0.75rem; background: #fff; color: #1f2937; width: min(96vw, 1200px); max-height: 92vh; overflow: hidden; margin: auto; }
+.lightbox::backdrop { background: rgba(15, 23, 22, .75); }
+.lightbox-body { overflow: auto; max-height: 92vh; padding: 2.5rem 0.75rem 0.75rem; }
+.lightbox-body .lb-img { margin: 0 auto; cursor: default; }
+.lightbox-body .lb-img img { width: 100%; height: auto; }
+.lightbox-body.lb-svg svg { display: block; width: 100%; min-width: 40rem; height: auto; }
+.lightbox-close { position: absolute; top: 0.4rem; right: 0.6rem; z-index: 3; width: 2.25rem; height: 2.25rem; border-radius: 50%; background: #115e59; color: #fff; font-size: 1.4rem; line-height: 1; cursor: pointer; }
+
+/* Study tools */
+.learned-btn[aria-pressed='true'] { @apply bg-teal-deep text-white; }
+.learned-btn[aria-pressed='true']:hover { @apply bg-teal-900; }
+.learned-tick { @apply ml-1.5 inline-block text-sm font-bold text-teal-deep dark:text-teal-300; }
+a[data-topic-slug].relative .learned-tick { @apply absolute right-3 top-3; }
+.quiz-btn { @apply rounded-lg border border-teal-deep px-4 py-2 text-sm font-medium text-teal-deep hover:bg-sage focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral dark:border-teal-300 dark:text-teal-300 dark:hover:bg-teal-900/30; }
+.quiz-btn-primary { @apply bg-teal-deep text-white hover:bg-teal-900 dark:text-white; }
+.quiz-btn-coral { @apply border-coral text-coral hover:bg-coral/10 dark:border-coral dark:text-coral; }
+.study-field { @apply rounded-md border border-teal-deep/25 bg-white px-2 py-1.5 text-sm dark:bg-slate-900; }
+
+@media print {
+  body, .dark body { background: #fff; color: #000; }
+  .revise-topic { break-inside: avoid; box-shadow: none; background: #fff; border-color: #999; }
+  .revise-topic.hidden { display: none; }
+  .revise-topic a { color: #000; text-decoration: none; }
+}

@@ -1,0 +1,40 @@
+---
+// "12 / 56 learned" + bar. `slugs` is the set the count is taken over.
+interface Props { slugs: string[]; class?: string }
+const { slugs, class: cls = '' } = Astro.props;
+---
+<div class={`learned-progress ${cls}`} data-pagefind-ignore data-slugs={slugs.join(',')}>
+  <p class="text-sm font-medium text-teal-deep dark:text-teal-300"><span data-progress-text aria-live="polite">0 / {slugs.length} learned</span></p>
+  <div class="mt-1 h-2 overflow-hidden rounded-full bg-teal-deep/15" role="progressbar" aria-label="Topics learned" aria-valuemin="0" aria-valuemax={slugs.length} aria-valuenow="0">
+    <div data-progress-bar class="h-full rounded-full bg-teal-deep transition-[width] dark:bg-teal-400" style="width:0%"></div>
+  </div>
+</div>
+
+<script>
+  import { getLearned } from '../lib/study-store';
+  // Fills every progress widget and tick on any element carrying data-topic-slug.
+  function paint() {
+    const learned = getLearned();
+    document.querySelectorAll<HTMLElement>('.learned-progress').forEach((el) => {
+      const slugs = (el.dataset.slugs ?? '').split(',').filter(Boolean);
+      const n = slugs.filter((s) => learned.has(s)).length;
+      el.querySelector('[data-progress-text]')!.textContent = `${n} / ${slugs.length} learned`;
+      const bar = el.querySelector<HTMLElement>('[data-progress-bar]')!;
+      bar.style.width = slugs.length ? `${(n / slugs.length) * 100}%` : '0%';
+      el.querySelector('[role=progressbar]')!.setAttribute('aria-valuenow', String(n));
+    });
+    document.querySelectorAll<HTMLElement>('[data-topic-slug]').forEach((el) => {
+      const on = learned.has(el.dataset.topicSlug!);
+      el.classList.toggle('is-learned', on);
+      const tick = el.querySelector('.learned-tick');
+      if (on && !tick) {
+        const s = document.createElement('span');
+        s.className = 'learned-tick'; s.textContent = '✓'; s.title = 'Learned'; s.setAttribute('aria-label', 'learned');
+        el.append(s);
+      } else if (!on && tick) tick.remove();
+    });
+  }
+  paint();
+  addEventListener('storage', paint);
+  addEventListener('gi-atlas:change', paint);
+</script>

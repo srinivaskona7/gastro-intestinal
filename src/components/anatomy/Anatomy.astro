@@ -10,22 +10,114 @@ const def = mods[`./figures/${figure}.js`]?.default;
 if (!def) throw new Error(`Unknown anatomy figure "${figure}"`);
 const svg = renderFigure(def, { highlight, show });
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
-const plates = ((data.figures as Record<string, string[]>)[figure] ?? []).map((id) => (data.plates as Record<string, any>)[id]);
+const plates: any[] = ((data.figures as Record<string, string[]>)[figure] ?? []).map((id) => (data.plates as Record<string, any>)[id]);
 ---
-<figure class="anatomy not-prose">
-  <div class="anatomy-canvas" set:html={svg} />
-  {caption && <figcaption>{caption}</figcaption>}
+<figure class="anatomy not-prose" data-tabs={plates.length > 0 ? '' : undefined}>
   {plates.length > 0 && (
-    <div class="plates">
-      <p class="plates-title">Real anatomy</p>
-      <div class="plates-row">
-        {plates.map((p) => (
-          <a href={p.page} target="_blank" rel="noopener" class="plate">
-            <img src={`${base}plates/${p.file}`} width={p.w} height={p.h} loading="lazy" alt={p.caption} />
-            <span>{p.caption}<small>Gray's Anatomy (1918), plate {p.n}. Public domain, via Wikimedia Commons.</small></span>
-          </a>
-        ))}
-      </div>
+    <div class="anatomy-tabs" role="tablist" aria-label="Figure view" hidden>
+      <button type="button" role="tab" data-view="schem" aria-selected="true" tabindex="0">Schematic</button>
+      <button type="button" role="tab" data-view="real" aria-selected="false" tabindex="-1">Real anatomy</button>
+      <button type="button" role="tab" data-view="both" aria-selected="false" tabindex="-1" class="tab-both">Side by side</button>
     </div>
   )}
+  <div class="anatomy-main">
+    <div class="anatomy-pane">
+      <div class="anatomy-canvas" data-zoom="svg" role="button" tabindex="0" aria-label="Enlarge schematic" set:html={svg} />
+      {caption && <figcaption>{caption}</figcaption>}
+    </div>
+    {plates.length > 0 && (
+      <div class="plates">
+        <p class="plates-title">Real anatomy</p>
+        <div class="plates-row">
+          {plates.map((p) => (
+            <div class="plate">
+              <div class="plate-img" data-zoom="img" role="button" tabindex="0" aria-label={`Enlarge: ${p.caption}`} style={`max-width:${p.w}px`}>
+                <img src={`${base}plates/${p.file}`} width={p.w} height={p.h} loading="lazy" alt={p.caption} />
+                {(p.pins ?? []).map((pin: any, i: number) => (
+                  <span class="pin" data-pin={i + 1} style={`left:${pin.x}%;top:${pin.y}%`} aria-hidden="true">{i + 1}</span>
+                ))}
+              </div>
+              <span class="plate-cap">{p.caption}
+                <small>{p.credit ?? `Gray's Anatomy (1918), plate ${p.n}. Public domain, via Wikimedia Commons.`} <a href={p.page} target="_blank" rel="noopener">Source</a></small>
+              </span>
+              {(p.pins ?? []).length > 0 && (
+                <ol class="pin-legend">
+                  {p.pins.map((pin: any, i: number) => <li tabindex="0" data-pin={i + 1}>{pin.text}</li>)}
+                </ol>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
 </figure>
+<script>
+  // One shared script per page: view toggle, pin highlight, lightbox.
+  if (!(window as any).__anatomyInit) {
+    (window as any).__anatomyInit = true;
+    const views = ['schem', 'real', 'both'];
+    document.querySelectorAll<HTMLElement>('figure.anatomy[data-tabs]').forEach((fig) => {
+      const bar = fig.querySelector<HTMLElement>('.anatomy-tabs')!;
+      const tabs = [...bar.querySelectorAll<HTMLButtonElement>('[role=tab]')];
+      const set = (v: string, focus = false) => {
+        fig.dataset.view = v;
+        tabs.forEach((t) => { const on = t.dataset.view === v; t.setAttribute('aria-selected', String(on)); t.tabIndex = on ? 0 : -1; if (on && focus) t.focus(); });
+      };
+      bar.hidden = false; set('schem');
+      tabs.forEach((t) => t.addEventListener('click', () => set(t.dataset.view!)));
+      bar.addEventListener('keydown', (e) => {
+        const vis = tabs.filter((t) => t.offsetParent !== null);
+        const i = vis.findIndex((t) => t.getAttribute('aria-selected') === 'true');
+        let j = -1;
+        if (e.key === 'ArrowRight') j = (i + 1) % vis.length; else if (e.key === 'ArrowLeft') j = (i - 1 + vis.length) % vis.length;
+        else if (e.key === 'Home') j = 0; else if (e.key === 'End') j = vis.length - 1;
+        if (j >= 0) { e.preventDefault(); set(vis[j].dataset.view!, true); }
+      });
+    });
+    const pinSync = (e: Event, on: boolean) => {
+      const li = (e.target as HTMLElement).closest?.('.pin-legend li[data-pin]') as HTMLElement | null;
+      if (!li) return;
+      li.closest('.plate')?.querySelector(`.pin[data-pin="${li.dataset.pin}"]`)?.classList.toggle('on', on);
+    };
+    document.addEventListener('mouseover', (e) => pinSync(e, true));
+    document.addEventListener('mouseout', (e) => pinSync(e, false));
+    document.addEventListener('focusin', (e) => pinSync(e, true));
+    document.addEventListener('focusout', (e) => pinSync(e, false));
+
+    let dlg: HTMLDialogElement | null = null, opener: HTMLElement | null = null;
+    const open = (el: HTMLElement) => {
+      if (!dlg) {
+        dlg = document.createElement('dialog');
+        dlg.className = 'lightbox';
+        dlg.setAttribute('aria-label', 'Enlarged figure');
+        dlg.innerHTML = '<button type="button" class="lightbox-close" aria-label="Close">&times;</button><div class="lightbox-body"></div>';
+        document.body.appendChild(dlg);
+        dlg.addEventListener('click', (e) => { if (e.target === dlg || (e.target as HTMLElement).closest('.lightbox-close')) dlg!.close(); });
+        dlg.addEventListener('close', () => { opener?.focus(); });
+      }
+      const body = dlg.querySelector('.lightbox-body')!;
+      body.innerHTML = '';
+      if (el.dataset.zoom === 'svg') {
+        const svg = el.querySelector('svg')!.cloneNode(true) as SVGElement;
+        body.className = 'lightbox-body lb-svg'; body.appendChild(svg);
+      } else {
+        const img = el.querySelector('img')!;
+        const wrap = el.cloneNode(true) as HTMLElement;
+        wrap.removeAttribute('role'); wrap.removeAttribute('tabindex'); wrap.removeAttribute('data-zoom');
+        wrap.style.width = img.getAttribute('width') + 'px'; wrap.style.maxWidth = 'none';
+        wrap.classList.add('lb-img');
+        body.className = 'lightbox-body'; body.appendChild(wrap);
+      }
+      opener = el; dlg.showModal();
+    };
+    document.addEventListener('click', (e) => {
+      const el = (e.target as HTMLElement).closest?.('[data-zoom]') as HTMLElement | null;
+      if (el && !el.closest('dialog')) open(el);
+    });
+    document.addEventListener('keydown', (e) => {
+      const el = (e.target as HTMLElement).closest?.('[data-zoom]') as HTMLElement | null;
+      if (el && (e.key === 'Enter' || e.key === ' ') && !el.closest('dialog')) { e.preventDefault(); open(el); }
+    });
+  }
+</script>

@@ -1,0 +1,82 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+const base = import.meta.env.BASE_URL;
+const all = (await getCollection('topics')).sort((a, b) => a.data.order - b.data.order);
+const parts = [
+  { id: 'anatomy-physiology', label: 'Anatomy & physiology' },
+  { id: 'pathology', label: 'Pathology' },
+];
+---
+<Base title="Revise" description="All high-yield bullets in one page, grouped by organ, printable.">
+  <div class="mx-auto max-w-4xl px-4 py-10" data-pagefind-ignore>
+    <h1 class="text-3xl font-semibold text-teal-deep dark:text-teal-300">Revise</h1>
+    <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">The high-yield bullets of every topic on one page. Use the filter, then print for a cheat sheet.</p>
+
+    <div class="no-print mt-5 flex flex-wrap items-center gap-3">
+      <fieldset class="flex items-center gap-1 text-sm">
+        <legend class="sr-only">Show topics</legend>
+        <label class="quiz-btn cursor-pointer has-[:checked]:bg-teal-deep has-[:checked]:text-white has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-coral"><input type="radio" name="rf" value="all" class="sr-only" checked /> All</label>
+        <label class="quiz-btn cursor-pointer has-[:checked]:bg-teal-deep has-[:checked]:text-white has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-coral"><input type="radio" name="rf" value="unlearned" class="sr-only" /> Not learned</label>
+        <label class="quiz-btn cursor-pointer has-[:checked]:bg-teal-deep has-[:checked]:text-white has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-coral"><input type="radio" name="rf" value="learned" class="sr-only" /> Learned</label>
+      </fieldset>
+      <button type="button" id="print-btn" class="quiz-btn">Print</button>
+      <span id="revise-count" class="text-sm text-slate-500" aria-live="polite"></span>
+    </div>
+
+    {parts.map((p) => {
+      const items = all.filter((t) => t.data.part === p.id);
+      const groups = [...new Set(items.map((t) => t.data.group))];
+      return (
+        <section class="revise-part mt-10">
+          <h2 class="text-2xl font-semibold">{p.label}</h2>
+          {groups.map((g) => (
+            <div class="revise-group mt-5">
+              <h3 class="text-sm font-bold uppercase tracking-wider text-coral">{g}</h3>
+              <div class="mt-2 grid gap-3">
+                {items.filter((t) => t.data.group === g).map((t) => (
+                  <article class="revise-topic rounded-xl border border-teal-deep/15 bg-white p-4 dark:bg-slate-900" data-slug={t.id}>
+                    <h4 class="font-display text-lg font-semibold"><a href={`${base}topics/${t.id}/`} data-topic-slug={t.id} class="text-teal-deep hover:underline dark:text-teal-300">{t.data.title}</a></h4>
+                    <ul class="mt-2 list-disc space-y-1 pl-5 text-[0.95rem]">
+                      {t.data.highYield.map((h) => <li>{h}</li>)}
+                    </ul>
+                  </article>
+                ))}
+              </div>
+            </div>
+          ))}
+        </section>
+      );
+    })}
+    <p id="revise-empty" class="mt-8 hidden text-sm text-slate-500">No topics match this filter.</p>
+  </div>
+</Base>
+
+<script>
+  import { getLearned } from '../../lib/study-store';
+  const topics = [...document.querySelectorAll<HTMLElement>('.revise-topic')];
+  const mode = () => (document.querySelector<HTMLInputElement>('input[name=rf]:checked')?.value ?? 'all');
+  function apply() {
+    const learned = getLearned(), m = mode();
+    let shown = 0;
+    topics.forEach((el) => {
+      const l = learned.has(el.dataset.slug!);
+      const vis = m === 'all' || (m === 'learned' ? l : !l);
+      el.classList.toggle('hidden', !vis);
+      if (vis) shown++;
+      const a = el.querySelector('a')!;
+      a.classList.toggle('is-learned', l);
+      const tick = a.querySelector('.learned-tick');
+      if (l && !tick) a.append(Object.assign(document.createElement('span'), { className: 'learned-tick', textContent: '✓', title: 'Learned' }));
+      if (!l && tick) tick.remove();
+    });
+    document.querySelectorAll<HTMLElement>('.revise-group').forEach((g) => g.classList.toggle('hidden', !g.querySelector('.revise-topic:not(.hidden)')));
+    document.querySelectorAll<HTMLElement>('.revise-part').forEach((p) => p.classList.toggle('hidden', !p.querySelector('.revise-topic:not(.hidden)')));
+    document.getElementById('revise-count')!.textContent = `${shown} of ${topics.length} topics`;
+    document.getElementById('revise-empty')!.classList.toggle('hidden', shown > 0);
+  }
+  document.querySelectorAll('input[name=rf]').forEach((r) => r.addEventListener('change', apply));
+  document.getElementById('print-btn')!.addEventListener('click', () => print());
+  addEventListener('storage', apply);
+  apply();
+</script>

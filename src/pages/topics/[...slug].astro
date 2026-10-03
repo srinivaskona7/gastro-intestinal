@@ -25,6 +25,9 @@ const partLabel = entry.data.part === 'pathology' ? 'Pathology' : 'Anatomy & phy
       <h1 class="mt-2 text-4xl font-semibold leading-tight text-teal-deep dark:text-teal-300" data-pagefind-meta="title">{entry.data.title}</h1>
       <p class="mt-2 text-lg text-slate-600 dark:text-slate-300">{entry.data.summary}</p>
       <p class="mt-1 text-xs text-slate-500">{minutes} min read</p>
+      <div class="no-print mt-3" data-pagefind-ignore>
+        <button type="button" id="learned-btn" data-slug={entry.id} aria-pressed="false" class="learned-btn rounded-lg border border-teal-deep px-4 py-2 text-sm font-medium text-teal-deep hover:bg-sage dark:border-teal-300 dark:text-teal-300 dark:hover:bg-teal-900/30">Mark as learned</button>
+      </div>
 
       <aside class="my-6 rounded-xl border border-coral/40 bg-coral/10 p-4" aria-label="High-yield summary">
         <p class="text-xs font-bold uppercase tracking-wider text-coral">High-yield in 30 seconds</p>
@@ -53,3 +56,18 @@ const partLabel = entry.data.part === 'pathology' ? 'Pathology' : 'Anatomy & phy
     </aside>
   </div>
 </Base>
+<script>
+  import { getLearned, setLearned } from '../../lib/study-store';
+  const btn = document.getElementById('learned-btn') as HTMLButtonElement;
+  const paint = () => {
+    const on = getLearned().has(btn.dataset.slug!);
+    btn.setAttribute('aria-pressed', String(on));
+    btn.textContent = on ? '✓ Learned (click to undo)' : 'Mark as learned';
+  };
+  btn.addEventListener('click', () => {
+    setLearned(btn.dataset.slug!, btn.getAttribute('aria-pressed') !== 'true');
+    paint(); dispatchEvent(new Event('gi-atlas:change'));
+  });
+  paint();
+  addEventListener('storage', paint);
+</script>

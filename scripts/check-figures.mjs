@@ -51,15 +51,21 @@ console.log(`${n - bad > 0 && !bad ? 'OK' : 'FAIL'}: ${n} figure(s) checked`);
   if (badUse) process.exit(1);
 }
 
-// Real-plate gate: every plate in plates.json has a file, a public-domain page URL and a caption; every mapped figure exists.
+// Real-plate gate: every plate in plates.json has a file, a Commons page URL and a caption; pins sit inside 0-100%; non-public-domain plates carry a credit; every mapped figure exists.
 {
   const fs = await import('node:fs');
-  const d = JSON.parse(fs.readFileSync('src/data/plates.json', 'utf8'));
+  const d = JSON.parse(fs.readFileSync(process.env.PLATES_JSON ?? 'src/data/plates.json', 'utf8'));
   const bad = [];
   for (const [id, p] of Object.entries(d.plates)) {
     if (!fs.existsSync(`public/plates/${p.file}`)) bad.push(`${id}: missing public/plates/${p.file}`);
     if (!/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/.test(p.page)) bad.push(`${id}: page is not a Commons file URL`);
     if (!p.caption) bad.push(`${id}: no caption`);
+    if (p.license && !/^public domain/i.test(p.license) && !p.credit) bad.push(`${id}: license "${p.license}" needs a credit`);
+    if (p.pins !== undefined && !Array.isArray(p.pins)) bad.push(`${id}: pins must be an array`);
+    for (const [i, pin] of (Array.isArray(p.pins) ? p.pins : []).entries()) {
+      if (!pin.text || typeof pin.text !== 'string') bad.push(`${id}: pin ${i + 1} has no text`);
+      for (const k of ['x', 'y']) if (typeof pin[k] !== 'number' || pin[k] < 0 || pin[k] > 100) bad.push(`${id}: pin ${i + 1} ${k} must be a number 0-100`);
+    }
   }
   for (const [f, ids] of Object.entries(d.figures)) {
     if (!fs.existsSync(`src/components/anatomy/figures/${f}.js`)) bad.push(`figure ${f} unknown`);
