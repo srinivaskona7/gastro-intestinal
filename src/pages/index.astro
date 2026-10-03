@@ -10,7 +10,9 @@ const groups = [...new Set(pathology.map((t) => t.data.group))];
 const href = (id: string) => `${base}topics/${id}/`;
 ---
 <Base>
-  <section class="mx-auto max-w-4xl px-4 pb-10 pt-16 text-center">
+  <section class="hero-shell mx-auto mt-6 max-w-6xl overflow-hidden rounded-3xl border border-teal-deep/15 bg-[#edf5f1] px-5 py-8 shadow-sm sm:px-10 sm:py-10 dark:bg-[#102522]">
+    <div class="grid items-center gap-8 lg:grid-cols-[1.05fr_.95fr]">
+      <div class="max-w-2xl">
     <p class="text-xs font-semibold uppercase tracking-widest text-coral">Gastrointestinal system · for medical students</p>
     <h1 class="mt-3 text-4xl font-semibold leading-tight text-teal-deep dark:text-teal-300 sm:text-5xl">Understand the gut, one concept at a time</h1>
     <p class="mx-auto mt-4 max-w-2xl text-lg text-slate-600 dark:text-slate-300">{all.length} topics from anatomy and physiology to pathology, each with a diagram, a high-yield summary and a self-test.</p>
@@ -19,6 +21,46 @@ const href = (id: string) => `${base}topics/${id}/`;
       <a href={`${base}topics/#pathology`} class="rounded-lg border border-teal-deep px-5 py-2.5 font-medium text-teal-deep hover:bg-sage dark:text-teal-300 dark:hover:bg-teal-900/30">Browse pathology</a>
     </div>
     <LearnedProgress slugs={all.map((t) => t.id)} class="mx-auto mt-6 max-w-xs" />
+      </div>
+      <div class="hero-figure" aria-label="Illustrated overview of the gastrointestinal tract">
+        <svg viewBox="0 0 520 390" role="img" aria-labelledby="gut-title gut-desc">
+          <title id="gut-title">The gastrointestinal tract</title>
+          <desc id="gut-desc">A warm illustrated overview showing the oesophagus, stomach, small bowel, colon, liver and pancreas.</desc>
+          <path class="organ organ-liver" d="M306 84c47-28 110-14 133 19 13 19 3 51-19 59-33 12-92-1-120-24-12-10-10-42 6-54Z" />
+          <path class="organ organ-stomach" d="M239 93c-31-3-48 18-43 45 4 22 25 31 34 49 10 21 3 44 23 57 22 15 50 4 57-19 9-29-14-52-18-74-5-26-17-56-53-58Z" />
+          <path class="organ organ-pancreas" d="M265 193c31-20 87-16 110 2 8 7-5 18-19 19-28 3-62 1-89-6-11-3-12-9-2-15Z" />
+          <path class="organ organ-bowel" d="M203 210c-37 10-60 39-48 67 9 21 37 21 56 7 20-16 35-23 57-12 25 13 58 9 65-14 7-24-23-37-47-31-29 7-38 24-59 19-19-5-5-29 9-36 15-8 0-7-33 0-29 14 2 29-2 29-19" />
+          <path class="organ organ-colon" d="M158 260c-28 18-24 63 3 83 25 18 70 9 87-9 16-17 27-16 43-3 23 19 63 16 76-6 14-24-5-45-26-44-19 0-28 20-48 20-17 0-23-24-43-33-23-11-67-20-92-8Z" />
+          <path class="organ organ-esophagus" d="M228 37c-2 24 2 37 15 57" />
+          <g class="gut-label"><circle cx="422" cy="54" r="4"/><text x="438" y="58">liver</text></g>
+          <g class="gut-label"><circle cx="211" cy="125" r="4"/><text x="103" y="129">stomach</text></g>
+          <g class="gut-label"><circle cx="288" cy="248" r="4"/><text x="308" y="253">small bowel</text></g>
+          <g class="gut-label"><circle cx="146" cy="335" r="4"/><text x="83" y="351">colon</text></g>
+          <text class="figure-note" x="352" y="340">trace the journey</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 pt-8" aria-labelledby="route-title">
+    <div class="grid gap-4 lg:grid-cols-[1.2fr_.8fr]">
+      <div class="rounded-2xl border border-teal-deep/15 bg-white p-5 dark:bg-slate-900">
+        <p class="card-kicker">Your next best step</p><h2 id="route-title" class="text-2xl font-semibold">Today’s study route</h2>
+        <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">A small, focused route: orient yourself, test recall, then revisit one weak area.</p>
+        <div class="mt-4 grid gap-2 sm:grid-cols-3"><a class="route-step" href={`${base}topics/`}><span>01</span>Choose a topic</a><a class="route-step" href={`${base}quiz/`}><span>02</span>Test recall</a><a class="route-step" href={`${base}revise/`}><span>03</span>Revise weak spots</a></div>
+        <div id="continue-learning" class="mt-4 hidden"><p class="text-xs font-bold uppercase tracking-wider text-coral">Continue learning</p><div id="continue-list" class="mt-2 grid gap-2 sm:grid-cols-2"></div></div>
+      </div>
+      <div class="rounded-2xl border border-teal-deep/15 bg-[#edf5f1] p-5 dark:bg-[#102522]"><p class="card-kicker">Explore by organ</p><h2 class="text-2xl font-semibold">Organ map</h2><div class="mt-4 grid grid-cols-2 gap-2 text-sm">{['Oesophagus','Stomach','Small bowel','Colon','Liver','Pancreas'].map((o) => <a href={`${base}topics/?organ=${encodeURIComponent(o)}`} class="organ-link" data-organ-link={o}>{o}<span>→</span></a>)}</div></div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 pb-10 pt-8">
+    <div class="mb-5 flex items-end justify-between gap-4"><div><p class="text-xs font-bold uppercase tracking-widest text-coral">A visual way in</p><h2 class="mt-1 text-2xl font-semibold">Start with the big picture</h2></div><a class="hidden text-sm font-medium text-teal-deep hover:underline sm:block dark:text-teal-300" href={`${base}atlas-3d/`}>Open the 3D atlas →</a></div>
+    <div class="grid gap-4 md:grid-cols-3">
+      <a class="visual-card" href={anatomy[0] ? href(anatomy[0].id) : `${base}topics/`}><img src={`${base}plates/gray1043.webp`} alt="Anatomical plate of the abdominal digestive organs" loading="lazy" /><div><p class="card-kicker">01 · orient</p><h3>Map the digestive tract</h3><p>Follow the tube, its turns and its supporting organs before adding disease.</p></div></a>
+      <a class="visual-card" href={anatomy[1] ? href(anatomy[1].id) : `${base}topics/`}><img src={`${base}plates/histo-gastric-mucosa.webp`} alt="Histology of gastric mucosa" loading="lazy" /><div><p class="card-kicker">02 · zoom in</p><h3>See structure become function</h3><p>Move from whole-organ anatomy to the lining, layers and specialised cells.</p></div></a>
+      <a class="visual-card" href={`${base}topics/#pathology`}><img src={`${base}plates/blausen0698.webp`} alt="Illustrated plate of a gastrointestinal condition" loading="lazy" /><div><p class="card-kicker">03 · connect</p><h3>Recognise the patterns</h3><p>Use concise pathology notes, diagrams and recall questions to make links stick.</p></div></a>
+    </div>
   </section>
 
   <div class="mx-auto max-w-6xl space-y-12 px-4">
@@ -51,3 +93,8 @@ const href = (id: string) => `${base}topics/${id}/`;
     </section>
   </div>
 </Base>
+<script define:vars={{ topics: all.map(t => ({ id:t.id, title:t.data.title, summary:t.data.summary })), base }}>
+  import { getActivity, getLearned } from '../lib/study-store';
+  const activity=getActivity(), learned=getLearned(); const recent=Object.values(activity).sort((a,b)=>b.viewedAt-a.viewedAt).slice(0,4);
+  if(recent.length){ document.getElementById('continue-learning')!.classList.remove('hidden'); const list=document.getElementById('continue-list')!; recent.forEach(a=>{const t=topics.find(x=>x.id===a.slug); if(!t)return; const el=document.createElement('a'); el.href=`${base}topics/${t.id}/`; el.className='rounded-lg border border-teal-deep/15 p-3 hover:border-teal-deep'; el.innerHTML=`<span class="block font-medium text-teal-deep dark:text-teal-300">${t.title}</span><span class="text-xs text-slate-500">${learned.has(t.id)?'Learned · revisit':'Continue where you left off'}</span>`; list.append(el);}); }
+</script>

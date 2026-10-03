@@ -16,7 +16,24 @@ export function setLearned(slug: string, on: boolean) {
   const s = getLearned();
   on ? s.add(slug) : s.delete(slug);
   write('learned', [...s]);
+  touch(slug);
 }
+
+export type Activity = { slug: string; viewedAt: number; visits: number };
+export const getActivity = (): Record<string, Activity> => read('activity', {});
+export function touch(slug: string) {
+  const a = getActivity();
+  a[slug] = { slug, viewedAt: Date.now(), visits: (a[slug]?.visits ?? 0) + 1 };
+  write('activity', a);
+}
+export const getBookmarks = (): Set<string> => new Set(read<string[]>('bookmarks', []));
+export function toggleBookmark(slug: string) {
+  const b = getBookmarks(); b.has(slug) ? b.delete(slug) : b.add(slug); write('bookmarks', [...b]);
+}
+export const getNotes = (): Record<string, string> => read('notes', {});
+export function setNote(slug: string, note: string) { const n = getNotes(); note.trim() ? n[slug] = note : delete n[slug]; write('notes', n); }
+export const getQuizStats = () => read<{ correct: number; answered: number; sessions: number; streak: number }>('quiz-stats', { correct: 0, answered: 0, sessions: 0, streak: 0 });
+export function recordQuiz(correct: boolean, finished = false) { const s = getQuizStats(); s.correct += correct ? 1 : 0; s.answered++; if (finished) s.sessions++; write('quiz-stats', s); }
 
 // Leitner boxes 1-3; unseen cards count as box 1.
 export const getBoxes = (): Record<string, number> => {

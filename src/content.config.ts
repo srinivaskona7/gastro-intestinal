@@ -11,6 +11,10 @@ const topics = defineCollection({
     summary: z.string().max(220),
     highYield: z.array(z.string()).min(3).max(6),
     tags: z.array(z.string()).default([]),
+    difficulty: z.enum(['foundational', 'intermediate', 'advanced']).default('intermediate'),
+    examRelevance: z.enum(['core', 'high', 'extended']).default('high'),
+    organ: z.string().default('Whole GI system'),
+    clinicalImages: z.array(z.object({ src: z.string(), alt: z.string(), kind: z.string() })).default([]),
   }),
 });
 

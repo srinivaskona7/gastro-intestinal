@@ -21,6 +21,26 @@
 body { @apply bg-paper text-ink font-sans antialiased; }
 .dark body { background: #0f1716; color: #e2e8f0; }
 
+/* Homepage visual language: a softly inked, organic atlas illustration. */
+.hero-figure { min-height: 18rem; display: grid; place-items: center; }
+.hero-figure svg { width: 100%; max-width: 32rem; height: auto; overflow: visible; }
+.organ { stroke: #115e59; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+.organ-liver { fill: #d98670; }
+.organ-stomach { fill: #eab39e; }
+.organ-pancreas { fill: #e8c06f; stroke-width: 4; }
+.organ-bowel { fill: none; stroke: #e28a72; stroke-width: 16; }
+.organ-colon { fill: none; stroke: #c96f5c; stroke-width: 18; }
+.organ-esophagus { fill: none; stroke: #eab39e; stroke-width: 12; }
+.gut-label text { font: 600 16px 'Inter Variable', sans-serif; fill: #115e59; }
+.gut-label circle { fill: #e05a47; stroke: #fff; stroke-width: 3; }
+.figure-note { font: italic 18px 'Newsreader Variable', serif; fill: #64748b; }
+.visual-card { @apply overflow-hidden rounded-2xl border border-teal-deep/15 bg-white transition hover:-translate-y-1 hover:border-teal-deep hover:shadow-lg dark:bg-slate-900; }
+.visual-card img { display: block; width: 100%; height: 10rem; object-fit: cover; object-position: center; background: #f7f5ef; }
+.visual-card > div { padding: 1rem 1.1rem 1.15rem; }
+.visual-card h3 { @apply text-xl font-semibold text-teal-deep dark:text-teal-300; }
+.visual-card p:not(.card-kicker) { @apply mt-1 text-sm leading-6 text-slate-600 dark:text-slate-300; }
+.card-kicker { margin: 0 0 .25rem; color: #e05a47; font: 700 .68rem/1 Inter, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+
 h1, h2, h3, .font-display { font-family: var(--font-serif); }
 
 /* Long-form reading column */
@@ -129,6 +149,10 @@ a[data-topic-slug].relative .learned-tick { @apply absolute right-3 top-3; }
 .quiz-btn-primary { @apply bg-teal-deep text-white hover:bg-teal-900 dark:text-white; }
 .quiz-btn-coral { @apply border-coral text-coral hover:bg-coral/10 dark:border-coral dark:text-coral; }
 .study-field { @apply rounded-md border border-teal-deep/25 bg-white px-2 py-1.5 text-sm dark:bg-slate-900; }
+.route-step { @apply flex items-center gap-2 rounded-lg border border-teal-deep/15 p-3 text-sm font-medium hover:border-teal-deep hover:bg-sage dark:hover:bg-teal-900/30; }
+.route-step span { @apply text-xs font-bold text-coral; }
+.organ-link { @apply flex items-center justify-between rounded-lg bg-white/70 p-3 font-medium text-teal-deep hover:bg-white dark:bg-slate-900/60 dark:text-teal-300 dark:hover:bg-slate-900; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
 
 @media print {
   body, .dark body { background: #fff; color: #000; }

@@ -27,6 +27,7 @@ const partLabel = entry.data.part === 'pathology' ? 'Pathology' : 'Anatomy & phy
       <p class="mt-1 text-xs text-slate-500">{minutes} min read</p>
       <div class="no-print mt-3" data-pagefind-ignore>
         <button type="button" id="learned-btn" data-slug={entry.id} aria-pressed="false" class="learned-btn rounded-lg border border-teal-deep px-4 py-2 text-sm font-medium text-teal-deep hover:bg-sage dark:border-teal-300 dark:text-teal-300 dark:hover:bg-teal-900/30">Mark as learned</button>
+        <button type="button" id="bookmark-btn" aria-pressed="false" class="ml-2 rounded-lg border border-teal-deep px-4 py-2 text-sm font-medium text-teal-deep hover:bg-sage dark:border-teal-300 dark:text-teal-300">☆ Bookmark</button>
       </div>
 
       <aside class="my-6 rounded-xl border border-coral/40 bg-coral/10 p-4" aria-label="High-yield summary">
@@ -39,6 +40,13 @@ const partLabel = entry.data.part === 'pathology' ? 'Pathology' : 'Anatomy & phy
       <div class="prose prose-slate max-w-none dark:prose-invert prose-headings:font-display">
         <Content />
       </div>
+
+      <section class="no-print mt-10 rounded-xl border border-teal-deep/15 bg-sage p-5 dark:bg-teal-900/20" aria-labelledby="personal-study">
+        <h2 id="personal-study" class="mt-0 border-0 pb-0 text-xl text-teal-deep dark:text-teal-300">Personal study note</h2>
+        <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Capture a mnemonic, question, or exam trap. It stays in this browser.</p>
+        <textarea id="topic-note" class="study-field mt-3 min-h-24 w-full" placeholder="My key takeaway…" aria-label="Personal study note"></textarea>
+        <button type="button" id="save-note" class="quiz-btn quiz-btn-primary mt-2">Save note</button><span id="note-status" class="ml-2 text-xs text-slate-500" aria-live="polite"></span>
+      </section>
 
       <nav class="mt-14 grid gap-3 border-t border-teal-deep/15 pt-6 sm:grid-cols-2" aria-label="Previous and next topic">
         {prev ? <a href={`${base}topics/${prev.id}/`} class="rounded-lg border border-teal-deep/20 p-3 hover:border-teal-deep"><span class="block text-xs text-slate-500">← Previous</span>{prev.data.title}</a> : <span />}
@@ -56,8 +64,9 @@ const partLabel = entry.data.part === 'pathology' ? 'Pathology' : 'Anatomy & phy
     </aside>
   </div>
 </Base>
-<script>
-  import { getLearned, setLearned } from '../../lib/study-store';
+<script define:vars={{ slug: entry.id }}>
+  import { getLearned, setLearned, getBookmarks, toggleBookmark, getNotes, setNote, touch } from '../../lib/study-store';
+  touch(slug);
   const btn = document.getElementById('learned-btn') as HTMLButtonElement;
   const paint = () => {
     const on = getLearned().has(btn.dataset.slug!);
@@ -69,5 +78,10 @@ const partLabel = entry.data.part === 'pathology' ? 'Pathology' : 'Anatomy & phy
     paint(); dispatchEvent(new Event('gi-atlas:change'));
   });
   paint();
+  const bm = document.getElementById('bookmark-btn') as HTMLButtonElement;
+  const paintBookmark = () => { const on=getBookmarks().has(slug); bm.setAttribute('aria-pressed',String(on)); bm.textContent=on?'★ Bookmarked':'☆ Bookmark'; };
+  bm.addEventListener('click',()=>{toggleBookmark('{entry.id}');paintBookmark();}); paintBookmark();
+  const note=document.getElementById('topic-note') as HTMLTextAreaElement, status=document.getElementById('note-status')!; note.value=getNotes()[slug] ?? '';
+  document.getElementById('save-note')!.addEventListener('click',()=>{setNote(slug,note.value);status.textContent='Saved'; setTimeout(()=>status.textContent='',1600);});
   addEventListener('storage', paint);
 </script>

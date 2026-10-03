@@ -18,6 +18,7 @@ const base = import.meta.env.BASE_URL;
         <select id="f-size" class="study-field mt-1 block w-full"><option>10</option><option selected>20</option><option>50</option><option value="0">All</option></select>
       </label>
       <label class="flex items-center gap-2 self-end pb-1.5 text-sm"><input id="f-unlearned" type="checkbox" class="h-4 w-4 accent-teal-700" /> Only topics not learned yet</label>
+      <label class="flex items-center gap-2 text-sm"><input id="f-exam" type="checkbox" class="h-4 w-4 accent-teal-700" /> Timed exam mode <span class="text-xs text-slate-500">(60 sec)</span></label>
       <div class="sm:col-span-2 flex flex-wrap items-center gap-3">
         <button type="submit" class="quiz-btn quiz-btn-primary" id="start-btn" disabled>Start quiz</button>
         <span id="match-count" class="text-sm text-slate-500" aria-live="polite">Loading cards…</span>
@@ -26,10 +27,10 @@ const base = import.meta.env.BASE_URL;
     </form>
 
     <section id="quiz-card" class="mt-6 hidden" aria-live="polite" aria-label="Quiz card">
-      <div class="flex items-center justify-between text-xs text-slate-500"><span id="q-pos"></span><span id="q-meta"></span></div>
+      <div class="flex items-center justify-between text-xs text-slate-500"><span id="q-pos"></span><span id="q-timer" class="font-semibold text-coral"></span><span id="q-meta"></span></div>
       <div class="mt-2 rounded-xl border border-teal-deep/20 bg-white p-5 dark:bg-slate-900">
         <p id="q-text" class="font-display text-xl leading-snug"></p>
-        <p id="q-answer" class="mt-4 hidden rounded-lg bg-sage p-3 text-[0.95rem] leading-relaxed dark:bg-teal-900/30"></p>
+          <div id="q-explanation" class="mt-4 hidden rounded-lg bg-sage p-3 dark:bg-teal-900/30"><p class="text-xs font-bold uppercase tracking-wider text-coral">Explanation</p><p id="q-answer" class="mt-1 text-[0.95rem] leading-relaxed"></p></div>
       </div>
       <div class="mt-4 flex flex-wrap gap-3">
         <button type="button" id="reveal-btn" class="quiz-btn quiz-btn-primary">Show answer <span class="text-xs opacity-80">(Space)</span></button>
@@ -57,9 +58,9 @@ const base = import.meta.env.BASE_URL;
   type Card = { id: string; slug: string; title: string; part: string; group: string; q: string; a: string };
   const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
   const root = $('quiz-root');
-  const fPart = $<HTMLSelectElement>('f-part'), fGroup = $<HTMLSelectElement>('f-group'), fSize = $<HTMLSelectElement>('f-size');
+  const fPart = $<HTMLSelectElement>('f-part'), fGroup = $<HTMLSelectElement>('f-group'), fSize = $<HTMLSelectElement>('f-size'), fExam = $<HTMLInputElement>('f-exam');
   const fUnl = $<HTMLInputElement>('f-unlearned'), startBtn = $<HTMLButtonElement>('start-btn'), count = $('match-count');
-  let deck: Card[] = [], queue: Card[] = [], idx = 0, got = 0, missed: Card[] = [], revealed = false, active = false;
+  let deck: Card[] = [], queue: Card[] = [], idx = 0, got = 0, missed: Card[] = [], revealed = false, active = false, timer = 0, clock = 0;
 
   const show = (id: string, on: boolean) => $(id).classList.toggle('hidden', !on);
   const matching = () => {
@@ -88,6 +89,7 @@ const base = import.meta.env.BASE_URL;
     const size = Number(fSize.value);
     queue = size ? shuffled.slice(0, size) : shuffled;
     idx = 0; got = 0; missed = []; active = true;
+    clearInterval(clock); timer = fExam.checked ? 60 : 0; $('q-timer').textContent = timer ? `⏱ ${timer}s` : ''; if(timer) clock=window.setInterval(()=>{ timer--; $('q-timer').textContent=`⏱ ${timer}s`; if(timer<=0){clearInterval(clock); finish();}},1000);
     show('quiz-setup', false); show('quiz-summary', false); show('quiz-card', true);
     render();
   }
@@ -98,13 +100,13 @@ const base = import.meta.env.BASE_URL;
     $('q-meta').textContent = `${c.title} · box ${getBoxes()[c.id] ?? 1}`;
     $('q-text').textContent = c.q;
     $('q-answer').textContent = c.a;
-    show('q-answer', false); show('got-btn', false); show('again-btn', false); show('reveal-btn', true);
+    show('q-explanation', false); show('got-btn', false); show('again-btn', false); show('reveal-btn', true);
     $('reveal-btn').focus();
   }
   function reveal() {
     if (!active || revealed) return;
     revealed = true;
-    show('q-answer', true); show('reveal-btn', false); show('got-btn', true); show('again-btn', true);
+    show('q-explanation', true); show('reveal-btn', false); show('got-btn', true); show('again-btn', true);
     $('got-btn').focus();
   }
   function answer(gotIt: boolean) {
@@ -116,6 +118,7 @@ const base = import.meta.env.BASE_URL;
   }
   function finish() {
     active = false;
+    clearInterval(clock);
     show('quiz-card', false); show('quiz-summary', true);
     const total = queue.length;
     $('sum-text').textContent = `You got ${got} of ${total} (${total ? Math.round((got / total) * 100) : 0}%). Missed cards drop to box 1 and come back first next time.`;
