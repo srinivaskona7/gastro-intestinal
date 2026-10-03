@@ -1,0 +1,13 @@
+---
+// Self-test: question visible, answer behind a native <details> (no JS needed).
+interface Props { cards: { q: string; a: string }[] }
+const { cards } = Astro.props;
+---
+<section class="not-prose my-8 space-y-2" aria-label="Self-test">
+  {cards.map((c) => (
+    <details class="group rounded-lg border border-teal-deep/20 bg-white px-4 py-3 open:bg-sage dark:bg-slate-900 dark:open:bg-teal-900/30">
+      <summary class="cursor-pointer select-none font-medium marker:text-coral">{c.q}</summary>
+      <p class="mt-2 text-[0.95rem] leading-relaxed text-slate-700 dark:text-slate-300">{c.a}</p>
+    </details>
+  ))}
+</section>

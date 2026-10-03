@@ -1,0 +1,72 @@
+---
+title: Mallory-Weiss tear
+part: pathology
+group: Oesophagus
+order: 11
+summary: A longitudinal mucosal tear at the gastro-oesophageal junction caused by a sudden rise in abdominal pressure, usually after forceful vomiting.
+highYield:
+  - Linear mucosal (not full-thickness) tear at the gastro-oesophageal junction.
+  - Classic story is forceful retching or vomiting, then haematemesis.
+  - Diagnosis is by endoscopy; most tears stop bleeding without treatment.
+  - Boerhaave syndrome is the dangerous look-alike, a full-thickness rupture.
+tags: [upper GI bleed, oesophagus, haematemesis]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+A **Mallory-Weiss tear** is a **longitudinal laceration of the mucosa** where the oesophagus meets the stomach. Only the lining tears, so the wall stays intact and the bleeding is usually minor.
+
+## Why it happens
+
+Anything that suddenly raises intra-abdominal pressure can split the mucosa at the junction:
+
+- Forceful or repeated vomiting and retching (the classic trigger, often after heavy alcohol intake)
+- Severe coughing
+- Straining or heavy lifting
+
+About three quarters of patients also have a **hiatus hernia**, which leaves the junction less supported.
+
+<Mermaid
+  caption="From pressure spike to bleed"
+  chart={`flowchart LR
+  A[Forceful vomiting or coughing] --> B[Intra-abdominal pressure rises]
+  B --> C[Mucosa tears at gastro-oesophageal junction]
+  C --> D[Minor upper GI bleed]
+  D --> E{Self-limiting?}
+  E -- Usually --> F[Heals, supportive care]
+  E -- Rarely --> G[Endoscopic or surgical haemostasis]`}
+/>
+
+## What you see
+
+| Feature | Detail |
+|---|---|
+| Lesion | Single linear mucosal tear at the gastro-oesophageal junction |
+| Symptoms | Haematemesis, epigastric or chest pain, sometimes dysphagia |
+| Bleeding | Minor upper GI bleed |
+
+## Diagnosis and management
+
+- **Endoscopy** confirms the tear and excludes other bleeding sources.
+- Most cases are **self-limiting** and need only supportive care.
+- Surgery is rarely required.
+
+<Callout kind="warning" title="Do not confuse with Boerhaave syndrome">
+Boerhaave syndrome is a **full-thickness oesophageal rupture** after vomiting. It presents with severe chest pain and sepsis risk, and is a surgical emergency. A Mallory-Weiss tear is mucosal only.
+</Callout>
+
+<Callout kind="pearl">
+Vomiting first, blood second: think Mallory-Weiss. Bleeding with no preceding retching shifts the differential towards ulcer or varices.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Which layer is torn in a Mallory-Weiss tear?', a: 'Only the mucosa, as a longitudinal tear at the gastro-oesophageal junction.' },
+  { q: 'What is the classic trigger?', a: 'A sudden rise in intra-abdominal pressure, typically forceful vomiting or retching.' },
+  { q: 'How is it diagnosed and usually managed?', a: 'Endoscopy confirms it; most tears are self-limiting and need supportive care only.' },
+  { q: 'How does it differ from Boerhaave syndrome?', a: 'Boerhaave is a full-thickness rupture and a surgical emergency; Mallory-Weiss is a mucosal tear with minor bleeding.' },
+]} />

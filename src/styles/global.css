@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/newsreader';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Newsreader Variable', Georgia, serif;
+  --color-paper: #faf8f5;
+  --color-ink: #1e293b;
+  --color-teal-deep: #115e59;
+  --color-sage: #f0f5f3;
+  --color-coral: #e05a47;
+}
+
+:root { color-scheme: light; }
+.dark { color-scheme: dark; }
+
+body { @apply bg-paper text-ink font-sans antialiased; }
+.dark body { background: #0f1716; color: #e2e8f0; }
+
+h1, h2, h3, .font-display { font-family: var(--font-serif); }
+
+/* Long-form reading column */
+.prose { --tw-prose-body: var(--color-ink); max-width: 760px; }
+.prose h2 { @apply mt-12 border-b border-teal-deep/20 pb-1 text-teal-deep; scroll-margin-top: 5rem; }
+.dark .prose h2 { @apply text-teal-300 border-teal-300/20; }
+.prose h3 { scroll-margin-top: 5rem; }
+.dark .prose { --tw-prose-body: #e2e8f0; --tw-prose-headings: #f1f5f9; --tw-prose-bold: #f8fafc;
+  --tw-prose-th-borders: #334155; --tw-prose-td-borders: #1e293b; --tw-prose-links: #5eead4;
+  --tw-prose-bullets: #5eead4; --tw-prose-counters: #5eead4; --tw-prose-hr: #334155; --tw-prose-quotes: #e2e8f0; }
+.prose table { @apply text-sm; }
+.prose thead th { @apply bg-sage text-teal-deep; }
+.dark .prose thead th { background: #14302d; color: #99f6e4; }
+.prose :where(table) { display: block; overflow-x: auto; }
+
+/* Diagrams always sit on a light card so one Mermaid theme works in both modes */
+.diagram { @apply my-8 rounded-xl border border-teal-deep/15 bg-white p-4 shadow-sm; }
+.diagram pre.mermaid { @apply m-0 overflow-x-auto bg-transparent p-0 text-center text-slate-800; }
+.diagram figcaption { @apply mt-3 text-center text-sm italic text-slate-500; }
+
+.skip-link { @apply sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-50 focus:rounded focus:bg-teal-deep focus:px-3 focus:py-2 focus:text-white; }
+
+@media print { header, footer, .no-print { display: none !important; } }

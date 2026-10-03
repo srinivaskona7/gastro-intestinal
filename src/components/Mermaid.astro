@@ -1,0 +1,9 @@
+---
+// Pass the diagram source as a template literal; rendered client-side (see Base.astro).
+interface Props { chart: string; caption?: string }
+const { chart, caption } = Astro.props;
+---
+<figure class="diagram not-prose">
+  <pre class="mermaid">{chart.trim()}</pre>
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>

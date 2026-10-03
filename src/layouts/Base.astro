@@ -1,0 +1,86 @@
+---
+import '../styles/global.css';
+interface Props { title?: string; description?: string }
+const { title, description = 'Free, diagram-rich study notes on the gastrointestinal system for medical students.' } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const fullTitle = title ? `${title} · GI Atlas` : 'GI Atlas — gastrointestinal system study notes';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{fullTitle}</title>
+    <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
+    <script is:inline>
+      // Set theme before paint to avoid a flash
+      const t = localStorage.getItem('theme');
+      if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.classList.add('dark');
+    </script>
+  </head>
+  <body class="min-h-screen">
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header class="sticky top-0 z-30 border-b border-teal-deep/15 bg-paper/90 backdrop-blur dark:bg-[#0f1716]/90">
+      <div class="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3">
+        <a href={base} class="font-display text-xl font-semibold text-teal-deep dark:text-teal-300">GI Atlas</a>
+        <nav class="ml-2 hidden gap-4 text-sm sm:flex" aria-label="Main">
+          <a href={`${base}topics/#anatomy-physiology`} class="hover:text-coral">Anatomy &amp; physiology</a>
+          <a href={`${base}topics/#pathology`} class="hover:text-coral">Pathology</a>
+        </nav>
+        <div class="ml-auto flex items-center gap-2">
+          <button id="open-search" class="flex items-center gap-2 rounded-md border border-teal-deep/25 px-3 py-1.5 text-sm text-slate-500 hover:border-teal-deep dark:text-slate-400" aria-label="Search topics">
+            <span>Search</span><kbd class="hidden rounded bg-sage px-1.5 text-xs dark:bg-teal-900/40 sm:inline">Ctrl K</kbd>
+          </button>
+          <button id="toggle-theme" class="rounded-md border border-teal-deep/25 px-2.5 py-1.5 text-sm" aria-label="Toggle dark mode">◐</button>
+        </div>
+      </div>
+    </header>
+
+    <dialog id="search-dialog" class="m-auto mt-20 w-[min(42rem,94vw)] rounded-xl border border-teal-deep/25 bg-paper p-4 text-ink backdrop:bg-black/40 dark:bg-[#0f1716] dark:text-slate-100">
+      <div id="search"></div>
+      <p id="search-fallback" class="hidden text-sm text-slate-500">Search is built with the site — run <code>npm run build &amp;&amp; npm run preview</code> to try it locally.</p>
+    </dialog>
+
+    <main id="main"><slot /></main>
+
+    <footer class="mt-20 border-t border-teal-deep/15 py-8 text-center text-xs text-slate-500">
+      <p>Original study notes for education. Not medical advice; verify against current guidelines before clinical use.</p>
+    </footer>
+
+    <script define:vars={{ base }}>
+      const dlg = document.getElementById('search-dialog');
+      let ready = false;
+      async function openSearch() {
+        dlg.showModal();
+        if (ready) return;
+        try {
+          const link = Object.assign(document.createElement('link'), { rel: 'stylesheet', href: `${base}pagefind/pagefind-ui.css` });
+          document.head.append(link);
+          await new Promise((res, rej) => { const s = Object.assign(document.createElement('script'), { src: `${base}pagefind/pagefind-ui.js`, onload: res, onerror: rej }); document.head.append(s); });
+          new PagefindUI({ element: '#search', showSubResults: true, resetStyles: false, baseUrl: base });
+          ready = true;
+        } catch { document.getElementById('search-fallback').classList.remove('hidden'); }
+        setTimeout(() => dlg.querySelector('input')?.focus(), 50);
+      }
+      document.getElementById('open-search').addEventListener('click', openSearch);
+      dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+      addEventListener('keydown', (e) => { if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); openSearch(); } });
+      document.getElementById('toggle-theme').addEventListener('click', () => {
+        const dark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', dark ? 'dark' : 'light');
+      });
+    </script>
+    <script>
+      // Mermaid is heavy: load it only on pages that contain a diagram.
+      if (document.querySelector('pre.mermaid')) {
+        import('mermaid').then(({ default: mermaid }) => {
+          mermaid.initialize({ startOnLoad: false, theme: 'base', securityLevel: 'strict', fontFamily: 'Inter Variable, sans-serif',
+            themeVariables: { primaryColor: '#e6f2f0', primaryBorderColor: '#115e59', primaryTextColor: '#1e293b', lineColor: '#475569', secondaryColor: '#fde8e4', tertiaryColor: '#f0f5f3' },
+            flowchart: { useMaxWidth: true, htmlLabels: true } });
+          mermaid.run({ querySelector: 'pre.mermaid' });
+        });
+      }
+    </script>
+  </body>
+</html>

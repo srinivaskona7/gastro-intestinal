@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GI Atlas - Gastrointestinal Reference &amp; High-Yield USMLE Study</title>
+<!-- Google Fonts: Newsreader (Editorial Serif) & Inter (Sans UI) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim from theme specs -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary-fixed-variant": "#424847",
+            "on-primary": "#ffffff",
+            "error-container": "#ffdad6",
+            "on-background": "#111c2d",
+            "inverse-surface": "#263143",
+            "on-secondary-fixed": "#171d1c",
+            "primary-fixed-dim": "#8fd3cc",
+            "surface-container-lowest": "#ffffff",
+            "primary": "#004541",
+            "secondary-fixed-dim": "#c2c8c6",
+            "surface-container-high": "#dee8ff",
+            "on-error": "#ffffff",
+            "outline-variant": "#bec9c7",
+            "on-primary-fixed": "#00201e",
+            "surface-dim": "#cfdaf2",
+            "on-error-container": "#93000a",
+            "background": "#f9f9ff",
+            "tertiary-fixed": "#ffdad4",
+            "on-surface": "#111c2d",
+            "surface-variant": "#d8e3fb",
+            "surface-container-low": "#f0f3ff",
+            "tertiary-fixed-dim": "#ffb4a8",
+            "on-tertiary-fixed": "#410100",
+            "secondary": "#5a5f5e",
+            "on-secondary-container": "#606564",
+            "surface": "#f9f9ff",
+            "inverse-on-surface": "#ecf1ff",
+            "secondary-container": "#dee4e2",
+            "outline": "#6f7977",
+            "primary-container": "#115e59",
+            "surface-container": "#e7eeff",
+            "surface-container-highest": "#d8e3fb",
+            "inverse-primary": "#8fd3cc",
+            "on-secondary": "#ffffff",
+            "surface-bright": "#f9f9ff",
+            "on-tertiary-container": "#ffb8ac",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#3f4947",
+            "tertiary-container": "#9d2a1c",
+            "primary-fixed": "#abefe8",
+            "tertiary": "#7c1107",
+            "error": "#ba1a1a",
+            "surface-tint": "#216963",
+            "on-primary-container": "#91d5ce",
+            "on-tertiary-fixed-variant": "#8a1c10",
+            "on-primary-fixed-variant": "#00504b",
+            "secondary-fixed": "#dee4e2"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin-mobile": "1rem",
+            "gutter": "1.5rem",
+            "gutter-mobile": "1rem",
+            "gutter-desktop": "2.5rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "space-md": "1rem",
+            "margin-desktop": "4rem",
+            "space-sm": "0.5rem",
+            "margin": "1.5rem",
+            "space-xl": "2.5rem"
+          },
+          "fontFamily": {
+            "label-md": ["Inter"],
+            "headline-lg-mobile": ["Newsreader"],
+            "code-clinical": ["Inter"],
+            "headline-sm": ["Newsreader"],
+            "label-caps": ["Inter"],
+            "label-lg": ["Inter"],
+            "headline-lg": ["Newsreader"],
+            "body-md": ["Inter"],
+            "body-sm": ["Inter"],
+            "headline-md": ["Newsreader"],
+            "body-lead": ["Newsreader"],
+            "display-hero-mobile": ["Newsreader"],
+            "display-hero": ["Newsreader"]
+          },
+          "fontSize": {
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.025em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "code-clinical": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "headline-sm": ["21px", { "lineHeight": "28px", "letterSpacing": "0", "fontWeight": "500" }],
+            "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "400" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400" }],
+            "headline-md": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "body-lead": ["19px", { "lineHeight": "30px", "letterSpacing": "0.005em", "fontWeight": "400" }],
+            "display-hero-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.015em", "fontWeight": "400" }],
+            "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scroll-hidden::-webkit-scrollbar {
+      display: none;
+    }
+    .custom-scroll-hidden {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased font-body-md text-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- 1. TopNavBar (Shared Component JSON Source of Truth) -->
+<header class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline docked full-width top-0 sticky z-50">
+<div class="max-w-[1240px] mx-auto px-4 md:px-8 h-14 flex items-center justify-between gap-4">
+<!-- Brand & Left Search Cluster -->
+<div class="flex items-center gap-6">
+<a class="flex items-center gap-2 group" href="#">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">biotech</span>
+</div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm font-medium tracking-tight text-primary dark:text-primary-fixed">GI Atlas</span>
+<span class="bg-secondary-container text-on-secondary-fixed font-code-clinical text-[10px] px-1.5 py-0.5 rounded tracking-wider border border-outline-variant">MED-ED</span>
+</div>
+</a>
+<!-- Prominent Left Search Bar (Shared spec search_bar: 'on_left') -->
+<div class="hidden lg:flex items-center relative w-80">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[18px]">search</span>
+<input class="w-full pl-9 pr-14 py-1.5 bg-surface-container-lowest border border-outline-variant rounded-lg text-body-sm font-body-sm text-on-surface placeholder:text-secondary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-150" placeholder="Search anatomical structures, histology..." type="text"/>
+<div class="absolute right-2 px-1.5 py-0.5 border border-outline-variant rounded bg-surface-container-low text-secondary font-code-clinical text-[10px]">
+            Ctrl K
+          </div>
+</div>
+</div>
+<!-- Navigation Links from Shared JSON -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1 font-label-md text-label-md transition-colors duration-150" href="#curriculum">Curriculum</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-150" href="#pathology">Pathology</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-150" href="#high-yield">USMLE High-Yield</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-150" href="#differentials">Differentials</a>
+</nav>
+<!-- Trailing Action Icons (bookmark, dark_mode) -->
+<div class="flex items-center gap-3">
+<button aria-label="Saved Bookmarks" class="p-2 text-on-surface-variant hover:text-primary transition-colors duration-150 rounded-lg border border-transparent hover:border-outline-variant" type="button">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</button>
+<button aria-label="Toggle Night Mode" class="p-2 text-on-surface-variant hover:text-primary transition-colors duration-150 rounded-lg border border-transparent hover:border-outline-variant" id="theme-toggle" type="button">
+<span class="material-symbols-outlined text-[20px]">dark_mode</span>
+</button>
+<a class="hidden sm:inline-flex items-center gap-1.5 bg-primary-container text-on-primary px-3.5 py-1.5 rounded text-label-md font-label-md hover:bg-primary transition-colors" href="#high-yield">
+<span>High-Yield Bank</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Main Content Spine (Sidebar-Free Academic Canvas) -->
+<main class="w-full">
+<!-- 2. Hero Section -->
+<section class="max-w-[1240px] mx-auto px-4 md:px-8 pt-12 pb-16 border-b border-outline-variant">
+<div class="max-w-[840px] mx-auto text-center flex flex-col items-center">
+<!-- Category Badge -->
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-surface-container-lowest border border-outline-variant text-primary font-label-caps text-label-caps tracking-widest mb-6">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span>
+          OPEN MEDICAL EDUCATION • USMLE &amp; CLINICAL CLERKSHIP
+        </div>
+<!-- Main Headline -->
+<h1 class="font-display-hero text-display-hero text-on-surface mb-6 tracking-tight">
+          Understand the gut, <span class="italic font-display-hero text-primary-container">one concept at a time</span>
+</h1>
+<!-- Subtitle -->
+<p class="font-body-lead text-body-lead text-secondary max-w-[720px] mb-8 leading-relaxed">
+          A peer-reviewed anatomical and histopathological visual atlas engineered for medical students. Master gastrointestinal physiology, embryology, and clinical pathology with interactive diagrams and high-yield board pearls.
+        </p>
+<!-- Dual Call-to-Action Buttons -->
+<div class="flex flex-wrap items-center justify-center gap-4 mb-12">
+<a class="inline-flex items-center gap-2 bg-primary-container text-on-primary px-6 py-3 rounded text-label-lg font-label-lg hover:bg-primary transition-all duration-150 shadow-sm" href="#anatomy-section">
+<span>Start with anatomy</span>
+<span class="material-symbols-outlined text-[18px]">east</span>
+</a>
+<a class="inline-flex items-center gap-2 bg-surface-container-lowest text-primary-container border border-primary-container px-6 py-3 rounded text-label-lg font-label-lg hover:bg-surface-container-low transition-all duration-150" href="#pathology">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Browse pathology</span>
+</a>
+</div>
+<!-- Quick Stats Row -->
+<div class="w-full grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-outline-variant text-left">
+<div class="flex items-center gap-3 p-2">
+<span class="material-symbols-outlined text-primary-container text-[24px]">schema</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold">8</div>
+<div class="font-label-caps text-label-caps text-secondary uppercase">Organ Systems</div>
+</div>
+</div>
+<div class="flex items-center gap-3 p-2">
+<span class="material-symbols-outlined text-primary-container text-[24px]">assignment</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold">140+</div>
+<div class="font-label-caps text-label-caps text-secondary uppercase">Clinical Vignettes</div>
+</div>
+</div>
+<div class="flex items-center gap-3 p-2">
+<span class="material-symbols-outlined text-tertiary-container text-[24px]">verified</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold">Step 1 &amp; 2</div>
+<div class="font-label-caps text-label-caps text-secondary uppercase">Aligned Pearls</div>
+</div>
+</div>
+<div class="flex items-center gap-3 p-2">
+<span class="material-symbols-outlined text-primary-container text-[24px]">lock_open</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold">100% Free</div>
+<div class="font-label-caps text-label-caps text-secondary uppercase">Open-Access</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Stylised Body-System Diagram Strip (Interactive Organ Continuum) -->
+<section class="max-w-[1240px] mx-auto px-4 md:px-8 py-12 border-b border-outline-variant">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<div>
+<div class="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-1">Interactive Continuum</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Anatomical Pathway</h2>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Explore the continuous gastrointestinal tract from oral cavity to terminal anorectum.</p>
+</div>
+<div class="flex items-center gap-2 text-label-md font-label-md text-secondary">
+<span class="material-symbols-outlined text-[16px]">touch_app</span>
+<span>Click any landmark to filter curricula</span>
+</div>
+</div>
+<!-- Horizontal Interconnected Organ Ribbon -->
+<div class="relative overflow-x-auto custom-scroll-hidden pb-4">
+<div class="flex items-center min-w-[1100px] gap-2">
+<!-- Node 1: Mouth -->
+<button class="group flex-1 flex flex-col items-center p-3 rounded bg-surface-container-lowest border border-outline-variant hover:border-primary-container hover:bg-surface-container-low transition-all duration-150 text-center" type="button">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary-container mb-2 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">dentistry</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface block leading-tight">Oral Cavity</span>
+<span class="font-code-clinical text-[11px] text-secondary mt-1">11 topics</span>
+</button>
+<span class="material-symbols-outlined text-outline-variant text-[18px]">arrow_forward</span>
+<!-- Node 2: Oesophagus -->
+<button class="group flex-1 flex flex-col items-center p-3 rounded bg-surface-container-lowest border border-outline-variant hover:border-primary-container hover:bg-surface-container-low transition-all duration-150 text-center" type="button">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary-container mb-2 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">straight</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface block leading-tight">Oesophagus</span>
+<span class="font-code-clinical text-[11px] text-secondary mt-1">14 topics</span>
+</button>
+<span class="material-symbols-outlined text-outline-variant text-[18px]">arrow_forward</span>
+<!-- Node 3: Stomach -->
+<button class="group flex-1 flex flex-col items-center p-3 rounded bg-surface-container-lowest border border-primary-container bg-surface-container-low transition-all duration-150 text-center ring-1 ring-primary-container" type="button">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-[20px]">science</span>
+</div>
+<span class="font-label-md text-label-md text-primary-container font-bold block leading-tight">Stomach</span>
+<span class="font-code-clinical text-[11px] text-primary-container mt-1">19 topics</span>
+</button>
+<span class="material-symbols-outlined text-outline-variant text-[18px]">arrow_forward</span>
+<!-- Node 4: Liver & Gallbladder -->
+<button class="group flex-1 flex flex-col items-center p-3 rounded bg-surface-container-lowest border border-outline-variant hover:border-primary-container hover:bg-surface-container-low transition-all duration-150 text-center" type="button">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary-container mb-2 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">water_drop</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface block leading-tight">Liver &amp; Gallbladder</span>
+<span class="font-code-clinical text-[11px] text-secondary mt-1">22 topics</span>
+</button>
+<span class="material-symbols-outlined text-outline-variant text-[18px]">arrow_forward</span>
+<!-- Node 5: Pancreas -->
+<button class="group flex-1 flex flex-col items-center p-3 rounded bg-surface-container-lowest border border-outline-variant hover:border-primary-container hover:bg-surface-container-low transition-all duration-150 text-center" type="button">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary-container mb-2 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">vital_signs</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface block leading-tight">Pancreas</span>
+<span class="font-code-clinical text-[11px] text-secondary mt-1">16 topics</span>
+</button>
+<span class="material-symbols-outlined text-outline-variant text-[18px]">arrow_forward</span>
+<!-- Node 6: Small Bowel -->
+<button class="group flex-1 flex flex-col items-center p-3 rounded bg-surface-container-lowest border border-outline-variant hover:border-primary-container hover:bg-surface-container-low transition-all duration-150 text-center" type="button">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary-container mb-2 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">grain</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface block leading-tight">Small Bowel</span>
+<span class="font-code-clinical text-[11px] text-secondary mt-1">24 topics</span>
+</button>
+<span class="material-symbols-outlined text-outline-variant text-[18px]">arrow_forward</span>
+<!-- Node 7: Colon -->
+<button class="group flex-1 flex flex-col items-center p-3 rounded bg-surface-container-lowest border border-outline-variant hover:border-primary-container hover:bg-surface-container-low transition-all duration-150 text-center" type="button">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary-container mb-2 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">alt_route</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface block leading-tight">Colon</span>
+<span class="font-code-clinical text-[11px] text-secondary mt-1">18 topics</span>
+</button>
+<span class="material-symbols-outlined text-outline-variant text-[18px]">arrow_forward</span>
+<!-- Node 8: Anorectum -->
+<button class="group flex-1 flex flex-col items-center p-3 rounded bg-surface-container-lowest border border-outline-variant hover:border-primary-container hover:bg-surface-container-low transition-all duration-150 text-center" type="button">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary-container mb-2 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">adjust</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface block leading-tight">Anorectum</span>
+<span class="font-code-clinical text-[11px] text-secondary mt-1">9 topics</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 4. Section: Anatomy and Physiology (7 Cards Grid) -->
+<section class="max-w-[1240px] mx-auto px-4 md:px-8 py-16 border-b border-outline-variant" id="anatomy-section">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between mb-8 gap-4">
+<div>
+<div class="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-1">Foundational Foundations</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Anatomy and physiology</h2>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Fundamental macrostructure, microscopic histology, innervation, and secretory dynamics.</p>
+</div>
+<!-- Filter Pill Selector -->
+<div class="flex items-center gap-2 p-1 bg-surface-container-lowest border border-outline-variant rounded">
+<button class="px-3 py-1 rounded bg-primary-container text-on-primary font-label-md text-label-md" type="button">All 7</button>
+<button class="px-3 py-1 rounded text-secondary hover:text-on-surface font-label-md text-label-md transition-colors" type="button">Secretory</button>
+<button class="px-3 py-1 rounded text-secondary hover:text-on-surface font-label-md text-label-md transition-colors" type="button">Vascular &amp; Nerves</button>
+<button class="px-3 py-1 rounded text-secondary hover:text-on-surface font-label-md text-label-md transition-colors" type="button">Motility</button>
+</div>
+</div>
+<!-- Asymmetrical Bento-style Grid for 7 Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 (Featured span 2 on desktop) -->
+<article class="md:col-span-2 lg:col-span-2 p-6 rounded bg-surface-container-lowest border border-outline-variant hover:border-primary-container transition-colors duration-150 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-3">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary-container border border-outline-variant font-label-md text-label-md">Physiology</span>
+<span class="px-2 py-0.5 rounded bg-[#FEF2F0] border border-[#E05A47]/30 text-[#E05A47] font-label-caps text-label-caps flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#E05A47]"></span>
+                  HIGH-YIELD PEARL
+                </span>
+</div>
+<span class="font-code-clinical text-[12px] text-secondary">7 min read</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2 hover:text-primary-container cursor-pointer transition-colors">
+              Gastric Acid Secretion &amp; Parietal Cell Dynamics
+            </h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed mb-4">
+              Role of H+/K+ ATPase, ECL histamine release, gastrin regulation, and pharmacologic inhibition by PPIs. Detailed analysis of basolateral HCO3-/Cl- antiporter producing the postprandial "alkaline tide".
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+<div class="font-code-clinical text-primary text-[12px] flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">biotech</span>
+<span>Histology: Canalicular branching &amp; tubulovesicles</span>
+</div>
+<a class="inline-flex items-center gap-1 text-primary-container hover:text-primary font-label-md text-label-md" href="#">
+<span>Study Module</span>
+<span class="material-symbols-outlined text-[16px]">north_east</span>
+</a>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="p-6 rounded bg-surface-container-lowest border border-outline-variant hover:border-primary-container transition-colors duration-150 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-3">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary-container font-label-md text-label-md">Histology</span>
+<span class="px-2 py-0.5 rounded bg-[#FEF2F0] border border-[#E05A47]/30 text-[#E05A47] font-label-caps text-label-caps">High-Yield</span>
+</div>
+<span class="font-code-clinical text-[12px] text-secondary">6 min read</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 hover:text-primary-container cursor-pointer transition-colors">
+              Hepatic Microarchitecture &amp; Acinus Zones 1–3
+            </h3>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4">
+              Centrilobular vulnerability to ischemia vs periportal metabolic competence in toxicologic injury. Zone 3 cytochrome P450 concentration explaining acetaminophen toxicity.
+            </p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between">
+<span class="font-code-clinical text-secondary text-[11px]">Rappaport Acinus</span>
+<a class="text-primary-container font-label-md text-label-md flex items-center gap-1 hover:underline" href="#">
+<span>Review</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="p-6 rounded bg-surface-container-lowest border border-outline-variant hover:border-primary-container transition-colors duration-150 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary-container font-label-md text-label-md">Neuroanatomy</span>
+<span class="font-code-clinical text-[12px] text-secondary">5 min read</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 hover:text-primary-container cursor-pointer transition-colors">
+              Enteric Nervous System: Myenteric &amp; Meissner Plexuses
+            </h3>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4">
+              Intrinsic motor innervation, peristaltic reflex arc, and autonomic sympathetic/parasympathetic tone modulation. Hirschsprung disease embryological neural crest cell arrest.
+            </p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between">
+<span class="font-code-clinical text-secondary text-[11px]">Auerbach vs Meissner</span>
+<a class="text-primary-container font-label-md text-label-md flex items-center gap-1 hover:underline" href="#">
+<span>Review</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="p-6 rounded bg-surface-container-lowest border border-outline-variant hover:border-primary-container transition-colors duration-150 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary-container font-label-md text-label-md">Biochem &amp; Physio</span>
+<span class="font-code-clinical text-[12px] text-secondary">8 min read</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 hover:text-primary-container cursor-pointer transition-colors">
+              Small Bowel Nutrient Absorption &amp; Brush Border Enzymology
+            </h3>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4">
+              Transport mechanisms for monosaccharides (SGLT1, GLUT5, GLUT2), dipeptides, micellar lipid uptake, and bile acid recycling in the distal terminal ileum.
+            </p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between">
+<span class="font-code-clinical text-secondary text-[11px]">Microvillus Border</span>
+<a class="text-primary-container font-label-md text-label-md flex items-center gap-1 hover:underline" href="#">
+<span>Review</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="p-6 rounded bg-surface-container-lowest border border-outline-variant hover:border-primary-container transition-colors duration-150 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-3">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary-container font-label-md text-label-md">Gross Anatomy</span>
+<span class="px-2 py-0.5 rounded bg-[#FEF2F0] border border-[#E05A47]/30 text-[#E05A47] font-label-caps text-label-caps">High-Yield</span>
+</div>
+<span class="font-code-clinical text-[12px] text-secondary">6 min read</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 hover:text-primary-container cursor-pointer transition-colors">
+              Celiac Trunk, SMA &amp; IMA Vascular Watersheds
+            </h3>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4">
+              Collateral arcades of Riolan, marginal artery of Drummond, and critical vulnerability at splenic flexure (Griffith point) during profound hypotensive collapse.
+            </p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between">
+<span class="font-code-clinical text-secondary text-[11px]">Angiography Guide</span>
+<a class="text-primary-container font-label-md text-label-md flex items-center gap-1 hover:underline" href="#">
+<span>Review</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 6 -->
+<article class="p-6 rounded bg-surface-container-lowest border border-outline-variant hover:border-primary-container transition-colors duration-150 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary-container font-label-md text-label-md">Physiology</span>
+<span class="font-code-clinical text-[12px] text-secondary">5 min read</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 hover:text-primary-container cursor-pointer transition-colors">
+              Exocrine Pancreatic Zymogens &amp; Bicarbonate Secretion
+            </h3>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4">
+              Secretin-driven ductal fluid production, CCK-mediated acinar enzyme release, and enterokinase activation preventing fatal premature autodigestion in acinar ducts.
+            </p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between">
+<span class="font-code-clinical text-secondary text-[11px]">CFTR &amp; Ductal Lumen</span>
+<a class="text-primary-container font-label-md text-label-md flex items-center gap-1 hover:underline" href="#">
+<span>Review</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 7 -->
+<article class="p-6 rounded bg-surface-container-lowest border border-outline-variant hover:border-primary-container transition-colors duration-150 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary-container font-label-md text-label-md">Motility</span>
+<span class="font-code-clinical text-[12px] text-secondary">4 min read</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 hover:text-primary-container cursor-pointer transition-colors">
+              Oesophageal Motility &amp; Lower Sphincter Tone
+            </h3>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4">
+              Primary vs secondary peristaltic waves, nitric oxide/VIP smooth muscle relaxation, and diaphragmatic crura antireflux mechanism preventing regurgitation.
+            </p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between">
+<span class="font-code-clinical text-secondary text-[11px]">High-Res Manometry</span>
+<a class="text-primary-container font-label-md text-label-md flex items-center gap-1 hover:underline" href="#">
+<span>Review</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+</section>
+<!-- 5. Section: Pathology (Grouped by Organ) -->
+<section class="max-w-[1240px] mx-auto px-4 md:px-8 py-16 border-b border-outline-variant" id="pathology">
+<div class="mb-10">
+<div class="font-label-caps text-label-caps text-tertiary-container uppercase tracking-widest mb-1">Clinical Disease Entities</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Pathology &amp; Clinical Medicine</h2>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Differential diagnosis, microscopic biopsy findings, pathophysiology, and classic board presentations.</p>
+</div>
+<!-- 3 Organ System Columns -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Group 1: Oesophagus & Stomach -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between pb-2 border-b-2 border-primary-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">lunch_dining</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Oesophagus &amp; Stomach</h3>
+</div>
+<span class="font-code-clinical text-[11px] text-secondary">2 Cases</span>
+</div>
+<!-- Card 1.1 -->
+<article class="p-5 rounded bg-surface-container-lowest border border-outline-variant hover:border-primary-container transition-colors duration-150 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-code-clinical text-[11px] px-2 py-0.5 rounded bg-surface-container text-primary-container">Pathology</span>
+<span class="px-2 py-0.5 rounded bg-[#FEF2F0] text-[#E05A47] font-label-caps text-label-caps">High-Yield</span>
+</div>
+<h4 class="font-headline-sm text-[18px] leading-snug text-on-surface mb-2 hover:text-primary-container cursor-pointer transition-colors">
+                Barrett Oesophagus &amp; Adenocarcinoma
+              </h4>
+<p class="font-body-sm text-body-sm text-secondary mb-4 leading-relaxed">
+                Intestinal metaplasia with goblet cells arising from chronic GERD; p53 dysregulation, endoscopic salmon-colored tongue extensions, and surveillance protocols.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between text-secondary">
+<span class="font-code-clinical text-[11px]">6 min read</span>
+<span class="material-symbols-outlined text-[16px] text-primary-container">arrow_forward</span>
+</div>
+</article>
+<!-- Card 1.2 -->
+<article class="p-5 rounded bg-surface-container-lowest border border-outline-variant hover:border-primary-container transition-colors duration-150 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-code-clinical text-[11px] px-2 py-0.5 rounded bg-surface-container text-primary-container">Microbiology</span>
+<span class="font-code-clinical text-[11px] text-secondary">8 min read</span>
+</div>
+<h4 class="font-headline-sm text-[18px] leading-snug text-on-surface mb-2 hover:text-primary-container cursor-pointer transition-colors">
+                Helicobacter pylori Gastritis &amp; Peptic Ulcer Disease
+              </h4>
+<p class="font-body-sm text-body-sm text-secondary mb-4 leading-relaxed">
+                Urease-positive antral predominant vs pangastritis, MALT lymphoma association, stool antigen verification, and bismuth quadruple eradication therapy.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between text-secondary">
+<span class="font-code-clinical text-[11px]">Warthin-Starry stain</span>
+<span class="material-symbols-outlined text-[16px] text-primary-container">arrow_forward</span>
+</div>
+</article>
+</div>
+<!-- Group 2: Hepatobiliary & Pancreas -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between pb-2 border-b-2 border-primary-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">heap_snapshot_large</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Hepatobiliary &amp; Pancreas</h3>
+</div>
+<span class="font-code-clinical text-[11px] text-secondary">2 Cases</span>
+</div>
+<!-- Card 2.1 -->
+<article class="p-5 rounded bg-surface-container-lowest border border-outline-variant hover:border-primary-container transition-colors duration-150 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-code-clinical text-[11px] px-2 py-0.5 rounded bg-surface-container text-primary-container">Clinical Path</span>
+<span class="px-2 py-0.5 rounded bg-[#FEF2F0] text-[#E05A47] font-label-caps text-label-caps">High-Yield</span>
+</div>
+<h4 class="font-headline-sm text-[18px] leading-snug text-on-surface mb-2 hover:text-primary-container cursor-pointer transition-colors">
+                Acute &amp; Chronic Pancreatitis
+              </h4>
+<p class="font-body-sm text-body-sm text-secondary mb-4 leading-relaxed">
+                Premature trypsinogen activation, fat necrosis with saponification (hypocalcemia), sentinel loop sign on abdominal radiograph, and pseudocyst formation.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between text-secondary">
+<span class="font-code-clinical text-[11px]">9 min read</span>
+<span class="material-symbols-outlined text-[16px] text-primary-container">arrow_forward</span>
+</div>
+</article>
+<!-- Card 2.2 -->
+<article class="p-5 rounded bg-surface-container-lowest border border-outline-variant hover:border-primary-container transition-colors duration-150 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-code-clinical text-[11px] px-2 py-0.5 rounded bg-surface-container text-primary-container">Hepatology</span>
+<span class="px-2 py-0.5 rounded bg-[#FEF2F0] text-[#E05A47] font-label-caps text-label-caps">High-Yield</span>
+</div>
+<h4 class="font-headline-sm text-[18px] leading-snug text-on-surface mb-2 hover:text-primary-container cursor-pointer transition-colors">
+                Cirrhosis, Portal Hypertension &amp; Ascites
+              </h4>
+<p class="font-body-sm text-body-sm text-secondary mb-4 leading-relaxed">
+                Stellate cell TGF-beta activation, bridging fibrosis, regenerative nodules, serum-ascites albumin gradient (SAAG), and esophageal varices shunting.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between text-secondary">
+<span class="font-code-clinical text-[11px]">10 min read</span>
+<span class="material-symbols-outlined text-[16px] text-primary-container">arrow_forward</span>
+</div>
+</article>
+</div>
+<!-- Group 3: Intestines & Colon -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between pb-2 border-b-2 border-primary-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">polyline</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Intestines &amp; Colon</h3>
+</div>
+<span class="font-code-clinical text-[11px] text-secondary">2 Cases</span>
+</div>
+<!-- Card 3.1 -->
+<article class="p-5 rounded bg-surface-container-lowest border border-outline-variant hover:border-primary-container transition-colors duration-150 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-code-clinical text-[11px] px-2 py-0.5 rounded bg-surface-container text-primary-container">Immunology</span>
+<span class="px-2 py-0.5 rounded bg-[#FEF2F0] text-[#E05A47] font-label-caps text-label-caps">High-Yield</span>
+</div>
+<h4 class="font-headline-sm text-[18px] leading-snug text-on-surface mb-2 hover:text-primary-container cursor-pointer transition-colors">
+                Inflammatory Bowel Disease: Crohn vs Ulcerative Colitis
+              </h4>
+<p class="font-body-sm text-body-sm text-secondary mb-4 leading-relaxed">
+                Transmural skip lesions &amp; non-caseating granulomas (cobblestoning) vs mucosal continuous crypt abscesses strictly sparing the terminal ileum.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between text-secondary">
+<span class="font-code-clinical text-[11px]">11 min read</span>
+<span class="material-symbols-outlined text-[16px] text-primary-container">arrow_forward</span>
+</div>
+</article>
+<!-- Card 3.2 -->
+<article class="p-5 rounded bg-surface-container-lowest border border-outline-variant hover:border-primary-container transition-colors duration-150 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-code-clinical text-[11px] px-2 py-0.5 rounded bg-surface-container text-primary-container">Oncology</span>
+<span class="px-2 py-0.5 rounded bg-[#FEF2F0] text-[#E05A47] font-label-caps text-label-caps">High-Yield</span>
+</div>
+<h4 class="font-headline-sm text-[18px] leading-snug text-on-surface mb-2 hover:text-primary-container cursor-pointer transition-colors">
+                Colorectal Carcinoma: Dual Molecular Pathways
+              </h4>
+<p class="font-body-sm text-body-sm text-secondary mb-4 leading-relaxed">
+                Classic chromosomal instability (APC loss → KRAS → p53) vs microsatellite instability (MSI-H MLH1/MSH2 hypermethylation seen in Lynch syndrome).
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between text-secondary">
+<span class="font-code-clinical text-[11px]">9 min read</span>
+<span class="material-symbols-outlined text-[16px] text-primary-container">arrow_forward</span>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- 6. High-Yield Checklist Strip (Targeted Vermilion Accent Callout) -->
+<section class="max-w-[1240px] mx-auto px-4 md:px-8 py-16" id="high-yield">
+<div class="p-8 md:p-10 rounded-lg bg-surface-container-lowest border-2 border-primary-container shadow-sm relative overflow-hidden">
+<!-- Header Banner -->
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-6 mb-8 border-b border-outline-variant gap-4">
+<div>
+<div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-[#FEF2F0] border border-[#E05A47]/40 text-[#E05A47] font-label-caps text-label-caps tracking-wider mb-2">
+<span class="material-symbols-outlined text-[14px]">flag</span>
+              STEP 1 / STEP 2 ESSENTIALS
+            </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">High-Yield USMLE GI Pearls</h2>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded bg-surface-container border border-outline-variant text-primary-container font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Download Printable Summary (PDF)</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded bg-tertiary-container text-on-primary font-label-md text-label-md hover:opacity-95 transition-opacity shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">quiz</span>
+<span>Test Flashcards (42 cards)</span>
+</button>
+</div>
+</div>
+<!-- 4 Distinct Pearl Callout Cards (Adhering to Design System Callout Panels) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Pearl 1 -->
+<div class="p-5 rounded bg-surface-container-low border-l-4 border-l-[#E05A47] border-t border-r border-b border-outline-variant">
+<div class="flex items-center justify-between mb-2">
+<span class="font-code-clinical text-[11px] font-bold text-primary-container">[PEARL 01] • BIOCHEM &amp; HEPATOLOGY</span>
+<span class="material-symbols-outlined text-[#E05A47] text-[18px]">verified</span>
+</div>
+<h3 class="font-headline-sm text-[18px] text-on-surface font-semibold mb-2 italic">SAAG Calculation &amp; Transudative vs Exudative</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<strong>SAAG ≥ 1.1 g/dL</strong> indicates portal hypertension (cirrhosis, congestive heart failure, Budd-Chiari syndrome). <strong>SAAG &lt; 1.1 g/dL</strong> indicates peritoneal carcinomatosis, peritoneal tuberculosis, or nephrotic syndrome.
+            </p>
+</div>
+<!-- Pearl 2 -->
+<div class="p-5 rounded bg-surface-container-low border-l-4 border-l-[#E05A47] border-t border-r border-b border-outline-variant">
+<div class="flex items-center justify-between mb-2">
+<span class="font-code-clinical text-[11px] font-bold text-primary-container">[PEARL 02] • VASCULAR ANATOMY</span>
+<span class="material-symbols-outlined text-[#E05A47] text-[18px]">verified</span>
+</div>
+<h3 class="font-headline-sm text-[18px] text-on-surface font-semibold mb-2 italic">Watershed Ischemia &amp; Griffith's Point</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Splenic flexure (SMA / IMA junction) and rectosigmoid junction (IMA / superior rectal) are most vulnerable to hypotensive shock and non-occlusive mesenteric ischemia; present with postprandial cramping and bloody diarrhea.
+            </p>
+</div>
+<!-- Pearl 3 -->
+<div class="p-5 rounded bg-surface-container-low border-l-4 border-l-[#E05A47] border-t border-r border-b border-outline-variant">
+<div class="flex items-center justify-between mb-2">
+<span class="font-code-clinical text-[11px] font-bold text-primary-container">[PEARL 03] • IMMUNOLOGY &amp; HISTOLOGY</span>
+<span class="material-symbols-outlined text-[#E05A47] text-[18px]">verified</span>
+</div>
+<h3 class="font-headline-sm text-[18px] text-on-surface font-semibold mb-2 italic">Coeliac Disease Serology &amp; Biopsy Triad</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Screen with <strong>anti-tissue transglutaminase (tTG-IgA)</strong> paired with total IgA to rule out deficiency. Confirmation via duodenal biopsy demonstrating intraepithelial lymphocytosis, crypt hyperplasia, and villous blunting.
+            </p>
+</div>
+<!-- Pearl 4 -->
+<div class="p-5 rounded bg-surface-container-low border-l-4 border-l-[#E05A47] border-t border-r border-b border-outline-variant">
+<div class="flex items-center justify-between mb-2">
+<span class="font-code-clinical text-[11px] font-bold text-primary-container">[PEARL 04] • ENDOCRINE NEOPLASMS</span>
+<span class="material-symbols-outlined text-[#E05A47] text-[18px]">verified</span>
+</div>
+<h3 class="font-headline-sm text-[18px] text-on-surface font-semibold mb-2 italic">VIPoma Classic Triad (WDHA Syndrome)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Characterized by <strong>W</strong>atery <strong>D</strong>iarrhea, <strong>H</strong>ypokalemia, and <strong>A</strong>chlorhydria (WDHA syndrome). Non-beta islet cell pancreatic neuroendocrine tumor diagnosed via elevated fasting vasoactive intestinal peptide.
+            </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- 7. Footer (Shared Component JSON Source of Truth) -->
+<footer class="bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant dark:border-outline docked full-width bottom">
+<div class="max-w-[1240px] mx-auto px-4 md:px-8 py-12 flex flex-col gap-8">
+<!-- Top Row: Brand & Curriculum Mapping -->
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-6 pb-6 border-b border-outline-variant dark:border-outline">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<div class="w-6 h-6 rounded bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[15px]">biotech</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed font-medium">GI Atlas</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant max-w-md">
+            Academic anatomical reference and pathology continuum for medical students, gastrointestinal fellows, and clinical educators.
+          </p>
+</div>
+<div class="flex flex-wrap items-center gap-4 text-secondary dark:text-surface-variant font-code-clinical text-[12px]">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface border border-outline-variant">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+            USMLE Step 1 Content Outline
+          </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface border border-outline-variant">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+            LCME Curricular Benchmarks
+          </span>
+</div>
+</div>
+<!-- Links Row from Shared JSON -->
+<div class="flex flex-wrap items-center gap-x-6 gap-y-2">
+<a class="text-on-surface-variant dark:text-surface-variant font-body-sm text-body-sm hover:text-primary dark:hover:text-primary-fixed transition-colors duration-150" href="#">Syllabus Index</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-sm text-body-sm hover:text-primary dark:hover:text-primary-fixed transition-colors duration-150" href="#">Curriculum Standards</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-sm text-body-sm hover:text-primary dark:hover:text-primary-fixed transition-colors duration-150" href="#">High-Yield Pearls</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-sm text-body-sm hover:text-primary dark:hover:text-primary-fixed transition-colors duration-150" href="#">Histopathology Bank</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-sm text-body-sm hover:text-primary dark:hover:text-primary-fixed transition-colors duration-150" href="#">Open-Access License</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-sm text-body-sm hover:text-primary dark:hover:text-primary-fixed transition-colors duration-150" href="#">Editorial Board</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-sm text-body-sm hover:text-primary dark:hover:text-primary-fixed transition-colors duration-150" href="#">Institutional Contact</a>
+</div>
+<!-- Bottom Disclaimer & Copyright from Shared JSON -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-on-surface-variant dark:text-surface-variant text-body-sm font-body-sm pt-2">
+<p class="max-w-[850px] leading-relaxed">
+          © 2025 GI Atlas. Peer-reviewed clinical reference and academic anatomy atlas. Strictly intended for medical education and USMLE preparation; does not constitute direct clinical diagnostic or treatment advice.
+        </p>
+<div class="text-right font-code-clinical text-[11px] whitespace-nowrap">
+          CC BY-NC-SA 4.0
+        </div>
+</div>
+</div>
+</footer>
+<!-- Light/Dark Mode Interactive Controller -->
+<script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        const icon = themeToggleBtn.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.textContent = document.documentElement.classList.contains('dark') ? 'light_mode' : 'dark_mode';
+        }
+      });
+    }
+
+    // Keyboard shortcut handler for search
+    document.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        const searchInput = document.querySelector('input[type="text"]');
+        if (searchInput) {
+          searchInput.focus();
+        }
+      }
+    });
+  </script>
+</body></html>

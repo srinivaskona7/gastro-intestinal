@@ -1,0 +1,618 @@
+[
+ {
+  "slug": "gi-overview",
+  "title": "General overview of the GI system",
+  "part": "anatomy-physiology",
+  "group": "Foundations",
+  "order": 1,
+  "pages": [
+   3,
+   23
+  ]
+ },
+ {
+  "slug": "gi-motility",
+  "title": "Gastrointestinal motility",
+  "part": "anatomy-physiology",
+  "group": "Foundations",
+  "order": 2,
+  "pages": [
+   24,
+   29
+  ]
+ },
+ {
+  "slug": "gi-secretions",
+  "title": "GI tract secretions",
+  "part": "anatomy-physiology",
+  "group": "Foundations",
+  "order": 3,
+  "pages": [
+   30,
+   42
+  ]
+ },
+ {
+  "slug": "gi-absorption",
+  "title": "GI tract absorption",
+  "part": "anatomy-physiology",
+  "group": "Foundations",
+  "order": 4,
+  "pages": [
+   43,
+   55
+  ]
+ },
+ {
+  "slug": "gi-structures",
+  "title": "Specific structures along the GI tract",
+  "part": "anatomy-physiology",
+  "group": "Foundations",
+  "order": 5,
+  "pages": [
+   56,
+   74
+  ]
+ },
+ {
+  "slug": "hepatobiliary-anatomy-physiology",
+  "title": "Hepatobiliary anatomy & physiology",
+  "part": "anatomy-physiology",
+  "group": "Foundations",
+  "order": 6,
+  "pages": [
+   75,
+   95
+  ]
+ },
+ {
+  "slug": "nutrition-basics",
+  "title": "Nutrition basics",
+  "part": "anatomy-physiology",
+  "group": "Foundations",
+  "order": 7,
+  "pages": [
+   96,
+   104
+  ]
+ },
+ {
+  "slug": "dysphagia-achalasia",
+  "title": "Dysphagia & achalasia",
+  "part": "pathology",
+  "group": "Oesophagus",
+  "order": 8,
+  "pages": [
+   106,
+   106
+  ]
+ },
+ {
+  "slug": "oesophagitis",
+  "title": "Oesophagitis",
+  "part": "pathology",
+  "group": "Oesophagus",
+  "order": 9,
+  "pages": [
+   107,
+   107
+  ]
+ },
+ {
+  "slug": "oesophageal-varices",
+  "title": "Oesophageal varices",
+  "part": "pathology",
+  "group": "Oesophagus",
+  "order": 10,
+  "pages": [
+   108,
+   109
+  ]
+ },
+ {
+  "slug": "mallory-weiss-tear",
+  "title": "Mallory-Weiss tear",
+  "part": "pathology",
+  "group": "Oesophagus",
+  "order": 11,
+  "pages": [
+   110,
+   110
+  ]
+ },
+ {
+  "slug": "hiatus-hernia",
+  "title": "Hiatus hernia",
+  "part": "pathology",
+  "group": "Oesophagus",
+  "order": 12,
+  "pages": [
+   111,
+   111
+  ]
+ },
+ {
+  "slug": "gord-barretts-oesophageal-tumours",
+  "title": "GORD, Barrett's oesophagus & oesophageal tumours",
+  "part": "pathology",
+  "group": "Oesophagus",
+  "order": 13,
+  "pages": [
+   112,
+   113
+  ]
+ },
+ {
+  "slug": "gastritis-pud",
+  "title": "Gastritis & peptic ulcer disease",
+  "part": "pathology",
+  "group": "Stomach",
+  "order": 14,
+  "pages": [
+   114,
+   117
+  ]
+ },
+ {
+  "slug": "helicobacter-pylori",
+  "title": "Helicobacter pylori",
+  "part": "pathology",
+  "group": "Stomach",
+  "order": 15,
+  "pages": [
+   118,
+   121
+  ]
+ },
+ {
+  "slug": "gastric-cancer",
+  "title": "Gastric cancer",
+  "part": "pathology",
+  "group": "Stomach",
+  "order": 16,
+  "pages": [
+   122,
+   122
+  ]
+ },
+ {
+  "slug": "gastrinoma-ze-syndrome",
+  "title": "Gastrinoma (Zollinger-Ellison syndrome)",
+  "part": "pathology",
+  "group": "Stomach",
+  "order": 17,
+  "pages": [
+   123,
+   123
+  ]
+ },
+ {
+  "slug": "coeliac-disease",
+  "title": "Coeliac disease",
+  "part": "pathology",
+  "group": "Small bowel",
+  "order": 18,
+  "pages": [
+   124,
+   124
+  ]
+ },
+ {
+  "slug": "congenital-pancreatic-abnormalities",
+  "title": "Congenital pancreatic abnormalities",
+  "part": "pathology",
+  "group": "Pancreas",
+  "order": 19,
+  "pages": [
+   125,
+   127
+  ]
+ },
+ {
+  "slug": "pancreatitis",
+  "title": "Pancreatitis",
+  "part": "pathology",
+  "group": "Pancreas",
+  "order": 20,
+  "pages": [
+   128,
+   130
+  ]
+ },
+ {
+  "slug": "pancreatic-cancer",
+  "title": "Pancreatic cancer",
+  "part": "pathology",
+  "group": "Pancreas",
+  "order": 21,
+  "pages": [
+   131,
+   131
+  ]
+ },
+ {
+  "slug": "endocrine-pancreatic-tumours",
+  "title": "Endocrine pancreatic tumours & MEN",
+  "part": "pathology",
+  "group": "Pancreas",
+  "order": 22,
+  "pages": [
+   132,
+   133
+  ]
+ },
+ {
+  "slug": "cholangitis",
+  "title": "Cholangitis",
+  "part": "pathology",
+  "group": "Liver & biliary",
+  "order": 23,
+  "pages": [
+   134,
+   134
+  ]
+ },
+ {
+  "slug": "gallstones-cholecystitis",
+  "title": "Gallstones & cholecystitis",
+  "part": "pathology",
+  "group": "Liver & biliary",
+  "order": 24,
+  "pages": [
+   135,
+   137
+  ]
+ },
+ {
+  "slug": "jaundice",
+  "title": "Jaundice",
+  "part": "pathology",
+  "group": "Liver & biliary",
+  "order": 25,
+  "pages": [
+   137,
+   138
+  ]
+ },
+ {
+  "slug": "familial-liver-diseases",
+  "title": "Familial liver diseases",
+  "part": "pathology",
+  "group": "Liver & biliary",
+  "order": 26,
+  "pages": [
+   139,
+   142
+  ]
+ },
+ {
+  "slug": "hepatitis-overview-paracetamol",
+  "title": "Hepatitis overview & paracetamol toxicity",
+  "part": "pathology",
+  "group": "Liver & biliary",
+  "order": 27,
+  "pages": [
+   143,
+   144
+  ]
+ },
+ {
+  "slug": "viral-hepatitis",
+  "title": "Viral hepatitis A-E",
+  "part": "pathology",
+  "group": "Liver & biliary",
+  "order": 28,
+  "pages": [
+   145,
+   149
+  ]
+ },
+ {
+  "slug": "secondary-liver-disease",
+  "title": "Secondary liver disease",
+  "part": "pathology",
+  "group": "Liver & biliary",
+  "order": 29,
+  "pages": [
+   150,
+   152
+  ]
+ },
+ {
+  "slug": "liver-failure-cirrhosis",
+  "title": "Liver failure, cirrhosis & ascites",
+  "part": "pathology",
+  "group": "Liver & biliary",
+  "order": 30,
+  "pages": [
+   153,
+   156
+  ]
+ },
+ {
+  "slug": "portal-hypertension",
+  "title": "Portal hypertension",
+  "part": "pathology",
+  "group": "Liver & biliary",
+  "order": 31,
+  "pages": [
+   156,
+   157
+  ]
+ },
+ {
+  "slug": "liver-cancers",
+  "title": "Liver cancers",
+  "part": "pathology",
+  "group": "Liver & biliary",
+  "order": 32,
+  "pages": [
+   158,
+   159
+  ]
+ },
+ {
+  "slug": "cholangiocarcinoma",
+  "title": "Cholangiocarcinoma",
+  "part": "pathology",
+  "group": "Liver & biliary",
+  "order": 33,
+  "pages": [
+   160,
+   160
+  ]
+ },
+ {
+  "slug": "gallbladder-carcinoma",
+  "title": "Gallbladder carcinoma",
+  "part": "pathology",
+  "group": "Liver & biliary",
+  "order": 34,
+  "pages": [
+   161,
+   161
+  ]
+ },
+ {
+  "slug": "liver-abscesses-cysts",
+  "title": "Liver abscesses & cysts",
+  "part": "pathology",
+  "group": "Liver & biliary",
+  "order": 35,
+  "pages": [
+   162,
+   163
+  ]
+ },
+ {
+  "slug": "meckels-diverticulum",
+  "title": "Meckel's diverticulum",
+  "part": "pathology",
+  "group": "Intestines",
+  "order": 36,
+  "pages": [
+   164,
+   165
+  ]
+ },
+ {
+  "slug": "bowel-obstruction",
+  "title": "Bowel obstruction",
+  "part": "pathology",
+  "group": "Intestines",
+  "order": 37,
+  "pages": [
+   166,
+   167
+  ]
+ },
+ {
+  "slug": "irritable-bowel-syndrome",
+  "title": "Irritable bowel syndrome",
+  "part": "pathology",
+  "group": "Intestines",
+  "order": 38,
+  "pages": [
+   168,
+   168
+  ]
+ },
+ {
+  "slug": "inflammatory-bowel-disease",
+  "title": "Inflammatory bowel disease",
+  "part": "pathology",
+  "group": "Intestines",
+  "order": 39,
+  "pages": [
+   169,
+   170
+  ]
+ },
+ {
+  "slug": "diverticular-disease",
+  "title": "Diverticulosis & diverticulitis",
+  "part": "pathology",
+  "group": "Intestines",
+  "order": 40,
+  "pages": [
+   171,
+   172
+  ]
+ },
+ {
+  "slug": "appendicitis",
+  "title": "Appendicitis",
+  "part": "pathology",
+  "group": "Intestines",
+  "order": 41,
+  "pages": [
+   173,
+   174
+  ]
+ },
+ {
+  "slug": "polyps-colon-cancer",
+  "title": "Polyps & colon cancer",
+  "part": "pathology",
+  "group": "Intestines",
+  "order": 42,
+  "pages": [
+   175,
+   179
+  ]
+ },
+ {
+  "slug": "hirschsprung-disease",
+  "title": "Hirschsprung's disease",
+  "part": "pathology",
+  "group": "Intestines",
+  "order": 43,
+  "pages": [
+   180,
+   180
+  ]
+ },
+ {
+  "slug": "ischaemic-bowel",
+  "title": "Ischaemic bowel",
+  "part": "pathology",
+  "group": "Intestines",
+  "order": 44,
+  "pages": [
+   181,
+   181
+  ]
+ },
+ {
+  "slug": "pseudomembranous-colitis",
+  "title": "Pseudomembranous colitis",
+  "part": "pathology",
+  "group": "Intestines",
+  "order": 45,
+  "pages": [
+   182,
+   182
+  ]
+ },
+ {
+  "slug": "radiation-enteritis",
+  "title": "Radiation enteritis",
+  "part": "pathology",
+  "group": "Intestines",
+  "order": 46,
+  "pages": [
+   183,
+   183
+  ]
+ },
+ {
+  "slug": "carcinoid-syndrome",
+  "title": "Carcinoid syndrome",
+  "part": "pathology",
+  "group": "Intestines",
+  "order": 47,
+  "pages": [
+   191,
+   191
+  ]
+ },
+ {
+  "slug": "rectal-bleeding",
+  "title": "Rectal bleeding: differential diagnosis",
+  "part": "pathology",
+  "group": "Anorectal",
+  "order": 48,
+  "pages": [
+   184,
+   186
+  ]
+ },
+ {
+  "slug": "haemorrhoids",
+  "title": "Haemorrhoids",
+  "part": "pathology",
+  "group": "Anorectal",
+  "order": 49,
+  "pages": [
+   187,
+   187
+  ]
+ },
+ {
+  "slug": "anal-fistulae",
+  "title": "Anal fistulae",
+  "part": "pathology",
+  "group": "Anorectal",
+  "order": 50,
+  "pages": [
+   188,
+   188
+  ]
+ },
+ {
+  "slug": "anal-fissures",
+  "title": "Anal fissures",
+  "part": "pathology",
+  "group": "Anorectal",
+  "order": 51,
+  "pages": [
+   189,
+   189
+  ]
+ },
+ {
+  "slug": "pilonidal-sinus",
+  "title": "Pilonidal sinus",
+  "part": "pathology",
+  "group": "Anorectal",
+  "order": 52,
+  "pages": [
+   190,
+   190
+  ]
+ },
+ {
+  "slug": "cystic-fibrosis",
+  "title": "Cystic fibrosis (GI features)",
+  "part": "pathology",
+  "group": "Systemic & infection",
+  "order": 53,
+  "pages": [
+   192,
+   192
+  ]
+ },
+ {
+  "slug": "gastroenteritis",
+  "title": "Gastroenteritis & listeriosis",
+  "part": "pathology",
+  "group": "Systemic & infection",
+  "order": 54,
+  "pages": [
+   193,
+   194
+  ]
+ },
+ {
+  "slug": "parasitic-gut-infections",
+  "title": "Parasitic gut infections",
+  "part": "pathology",
+  "group": "Systemic & infection",
+  "order": 55,
+  "pages": [
+   195,
+   198
+  ]
+ },
+ {
+  "slug": "acute-abdomen",
+  "title": "Acute abdomen",
+  "part": "pathology",
+  "group": "Systemic & infection",
+  "order": 56,
+  "pages": [
+   199,
+   200
+  ]
+ }
+]

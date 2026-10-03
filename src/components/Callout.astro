@@ -1,0 +1,15 @@
+---
+// kind: pearl = high-yield exam point, warning = red flag / danger, note = context
+interface Props { kind?: 'pearl' | 'warning' | 'note'; title?: string }
+const { kind = 'note', title } = Astro.props;
+const style = {
+  pearl: 'border-coral bg-coral/10',
+  warning: 'border-amber-500 bg-amber-100/60 dark:bg-amber-500/10',
+  note: 'border-teal-deep bg-sage dark:bg-teal-900/30',
+}[kind];
+const label = title ?? { pearl: 'High-yield', warning: 'Red flag', note: 'Note' }[kind];
+---
+<aside class={`not-prose my-6 rounded-r-lg border-l-4 p-4 ${style}`}>
+  <p class="mb-1 text-xs font-bold uppercase tracking-wider text-coral dark:text-orange-300" class:list={{ '!text-amber-700 dark:!text-amber-300': kind === 'warning', '!text-teal-deep dark:!text-teal-300': kind === 'note' }}>{label}</p>
+  <div class="text-[0.95rem] leading-relaxed [&_p]:m-0 [&_ul]:my-1 [&_ul]:list-disc [&_ul]:pl-5"><slot /></div>
+</aside>
