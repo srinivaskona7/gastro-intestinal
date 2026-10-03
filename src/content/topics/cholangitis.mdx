@@ -1,0 +1,82 @@
+---
+title: "Cholangitis"
+part: pathology
+group: Liver & biliary
+order: 23
+summary: "Acute ascending bacterial infection of an obstructed bile duct, presenting with Charcot's triad and needing antibiotics plus biliary drainage."
+highYield:
+  - "Obstructed bile plus gut bacteria (E. coli, Klebsiella) causes ascending infection."
+  - "Charcot's triad is fever, jaundice and abdominal pain; Reynolds' pentad adds hypotension and confusion."
+  - "Investigate with FBC, LFTs, amylase, blood cultures and ultrasound."
+  - "Treat with antibiotics, IV fluids and ERCP drainage or stone extraction; sepsis is the main complication."
+tags: [biliary, cholangitis, Charcot triad, ERCP]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+**Acute cholangitis** is infection of the bile ducts. Bile is normally sterile and flows downhill into the duodenum. When flow stops, bacteria can climb from the gut into the biliary tree and multiply in the trapped bile.
+
+## Causes and pathogenesis
+
+- **Choledocholithiasis** (a stone in the common bile duct) is the commonest cause of obstruction.
+- Infection is by gut bacteria, typically **E. coli** or **Klebsiella**.
+- **Biliary stasis** is the trigger. Besides stones, causes include obstruction, anorexia (no food stimulating bile flow) and total parenteral nutrition (TPN, which leaves the gut unused).
+
+<Mermaid
+  caption="From stasis to sepsis"
+  chart={`flowchart LR
+  A["Biliary stasis: stone, obstruction, anorexia, TPN"] --> B[Ascending infection from gut]
+  B --> C["E. coli or Klebsiella in bile"]
+  C --> D[Acute cholangitis]
+  D --> E[Fever, jaundice, pain]
+  D --> F[Sepsis]`}
+/>
+
+## Clinical features
+
+| Scoring | Components |
+|---|---|
+| Charcot's triad | 1. Fever, 2. Jaundice, 3. Abdominal pain |
+| Reynolds' pentad | The triad plus 4. Hypotension and 5. Confusion |
+
+The pentad signals severe disease with systemic shock.
+
+<Callout kind="warning" title="The pentad is an emergency">
+Hypotension and confusion mean the infection has become septic. Treat urgently and arrange early biliary drainage.
+</Callout>
+
+## Investigations
+
+- **FBC:** raised white cell count.
+- **LFTs:** an obstructive pattern.
+- **Amylase:** raised if pancreatitis is also present (gallstone pancreatitis).
+- **Blood cultures** to identify the organism.
+- **Ultrasound** to look for stones and duct dilatation.
+
+## Management
+
+1. **IV fluids** to restore circulation.
+2. **Antibiotics**: a typical combination is ampicillin, gentamicin and metronidazole.
+3. **ERCP or MRCP**: MRCP confirms the diagnosis; ERCP is both diagnostic and therapeutic, allowing stenting or stone extraction to relieve the obstruction.
+4. **Cholecystectomy** may follow, to remove the origin of future stones.
+
+<Callout kind="pearl">
+Antibiotics alone do not clear an infected obstructed system. Drainage of the duct is the definitive step.
+</Callout>
+
+## Complications
+
+**Sepsis** is the main danger, which is why blood cultures, fluids and early drainage matter.
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Why does biliary stasis lead to cholangitis?', a: 'Stagnant bile allows gut bacteria to ascend and multiply; normal flow would wash them out.' },
+  { q: 'What is Charcot triad and how does Reynolds pentad differ?', a: 'Fever, jaundice and abdominal pain. The pentad adds hypotension and confusion, signalling sepsis.' },
+  { q: 'Which organisms usually cause it?', a: 'Gut bacteria, typically E. coli or Klebsiella.' },
+  { q: 'What is the role of ERCP?', a: 'It confirms the diagnosis and treats it by stenting the duct or extracting stones.' },
+  { q: 'Which first-line measures accompany drainage?', a: 'IV fluids and antibiotics (for example ampicillin, gentamicin and metronidazole), with blood cultures.' },
+]} />

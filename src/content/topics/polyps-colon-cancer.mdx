@@ -1,0 +1,166 @@
+---
+title: "Polyps & colon cancer"
+part: pathology
+group: Intestines
+order: 42
+summary: "Most colonic polyps are harmless, but adenomas can progress to adenocarcinoma, the main colorectal cancer, either sporadically or through inherited syndromes such as HNPCC and FAP."
+highYield:
+  - "98% of malignant colonic tumours are adenocarcinomas; 90% of cases are diagnosed after age 50."
+  - "About 90% of polyps are non-neoplastic; adenomas (tubular, tubulovillous, villous) are the premalignant ones."
+  - "Sporadic cancers (over 95%) favour the left colon and bleed frankly; inherited ones favour the right colon and cause occult bleeding and anaemia."
+  - "HNPCC (autosomal dominant, few polyps) and FAP (thousands of polyps, near-certain cancer) are the key inherited syndromes."
+  - "Colonoscopy with biopsy diagnoses; resection is the cornerstone of treatment."
+tags: [colorectal cancer, polyps, adenoma, HNPCC, FAP]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+Colonic tumours are growths of the large bowel lining. **Polyps** are the commonest. Most are benign, but a minority, the **adenomas**, can turn malignant. Of all neoplastic colonic tumours, **98% are adenocarcinomas**. Colorectal cancer (CRC) is a disease of Western, older populations and is the second most common internal malignancy.
+
+## Causes and risk factors
+
+| Risk factor | Detail |
+|---|---|
+| Age | 90% of CRC is diagnosed after 50 years |
+| Pre-existing polyps | Most are benign; adenomas can become malignant |
+| Genetics and family history | HNPCC and FAP are best known and carry a very high lifetime risk of cancer |
+| Inflammatory bowel disease | Crohn's disease and ulcerative colitis |
+| Diet | High fat, low fibre, low calcium, low folate |
+| Smoking | Adds risk |
+
+## Sporadic versus inherited cancer
+
+| | Sporadic | Inherited |
+|---|---|---|
+| Share of CRC | Over 95% | Under 5% |
+| Usual site | Left (descending, distal) colon | Right (ascending, proximal) colon |
+| Driver | Toxin and carcinogen exposure over time | Germline mutation |
+| Typical bleeding | Frank rectal bleeding | Occult bleeding and anaemia |
+
+## Pathogenesis
+
+Whether a mutation is inherited or acquired, the result is the same: the cell cycle becomes dysregulated, the epithelium becomes **dysplastic**, and eventually frank **carcinoma** develops.
+
+<Mermaid
+  caption="From mutation to carcinoma"
+  chart={`flowchart LR
+  A["Mutation (inherited or sporadic)"] --> B["Cell-cycle dysregulation"]
+  B --> C["Adenoma with dysplasia"]
+  C --> D["Adenocarcinoma"]
+  D --> E["Invasion and metastasis"]`}
+/>
+
+## Types of polyp
+
+About **90% of polyps are non-neoplastic** and have low malignant potential. About **10% are neoplastic** and have high malignant potential.
+
+<Mermaid
+  caption="Colonic polyp classification"
+  chart={`flowchart TD
+  P["Colonic polyps"] --> N["Non-neoplastic, about 90 percent"]
+  P --> M["Neoplastic, about 10 percent"]
+  N --> H["Hyperplastic"]
+  N --> HA["Hamartomatous or juvenile"]
+  N --> I["Inflammatory or pseudopolyps"]
+  M --> AD["Adenomas"]
+  AD --> T["Tubular"]
+  AD --> TV["Tubulovillous"]
+  AD --> V["Villous"]`}
+/>
+
+### Non-neoplastic polyps
+
+| Type | Features |
+|---|---|
+| **Hyperplastic** | Commonest non-neoplastic polyp; descending colon. Multiple, small, sessile (stalkless), nipple-like. Microscopically deeper crypts with extra goblet cells (more mucus) giving a saw-tooth outline, with no dysplasia. Benign. |
+| **Hamartomatous / juvenile** | A hamartoma is a non-malignant overgrowth that grows at the same rate as surrounding tissue. Typical of Peutz-Jeghers syndrome (autosomal dominant). Large and irregular; dilated glands of normal cells in abnormal arrangement; no dysplasia. Benign, but can cause obstruction. |
+| **Inflammatory / pseudopolyps** | Seen in inflammatory bowel disease (Crohn's disease, ulcerative colitis). |
+
+### Adenomas (neoplastic)
+
+| Type | Shape | Frequency among adenomas | Look |
+|---|---|---|---|
+| Tubular | Pedunculated (on a stalk) | About 90% | Smooth mushroom |
+| Tubulovillous | Pedunculated | Under 10% | Mixed appearance |
+| Villous | Sessile | Under 1% | Wart-like |
+
+### Inherited syndromes
+
+| | HNPCC (Lynch syndrome) | FAP |
+|---|---|---|
+| Share of CRC | Under 1% | About 1%, rare |
+| Inheritance | Autosomal dominant | Autosomal dominant |
+| Polyps | A few adenomatous polyps | Thousands of adenomatous polyps |
+| Lifetime CRC risk | 70-80% | Essentially 100% |
+| Other cancers | Endometrial, gastric, ovarian, small intestinal, ureter, renal pelvis | Same group of non-colonic cancers |
+
+Most individual FAP polyps are benign, but there are far too many to remove, so cancer is effectively inevitable without colectomy.
+
+**Amsterdam II criteria** support a diagnosis of HNPCC when:
+
+1. Three or more relatives have an HNPCC-associated cancer.
+2. At least one is a first-degree relative of the other two.
+3. The family history spans two or more generations.
+4. At least one case was diagnosed before age 50.
+
+<Callout kind="pearl">
+Right-sided cancers bleed silently, so the patient presents with iron-deficiency anaemia. Left-sided cancers have a narrower lumen and bleed visibly, with altered bowel habit.
+</Callout>
+
+## Clinical features
+
+- Often **asymptomatic** early on.
+- Alternating bowel habit, and change in stool shape (thin, ribbon-like stool).
+- Cramping, colicky pain, discomfort and bloating.
+- Rectal bleeding: frank on the left, occult with anaemia on the right. Occult blood is detected by a **faecal occult blood test (FOBT)**.
+
+<Callout kind="warning" title="Red flags">
+Anorexia, fever, night sweats, weight loss, fatigue and anaemia suggest advanced or bleeding disease and need urgent investigation.
+</Callout>
+
+## Investigations
+
+- **FOBT** for screening and occult bleeding.
+- **Colonoscopy** to see the lesion, remove polyps (polypectomy) and take biopsies.
+- **Imaging** (CT, PET; a barium enema is the barium study for the colon, a barium swallow examines the upper tract).
+- **Genetic testing** if there is a family history.
+- **FBC** to detect anaemia.
+
+## Management
+
+<Mermaid
+  caption="Pathway from detection to treatment"
+  chart={`flowchart LR
+  A["FOBT or symptoms"] --> B["Colonoscopy with biopsy"]
+  B --> C["Grading"]
+  C --> D["CT, PET or MRI staging (TNM or Dukes A to D)"]
+  D --> E["Bowel resection and possible colostomy"]
+  E --> F["Adjuvant options"]
+  F --> G["Targeted therapy, chemotherapy, radiotherapy"]`}
+/>
+
+- Polypectomy or biopsy gives the histological grade.
+- CT, PET or MRI stage the tumour (TNM, or Dukes A to D).
+- **Bowel resection**, with a colostomy where needed.
+- **Targeted therapy** with cetuximab or panitumumab, antibodies against the epidermal growth factor receptor.
+- Chemotherapy and radiotherapy in selected cases.
+
+## Complications
+
+- Perforation, peritonitis, abscess or fistula.
+- Metastasis, which leads to death.
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Which histological type makes up 98% of malignant colonic tumours?', a: 'Adenocarcinoma.' },
+  { q: 'Which polyp types are premalignant, and which is the commonest?', a: 'Adenomas (tubular, tubulovillous, villous) are neoplastic; tubular is the commonest. Hyperplastic, hamartomatous and inflammatory polyps are non-neoplastic.' },
+  { q: 'How do left- and right-sided colon cancers differ in presentation?', a: 'Left-sided (usually sporadic) bleed frankly and change bowel habit; right-sided (often familial) bleed occultly and present with anaemia.' },
+  { q: 'Contrast HNPCC with FAP.', a: 'HNPCC has few polyps and a 70-80% cancer risk with other extracolonic cancers; FAP has thousands of polyps and near-100% risk.' },
+  { q: 'What are the Amsterdam II criteria for?', a: 'Diagnosing HNPCC from family history: 3 or more relatives, one first-degree to the other two, two or more generations, one case under age 50.' },
+  { q: 'Why is a polyp removed at colonoscopy?', a: 'Adenomas can progress to cancer, so polypectomy treats the lesion and gives tissue for grading.' },
+  { q: 'Which drugs target the epidermal growth factor receptor in CRC?', a: 'Cetuximab and panitumumab.' },
+]} />

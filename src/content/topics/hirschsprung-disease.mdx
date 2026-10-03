@@ -1,0 +1,80 @@
+---
+title: "Hirschsprung's disease"
+part: pathology
+group: Intestines
+order: 43
+summary: "A congenital absence of ganglion cells in a segment of large bowel leaves it contracted and unable to propel stool, causing functional obstruction in infancy."
+highYield:
+  - "Congenital aganglionic megacolon, a functional large bowel obstruction."
+  - "The aganglionic segment is atonic and narrowed; bowel proximal to it dilates."
+  - "Severe cases present within days of birth with delayed meconium passage over 48 hours, distension and vomiting."
+  - "Diagnosis is confirmed by rectal biopsy showing no ganglion cells."
+  - "Treatment is surgical resection of the aganglionic bowel; enterocolitis is the feared complication."
+tags: [paediatrics, megacolon, congenital, obstruction]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+**Hirschsprung's disease** (congenital aganglionic megacolon) is a **functional obstruction of the large bowel** caused by atonic bowel. Nothing physically blocks the lumen; the affected segment simply cannot move its contents on.
+
+## Cause and pathogenesis
+
+The condition is **congenital**. A section of large bowel has **no nerve (ganglion) cells** in its wall, so it is not innervated. Without nerve supply it cannot relax and propagate peristalsis, becomes paralysed and atonic, and causes obstruction.
+
+<Mermaid
+  caption="How absent nerves cause obstruction"
+  chart={`flowchart LR
+  A["Congenital absence of ganglion cells"] --> B["Segment not innervated"]
+  B --> C["Paralysed, atonic, narrowed segment"]
+  C --> D["Functional obstruction"]
+  D --> E["Proximal bowel dilates (megacolon)"]`}
+/>
+
+## Morphology
+
+- The aganglionic segment is usually short (under 30 cm) and lies in the distal large bowel. Classically it involves the rectum and sigmoid, always starting from the anus and extending upward.
+- The atonic segment is **narrowed**.
+- The bowel **proximal** to it is **dilated** because stool piles up behind the functional block.
+
+## Clinical features
+
+| Severity | When it presents | Features |
+|---|---|---|
+| Severe | Within 2-3 days of birth | Meconium not passed within 48 hours, then abdominal distension and vomiting |
+| Mild | Late infancy | Abdominal distension, with constipation alternating with diarrhoea |
+
+<Callout kind="pearl">
+A newborn who has not passed meconium by 48 hours should prompt you to think of Hirschsprung's disease.
+</Callout>
+
+## Diagnosis
+
+- **Barium enema** shows the narrow distal segment and dilated bowel above it.
+- **Anorectal manometry** measures contractility of the anus and rectum.
+- **Rectal biopsy** confirms the diagnosis by showing a lack of ganglion cells.
+
+## Treatment
+
+**Surgery**: resect the aganglionic bowel and join normal bowel to the anus (reanastomosis).
+
+## Complications
+
+- **Enterocolitis**, a serious bowel inflammation and infection behind the obstruction.
+- Death if untreated.
+
+<Callout kind="warning">
+Fever, explosive diarrhoea and a swollen abdomen in a known or suspected case suggest enterocolitis and need urgent care.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'What is missing in Hirschsprung disease?', a: 'Ganglion (nerve) cells in a segment of large bowel, so it is uninnervated and atonic.' },
+  { q: 'Why is the bowel above the lesion dilated?', a: 'The narrowed atonic segment causes a functional obstruction, so stool accumulates proximally.' },
+  { q: 'What is the classic neonatal presentation?', a: 'Failure to pass meconium within 48 hours, followed by abdominal distension and vomiting.' },
+  { q: 'How is the diagnosis confirmed?', a: 'Rectal biopsy showing absent ganglion cells; barium enema and manometry support it.' },
+  { q: 'What is the treatment and main complication?', a: 'Resection of aganglionic bowel with anastomosis of normal bowel to the anus; enterocolitis is the main complication.' },
+]} />

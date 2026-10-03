@@ -1,0 +1,126 @@
+---
+title: "Liver abscesses & cysts"
+part: pathology
+group: Liver & biliary
+order: 35
+summary: "Pyogenic liver abscesses follow abdominal or biliary sepsis and need drainage plus antibiotics; hydatid cysts come from Echinococcus granulosus and are treated with albendazole and aspiration."
+highYield:
+  - "Pyogenic abscess is typically E. coli or other gut organisms, after intra-abdominal or biliary sepsis (biliary in the elderly)."
+  - "Ultrasound is the definitive test; CT helps rule out hepatocellular carcinoma."
+  - "Treat with ultrasound-guided aspiration plus antibiotics such as metronidazole and gentamicin."
+  - "Single abscess has good prognosis; multiple abscesses carry about 80 percent mortality."
+  - "Hydatid cysts come from Echinococcus granulosus (dogs and sheep), have three layers and are treated with albendazole and aspiration or surgery."
+tags: [liver abscess, hydatid disease, Echinococcus, parasite, sepsis]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What they are
+
+Two unrelated conditions produce a space-occupying lesion in the liver.
+
+| | Pyogenic abscess | Hydatid cyst |
+|---|---|---|
+| Cause | Bacterial infection | Echinococcus granulosus parasite |
+| Number | Single or multiple | Single or multiple |
+| Nature | Collection of pus | Parasitic cyst |
+
+## Liver abscess
+
+### Causes
+
+Infection, typically by **E. coli** or other **anaerobes**, reaches the liver from:
+
+- **Intra-abdominal sepsis** (infection spreading from the bowel or abdomen)
+- **Biliary sepsis**, particularly in the **elderly**
+
+### Pathogenesis and morphology
+
+Bacteria seed the liver and a **pyogenic abscess** (a pus-filled cavity) forms.
+
+### Clinical features
+
+The picture ranges from **no symptoms to acute illness**.
+
+- Symptoms: malaise, fever and rigors, anorexia, weight loss, vomiting, abdominal pain
+- Signs: the patient may be septic, jaundiced and febrile, and the liver is **tender and enlarged**
+
+### Investigations
+
+| Test | Finding |
+|---|---|
+| Alkaline phosphatase | Raised |
+| Bilirubin | Raised |
+| Blood cultures | Positive |
+| Abdominal ultrasound | Definitive |
+| Abdominal CT | Helps rule out hepatocellular carcinoma |
+
+### Treatment and prognosis
+
+- **Ultrasound-guided aspiration** of the pus
+- **Antibiotics**: metronidazole plus gentamicin
+
+A **single** abscess has a good prognosis. **Multiple** abscesses carry about **80 percent mortality**.
+
+<Mermaid
+  caption="Pyogenic liver abscess pathway"
+  chart={`flowchart LR
+  A["Intra-abdominal or biliary sepsis"] --> B["E. coli or anaerobes reach liver"]
+  B --> C["Pyogenic abscess"]
+  C --> D["Fever, RUQ pain, tender liver"]
+  D --> E["Ultrasound and blood cultures"]
+  E --> F["Aspiration plus antibiotics"]`}
+/>
+
+<Callout kind="warning" title="Number of abscesses predicts survival">
+One abscess usually does well. Multiple abscesses are a marker of very high mortality, so recognise and treat early.
+</Callout>
+
+## Hydatid disease of the liver
+
+### Cause
+
+Infection by the parasite **Echinococcus granulosus**, which is spread by **dogs and sheep**.
+
+### Pathogenesis
+
+One or more **cysts** form, typically in the **lower right lobe** of the liver.
+
+### Morphology
+
+Each cyst has **three layers**:
+
+1. **Outer**: derived from the host
+2. **Intermediate**: a laminated layer
+3. **Inner**: the germinal layer, which buds off **brood capsules** that become **daughter cysts**
+
+<Mermaid
+  caption="Layers of a hydatid cyst, outside to inside"
+  chart={`flowchart TD
+  A["Outer layer from host"] --> B["Intermediate laminated layer"]
+  B --> C["Inner germinal layer"]
+  C --> D["Brood capsules"]
+  D --> E["Daughter cysts"]`}
+/>
+
+### Clinical features
+
+Often **asymptomatic**. Some patients have a **dull ache in the right upper quadrant**.
+
+### Treatment
+
+- **Albendazole**, an antiparasitic drug
+- **Surgical aspiration**, by fine needle or open surgery
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Which organisms usually cause a pyogenic liver abscess, and from where?', a: 'E. coli or other anaerobes, following intra-abdominal sepsis or biliary sepsis (the latter in the elderly).' },
+  { q: 'Which investigation is definitive for an abscess, and why do CT?', a: 'Abdominal ultrasound is definitive; CT helps rule out hepatocellular carcinoma.' },
+  { q: 'How is a pyogenic abscess treated?', a: 'Ultrasound-guided aspiration plus antibiotics, such as metronidazole and gentamicin.' },
+  { q: 'How does the number of abscesses affect outcome?', a: 'A single abscess has a good prognosis; multiple abscesses have about 80 percent mortality.' },
+  { q: 'What causes hydatid disease and who spreads it?', a: 'Echinococcus granulosus, spread by dogs and sheep.' },
+  { q: 'Describe the three layers of a hydatid cyst.', a: 'Host-derived outer layer, laminated intermediate layer, and an inner germinal layer producing brood capsules and daughter cysts.' },
+  { q: 'How is hydatid disease treated?', a: 'Albendazole plus surgical aspiration (fine needle or open).' },
+]} />

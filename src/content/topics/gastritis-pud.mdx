@@ -1,0 +1,122 @@
+---
+title: "Gastritis & peptic ulcer disease"
+part: pathology
+group: Stomach
+order: 14
+summary: "Gastritis is inflammation of the stomach lining; peptic ulcers form when acid and pepsin overcome mucosal defences, most often through H. pylori or NSAIDs."
+highYield:
+  - "Ulcers arise from an imbalance between attack (acid, pepsin) and defence (mucus, prostaglandins)."
+  - "H. pylori causes about 80% of chronic gastritis; NSAIDs and alcohol drive acute gastritis."
+  - "Duodenal ulcer pain is worst when hungry and relieved by food."
+  - "Carbon-13 urea breath test is the best non-invasive test for H. pylori."
+  - "Complications are bleeding, perforation, pyloric stenosis and gastric cancer."
+tags: [stomach, gastritis, peptic ulcer, NSAIDs, Curling's ulcer]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## Background: protection versus destruction
+
+The stomach lining survives a pH of about 2 because of defences that balance destructive forces.
+
+| Protective factors | Destructive factors |
+|---|---|
+| Alkaline mucus layer, a mechanical barrier | **Helicobacter pylori** |
+| Prostaglandins, which stimulate mucin synthesis by goblet cells | Acid (pH about 2) |
+| | Pepsin, a proteolytic enzyme from chief cells |
+| | NSAIDs (aspirin, ibuprofen): 15-20% of users develop a gastric ulcer |
+| | Stress and gastrinoma (Zollinger-Ellison syndrome) |
+
+<Mermaid
+  caption="Balance of attack and defence"
+  chart={`flowchart LR
+  A["Attack: acid, pepsin, Zollinger-Ellison"] --> C{"Balance lost?"}
+  B["Defence: mucus, prostaglandins"] --> C
+  D["Weakened defence: H pylori, stress, NSAIDs, steroids, smoking"] --> C
+  C -- "Yes" --> E["Mucosal injury"]
+  E --> F["Gastritis or peptic ulcer"]`}
+/>
+
+## Gastritis
+
+**Gastritis** is inflammation of the stomach lining.
+
+### Causes and pathogenesis
+
+| Type | Cause and mechanism |
+|---|---|
+| Acute | Alcohol (about 15%); NSAIDs inhibit COX, so prostaglandins fall, giving hyperacidity and inflammation; severe burns reduce plasma volume and the mucosa sloughs |
+| Chronic | About 80% bacterial, mainly Helicobacter pylori, the most common cause |
+| Atrophic | Autoimmune: antibodies against parietal cells and intrinsic factor cause pernicious anaemia (vitamin B12 deficiency) |
+
+### Clinical features
+
+Abdominal pain, dyspepsia, bloating, nausea and vomiting. There may be haematemesis if an ulcer is present, and anaemia if pernicious B12 deficiency exists.
+
+### Investigations and management
+
+- **Carbon-13 urea breath test**, serology (IgG) and **faecal antigen test** for H. pylori.
+- **Endoscopy with gastric biopsy**: H. pylori microscopy and exclusion of gastric cancer.
+
+Treatment: avoid triggers (alcohol, NSAIDs); antacids (Mylanta); PPI (omeprazole) or H2 antagonist (ranitidine); **H. pylori triple eradication therapy** (clarithromycin plus amoxicillin, with or without metronidazole); B12 injections for pernicious anaemia.
+
+## Peptic ulcer disease
+
+### Causes
+
+Ulcers result from **too much attack** (hyperacidity, Zollinger-Ellison syndrome) or **too little defence** (H. pylori, stress, drugs such as NSAIDs and corticosteroids, smoking).
+
+### Morphology
+
+A small, single, round, **punched-out** ulcer. About 90% lie in the **duodenum or the lesser curve** of the stomach. Healing ulcers show mucosal folds radiating from the scar as it contracts.
+
+### Clinical features
+
+- Burning epigastric pain, worst when hungry and relieved by food
+- Nausea and vomiting
+- Anorexia and weight loss
+- Haematemesis or melaena; perforation leads to acute peritonitis
+
+### Investigations
+
+Clinical history; endoscopy with biopsy (ulcer, H. pylori, cancer); **carbon-13 urea breath test**, the best non-invasive H. pylori diagnosis; serology (IgG); faecal antigen test.
+
+### Management
+
+Same medical regimen as gastritis: avoid triggers, antacids, PPI or H2 antagonist, and triple eradication therapy. **Emergency surgery** is needed for haematemesis, rupture, peritonitis or cancer.
+
+### Complications
+
+| Complication | Consequence |
+|---|---|
+| GI bleeding | Anaemia |
+| Perforation | Haemorrhage and shock, peritonitis, or erosion into the pancreas (pancreatitis) |
+| Pyloric stenosis from scarring | Gastric outlet obstruction and vomiting |
+| Gastric cancer | H. pylori carries about six times the cancer risk |
+
+<Callout kind="warning" title="Perforation">
+Sudden severe abdominal pain with peritonism in an ulcer patient means perforation: an emergency.
+</Callout>
+
+## Curling's ulcer
+
+An acute peptic ulcer (of the duodenum) caused by severe burns. Burns cause fluid loss and a fall in plasma volume, the gastric mucosa sloughs, and an ulcer forms. Risk of perforation and haemorrhage is high, with high mortality.
+
+**Prevention**: total parenteral nutrition and a PPI or H2 receptor antagonist; emergency surgery if haematemesis, rupture or peritonitis.
+
+<Callout kind="pearl">
+Hunger pain relieved by food points to a duodenal ulcer. Always test for H. pylori and biopsy gastric ulcers to exclude cancer.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Name the two main protective factors of the gastric mucosa.', a: 'The alkaline mucus layer and prostaglandins, which stimulate mucin synthesis.' },
+  { q: 'How do NSAIDs cause gastritis?', a: 'They inhibit COX, lowering prostaglandins, so defence falls and acid causes inflammation.' },
+  { q: 'What causes atrophic gastritis and what follows?', a: 'Autoimmune antibodies against parietal cells and intrinsic factor, giving pernicious anaemia from B12 deficiency.' },
+  { q: 'Which test is the best non-invasive diagnosis of H. pylori?', a: 'The carbon-13 urea breath test.' },
+  { q: 'What is the typical pain of a peptic ulcer?', a: 'Burning epigastric pain, worst when hungry and relieved by food.' },
+  { q: 'List the complications of peptic ulcer.', a: 'Bleeding with anaemia, perforation with peritonitis, pyloric stenosis with outlet obstruction, and gastric cancer.' },
+  { q: 'What is a Curling\'s ulcer?', a: 'An acute duodenal ulcer after severe burns, caused by reduced plasma volume and mucosal sloughing, with high perforation and mortality risk.' },
+]} />

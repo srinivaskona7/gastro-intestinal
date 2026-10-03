@@ -1,0 +1,102 @@
+---
+title: "Diverticulosis & diverticulitis"
+part: pathology
+group: Intestines
+order: 40
+summary: "Diverticulosis is the presence of mucosal pouches in the bowel wall, usually silent. Diverticulitis is their inflammation, giving left iliac fossa pain and fever."
+highYield:
+  - "Diverticulosis means pouches are present; diverticulitis means they are inflamed."
+  - "Pouches arise from raised pressure (straining, constipation) at weak points of the colonic wall, typically on the left."
+  - "95% are asymptomatic; rectal bleeding is the commonest complication."
+  - "Diverticulitis feels like appendicitis on the left, with fever and tachycardia."
+  - "Treatment is high fibre, antibiotics for non-perforated disease, plus surgery if perforated."
+tags: [colon, diverticula, left iliac fossa, constipation]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+| Term | Meaning |
+|---|---|
+| **Diverticulosis** | Presence of diverticula (pouches) in the bowel wall |
+| **Diverticulitis** | Inflammation of those diverticula |
+
+A diverticulum is a pocket of mucosa pushed out through the muscular wall, typically in the colon and most often on the **left** side (sigmoid).
+
+## Causes and risk factors
+
+- Straining at stool
+- Chronic constipation
+- Increasing age
+- Congenital forms, such as **Meckel's diverticulum** (a true congenital pouch in the ileum)
+
+## Pathogenesis
+
+**Diverticulosis**: a weakness in the intestinal or colonic wall combines with raised intraluminal pressure (from straining or constipation). The mucosa herniates through the weak point and forms a pouch.
+
+**Diverticulitis**: faeces block the neck of the diverticulum, contents stagnate, bacteria overgrow, and inflammation follows. That inflammation can lead to complications.
+
+<Mermaid
+  caption="From pouch to complication"
+  chart={`flowchart TD
+  A[Weak colonic wall] --> B[Raised intraluminal pressure]
+  B --> C["Mucosa herniates: diverticulosis"]
+  C --> D[Faeces block diverticulum neck]
+  D --> E[Stagnation]
+  E --> F[Bacterial overgrowth]
+  F --> G["Inflammation: diverticulitis"]
+  G --> H[Perforation, abscess, fistula]`}
+/>
+
+## Morphology
+
+Pouches or pockets in the intestinal wall, typically in the left iliac fossa (LIF) region of the colon.
+
+## Clinical features
+
+| Situation | Features |
+|---|---|
+| Diverticulosis | 95% asymptomatic; rectal bleeding common |
+| Symptomatic disease | Intermittent LIF pain and erratic bowel habit |
+| Diverticulitis | Severe LIF pain, fever, tachycardia (like appendicitis, but on the left) |
+| Perforation | Peritonitis and sepsis |
+
+<Callout kind="pearl">
+Left-sided appendicitis-like pain with fever in an older, constipated patient is diverticulitis until proven otherwise.
+</Callout>
+
+## Diagnosis
+
+- **Colonoscopy** to see the pouches (avoided during acute inflammation because of perforation risk, with CT often used instead).
+- **FBC** to look for raised inflammatory markers and bleeding.
+
+## Treatment
+
+- **High fibre diet** for prevention and symptoms.
+- **Non-perforated diverticulitis**: antibiotics, here ampicillin, gentamicin and metronidazole.
+- **Perforated diverticulitis**: the same antibiotics plus **surgery**.
+
+## Complications
+
+- **Rectal bleeding** (the commonest)
+- **Perforation** leading to sepsis
+- Generalised peritonitis
+- Abscess
+- Fistulae into adjacent organs
+
+<Callout kind="warning" title="Perforation">
+Rigid abdomen, high fever and shock suggest perforation with peritonitis, which needs resuscitation, antibiotics and surgery.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Define diverticulosis and diverticulitis.', a: 'Diverticulosis is the presence of diverticula; diverticulitis is inflammation of them.' },
+  { q: 'What combination of factors creates a diverticulum?', a: 'A weak point in the bowel wall plus raised intraluminal pressure, such as from straining or constipation.' },
+  { q: 'How does diverticulitis develop from a pouch?', a: 'Faeces obstruct the neck, causing stagnation, bacterial overgrowth, then inflammation.' },
+  { q: 'What are the clinical differences between diverticulosis and diverticulitis?', a: 'Diverticulosis is usually silent (95%) with occasional bleeding; diverticulitis causes severe LIF pain, fever and tachycardia.' },
+  { q: 'How are non-perforated and perforated diverticulitis treated?', a: 'Antibiotics for non-perforated; antibiotics plus surgery for perforated.' },
+  { q: 'What is the commonest complication?', a: 'Rectal bleeding.' },
+]} />

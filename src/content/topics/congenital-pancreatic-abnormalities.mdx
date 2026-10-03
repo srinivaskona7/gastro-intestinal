@@ -1,0 +1,88 @@
+---
+title: "Congenital pancreatic abnormalities"
+part: pathology
+group: Pancreas
+order: 19
+summary: "Developmental variants of the pancreas, namely pancreas divisum, annular pancreas, ectopic pancreas and pancreatic cysts, and the problems each can cause."
+highYield:
+  - "Pancreas divisum is failed fusion of the duct systems, so drainage is through the narrow minor papilla; predisposes to chronic pancreatitis."
+  - "Annular pancreas is a head that encircles the duodenum and obstructs it."
+  - "Ectopic pancreas is a choristoma, usually a small asymptomatic mass, rarely malignant."
+  - "Pancreatic cysts may be benign, precancerous or cancerous."
+tags: [pancreas divisum, annular pancreas, choristoma, pancreatic cyst]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## Overview
+
+The pancreas forms from two buds that fuse during development. Errors in this process, or in where tissue ends up, give four distinct conditions.
+
+| Condition | Core defect | Main consequence |
+|---|---|---|
+| Pancreas divisum | Duct systems fail to fuse | Chronic pancreatitis |
+| Annular pancreas | Head encircles duodenum | Duodenal obstruction |
+| Ectopic pancreas | Normal tissue in wrong place | Usually none |
+| Pancreatic cysts | Fluid collections | Pain, jaundice, malignancy risk |
+
+## Pancreas divisum
+
+Normally the duct systems of the pancreas join so that most secretions leave through the **ampulla of Vater** alongside the bile. In divisum they **fail to fuse**. Strictly, it is the ventral and dorsal pancreatic ducts that fail to join, not the common bile duct and pancreatic duct.
+
+The result is that the bile duct drains through the ampulla of Vater while the bulk of the pancreatic juice must leave through the **minor sphincter (minor papilla) only**, which is **narrower and shorter**. Secretions drain poorly, pressure builds, and this **predisposes to chronic pancreatitis**.
+
+<Mermaid
+  caption="Why divisum causes pancreatitis"
+  chart={`flowchart LR
+  A["Ducts fail to fuse"] --> B["Bile drains via ampulla of Vater"]
+  A --> C["Pancreatic juice drains via minor papilla only"]
+  C --> D["Narrow outlet, poor drainage"]
+  D --> E["Chronic pancreatitis"]`}
+/>
+
+## Annular pancreas
+
+The **head of the pancreas encircles the duodenum**, like a ring around a pipe. This can squeeze the duodenum and cause **duodenal obstruction**.
+
+## Ectopic pancreas
+
+An ectopic pancreas is a **choristoma**: a benign tumour-like mass made of normal tissue in an abnormal location. It consists of **exocrine (acinar) pancreatic tissue** outside the pancreas and may be found in:
+
+- stomach
+- duodenum
+- jejunum
+- Meckel's diverticulum
+
+It is typically a small mass (under 1 cm), **usually asymptomatic**, and **malignancy is rare**.
+
+## Pancreatic cysts
+
+These are **fluid collections within the head, body or tail** of the pancreas. The cause here is congenital. Microscopically they are **epithelial lined** and the contents are fluid.
+
+| Situation | Presentation |
+|---|---|
+| Small | Asymptomatic |
+| Large | Abdominal pain, back pain, duodenal obstruction, jaundice if in the head |
+| Infected | Fever, chills, sepsis |
+
+They may be **benign, precancerous or cancerous**, so the nature of each cyst matters.
+
+<Callout kind="pearl">
+Annular pancreas obstructs the duodenum from outside; ectopic pancreas is a lump of normal tissue misplaced; divisum is a drainage problem. Keep the mechanism separate for each.
+</Callout>
+
+<Callout kind="warning" title="Large cysts in the head">
+A cyst in the pancreatic head can compress the bile duct and produce jaundice, which can be mistaken for a tumour.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'What goes wrong in pancreas divisum?', a: 'The duct systems fail to fuse, so pancreatic juice drains through the narrow, short minor papilla.' },
+  { q: 'Why does divisum predispose to chronic pancreatitis?', a: 'Poor drainage through a small outlet raises pressure and causes repeated inflammation.' },
+  { q: 'What is annular pancreas and what does it cause?', a: 'The pancreatic head encircles the duodenum, causing duodenal obstruction.' },
+  { q: 'What is a choristoma?', a: 'A benign mass of normal tissue in an abnormal location, as in ectopic pancreas.' },
+  { q: 'Where can ectopic pancreas occur and is it dangerous?', a: 'Stomach, duodenum, jejunum or Meckel diverticulum; usually asymptomatic and rarely malignant.' },
+  { q: 'What symptoms arise from large or infected pancreatic cysts?', a: 'Abdominal and back pain, jaundice if in the head, duodenal obstruction; infection adds fever, chills and sepsis.' },
+]} />

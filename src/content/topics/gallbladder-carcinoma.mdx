@@ -1,0 +1,74 @@
+---
+title: "Gallbladder carcinoma"
+part: pathology
+group: Liver & biliary
+order: 34
+summary: "An adenocarcinoma arising from chronically inflamed gallbladder, usually in women with gallstones, and usually found late with a poor outlook."
+highYield:
+  - "Chronic cholelithiasis (gallstones) is the main cause, through long-standing irritation."
+  - "Microscopy shows adenocarcinoma."
+  - "More common in females; symptoms are vague abdominal pain, anorexia and weight loss."
+  - "ALP and GGT are raised; CT diagnoses and stages."
+  - "Resect if below stage 3; palliative chemotherapy if metastatic. Late diagnosis gives poor prognosis."
+tags: [gallbladder, gallstones, adenocarcinoma, cholelithiasis]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+Gallbladder carcinoma is a malignant tumour of the gallbladder wall. Under the microscope it shows the features of an **adenocarcinoma**.
+
+## Causes and pathogenesis
+
+The main cause is **chronic cholelithiasis**. Gallstones keep the gallbladder wall irritated and inflamed for years, and that persistent inflammation can eventually give rise to a neoplasm.
+
+<Mermaid
+  caption="Gallstones to carcinoma"
+  chart={`flowchart LR
+  A["Chronic gallstones"] --> B["Chronic irritation and inflammation"]
+  B --> C["Neoplasm"]
+  C --> D["Adenocarcinoma"]
+  D --> E["Late, vague symptoms"]
+  E --> F["Late diagnosis and poor prognosis"]`}
+/>
+
+## Clinical features
+
+- It is **more common in females**, matching the sex distribution of gallstones.
+- Symptoms are non-specific: **vague abdominal pain**, **anorexia** and **weight loss**.
+
+Because nothing points clearly to the gallbladder, the tumour is usually discovered late.
+
+## Investigations
+
+| Test | Role |
+|---|---|
+| LFTs | Raised ALP and GGT |
+| CT | Diagnosis and staging |
+
+## Management
+
+| Situation | Treatment |
+|---|---|
+| Below stage 3 | Surgical resection |
+| Metastatic disease | Palliative chemotherapy |
+
+## Prognosis
+
+Late diagnosis is typical, so the prognosis is **poor**.
+
+<Callout kind="pearl">
+Gallstones for years, plus a woman with vague abdominal pain and weight loss, should make you think of gallbladder carcinoma as well as simple biliary colic.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'What is the main cause of gallbladder carcinoma?', a: 'Chronic cholelithiasis: long-term irritation and inflammation of the gallbladder wall.' },
+  { q: 'What histological type is it?', a: 'Adenocarcinoma.' },
+  { q: 'Why is it usually diagnosed late?', a: 'Symptoms are vague (mild abdominal pain, anorexia, weight loss), so it is found at an advanced stage.' },
+  { q: 'Which tests help?', a: 'LFTs (raised ALP and GGT) and CT for diagnosis and staging.' },
+  { q: 'How does stage drive management?', a: 'Resection if below stage 3; palliative chemotherapy if metastatic.' },
+]} />

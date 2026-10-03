@@ -1,0 +1,104 @@
+---
+title: "Meckel's diverticulum"
+part: pathology
+group: Intestines
+order: 36
+summary: "A congenital true diverticulum of the small bowel, remembered by the rule of twos, usually silent but able to bleed, obstruct or mimic appendicitis."
+highYield:
+  - "Congenital malformation: a single true diverticulum (all wall layers) in the small intestine."
+  - "Rule of twos: 2 percent of people, presents around 2 years old, 2 cm long, within about 2 feet of the ileocaecal valve, 2 tissue types (gastric and pancreatic)."
+  - "Most are asymptomatic; the first sign is often melaena."
+  - "Can cause obstruction, volvulus, intussusception and an appendicitis-like illness."
+  - "Diagnosis is clinical with ultrasound or CT; treatment is surgery."
+tags: [small intestine, congenital, melaena, rule of twos, paediatric]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+**Meckel's diverticulum** is a congenital malformation of the small intestine: a single pouch sticking out of the bowel. It is a **true diverticulum**, meaning that its wall contains **all the layers** of the intestine, unlike acquired false diverticula.
+
+## Causes and pathogenesis
+
+A defect in **embryological development** leaves one diverticulum in the small bowel, positioned just deep to the umbilicus. Because it is congenital, it is present from birth even if it never causes problems.
+
+## The rule of twos
+
+This memory aid captures both the structure and the epidemiology.
+
+| The "two" | Meaning |
+|---|---|
+| 2 percent | Of the population has one |
+| 2 years | Typical age at presentation |
+| 2 cm | Length of the diverticulum |
+| 2 feet | Within about 2 feet of the ileocaecal valve |
+| 2 tissues | Contains gastric and pancreatic tissue |
+
+<Callout kind="pearl">
+The ectopic **gastric** tissue can secrete acid. That explains the **ulceration and bleeding** that give the classic painless melaena in a small child.
+</Callout>
+
+<Mermaid
+  caption="Rule of twos"
+  chart={`mindmap
+  root((Meckel's))
+    2 percent of people
+    Presents at 2 years
+    2 cm long
+    2 feet from ileocaecal valve
+    2 tissues
+      Gastric
+      Pancreatic`}
+/>
+
+## Clinical features
+
+Most people with a Meckel's diverticulum are **asymptomatic**. When it does declare itself, usually around age 2, the course is typically:
+
+1. **Melaena** first (passage of black, tarry stool).
+2. Later, **severe abdominal pain** from small bowel obstruction, volvulus or intussusception.
+3. Some cases **look like appendicitis**.
+
+<Mermaid
+  caption="How a Meckel's diverticulum can present"
+  chart={`flowchart TD
+  A["Meckel's diverticulum"] --> B["Asymptomatic (majority)"]
+  A --> C["Gastric tissue ulcerates"]
+  C --> D["Melaena"]
+  A --> E["Mechanical problems"]
+  E --> F["Obstruction, volvulus, intussusception"]
+  A --> G["Inflammation"]
+  G --> H["Appendicitis-like pain"]`}
+/>
+
+## Complications
+
+- Bleeding
+- Peptic ulceration
+- Infection
+- Torsion
+- Ischaemia and necrosis
+- Herniation
+- Obstruction
+
+## Diagnosis and treatment
+
+- Diagnosis is **clinical**, supported by **ultrasound or CT**.
+- Treatment is **surgery**.
+
+<Callout kind="warning" title="Appendicitis mimic">
+A child with appendicitis-like pain, or with melaena and no obvious cause, should have Meckel's diverticulum on the differential.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'What does "true diverticulum" mean here?', a: 'The pouch wall contains all the layers of the small intestine.' },
+  { q: 'State the rule of twos.', a: '2 percent of people, presenting at about 2 years, 2 cm long, about 2 feet from the ileocaecal valve, with 2 tissue types (gastric and pancreatic).' },
+  { q: 'What is the usual first symptom when it presents?', a: 'Melaena, from ulceration due to acid-secreting gastric tissue.' },
+  { q: 'Which later problems cause severe pain?', a: 'Small bowel obstruction, volvulus or intussusception; it can also mimic appendicitis.' },
+  { q: 'List some complications.', a: 'Bleeding, peptic ulceration, infection, torsion, ischaemia, necrosis, herniation and obstruction.' },
+  { q: 'How is it diagnosed and treated?', a: 'Clinically with ultrasound or CT; treatment is surgery.' },
+]} />

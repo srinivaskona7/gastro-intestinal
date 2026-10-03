@@ -1,0 +1,82 @@
+---
+title: "Cholangiocarcinoma"
+part: pathology
+group: Liver & biliary
+order: 33
+summary: "An adenocarcinoma of the bile ducts linked to chronic biliary irritation, presenting with obstructive jaundice and carrying a poor prognosis."
+highYield:
+  - "Malignant adenocarcinoma arising anywhere along the bile ducts."
+  - "Risk factors are bile duct cysts, primary sclerosing cholangitis, ulcerative colitis and past parasitic worm infection."
+  - "Not associated with hepatitis or cirrhosis, unlike hepatocellular carcinoma."
+  - "Presents with painless obstructive jaundice, dark urine and pale stools."
+  - "Raised ALP and GGT; CT for diagnosis and staging; five-year survival is about 30 percent."
+tags: [bile duct, biliary, obstructive jaundice, primary sclerosing cholangitis]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+**Cholangiocarcinoma** (bile duct carcinoma) is a malignant tumour of the bile ducts. Microscopically it is an **adenocarcinoma**. It can start at any point along the biliary tree, inside or outside the liver.
+
+## Causes / risk factors
+
+The common thread is long-standing irritation or abnormality of the ducts.
+
+| Risk factor | Notes |
+|---|---|
+| Bile duct cysts | Congenital abnormality of the ducts |
+| Primary sclerosing cholangitis | Chronic inflammation of the bile ducts |
+| Ulcerative colitis | Linked through its association with sclerosing cholangitis |
+| History of parasitic worm infection | Chronic biliary infestation |
+
+<Callout kind="pearl">
+Cholangiocarcinoma is **not** associated with hepatitis or cirrhosis. That sets it apart from hepatocellular carcinoma.
+</Callout>
+
+## Pathogenesis
+
+A neoplasm develops in the lining of the ducts. As it grows it narrows the lumen, which causes **biliary obstruction**, and obstruction produces most of the symptoms.
+
+<Mermaid
+  caption="From duct irritation to obstructive picture"
+  chart={`flowchart TD
+  A["Risk factor: cysts, PSC, UC, parasites"] --> B["Chronic biliary irritation"]
+  B --> C["Adenocarcinoma of bile duct"]
+  C --> D["Biliary obstruction"]
+  D --> E["Post-hepatic jaundice"]
+  D --> F["Raised ALP and GGT"]`}
+/>
+
+## Clinical features
+
+- Fever and chills
+- Anorexia and weight loss
+- **Post-hepatic (obstructive) jaundice**: yellow skin and eyes, **dark urine** (conjugated bilirubin spills into urine) and **pale stools** (no bile pigment reaches the gut)
+
+## Investigations
+
+- **ALP and GGT raised**, the cholestatic pattern. ALT and AST may be mildly raised, and conjugated bilirubin may be mildly raised.
+- **CT** for diagnosis and staging.
+
+## Management and prognosis
+
+- **Surgery** if the tumour is extrahepatic.
+- **Liver transplant** if the tumour is large.
+- Prognosis is **poor**: about **30 percent** survive five years.
+
+<Callout kind="warning" title="Obstructive jaundice needs a cause">
+Jaundice with dark urine, pale stools and a raised ALP means the flow of bile is blocked. In a patient with sclerosing cholangitis or ulcerative colitis, keep cholangiocarcinoma on the list.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'What is the histological type of cholangiocarcinoma?', a: 'Adenocarcinoma of the bile ducts.' },
+  { q: 'Name four risk factors.', a: 'Bile duct cysts, primary sclerosing cholangitis, ulcerative colitis and previous parasitic worm infection.' },
+  { q: 'Is it linked to cirrhosis or hepatitis?', a: 'No. That is a feature of hepatocellular carcinoma instead.' },
+  { q: 'Why are the urine dark and the stools pale?', a: 'The tumour blocks bile flow: conjugated bilirubin regurgitates into blood and urine, and less reaches the gut.' },
+  { q: 'Which liver enzymes rise, and which imaging is used?', a: 'ALP and GGT (possibly mild ALT and AST); CT for diagnosis and staging.' },
+  { q: 'What are the treatment options?', a: 'Surgery for extrahepatic disease; liver transplant if large. Five-year survival is about 30 percent.' },
+]} />

@@ -1,0 +1,158 @@
+---
+title: "GI tract absorption"
+part: anatomy-physiology
+group: Foundations
+order: 4
+summary: "How water, carbohydrate, protein and lipid are digested and absorbed along the gut, including the transporters, enzymes, micelles and chylomicrons involved."
+highYield:
+  - "Under 170 mL of water is lost in faeces daily; the rest is absorbed, mostly following sodium."
+  - "Glucose enters enterocytes by SGLT1 with sodium and leaves by GLUT2; fructose uses GLUT5."
+  - "Zymogens (pepsinogen, trypsinogen) stay inactive until they reach the lumen, protecting the cells that make them."
+  - "Fats travel as micelles, then chylomicrons, and enter lymph through lacteals."
+  - "Amino acids and sugars go to the portal blood; fat goes to lymph."
+tags: [absorption, carbohydrate, protein, lipid, water, transporters]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## Water absorption
+
+Less than 170 mL of water leaves the gut each day, so nearly everything that enters is absorbed into the blood. Water moves by **osmosis** towards the more concentrated (hypertonic) side, usually following sodium ions though not always. It crosses through **aquaporins**, water-specific channel proteins.
+
+| Site | Mechanism |
+|---|---|
+| Jejunum | Na+/K+ ATPase keeps intracellular sodium low. SGLT1 imports sodium and glucose together, water follows, and basal GLUT2 releases glucose to the interstitium |
+| Ileum | Na+/K+ ATPase again; sodium enters through a Na+/H+ antiporter (H+ goes to the lumen); bicarbonate enters the lumen through a HCO3-/Cl- antiporter, balancing charge; chloride moves from cell to interstitium to balance sodium |
+| Proximal colon | Na+/K+ ATPase; sodium enters through an apical ion channel; excess potassium leaks back to the interstitium through leak channels |
+
+<Mermaid
+  caption="Jejunal sodium-glucose-water coupling"
+  chart={`flowchart LR
+  A["Na/K ATPase keeps cell sodium low"] --> B["SGLT1 imports Na and glucose"]
+  B --> C["Water follows by osmosis"]
+  B --> D["GLUT2 releases glucose to interstitium"]`}
+/>
+
+<Callout kind="pearl" title="Why oral rehydration works">
+In severe dehydration a solution containing both sodium and glucose gives the best water uptake, because SGLT1 couples the two.
+</Callout>
+
+## Carbohydrate
+
+Intake is about 200-600 g a day and supplies roughly half of energy needs, at 16 kJ per gram. Complex carbohydrates give the slowest energy release.
+
+### Digestion
+
+| Site | Enzyme | Action |
+|---|---|---|
+| Mouth | Salivary alpha-amylase (parotid, submandibular) | Cuts starch to short chains of a few units; needs the right pH, so works in the mouth but not the stomach |
+| Small intestine lumen | Pancreatic alpha-amylase | Cuts starch into even smaller pieces. Its release is stimulated by CCK; secretin drives bicarbonate release that neutralises chyme to the optimum pH |
+| Brush border | Membrane-bound enzymes | Oligosaccharides and disaccharides to monosaccharides |
+
+Brush-border enzymes are often bifunctional, with two active sites in one protein.
+
+| Enzyme | Substrate | Products |
+|---|---|---|
+| Sucrase | Sucrose | Glucose and fructose |
+| Lactase | Lactose | Glucose and galactose |
+| Maltase | Maltose | Glucose and glucose |
+| Isomaltase | Maltotriose and branch-point fragments | Glucose (not galactose, a common exam trap) |
+
+### Absorption
+
+None occurs in mouth, stomach or large intestine. In the small intestine:
+
+- **Glucose and galactose** enter by the sodium-coupled apical transporter **SGLT1** (secondary active transport; not GLUT1) and exit basally by GLUT2.
+- **Fructose** enters by apical GLUT5 and exits by GLUT2.
+
+### Blood glucose fate
+
+| Pathway | Examples |
+|---|---|
+| Insulin-dependent | Fat synthesis and storage; uptake into muscle (for glycogen storage; storing is glycogenesis, not glycogenolysis) |
+| Insulin-independent | Uptake into the liver; uptake into the brain as fuel |
+
+If the insulin-dependent routes are blocked, as in diabetes, blood glucose rises and glucose spills into the urine.
+
+### Glycaemic index and fibre
+
+The **glycaemic index** measures how quickly a carbohydrate releases glucose: high GI means fast, low GI means slow.
+
+| Type | Features |
+|---|---|
+| Soluble fibre (non-starch polysaccharide, not cellulose) | In fruit, vegetables, oats, seeds; thickens gut contents; fermented by colonic bacteria |
+| Insoluble fibre (cellulose) | Plant cell walls; bulks colonic contents and keeps bowels regular; mostly not fermented |
+| Resistant starch | Escapes small-bowel digestion, reaches the colon, acts like both fibre types; not strictly fibre |
+
+## Protein
+
+The recommended intake is about 125 g a day (sources: meat, eggs, dairy, seeds, nuts, legumes). Proteins supply amino acids; **essential** ones must be eaten, **non-essential** ones can be made by the body.
+
+### Digestion
+
+1. **Stomach:** chief cells secrete pepsinogen and parietal cells secrete HCl. Acid converts it to **pepsin**, an endopeptidase that breaks bonds inside proteins to give smaller polypeptides.
+2. **Small intestine:** proteases cut polypeptides to single amino acids.
+
+<Mermaid
+  caption="Pancreatic protease activation cascade"
+  chart={`flowchart TD
+  A["Brush border enzyme (enteropeptidase)"] --> B["Trypsinogen to trypsin"]
+  B --> C["Chymotrypsinogen to chymotrypsin"]
+  B --> D["Procarboxypeptidase to carboxypeptidase"]
+  E["Brush border: aminopeptidase and dipeptidase"] --> F["One amino acid cleaved at a time"]`}
+/>
+
+Because pepsin is released as a **zymogen**, an inactive precursor needing a chemical change to activate, it does not digest the cells that made it.
+
+<Callout kind="pearl" title="Newborns">
+Newborns cannot digest protein well, which spares IgA antibodies in colostrum. They protect the gut and are also taken into the blood for wider immunity.
+</Callout>
+
+### Absorption
+
+Single amino acids and some di- and tripeptides are taken up mainly in the small intestine by enterocytes, by cotransport with sodium. Intracellular peptidases finish breaking down di- and tripeptides, and basolateral transporters release amino acids and peptides into villus capillaries.
+
+## Lipids
+
+Intake is 60-100 g a day: 90% triglycerides, 10% cholesterol, cholesterol esters, phospholipids and the fat-soluble vitamins A, D, E and K.
+
+### Emulsification
+
+Fats do not dissolve in water. Gastric contractions spread fat evenly through chyme. In the duodenum, **bile salts**, which have a polar end and a non-polar end (amphiphilic), break large droplets into tiny ones. More surface area means more access for lipases.
+
+### Digestion
+
+- **Gastric lipase** comes from chief cells; **pancreatic lipase** is secreted in active form. Both are water-soluble and hydrolyse the ester bonds between glycerol and fatty acids.
+- Usually the result is one monoacylglyceride plus two free fatty acids; rarely it is glycerol plus three fatty acids.
+
+### Absorption
+
+<Mermaid
+  caption="From lumen to lymph"
+  chart={`flowchart TD
+  A["Micelle at brush border"] --> B["Fatty acids and monoglycerides diffuse into enterocyte"]
+  B --> C["Smooth ER rebuilds triglycerides"]
+  C --> D["Golgi packs with cholesterol and lipoproteins"]
+  D --> E["Chylomicron"]
+  E --> F["Exocytosed to interstitium"]
+  F --> G["Lacteal then lymphatics then blood"]`}
+/>
+
+1. Monoglycerides and fatty acids stay associated with bile acids and form **micelles** in the chyme.
+2. At the brush border, micelles release their cargo, which diffuses freely into the enterocyte.
+3. In the endoplasmic reticulum they are rebuilt into triglycerides, then packaged in the Golgi with cholesterol and lipoproteins into **chylomicrons** (the lowest-density lipoprotein).
+4. Vesicles carry chylomicrons to the basolateral membrane, where they are exocytosed, enter the **lacteal** in the villus, pass through lymph and reach the blood. There they are rapidly used.
+
+**Cholesterol** is absorbed in the small intestine through a specific transporter and carried in chylomicrons. Homeostasis is the balance of synthesis, absorption and excretion in bile.
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Why is a sodium plus glucose solution used for severe dehydration?', a: 'SGLT1 couples sodium and glucose uptake, and water follows sodium by osmosis, maximising absorption.' },
+  { q: 'Why is pepsin secreted as pepsinogen?', a: 'As a zymogen it stays inactive until acid in the lumen activates it, so it does not digest the cells that made it.' },
+  { q: 'Which transporters move fructose across the enterocyte?', a: 'GLUT5 on the apical side and GLUT2 on the basal side.' },
+  { q: 'Why does absorbed fat reach lymph rather than portal blood?', a: 'It is packaged into chylomicrons, too large for capillaries, which enter the lacteal and travel in lymph to the blood.' },
+  { q: 'What is the role of bile salts in fat digestion?', a: 'They emulsify large droplets into tiny ones, raising surface area for lipases, and later form micelles.' },
+  { q: 'Which brush-border enzyme splits lactose and into what?', a: 'Lactase, into glucose and galactose.' },
+]} />

@@ -1,0 +1,88 @@
+---
+title: "GORD, Barrett's oesophagus & oesophageal tumours"
+part: pathology
+group: Oesophagus
+order: 13
+summary: "Reflux from a defective lower oesophageal sphincter can cause Barrett's metaplasia and adenocarcinoma, while smoking and alcohol drive squamous cell carcinoma."
+highYield:
+  - "GORD arises from a defective lower oesophageal sphincter; hiatus hernia and raised abdominal pressure are risk factors."
+  - "Barrett's is upward migration of the squamo-columnar junction with columnar metaplasia."
+  - "Adenocarcinoma sits in the lower third (GORD, Barrett's); squamous carcinoma in the upper third (smoking, alcohol)."
+  - "Dysphagia progressing from solids to liquids suggests malignancy."
+  - "Gastroscopy with biopsy grades disease; CT stages adenocarcinoma."
+tags: [oesophagus, reflux, Barrett's, adenocarcinoma, squamous]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+**Gastro-oesophageal reflux disease (GORD)** is the backflow of stomach contents into the oesophagus. Long-standing reflux can change the lining (**Barrett's oesophagus**) and may lead to cancer. Oesophageal tumours come in two main types that differ in cause and location.
+
+## Causes and risk factors
+
+The underlying problem is a **defective lower oesophageal sphincter**. Factors that promote reflux:
+
+- Raised intra-abdominal pressure
+- Hiatus hernia
+- Fatty foods, alcohol, coffee, chocolate and spices
+
+## Pathogenesis and morphology
+
+Repeated acid exposure damages the squamous lining, which is replaced by gastric-type columnar epithelium (metaplasia). Cancer can then arise from this.
+
+<Mermaid
+  caption="From reflux to cancer"
+  chart={`flowchart LR
+  A["Defective sphincter"] --> B["Chronic reflux"]
+  B --> C["Barrett's metaplasia"]
+  C --> D["Dysplasia"]
+  D --> E["Adenocarcinoma"]
+  F["Smoking and alcohol"] --> G["Squamous cell carcinoma"]`}
+/>
+
+| Condition | Endoscopic appearance | Location and cause |
+|---|---|---|
+| Barrett's oesophagus | Squamo-columnar junction moves upwards; darker pink, velvety, inflamed mucosa with an irregular border | Lower oesophagus, from GORD |
+| Adenocarcinoma | Wet, bulbous tumour surrounded by gastric metaplasia (Barrett's) | Lower third; GORD and Barrett's |
+| Squamous cell carcinoma | Dry, keratinised, ulcerative tumour | Upper third; smoking and alcohol |
+
+## Clinical features
+
+- **Heartburn**: a retrosternal burning sensation.
+- **Dysphagia**: difficulty swallowing, usually solids first and then liquids.
+
+Complications of reflux disease: bleeding, perforation, stricture or obstruction, and Barrett's oesophagus.
+
+**Malignancy** adds progressive dysphagia (solids then liquids), weight loss, anorexia and aspiration.
+
+<Callout kind="warning" title="Progressive dysphagia">
+Dysphagia that worsens from solids to liquids, with weight loss, is a red flag for oesophageal cancer and needs urgent endoscopy.
+</Callout>
+
+## Investigations
+
+- **Gastroscopy with biopsy** to grade changes from Barrett's metaplasia up to adenocarcinoma.
+- **CT** to stage adenocarcinoma.
+
+## Management
+
+1. **Conservative (lifestyle)**: raise the head of the bed; avoid meals within 3 hours of bedtime; cut down fat, alcohol, caffeine, spices and smoking; lose weight to reduce intra-abdominal pressure.
+2. **Medical**: antacids (Mylanta), alginates (aluminium salts), H2 histamine receptor antagonists (ranitidine) and proton-pump inhibitors (omeprazole).
+3. **Surgical**: **Nissen fundoplication**, wrapping the upper stomach around the oesophagus.
+
+<Callout kind="pearl">
+Lower third, wet and bulbous, Barrett's nearby: adenocarcinoma. Upper third, dry and keratinised: squamous, linked to smoking and alcohol.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'What is the core defect in GORD?', a: 'A defective lower oesophageal sphincter allowing acid reflux.' },
+  { q: 'What does Barrett\'s oesophagus look like at endoscopy?', a: 'The squamo-columnar junction moves up; the mucosa is darker pink, velvety and inflamed with an irregular border.' },
+  { q: 'Which tumour is linked to GORD and where does it occur?', a: 'Adenocarcinoma, in the lower third of the oesophagus, arising in Barrett\'s.' },
+  { q: 'Which tumour is linked to smoking and alcohol?', a: 'Squamous cell carcinoma, in the upper third, dry, keratinised and ulcerative.' },
+  { q: 'Which lifestyle measures reduce reflux?', a: 'Raise the bed head, no meals within 3 hours of bed, less fat, alcohol, caffeine, spices and smoking, and weight loss.' },
+  { q: 'Which investigation stages adenocarcinoma?', a: 'CT; gastroscopy with biopsy is used for grading.' },
+]} />

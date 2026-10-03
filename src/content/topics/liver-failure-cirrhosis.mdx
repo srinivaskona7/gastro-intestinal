@@ -1,0 +1,133 @@
+---
+title: "Liver failure, cirrhosis & ascites"
+part: pathology
+group: Liver & biliary
+order: 30
+summary: "Fulminant hepatic failure, cirrhosis and its signs, acute versus chronic liver disease, compensated versus decompensated states, hepatic encephalopathy and how ascites forms."
+highYield:
+  - "Fulminant failure is massive necrosis with encephalopathy within 2 weeks; transplant is the only definitive treatment."
+  - "Cirrhosis causes: toxins 60-70%, chronic viral hepatitis 10%, biliary disease 10%, haemochromatosis 5%, cryptogenic 5%."
+  - "Low albumin, raised PT and low sodium reflect lost synthetic and regulatory function."
+  - "Hepatic encephalopathy is driven by ammonia the failing liver cannot clear."
+  - "Ascites arises from portal hypertension, low albumin and hepatorenal salt and water retention."
+tags: [cirrhosis, liver failure, encephalopathy, ascites, decompensation]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## Fulminant hepatic failure
+
+### What it is
+
+Severe, rapid liver failure that complicates acute hepatitis. The liver shows **massive, diffuse necrosis**.
+
+### Causes
+
+| Group | Examples |
+|---|---|
+| Viruses | A, B (with D), E |
+| Drugs | Paracetamol, halothane, antiepileptics, ecstasy |
+| Toxins | Amanita (poisonous mushrooms) |
+| Other | Wilson's disease, autoimmune hepatitis |
+
+### Clinical features
+
+Jaundice, a small liver, hepatic encephalopathy within 2 weeks, fetor hepaticus, fever, vomiting and cerebral oedema.
+
+### Investigations
+
+- FBC, to look for a cause.
+- LFTs: bilirubin and ALT/AST raised.
+- Coagulation: falling clotting factors including prothrombin and factor V, so prolonged PT.
+- Liver ultrasound.
+
+### Management
+
+Treat the cause and give supportive care. For coagulopathy use IV vitamin K, platelets, blood or fresh frozen plasma. **Liver transplant is the only definitive treatment.**
+
+## Hepatic cirrhosis
+
+### What it is
+
+The end stage of diffuse liver disease. Chronic hepatocyte injury leads to necrosis, **nodular fibrosis** and loss of normal function.
+
+### Causes
+
+| Cause | Share |
+|---|---|
+| Toxins (alcohol, drugs) | 60-70% |
+| Chronic viral hepatitis | 10% |
+| Biliary disease (obstruction, PBC) | 10% |
+| Primary haemochromatosis | 5% |
+| Cryptogenic | 5% |
+| Rare | Wilson's disease (copper), alpha-1 antitrypsin deficiency |
+
+### Morphology
+
+A shrunken liver with nodules (micro- or macro-nodular depending on cause) separated by fibrous septa.
+
+### Clinical features
+
+- **Encephalopathy**: forgetfulness, confusion, irritability, tremor and asterixis, seizures, coma.
+- **Portal hypertension**: caput medusae, oesophageal varices, haemorrhoids, splenomegaly, ascites, peripheral oedema.
+- **Excess oestrogen** (the liver fails to break it down): spider naevi on the chest (more than 3 is significant), gynaecomastia, palmar erythema.
+
+### Investigations
+
+Low serum albumin, raised prothrombin time, raised ALT/AST (marked if decompensated), low sodium. In young cirrhotics also check serum copper and alpha-1 antitrypsin to screen for Wilson's disease and deficiency.
+
+### Management and prognosis
+
+Remove or treat the cause; transplant is definitive. Cirrhosis is irreversible and fatal without transplant.
+
+## Acute versus chronic liver disease
+
+| | Acute | Chronic |
+|---|---|---|
+| Symptoms | May be none; if viral, malaise, fever, anorexia | May be none; right hypochondrial pain, abdominal distension, ankle swelling, itch, gynaecomastia, low libido, amenorrhoea, confusion and drowsiness |
+| Signs | Jaundice or not; hepatomegaly; if cholestatic, pale stools (no bile pigment reaches the gut) and dark urine (excess urinary bilirubin) | Jaundice, fever, loss of body hair, striae, testicular atrophy, purpura |
+
+**Compensated** chronic disease: spider naevi, gynaecomastia, hepato- and splenomegaly, clubbing, Dupuytren's contracture (alcoholic), xanthelasma and xanthomas.
+
+**Decompensated** disease: encephalopathy (drowsiness to coma, flap), ascites, caput medusae and peripheral oedema.
+
+## Hepatic encephalopathy
+
+When the liver cannot break down toxins, **ammonia** accumulates in the blood (sometimes loosely called azotaemia). The brain effects progress from forgetfulness, confusion and irritability to tremor and asterixis (sometimes attributed to loss of proprioception), then seizures and coma.
+
+## Ascites
+
+<Mermaid
+  caption="How cirrhosis produces ascites"
+  chart={`flowchart TD
+  A["Cirrhotic liver"] --> B["Portal hypertension"]
+  A --> C["Low albumin"]
+  B --> D["Higher hydrostatic pressure"]
+  C --> E["Lower oncotic pressure"]
+  D --> F["More lymph fluid leaks out: ascites"]
+  E --> F
+  F --> G["Lower intravascular volume"]
+  G --> H["Aldosterone rises"]
+  H --> I["Salt and water retention"]
+  I --> D
+  I --> E`}
+/>
+
+Two liver-driven forces push fluid out: raised hydrostatic pressure from **portal hypertension** and reduced oncotic pressure from **hypoalbuminaemia**. Fluid loss into the abdomen shrinks the circulating volume, which raises aldosterone (the hepatorenal contribution). The kidneys retain more fluid, which feeds the same two forces, creating a vicious circle.
+
+<Callout kind="pearl">
+Pale stools plus dark urine means conjugated bilirubin cannot reach the gut and spills into urine: cholestasis.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'What does the liver look like in fulminant failure?', a: 'Massive, diffuse necrosis.' },
+  { q: 'What is the only definitive treatment for fulminant failure and cirrhosis?', a: 'Liver transplant.' },
+  { q: 'Which cause accounts for most cirrhosis?', a: 'Toxins, mainly alcohol and drugs, at 60 to 70%.' },
+  { q: 'Why do cirrhotic men develop gynaecomastia and spider naevi?', a: 'The failing liver cannot clear oestrogen.' },
+  { q: 'What lab changes show lost liver function in cirrhosis?', a: 'Low albumin, raised prothrombin time, and low sodium.' },
+  { q: 'Which two tests screen young cirrhotics for treatable causes?', a: 'Serum copper (Wilson) and alpha-1 antitrypsin.' },
+  { q: 'Why does ascites keep worsening?', a: 'Lost fluid lowers circulating volume, aldosterone rises, and retained fluid raises hydrostatic pressure further.' },
+]} />

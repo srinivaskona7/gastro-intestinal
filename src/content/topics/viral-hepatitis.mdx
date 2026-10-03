@@ -1,0 +1,145 @@
+---
+title: "Viral hepatitis A-E"
+part: pathology
+group: Liver & biliary
+order: 28
+summary: "Hepatitis A to E compared by transmission, pathogenesis, chronicity and complications, with hepatitis B serology decoded and other infections that inflame the liver."
+highYield:
+  - "A and E are acute only; B and D can be acute or chronic; C is mostly chronic."
+  - "Hepatitis A and E spread faecal-orally; E carries about 20% mortality in pregnancy."
+  - "Hepatitis B injury is immune mediated; about 30% become chronic active and 70% chronic persistent carriers."
+  - "Anti-HBs alone means vaccinated; anti-HBs plus anti-HBc means previous infection."
+  - "Hepatitis D needs hepatitis B to replicate and worsens its course."
+  - "About 90% of hepatitis C becomes chronic; 20-30% reach cirrhosis."
+tags: [hepatitis A, hepatitis B, hepatitis C, serology, liver]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+Five main viruses (A to E) infect hepatocytes. They differ in how they spread and whether they persist.
+
+| Virus | Course | Spread | Cirrhosis risk |
+|---|---|---|---|
+| A | Acute only | Faecal-oral | None |
+| B | Acute and chronic | Blood, sex, mother to baby | Yes |
+| C | Mostly chronic | Blood, body fluids | Yes |
+| D | Acute and chronic, needs B | With hepatitis B | Yes, faster |
+| E | Acute only | Faecal-oral | None |
+
+## Hepatitis A
+
+**Hepatitis A virus** is the commonest viral hepatitis worldwide. It spreads faecal-orally, with an incubation period of 2 to 6 weeks. The virus damages the liver directly (cytopathic) but never causes cirrhosis, and there is no chronic phase.
+
+**Clinical features.** Viraemia gives fever, malaise, anorexia, nausea and arthralgia. After 1 to 2 weeks jaundice appears because of intrahepatic cholestasis: conjugated bilirubin rises, giving **pale stools and dark urine**. There may be hepatomegaly, splenomegaly and tender lymph nodes. Hepatic encephalopathy and death are rare.
+
+**Investigations.** All liver tests are raised; confirm with hepatitis A serology and PCR.
+
+**Prognosis.** Usually self-limiting; supportive care only.
+
+## Hepatitis E
+
+Clinically it mimics hepatitis A: faecal-oral spread (including animal sources such as dogs, pigs and rodents), direct liver cell damage, raised liver tests. The key difference is danger in **pregnancy**.
+
+- Mortality is 1 to 2% overall, from fulminant hepatic failure.
+- In pregnancy mortality is about **20%**, from DIC in the third trimester.
+
+<Callout kind="warning" title="Common confusions">
+Hepatitis E is not a herpesvirus; it is an RNA virus in its own family. Diagnosis needs hepatitis E serology and PCR, not the hepatitis A tests.
+</Callout>
+
+## Hepatitis B
+
+### Transmission
+
+- **Horizontal**: sexual contact, blood, ingestion and inoculation. Highly infectious.
+- **Vertical**: mother to baby, with a 20% chance. Infected mothers need anti-HBV immunoglobulin plus oral antivirals.
+- Preventable by vaccination with surface antigen, given at birth, 2, 4 and 6 months and at year 8.
+
+### Pathogenesis
+
+Hepatocyte injury is caused by **CD8 T-cell attack**, not the virus directly. An immunocompetent person clears the virus and recovers. If the immune response is sub-optimal the infection persists in one of two ways:
+
+<Mermaid
+  caption="Outcomes of hepatitis B infection"
+  chart={`flowchart TD
+  A["Acute hepatitis B"] --> B{"Immune response"}
+  B -->|"Good"| C["Clearance and recovery (over 90%)"]
+  B -->|"Sub-optimal"| D["Chronic (under 10%)"]
+  D --> E["30% chronic active hepatitis"]
+  D --> F["70% chronic persistent hepatitis"]
+  E --> G["Inflammation, fibrosis, EARLY cirrhosis, liver cancer"]
+  F --> H["Little inflammation, carrier, LATE cirrhosis"]`}
+/>
+
+### Clinical picture by stage
+
+| | Acute | Chronic active (30%) | Chronic persistent (70%) |
+|---|---|---|---|
+| Symptoms | Fever, anorexia, nausea, vomiting, myalgia | Same non-specific viral symptoms | May be asymptomatic |
+| Signs | Conjugated jaundice, dark urine, pale stools, pruritus | Jaundice, small nodular liver, portal hypertension signs (telangiectasia, caput medusae, ascites, pedal oedema, splenomegaly, gynaecomastia, encephalopathy) | None |
+| Nature | Acute illness | Active, replicative | Inactive carrier |
+| Outcome | Over 90% full recovery | Cirrhosis in all; liver cancer risk about 200 times higher | Carrier for life, minimal progression, late cirrhosis, sporadic acute episodes |
+
+### Serology
+
+| State | HBsAg | Anti-HBs | HBeAg | Anti-HBe | Anti-HBc | LFTs |
+|---|---|---|---|---|---|---|
+| Acute | Positive | Negative | Positive | Negative | Positive | AST, ALT, bilirubin raised |
+| Chronic active | Positive | Negative | Positive | Negative | Positive | Raised |
+| Chronic persistent | Positive | Negative | Negative | Positive | Positive | Normal |
+| Recovered | Negative | Positive | Negative | Positive | Positive | Normal |
+| Vaccinated | Negative | Positive | Negative | Negative | Negative | Normal |
+
+<Callout kind="pearl">
+Anti-HBs alone means vaccination. Anti-HBs plus anti-HBc means a past infection. Recovery is anti-HBs positive with HBsAg cleared.
+</Callout>
+
+Treatment: interferon alpha and long-term antivirals, with remission only about 20 to 40%, plus maternal prophylaxis. (Standard hepatitis B antivirals are nucleoside analogues such as tenofovir or entecavir, not ganciclovir.)
+
+## Hepatitis D
+
+The hepatitis D virus cannot replicate alone and needs hepatitis B, so it appears as **co-infection**. Injury is immune mediated, as in B, but more severe, with quicker progression to cirrhosis. Symptoms are indistinguishable from acute hepatitis B.
+
+- **Diagnosis**: raised AST/ALT, IgM anti-HDV and IgM anti-HBc.
+- **Complications**: higher risk of fulminant hepatitis, and chronic hepatitis D carries about 70% risk of cirrhosis, more than B alone.
+
+## Hepatitis C
+
+**Transmission**: blood (for example injecting drug use; as little as 0.0001 mL can transmit), other body fluids including semen and cervical secretions, and rarely vertical.
+
+**Pathogenesis**: the virus is not directly cytopathic. Damage is from the immune response, giving chronic low-grade inflammation, then fibrosis and cirrhosis.
+
+**Natural history**
+
+- About 10% have an acute illness (mild viral illness with jaundice) and recover.
+- About 90% become chronic: asymptomatic for years, usually found by chance, with sporadic mild illnesses and jaundice.
+- End stage: 20 to 30% develop cirrhosis within 10 to 30 years; about 5% develop hepatocellular carcinoma (the virus inactivates p53).
+
+**Investigations**: mildly raised ALT/AST on routine tests, anti-HCV serology, HCV-RNA by PCR.
+
+**Treatment**: after exposure such as a needlestick, interferon and ribavirin; established disease gets supportive care.
+
+## Other infections affecting the liver
+
+| Agent | Liver findings | Notes |
+|---|---|---|
+| EBV (glandular fever) | Acute hepatitic changes within 5 days (degeneration, swelling, necrosis, inflammation); periportal large mononuclear cells | Mild jaundice and mildly raised AST/ALT common; clinical hepatitis uncommon |
+| CMV | Biopsy shows intranuclear inclusions and giant cells | Especially in the immunocompromised |
+| Yellow fever virus | Acute hepatic necrosis, significant | Jaundice, markedly raised AST/ALT |
+| Herpes simplex | Massive necrosis on biopsy | Immunocompromised or pregnant; markedly raised AST/ALT; treat with aciclovir |
+| Toxoplasmosis | Picture like EBV | Mild jaundice, mildly raised AST/ALT |
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Which hepatitis viruses are acute only?', a: 'A and E. B and D are acute or chronic, and C is mostly chronic.' },
+  { q: 'Why is hepatitis E especially dangerous in pregnancy?', a: 'About 20% mortality, from DIC in the third trimester, against 1 to 2% in general.' },
+  { q: 'What causes the liver damage in hepatitis B?', a: 'CD8 T-cell attack on infected hepatocytes, so the immune response, not the virus itself.' },
+  { q: 'How do chronic active and chronic persistent hepatitis B differ?', a: 'Active (30%) has strong inflammation and early cirrhosis; persistent (70%) is a quiet carrier state with late cirrhosis.' },
+  { q: 'What does anti-HBs without anti-HBc show?', a: 'Vaccination. If anti-HBc is also positive the person has been infected.' },
+  { q: 'Why does hepatitis D only occur with hepatitis B?', a: 'It cannot replicate on its own and needs hepatitis B; it makes the disease worse.' },
+  { q: 'What are the natural-history numbers for hepatitis C?', a: 'About 90% chronic; 20 to 30% cirrhosis in 10 to 30 years; about 5% hepatocellular carcinoma.' },
+]} />

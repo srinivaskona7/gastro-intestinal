@@ -1,0 +1,132 @@
+---
+title: "Gastrointestinal motility"
+part: anatomy-physiology
+group: Foundations
+order: 2
+summary: "How gut muscle contracts and relaxes to mix and move food, from swallowing through the migrating motor complex to mass movements and the defaecation reflex."
+highYield:
+  - "Total transit time is about 40 hours, with the longest stay in the large intestine."
+  - "Segmentation mixes; peristalsis propels."
+  - "Swallowing has a voluntary buccal phase and an involuntary pharyngeal-oesophageal phase."
+  - "The migrating motor complex is triggered by motilin and sweeps the fasting small bowel."
+  - "Rectal stretch triggers the defaecation reflex."
+tags: [motility, peristalsis, swallowing, defaecation]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## Why motility matters
+
+Motility keeps food moving, but also makes it wait. Material must stay in each segment long enough for digestion and absorption.
+
+| Region | Time spent |
+|---|---|
+| Oesophagus | 5-10 seconds |
+| Stomach | 1-3 hours |
+| Small intestine | 7-9 hours |
+| Large intestine | 25-30 hours |
+| Total | About 40 hours |
+
+<Mermaid
+  caption="Typical transit"
+  chart={`flowchart LR
+  A["Oesophagus: 5-10 s"] --> B["Stomach: 1-3 h"]
+  B --> C["Small intestine: 7-9 h"]
+  C --> D["Large intestine: 25-30 h"]
+  D --> E["Defaecation after about 40 h"]`}
+/>
+
+Motility depends on both contraction and relaxation:
+
+| | Roles |
+|---|---|
+| Contraction | Mechanical digestion; keeps contents in contact with the epithelium; propulsion; restriction of movement by sphincters |
+| Relaxation | Accommodation reflexes; an essential part of peristalsis and swallowing; opening sphincters so contents can move on |
+
+## Categories of movement
+
+| Type | Where | Notes |
+|---|---|---|
+| Accommodation | Stomach | Smooth muscle relaxes as the stomach stretches |
+| Tonic contraction | Whole tract | Continual partial contraction |
+| Peristalsis | Oesophagus, stomach | Propulsive wave; oesophagus 5-10 s, stomach 1-3 h |
+| Migrating motor complex | Small intestine | 7-9 h |
+| Mass movement | Large intestine | 25-30 h |
+| Defaecation reflex | Rectum and anus | After about 40 h |
+
+### Segmentation and pendular contractions
+
+Peristalsis is a combination of these two patterns of local movement.
+
+- **Segmentation:** circular muscle contracts at random places and times. It stirs contents back and forth so that all food touches the wall, which aids absorption.
+- **Pendular contractions:** longitudinal muscle shortens and lengthens the tube, like a caterpillar.
+
+<Callout kind="pearl">
+Mixing without net forward movement is segmentation. Directed forward movement is peristalsis.
+</Callout>
+
+## Swallowing (deglutition)
+
+<Mermaid
+  caption="Swallowing in two phases"
+  chart={`flowchart TD
+  A["Buccal phase - voluntary"] --> B["Tongue tip against hard palate"]
+  B --> C["Tongue pushes bolus into oropharynx"]
+  C --> D["Touch receptors fire"]
+  D --> E["Pharyngeal-oesophageal phase - involuntary"]
+  E --> F["Mouth and nasopharynx sealed, larynx rises, epiglottis closes"]
+  F --> G["Upper oesophageal sphincter opens then closes"]
+  G --> H["Peristalsis carries bolus down"]
+  H --> I["Gastro-oesophageal sphincter opens then closes"]`}
+/>
+
+1. **Buccal phase (voluntary):** the tongue tip presses on the hard palate and squeezes the bolus into the oropharynx. Food stimulates tactile receptors, which starts the next phase.
+2. **Pharyngeal-oesophageal phase (involuntary):** controlled by the swallowing centre in the medulla. Breathing is inhibited. The tongue blocks the mouth, the soft palate blocks the nasopharynx, and the larynx rises so the epiglottis covers its opening. The upper oesophageal sphincter relaxes then tightens, peristalsis moves the bolus down, and the gastro-oesophageal sphincter relaxes to admit food to the stomach, then tightens.
+
+## Stomach
+
+- Pacemaker cells (interstitial cells of Cajal) depolarise and repolarise spontaneously, giving **3 waves per minute**. They sit in the longitudinal muscle of the fundus.
+- Waves travel down the body and strengthen as they go.
+- Very intense waves at the pylorus grind food into **chyme**, a uniform mixture.
+- Each wave squirts about 3 ml of chyme into the duodenum.
+
+## Small intestine
+
+- **Segmentation** is the commonest movement, started by pacemaker cells in the longitudinal muscle, at 12-14 contractions per minute.
+- **Migrating motor complex** is peristalsis that occurs once most nutrients have been absorbed (fasting state).
+
+<Mermaid
+  caption="Migrating motor complex cycle"
+  chart={`flowchart LR
+  A["Nutrients absorbed"] --> B["Duodenal mucosa releases motilin"]
+  B --> C["Peristaltic wave starts in duodenum"]
+  C --> D["Wave dies out after 50-70 cm"]
+  D --> E["New wave starts further along"]
+  E --> F["Reaches ileocaecal valve in about 2 h"]
+  F --> B`}
+/>
+
+Each wave covers 50-70 cm, then a new one begins further on, hence "migrating". It takes about 2 hours to reach the ileocaecal valve, then the cycle repeats, sweeping out food remnants and bacteria.
+
+<Callout kind="warning" title="Duodenal pacemaker rate">
+Duodenal pacemaker rhythm is quoted as 9-12 per minute and small intestinal slow waves as 12-14 per minute. Treat both as the approximate range of 9-14 per minute.
+</Callout>
+
+## Large intestine and rectum
+
+- The colon is inactive most of the time and becomes motile when food arrives. Ordinary contractions are sluggish and brief.
+- **Mass movements** are long, slow, powerful waves over large stretches of colon, about 3 times a day, forcing contents towards the rectum.
+- Faeces entering the rectum stretch its wall, which starts the **defaecation reflex**: the sigmoid colon and rectum contract and the internal anal sphincter relaxes. Pressure on the anal canal signals the brain, producing the urge.
+- If defaecation is delayed voluntarily, the reflex fades within seconds, and returns with the next mass movement.
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Which region holds food longest, and for how long?', a: 'The large intestine, 25-30 hours of a roughly 40 hour transit.' },
+  { q: 'Difference between segmentation and peristalsis?', a: 'Segmentation mixes contents back and forth without net travel; peristalsis moves them forward.' },
+  { q: 'What triggers the migrating motor complex?', a: 'Motilin released from duodenal mucosa once most nutrients are absorbed.' },
+  { q: 'Which phase of swallowing is voluntary?', a: 'The buccal phase; the pharyngeal-oesophageal phase is reflex, coordinated by the medulla.' },
+  { q: 'What starts the defaecation reflex?', a: 'Stretch of the rectal wall by faeces pushed in by a mass movement.' },
+  { q: 'Why does the urge disappear if you wait?', a: 'The reflex dissipates within seconds, and returns with the next mass movement.' },
+]} />

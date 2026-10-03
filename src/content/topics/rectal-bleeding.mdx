@@ -1,0 +1,86 @@
+---
+title: "Rectal bleeding: differential diagnosis"
+part: pathology
+group: Anorectal
+order: 48
+summary: "Approach to GI and rectal bleeding, separating major from minor bleeds, the commonest causes of each, and the first-line work-up."
+highYield:
+  - "Major rectal bleeding means the patient needs resuscitation; minor means haemodynamically stable."
+  - "Major bleeds are often upper GI (peptic or duodenal ulcer, varices) or lower GI (diverticulosis, angiodysplasia, cancer)."
+  - "Minor bleeds are mostly haemorrhoids (54%), then fissure, fistula and cancer or polyp."
+  - "Colour hints at rate and site; frank blood is massive or distal, black blood slower or proximal."
+  - "Endoscopy or colonoscopy is definitive."
+tags: [GI bleed, haematochezia, melaena, haematemesis]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+GI bleeding is common: most people experience some form of it in their lifetime. It may be **trivial or life-threatening**, **painful or painless**, and the underlying cause may or may not be serious.
+
+## Terms to know
+
+| Term | Meaning | Notes |
+|---|---|---|
+| Haematemesis | Vomiting blood, fresh or dark (denatured) | Can be very serious; usually implies a stomach source |
+| Haematochezia | Passage of bloody stools (rectal bleeding) | Major bleeding implies an upper GI source; minor implies a lower GI source |
+| Melaena | Black, tar-like stool | Usually an upper GI source |
+| Occult bleeding | Hidden blood loss | Important cause of chronic anaemia; detected by faecal occult blood test |
+
+<Callout kind="warning" title="Haematemesis first priority">
+Get **large-bore IV access** and **cross-match blood** straight away. Bleeding from the stomach can become fatal very quickly.
+</Callout>
+
+## Major versus minor rectal bleeding
+
+The split is clinical. **Major** bleeding means the patient needs resuscitation: tachycardia, hypotension, pallor, dyspnoea or altered level of consciousness. **Minor** bleeding means the patient is haemodynamically stable.
+
+<Mermaid
+  caption="Triage of rectal bleeding"
+  chart={`flowchart TD
+  A[Rectal bleeding] --> B{Haemodynamically stable?}
+  B -- No --> C[Major bleed: resuscitate]
+  B -- Yes --> D[Minor bleed]
+  C --> E["Upper GI: peptic or duodenal ulcer, varices"]
+  C --> F["Lower GI: diverticulosis, angiodysplasia, cancer"]
+  D --> G["Haemorrhoids, fissure, fistula, cancer or polyp"]`}
+/>
+
+### Commonest causes
+
+| Bleed | Cause | Share |
+|---|---|---|
+| Major, upper GI | Peptic ulcer, duodenal ulcer, oesophageal varices | Commonest upper causes |
+| Major, lower GI | Diverticulosis | 50% |
+| | Angiodysplasia | 35% |
+| | Colorectal cancer | 15% |
+| Minor, lower GI | Haemorrhoids | 54% |
+| | Fissure | 18% |
+| | Fistulae | 7% |
+| | Cancer or polyp | 6% |
+
+<Callout kind="pearl">
+Blood colour gives clues. **Frank red blood** suggests massive bleeding or a more distal origin. **Blackened blood** suggests slower bleeding or a stomach or oesophageal origin.
+</Callout>
+
+## Investigations and management
+
+- **FBC**: haemoglobin, reticulocytes, platelets and MCV (a low MCV points to chronic loss).
+- **LFTs**: look for alcoholic liver disease (varices).
+- **Coagulation studies** and **EUCs**.
+- **PPI** if peptic ulcer disease is suspected.
+- **Group and hold, cross-match** and **IV fluids** if the bleed is severe.
+- **Endoscopy or colonoscopy** is the definitive investigation.
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'How do you define major versus minor rectal bleeding?', a: 'Major: the patient needs resuscitation (tachycardia, hypotension, pallor, dyspnoea, altered consciousness). Minor: haemodynamically stable.' },
+  { q: 'What is the first priority in haematemesis?', a: 'Large-bore IV access and cross-matched blood, as stomach bleeding can be rapidly fatal.' },
+  { q: 'What does melaena usually indicate?', a: 'Black tarry stool, usually from an upper GI source.' },
+  { q: 'Commonest cause of minor rectal bleeding?', a: 'Haemorrhoids (about 54%), followed by fissure, fistula and cancer or polyp.' },
+  { q: 'Causes of major lower GI bleeding in order?', a: 'Diverticulosis (50%), angiodysplasia (35%), colorectal cancer (15%).' },
+  { q: 'Why is occult bleeding important?', a: 'It is a hidden cause of chronic anaemia and is detected by faecal occult blood testing.' },
+]} />

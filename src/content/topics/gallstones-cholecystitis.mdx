@@ -1,0 +1,118 @@
+---
+title: "Gallstones & cholecystitis"
+part: pathology
+group: Liver & biliary
+order: 24
+summary: "How gallstones form, biliary colic, and acute and chronic cholecystitis, with their presentation, diagnosis, treatment and complications."
+highYield:
+  - "Gallstones form by cholesterol supersaturation or low bile salts, calcium precipitation, biliary stasis and mucus-trapped crystal growth."
+  - "About 80% of gallstones are silent; biliary colic lasts under 3 hours, acute cholecystitis over 3 hours."
+  - "Acute cholecystitis is 90% stone-related (cystic duct blockage) and 10% acalculous in the critically ill."
+  - "Ultrasound is the definitive test; treatment is bowel rest, fluids, analgesia, antibiotics and cholecystectomy."
+tags: [gallstones, cholecystitis, biliary colic, Murphy sign]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## Gallstones (cholelithiasis)
+
+### Types
+
+| Type | Share | Appearance | X-ray |
+|---|---|---|---|
+| Mixed (cholesterol, calcium, bile pigment and blood) | About 80% | Multiple, faceted, yellow-grey | About 20% radio-opaque; high-calcium stones are 100% radio-opaque |
+| Pure pigment | Part of the 20% pure group | Dark brown or black, friable, soft | About 50% radio-opaque |
+| Pure cholesterol (rare) | Part of the 20% pure group | Yellow and spiky | Usually not radio-opaque |
+
+Pure stones make up about 20% overall (pigment only or cholesterol only). The risk factors differ for each type.
+
+### Pathogenesis: four steps
+
+<Mermaid
+  caption="Four mechanisms of stone formation"
+  chart={`flowchart LR
+  A["1. Supersaturation: excess cholesterol or low bile salts"] --> B["2. Calcium microprecipitation"]
+  B --> C["3. Biliary stasis: mucus traps crystals"]
+  C --> D[Aggregation]
+  D --> E["4. Stone growth"]`}
+/>
+
+1. **Supersaturation:** too much cholesterol, or too few bile salts to keep it dissolved.
+2. **Calcium microprecipitation:** tiny crystals form.
+3. **Biliary stasis:** slow bile flow lets mucus trap the crystals.
+4. **Growth:** the crystals aggregate and the stone enlarges.
+
+### Clinical features and tests
+
+- **80% are asymptomatic.** The other 20% develop biliary colic, acute cholecystitis or chronic cholecystitis.
+- **Biliary colic:** severe, colicky upper abdominal pain that radiates to the right shoulder, often after a fatty meal. Pain lasts under 3 hours.
+- Fat intolerance, with clay-coloured stools when bile cannot reach the gut.
+- **Labs:** raised conjugated bilirubin (extrahepatic obstruction) and raised alkaline phosphatase.
+
+### Management and complications
+
+Management: nil by mouth (bowel rest), IV rehydration, analgesia and IV antibiotics.
+
+Complications: cholangitis, pancreatitis, cholecystitis and cholangiocarcinoma.
+
+## Acute cholecystitis
+
+Inflammation of the gallbladder, with biliary pain lasting **over 3 hours**. It is more typical in females.
+
+| | Calculous (90%) | Acalculous (10%) |
+|---|---|---|
+| Cause | Gallstone blocks the cystic duct | No stones; seen in severely ill or trauma patients |
+| Risk factors | Age, female sex, obesity, rapid weight loss, drugs, pregnancy | Critical illness or sepsis, major surgery, prolonged fasting |
+| Mechanism | Obstruction leads to bile stasis and distension | Prolonged parenteral feeding leads to bile stasis and distension |
+| Next steps | Secondary infection by gut organisms (E. coli), then inflammation | Same |
+
+<Mermaid
+  caption="Acute calculous cholecystitis"
+  chart={`flowchart TD
+  A[Stone in gallbladder] --> B[Cystic duct blocked]
+  B --> C["Bile stasis and distension"]
+  C --> D["Secondary infection, E. coli"]
+  D --> E[Inflamed gallbladder]
+  E --> F[Gangrene, empyema, perforation]`}
+/>
+
+**Morphology:** a large, red, swollen gallbladder that may be felt as a right upper quadrant mass.
+
+### Clinical features
+
+- **Early:** right upper quadrant colicky pain radiating to the right scapula, worse with food; nausea, vomiting, fever and tachycardia.
+- **Later (hours):** severe constant RUQ pain with peritonitis (rigidity, guarding, rebound tenderness); **Murphy sign** (inspiration suddenly halts under the palpating hand); RUQ mass; jaundice.
+
+### Diagnosis, treatment, complications
+
+- Raised alkaline phosphatase (biliary obstruction).
+- **Abdominal ultrasound is definitive.** ERCP is an alternative that is also therapeutic.
+- Treatment: nil by mouth, IV fluids, analgesia, IV antibiotics and **cholecystectomy**.
+- Complications: acute gangrenous cholecystitis (very high pressure compromises blood supply), empyema from secondary infection, and gallbladder perforation. About 30% need surgery.
+
+<Callout kind="pearl">
+Biliary colic versus cholecystitis comes down to duration and inflammation: pain under 3 hours is colic, over 3 hours with fever, tenderness and Murphy sign is cholecystitis.
+</Callout>
+
+## Recurrent or chronic cholecystitis
+
+Caused by **biliary gravel**: thick bile with many small stones. A repeated cycle of bile stasis, stone formation and obstruction gives chronic inflammation and mild transient obstructions, so discomfort follows meals.
+
+- **Features:** chronic vague RUQ or upper abdominal discomfort after meals, indigestion, upper abdominal distension.
+- **Management:** cholecystectomy.
+
+<Callout kind="warning" title="Do not wait on gangrene">
+Constant severe pain with peritonism suggests gangrene or perforation. This needs urgent surgical review.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'What are the four steps of gallstone formation?', a: 'Supersaturation (or low bile salts), calcium microprecipitation, biliary stasis with mucus trapping crystals, then aggregation and growth.' },
+  { q: 'How do biliary colic and acute cholecystitis differ?', a: 'Colic lasts under 3 hours with no inflammation; cholecystitis lasts over 3 hours with fever, tenderness, Murphy sign and possible peritonism.' },
+  { q: 'What causes acalculous cholecystitis?', a: 'Critical illness, sepsis, major surgery or prolonged fasting and parenteral feeding, causing stasis without stones.' },
+  { q: 'What is the definitive test for acute cholecystitis?', a: 'Abdominal ultrasound; ERCP can also be used and is therapeutic.' },
+  { q: 'What is biliary gravel?', a: 'Thick bile with many small stones that drives chronic cholecystitis; treated by cholecystectomy.' },
+  { q: 'List complications of acute cholecystitis.', a: 'Gangrene, empyema, perforation; around 30% need surgery.' },
+]} />

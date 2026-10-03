@@ -1,0 +1,96 @@
+---
+title: "Oesophageal varices"
+part: pathology
+group: Oesophagus
+order: 10
+summary: "Engorged veins in the lower oesophagus caused by portal hypertension, usually from cirrhosis, which can rupture and bleed massively."
+highYield:
+  - "Varices are dilated lower oesophageal veins from portal hypertension, a porta-systemic shunt."
+  - "Portal hypertension is pre-hepatic (portal vein thrombosis), intrahepatic (cirrhosis) or post-hepatic (hepatic vein obstruction)."
+  - "Presents with haematemesis and melaena, often with signs of cirrhosis and alcohol use."
+  - "Endoscopy is the definitive diagnosis; band ligation treats severe or active bleeding."
+  - "Rupture causes massive GI bleeding, shock and death."
+tags: [varices, portal hypertension, cirrhosis, upper GI bleed, haematemesis]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+**Oesophageal varices** are engorged, tortuous veins in the **lower oesophagus**, resembling varicose veins. They are a result of **portal hypertension**, raised pressure in the portal venous system.
+
+## Causes
+
+Portal hypertension is classified by where the block lies relative to the liver:
+
+| Level | Cause |
+|---|---|
+| Pre-hepatic | Portal vein thrombosis |
+| Intrahepatic | Cirrhosis (the commonest) |
+| Post-hepatic | Hepatic vein obstruction |
+
+## Pathogenesis
+
+When blood cannot pass through the liver, pressure builds in the portal vein. Blood finds an alternative route by opening **porta-systemic shunts**, connections between the portal and systemic veins. At the lower oesophagus this blood flows into the oesophageal veins, which are thin-walled and not built for the load, so they swell into varices.
+
+<Mermaid
+  caption="From portal hypertension to bleeding"
+  chart={`flowchart LR
+  A["Portal hypertension"] --> B["Porta-systemic shunt"]
+  B --> C["Lower oesophageal veins engorged"]
+  C --> D["Varices"]
+  D --> E["Rupture"]
+  E --> F["Massive GI bleeding"]
+  F --> G["Shock or death"]`}
+/>
+
+## Clinical features
+
+| Group | Features |
+|---|---|
+| Bleeding | Haematemesis, melaena |
+| Anaemia | Dyspnoea, dizziness, light-headedness, syncope |
+| Cirrhotic | Jaundice, confusion, hepatic flap, small nodular liver |
+| Alcohol-related | Intoxication, Dupuytren's contracture |
+
+The cirrhotic and alcohol features are clues to the underlying cause, not to the varices themselves.
+
+## Investigations
+
+| Test | Finding |
+|---|---|
+| LFTs | Raised transaminases, low albumin, raised ALP and GGT |
+| FBC | Anaemia |
+| B12 and folate | Deficiency if alcoholic |
+| Urea, electrolytes and creatinine (UEC) | Electrolyte disturbance |
+| **Endoscopy** | **Definitive diagnosis** |
+
+## Management
+
+- **Thiamine replacement** plus B12 and folate (for alcohol-related deficiency).
+- **PPI** (omeprazole).
+- Procedure if severe or actively bleeding: **endoscopic band ligation**.
+
+<Callout kind="warning" title="Emergency management">
+Active variceal bleeding is an emergency: resuscitation, vasoactive drugs (terlipressin or octreotide) and antibiotics are standard alongside band ligation.
+</Callout>
+
+## Complications
+
+Rupture leads to **massive GI bleeding**, then **shock and death**.
+
+<Callout kind="pearl">
+Haematemesis in a patient with stigmata of chronic liver disease (jaundice, flap, small nodular liver, Dupuytren's) should make you think varices first, and endoscopy confirms.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'What causes oesophageal varices?', a: 'Portal hypertension, which opens porta-systemic shunts and engorges the lower oesophageal veins.' },
+  { q: 'Give an example of pre-hepatic, intrahepatic and post-hepatic causes.', a: 'Portal vein thrombosis, cirrhosis, and hepatic vein obstruction.' },
+  { q: 'Which clinical features hint at cirrhosis or alcohol as the underlying cause?', a: 'Jaundice, confusion, hepatic flap, small nodular liver, intoxication and Dupuytren\'s contracture.' },
+  { q: 'What is the definitive investigation?', a: 'Endoscopy.' },
+  { q: 'Why give thiamine, B12 and folate?', a: 'Alcohol-related patients are often deficient in them.' },
+  { q: 'What is the dangerous complication?', a: 'Rupture with massive GI bleeding, shock and death.' },
+]} />

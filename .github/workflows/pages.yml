@@ -1,0 +1,65 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      # Fails the build when a topic is missing, mis-ordered, too short or has no
+      # diagram / self-test, so a half-written page can never ship.
+      - name: Validate content
+        run: npm run check
+
+      - name: Build site and search index
+        env:
+          ASTRO_SITE: https://${{ github.repository_owner }}.github.io
+          ASTRO_BASE: /${{ github.event.repository.name }}
+        run: npm run build
+
+      - name: Smoke test
+        run: |
+          test -s dist/index.html
+          test -s dist/pagefind/pagefind.js || { echo "::error::search index missing"; exit 1; }
+          test "$(find dist/topics -name index.html | wc -l)" -ge 50 || { echo "::error::too few topic pages"; exit 1; }
+          grep -q "/${{ github.event.repository.name }}/" dist/index.html || { echo "::error::base path not applied"; exit 1; }
+
+      - uses: actions/configure-pages@v5
+        if: github.event_name != 'pull_request'
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
+        with:
+          path: dist
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

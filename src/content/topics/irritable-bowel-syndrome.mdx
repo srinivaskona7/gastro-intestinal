@@ -1,0 +1,87 @@
+---
+title: "Irritable bowel syndrome"
+part: pathology
+group: Intestines
+order: 38
+summary: "A chronic functional bowel disorder with abdominal pain and altered bowel habit but no structural disease. It is a diagnosis of exclusion, and red flags point elsewhere."
+highYield:
+  - "Functional disorder with no pathology on morphology and normal investigations."
+  - "Diagnosis of exclusion after more than 3 months of pain related to defecation with altered bowel habit."
+  - "Red flags (acute onset, anaemia, fever, blood, weight loss) mean another diagnosis."
+  - "Colonoscopy if over 50 to exclude bowel cancer."
+  - "Management is diet, fibre, loperamide and probiotics."
+tags: [functional, bowel habit, diagnosis of exclusion]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+**Irritable bowel syndrome (IBS)**, sometimes called "spastic colon", is a **functional disorder**: the bowel behaves abnormally but looks normal. It is an umbrella term and a **diagnosis of exclusion**, meaning it is made only after other causes have been ruled out.
+
+## Causes and triggers
+
+The cause is unknown. Recognised triggers and contributors include:
+
+- Stress, anxiety and depression
+- Pain
+- Autonomic irregularities
+- Gut hypersensitivity
+
+## Pathogenesis and morphology
+
+Because it is functional, there is likely **no pathology**. Biopsy and gross inspection are normal. The disorder is thought to arise from the gut-brain interaction (mood, autonomic control and a hypersensitive gut) rather than from damaged tissue.
+
+<Mermaid
+  caption="Triggers and the functional picture"
+  chart={`flowchart LR
+  A[Stress, anxiety, depression] --> D[Disturbed gut function]
+  B[Autonomic irregularity] --> D
+  C[Gut hypersensitivity] --> D
+  D --> E[Pain and bloating]
+  D --> F[Alternating bowel habit]
+  D --> G["Normal tissue on biopsy"]`}
+/>
+
+## Clinical features
+
+- Abdominal pain, discomfort or bloating that is **related to defecation**
+- **Chronic** course, lasting more than 3 months
+- **Alternating bowel habit**: diarrhoea or constipation, with or without tenesmus (feeling of incomplete evacuation)
+
+<Callout kind="warning" title="Red flags exclude IBS">
+Acute onset, anaemia, fever, blood in the stool or weight loss suggest other pathology. Investigate rather than label as IBS.
+</Callout>
+
+## Investigations
+
+Tests in IBS are normal; they are done to exclude alternatives.
+
+| Test | Looking for |
+|---|---|
+| Stool ova, cysts and parasites | Parasitic infection |
+| Stool culture | Bacterial infection or small intestinal bacterial overgrowth |
+| Allergy or intolerance testing | Lactose intolerance |
+| Duodenal biopsy | Coeliac disease |
+| Colonoscopy if over 50 | Bowel cancer |
+
+## Management
+
+- **Diet**: avoid foods the patient is intolerant of, and add fibre.
+- **Anti-diarrhoeals** such as loperamide.
+- **Probiotics**, as yoghurts or tablets.
+
+<Callout kind="pearl">
+Normal tests plus chronic pain linked to defecation and altered habit, with no red flags, is IBS. A new change in bowel habit after 50 needs colonoscopy first.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Why is IBS called a diagnosis of exclusion?', a: 'It has no structural or biochemical marker, so it is diagnosed only after other conditions are ruled out.' },
+  { q: 'What does a normal biopsy tell you about IBS?', a: 'IBS is a functional disorder with no tissue pathology.' },
+  { q: 'Name the red flags that argue against IBS.', a: 'Acute onset, anaemia, fever, blood in stool and weight loss.' },
+  { q: 'Which condition does each test exclude: stool parasites, duodenal biopsy, colonoscopy over 50?', a: 'Parasitic infection; coeliac disease; bowel cancer.' },
+  { q: 'What are the basic treatments?', a: 'Dietary change with added fibre, loperamide for diarrhoea, and probiotics.' },
+]} />

@@ -1,0 +1,86 @@
+---
+title: "Pancreatic cancer"
+part: pathology
+group: Pancreas
+order: 21
+summary: "Pancreatic ductal adenocarcinoma is usually silent until advanced, often presents with obstructive jaundice from a head tumour, and has a very poor prognosis."
+highYield:
+  - "Adenocarcinoma of the exocrine ductal tissue; risk factors include smoking, alcohol, chronic pancreatitis, diabetes and familial syndromes."
+  - "About 60% arise in the head and present with bile duct obstruction such as jaundice."
+  - "Painless jaundice with a palpable gallbladder is Courvoisier sign; migratory thrombophlebitis is Trousseau syndrome."
+  - "Whipple procedure for head tumours, distal pancreatectomy for tail tumours; otherwise palliative chemotherapy."
+  - "Prognosis is very poor: about 25% survive one year and 5% survive five years."
+tags: [adenocarcinoma, Whipple, Courvoisier, Trousseau, jaundice]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+**Pancreatic adenocarcinoma** is a cancer of the **exocrine, ductal** part of the pancreas. It arises through carcinogenesis in the exocrine glands and accounts for most pancreatic cancers.
+
+## Risk factors
+
+- Smoking
+- Alcohol
+- Chronic pancreatitis
+- Diabetes
+- Familial syndromes
+
+## Clinical features
+
+The disease is typically in **older patients (60 to 80 years)** and is **asymptomatic until advanced**. Around **60% occur in the head of the pancreas**, so they present early with signs of **common bile duct obstruction**, such as jaundice. Body and tail tumours stay silent longer.
+
+<Mermaid
+  caption="Why a head tumour causes jaundice"
+  chart={`flowchart TD
+  A["Tumour in head of pancreas"] --> B["Compresses common bile duct"]
+  B --> C["Bile cannot drain"]
+  C --> D["Obstructive jaundice"]
+  C --> E["Distended palpable gallbladder"]
+  C --> F["Fat malabsorption, steatorrhoea"]`}
+/>
+
+| Sign or symptom | Meaning |
+|---|---|
+| Mid-epigastric pain radiating to the back | Local invasion |
+| Obstructive jaundice | Bile duct blocked |
+| Steatorrhoea | Lack of bile and pancreatic enzymes in the gut |
+| Palpable gallbladder (Courvoisier sign) | Distended by distal obstruction |
+| Migratory thrombophlebitis (Trousseau syndrome) | Cancer-related clotting tendency |
+| Diabetes | Loss of endocrine function |
+| Anorexia and weight loss, extreme fatigue, depression | Systemic effects of advanced cancer |
+
+<Callout kind="pearl">
+A painless, jaundiced patient with a palpable gallbladder is pancreatic cancer until proven otherwise. In gallstone obstruction the gallbladder is usually scarred and not palpable.
+</Callout>
+
+## Investigations
+
+- **CT or ultrasound** to find and stage the tumour.
+- **CEA (carcino-embryonic antigen)** is used to monitor treatment. In current practice CA 19-9 is the usual marker for this purpose.
+
+## Treatment
+
+- **Surgery**: the **Whipple procedure** for tumours of the head, or **distal pancreatectomy** for tail tumours.
+- **Palliative chemotherapy** for disease that cannot be resected.
+
+## Complications and prognosis
+
+Complications are **metastases** and **obstructive jaundice**. Because the disease is advanced at diagnosis, outlook is **very poor**: about **25% survive one year** and **5% survive five years**.
+
+<Callout kind="warning" title="Late presentation">
+Weight loss, back pain and new-onset diabetes in an older person deserve imaging, because early disease is silent and curable surgery is only possible in a minority.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'What is the usual histological type?', a: 'Adenocarcinoma arising from the exocrine ductal tissue.' },
+  { q: 'Why do head tumours present earlier than tail tumours?', a: 'They compress the common bile duct and cause obstructive jaundice.' },
+  { q: 'What are Courvoisier sign and Trousseau syndrome?', a: 'A palpable gallbladder with jaundice, and migratory thrombophlebitis.' },
+  { q: 'Which operations are used?', a: 'Whipple procedure for head tumours; distal pancreatectomy for tail tumours.' },
+  { q: 'List risk factors.', a: 'Smoking, alcohol, chronic pancreatitis, diabetes and familial syndromes.' },
+  { q: 'What is the prognosis?', a: 'Very poor: about 25% one-year and 5% five-year survival.' },
+]} />

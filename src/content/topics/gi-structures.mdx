@@ -1,0 +1,189 @@
+---
+title: "Specific structures along the GI tract"
+part: anatomy-physiology
+group: Foundations
+order: 5
+summary: "A tour of each GI region - mouth, oesophagus, stomach, duodenum, small and large intestine, rectum and anus - with its anatomy, histology, motility and the phases of gastric secretion."
+highYield:
+  - "The gastro-oesophageal sphincter fails in reflux (GORD); the oesophagus has an adventitia, not a serosa."
+  - "Gastric acid secretion has cephalic, gastric and intestinal phases."
+  - "The stomach is protected by mucus, tight junctions and fast cell turnover; the duodenum by alkaline secretions."
+  - "Jejunum is for nutrient absorption, ileum for fluid; teniae coli and haustra are unique to the colon."
+  - "The external anal sphincter is voluntary, the internal involuntary."
+tags: [anatomy, histology, stomach, small intestine, large intestine, gastric phases]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## Oral cavity and pharynx
+
+The structures to be able to name, front to back:
+
+| Area | Structures |
+|---|---|
+| Lips and gums | Upper and lower lip, gingiva (gums), superior and inferior labial frenula ("lip bridles"), vestibule, cheek |
+| Palate | Nasal cavity above, hard palate, soft palate, uvula |
+| Arches and tonsils | Palatoglossal arch, palatopharyngeal arch, palatine tonsil, pharyngeal tonsil, lingual tonsil |
+| Tongue | Dorsum, root, lingual frenulum ("tongue bridle") |
+| Salivary ducts | Parotid, sublingual, submandibular |
+| Throat | Oropharynx, epiglottis, then the oesophagus |
+
+## Oesophagus
+
+- **Length and course:** about 25 cm; it pierces the diaphragm at the oesophageal hiatus and joins the stomach at the cardiac orifice.
+- **Sphincter:** the gastro-oesophageal sphincter. When it malfunctions the result is heartburn, GORD or GERD.
+- **Mucosa:** a common mistake is to describe the lower two thirds as columnar. The whole oesophagus is lined by stratified squamous epithelium, changing abruptly at the **oesophago-gastric junction (Z-line)** to gastric columnar epithelium.
+- **Submucosa:** dense connective tissue.
+- **Muscularis externa:** two opposing layers for peristalsis (striated in the upper third, smooth in the lower two thirds, as given in the overview topic).
+- **Adventitia:** instead of a serosa, a purely connective tissue outer covering.
+
+## Stomach
+
+Functions: temporary food storage, mechanical mixing and churning, and chemical digestion with hydrochloric acid.
+
+<Mermaid
+  caption="Regions of the stomach"
+  chart={`flowchart TD
+  A["Oesophagus"] --> B["Cardia"]
+  B --> C["Fundus"]
+  B --> D["Body"]
+  D --> E["Pylorus"]
+  E --> E1["Pyloric antrum"]
+  E1 --> E2["Pyloric canal"]
+  E2 --> E3["Pyloric sphincter"]
+  E3 --> F["Duodenum"]`}
+/>
+
+Other macro features: longitudinal and circular muscle layers, lesser and greater curvatures, and **rugae** (ridges or folds).
+
+### Histology
+
+The surface and **gastric pits** are lined by epithelium protected by mucus and alkaline secretion, with goblet-type mucus cells (simple columnar). The glands contain:
+
+| Cell | Product or role |
+|---|---|
+| Parietal | Acid and intrinsic factor (needed for B12 absorption) |
+| Chief | Pepsinogen, precursor of pepsin, which digests proteins including collagen |
+| G cells | Stimulate parietal cells |
+| D cells | Inhibit G cells |
+
+### Motility, emptying and vomiting
+
+- Peristalsis: 3 waves per minute moving down the body, very intense at the pylorus, which grinds food into chyme. Each wave delivers about 3 ml to the duodenum.
+- **Gastric emptying** is controlled by the duodenum. Fatty food, alcohol, caffeine and smoking delay it. Normally the duodenal contents matter more than gastric contents:
+  1. Acidic chyme enters the duodenum.
+  2. Chemical and stretch receptors in its wall trigger enterogastric reflexes.
+  3. These reflexes reduce acid and pepsin secretion.
+  4. They also weaken pyloric contractions, preventing further duodenal filling.
+- **Vomiting reflex:** triggered by extreme stomach stretch or irritants (bacterial toxins, alcohol, spicy food, drugs). Blood-borne molecules or sensory signals reach the **emetic centre** in the medulla. The diaphragm contracts, the cardiac sphincter relaxes and the soft palate rises to seal the nasal passage.
+
+### The three phases of acid secretion
+
+<Mermaid
+  caption="Phases of gastric secretion"
+  chart={`flowchart LR
+  A["Cephalic: taste, smell, thought"] --> B["Gastric: food distends stomach"]
+  B --> C["Intestinal: acidic chyme in duodenum"]
+  C --> D["Secretion inhibited"]`}
+/>
+
+| Phase | Trigger | What happens |
+|---|---|---|
+| Cephalic (before meal) | Taste, smell or thought of food | Signals to medulla, then vagus nerves; parasympathetic neurons drive HCl and pepsin release in upper and middle stomach; G cells release gastrin, which raises parietal HCl and chief cell pepsin output |
+| Gastric (about 3-4 h) | Food distends the stomach | Stretch receptors give positive feedback to the vagal reflex; gastrin from G cells is triggered by parasympathetic nerves, partly digested protein and rising pH; gastrin's main job is stimulating parietal cells |
+| Intestinal | Acidic chyme reaches duodenum | Brief intestinal gastrin boost, then inhibition |
+
+In the gastric phase, HCl release comes from combined acetylcholine (parasympathetic fibres), gastrin (G cells) and histamine (ECL cells, responding to gastrin). **High acidity (pH below 2) shuts gastrin off** by negative feedback; low acidity encourages it.
+
+In the intestinal phase the **enterogastric reflex** blocks vagal drive from the medulla and activates sympathetic fibres, which tighten the pyloric sphincter and reduce secretion. Three duodenal hormones also reach the blood and inhibit gastric secretion:
+
+| Hormone | Actions |
+|---|---|
+| Secretin | Pancreatic bicarbonate secretion; bile secretion by the liver |
+| Cholecystokinin | More pancreatic enzymes; gallbladder contraction; relaxes the hepatopancreatic sphincter |
+| VIP | Relaxes smooth muscle; stimulates water and electrolyte secretion in the intestine |
+
+### Staying safe in a high-acid environment
+
+Optimal enzyme function needs particular pH: mouth 6.4-7.3, stomach 1.5-4, duodenum to rectum 7-8.
+
+| Attackers | Defenders |
+|---|---|
+| Acid from parietal cells | Mucin from goblet cells, forming a barrier and lubricant |
+| Intrinsic factor accompanies acid | Tight junctions stop leakage of acid and entry of infection |
+| Pepsinogen from chief cells, then pepsin | High cell turnover: stem cells in gastric pits renew the lining every 5-7 days |
+| | Alkaline fluid from duodenal Brunner's glands |
+| | Bile (bile salts and alkaline fluid) from hepatocytes |
+| | Bicarbonate from the exocrine pancreas neutralises acid |
+
+<Callout kind="warning" title="Intrinsic factor trap">
+Intrinsic factor is made by the same parietal cells that make acid. Damage to these cells costs the patient acid and B12 absorption.
+</Callout>
+
+## Duodenum
+
+- A C-shaped section of small intestine running from stomach to jejunum.
+- The **hepatopancreatic sphincter** (sphincter of Oddi, duodenal ampulla, ampulla of Vater) controls bile and pancreatic juice entry at the major duodenal papilla.
+- Histology: microvilli, crypts of Lieberkuhn, simple epithelium with goblet cells, and **Brunner's glands** producing strongly alkaline mucus.
+- Neighbours: gallbladder with the cystic duct, hepatic ducts from the liver and the common hepatic duct, the bile duct, the pancreas and the pancreatic duct, and the jejunum beyond.
+
+## Small intestine
+
+| Part | Features |
+|---|---|
+| Duodenum | C-shaped |
+| Jejunum | High surface area (plicae, villi, microvilli), nutrient absorption |
+| Ileum | Fewer plicae and villi, fluid absorption |
+| Ileocaecal valve | Empties into the caecum |
+
+Microscopically: villous simple columnar epithelium with goblet cells and basal stem cells.
+
+**Motility** is the migrating motor complex: pacemaker cells fire at 12-14 contractions a minute, a peristaltic wave begins in the duodenum and dies after 50-70 cm, new waves begin further on, and about 2 hours later the wave reaches the ileocaecal valve. The cycle repeats and sweeps out remnants and bacteria.
+
+## Large intestine
+
+**Functions:** absorbs water from indigestible residue, stores waste temporarily and eliminates semisolid faeces.
+
+<Mermaid
+  caption="Path of faecal matter"
+  chart={`flowchart LR
+  A["Ileocaecal valve"] --> B["Caecum and appendix"]
+  B --> C["Ascending colon"]
+  C --> D["Right colic flexure"]
+  D --> E["Transverse colon"]
+  E --> F["Left colic flexure"]
+  F --> G["Descending colon"]
+  G --> H["Sigmoid colon"]
+  H --> I["Rectum"]
+  I --> J["Anal canal"]`}
+/>
+
+Distinctive structures:
+
+| Structure | Detail |
+|---|---|
+| Teniae coli | Three ribbons of smooth muscle along the whole colon; they gather the wall into segments |
+| Haustra | The resulting pouches; slow waste movement and help packing and compaction |
+| Epiploic appendages | Fatty pouches of visceral peritoneum, function unknown |
+| Transverse mesocolon | Peritoneal fold suspending the transverse colon |
+
+Microscopically it has simple columnar epithelium with goblet cells. Motility consists of **mass movements**: the colon is mostly inactive, becomes motile when food arrives, and produces long, slow, powerful waves about 3 times a day over large areas to push contents towards the rectum.
+
+## Rectum and anus
+
+- Structures: levator ani muscle, anal canal, anus.
+- **External anal sphincter:** voluntary. **Internal anal sphincter:** involuntary.
+- **Defaecation reflex:** rectal stretch starts the reflex, the sigmoid colon and rectum contract and the internal sphincter relaxes. Pressure on the anal canal signals the brain, giving the urge.
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'What replaces the serosa around the oesophagus?', a: 'An adventitia, a purely connective tissue covering.' },
+  { q: 'Which phase of gastric secretion is triggered before food arrives?', a: 'The cephalic phase, driven by taste, smell or thought through the vagus nerve.' },
+  { q: 'What stops gastrin secretion at high acidity?', a: 'Negative feedback when pH falls below about 2.' },
+  { q: 'Name the three duodenal hormones that inhibit gastric secretion.', a: 'Secretin, cholecystokinin and vasoactive intestinal peptide.' },
+  { q: 'Jejunum versus ileum: what differs?', a: 'The jejunum has more plicae, villi and microvilli for nutrient absorption; the ileum has fewer and mainly absorbs fluid.' },
+  { q: 'What gives the colon its haustra?', a: 'The teniae coli, three smooth muscle ribbons that bunch the wall into segments.' },
+  { q: 'List the defences of the stomach lining against its own acid.', a: 'Mucus barrier, tight junctions, rapid stem-cell turnover, with alkaline duodenal, biliary and pancreatic secretions downstream.' },
+]} />

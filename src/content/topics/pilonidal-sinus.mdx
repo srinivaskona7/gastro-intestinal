@@ -1,0 +1,65 @@
+---
+title: "Pilonidal sinus"
+part: pathology
+group: Anorectal
+order: 52
+summary: "A hair-containing cyst, sinus or abscess in the natal cleft of the buttocks. It is painful, commoner in adolescent males, and treated by excision."
+highYield:
+  - "Pilonidal means \"nest of hair\"; the lesion sits in the natal cleft and holds hair and skin debris."
+  - "Ingrown hair, prolonged sitting and sweating are the classic drivers."
+  - "Very painful; commoner in men than women and peaks in adolescents."
+  - "Definitive management is surgical excision."
+tags: [anorectal, abscess, natal cleft, surgery]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+A **pilonidal sinus** is a small tract, cyst or abscess found in or near the **natal cleft**, the groove between the buttocks. The cavity typically contains **hair and skin debris**. The name comes from Latin and means **"nest of hair"**, which describes what is found inside.
+
+A cyst can stay quiet, but when it becomes infected it forms a painful **pilonidal abscess**.
+
+## Causes and risk factors
+
+| Factor | Why it matters |
+|---|---|
+| Ingrown hair | Loose hairs bore into the skin of the cleft and set up a foreign-body reaction |
+| Excessive sitting | Pressure and friction drive hair into the skin |
+| Excessive sweating | Moist, warm skin favours blockage and infection |
+
+<Mermaid
+  caption="How a pilonidal abscess develops"
+  chart={`flowchart LR
+  A["Hair, sweat and sitting pressure"] --> B["Hair penetrates skin of natal cleft"]
+  B --> C["Sinus or cyst holding hair and debris"]
+  C --> D{"Infected?"}
+  D -- No --> E["Quiet cyst"]
+  D -- Yes --> F["Painful abscess"]
+  F --> G["Excision"]`}
+/>
+
+## Clinical features
+
+- The lesion is **very painful**, especially on sitting.
+- It is **more common in men than women**.
+- It is seen **mostly in adolescents** and young adults.
+
+## Management
+
+**Excision** of the sinus or cyst is the treatment. An acutely infected abscess needs to be drained as part of this surgical approach.
+
+<Callout kind="pearl">
+Young male, painful lump over the lower sacrum or natal cleft, hair visible: think pilonidal disease, not a perianal abscess.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'What does "pilonidal" mean and what is found inside?', a: 'It means nest of hair; the cyst or sinus contains hair and skin debris.' },
+  { q: 'Where does a pilonidal sinus occur?', a: 'In or near the natal cleft between the buttocks.' },
+  { q: 'Name three factors that contribute to it.', a: 'Ingrown hair, excessive sitting and excessive sweating.' },
+  { q: 'Who is typically affected?', a: 'Adolescents, and men more than women.' },
+  { q: 'What is the definitive treatment?', a: 'Surgical excision.' },
+]} />

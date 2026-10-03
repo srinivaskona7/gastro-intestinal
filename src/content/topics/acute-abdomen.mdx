@@ -1,0 +1,93 @@
+---
+title: "Acute abdomen"
+part: pathology
+group: Systemic & infection
+order: 56
+summary: "Assessing sudden severe abdominal pain: telling visceral, somatic and referred pain apart, deciding who needs laparotomy, and resuscitating before surgery."
+highYield:
+  - "Rupture with shock and generalised peritonitis need laparotomy; local peritonitis and colic do not."
+  - "Colic makes patients restless; peritonitis makes them lie still."
+  - "Visceral pain is diffuse and colicky; parietal pain is sharp and well localised; referred pain follows embryonic dermatomes."
+  - "Resuscitate before surgery because anaesthesia worsens shock."
+  - "Erect chest X-ray looks for air under the diaphragm."
+tags: [emergency, pain, peritonitis, surgery]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## Why it matters
+
+Abdominal pain is a very common reason to attend the Emergency Department. The key task is to separate patients who need an **urgent operation (laparotomy)** from those who do not.
+
+## Laparotomy or not?
+
+| Needs laparotomy | Features |
+|---|---|
+| Organ rupture (spleen, aorta, ectopic pregnancy) | Shock |
+| Generalised peritonitis from perforation (peptic or duodenal ulcer, diverticulum, appendix, bowel, gallbladder) | Prostration, shock, lying still, tenderness with guarding, rebound and percussion pain, abdominal rigidity, absent bowel sounds |
+
+| Does not need laparotomy | Features |
+|---|---|
+| Local peritonitis (diverticulitis, cholecystitis, salpingitis, appendicitis) | Lying still, tenderness (guarding, rebound, percussion), rigidity |
+| Colic | Restlessness; regularly waxing and waning pain |
+
+<Mermaid
+  caption="First decisions in an acute abdomen"
+  chart={`flowchart TD
+  A["Acute abdomen"] --> B["Resuscitate first"]
+  B --> C["Bloods, urinalysis, erect chest X-ray"]
+  C --> D{"Shock, rigidity, silent abdomen?"}
+  D -- Yes --> E["Rupture or perforation: laparotomy"]
+  D -- No --> F{"Restless with waxing and waning pain?"}
+  F -- Yes --> G["Colic: obstruction of a tube"]
+  F -- No --> H["Local peritonitis: manage without laparotomy"]`}
+/>
+
+## Tests and priorities
+
+- **Bloods:** U&E, FBC, amylase, LFT, CRP and arterial blood gas; plus urinalysis.
+- **Erect chest X-ray** to find **air under the diaphragm**, a sign of perforation.
+- **Resuscitate before surgery.** Anaesthesia compounds shock, so an unresuscitated patient may collapse on induction.
+
+## Three types of abdominal pain
+
+| Feature | Visceral (colicky) | Somatic (parietal) | Referred |
+|---|---|---|---|
+| Source | Abdominal viscera, usually from pressure or stretch | Inflamed or irritated parietal peritoneum | Pathology elsewhere, felt at another site |
+| Nerves | Autonomic fibres | Somatic nerves | Shared embryonic dermatomes |
+| Localisation | Diffuse, poorly localised, often periumbilical | Very well localised | Distant site |
+| Quality | Fluctuating, comes and goes | Sharp; worse on moving, coughing, breathing | Varies |
+| Associations | Nausea and autonomic features such as sweating | Peritonism | Diaphragm irritation gives shoulder-tip pain |
+| Behaviour | Moves around, cannot get comfortable | Keeps still | |
+
+### Extra-abdominal causes to remember
+
+- **Inferior myocardial infarction** often presents with epigastric pain.
+- **Testicular torsion** can present with hypogastric pain.
+
+## Assessing the pain
+
+Ask whether it is poorly defined or well localised, and **what the pain makes the patient do**.
+
+- **Waxing and waning** pain suggests obstruction of something (a tube).
+- **Constant** pain: sharp suggests peritoneal involvement, dull suggests visceral.
+- **Aggravating or relieving factors:** better or worse on eating (worse with food in gastric or duodenal ulcer disease), and worse on movement.
+- **Progression:** pathology often moves from visceral to parietal pain. In appendicitis the pain starts as diffuse visceral pain, then irritates the peritoneum and becomes localised somatic pain.
+
+Pain behaviour differs: **colic** (biliary, renal) makes patients move about; **parietal pain** (for example from bleeding or infection) makes them keep still.
+
+<Callout kind="warning" title="Silent, rigid, shocked">
+A still, shocked patient with a rigid abdomen and no bowel sounds has peritonitis until proven otherwise. Resuscitate, then operate.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'How does the patient\'s behaviour differ between colic and peritonitis?', a: 'Colic: restless and moving. Peritonitis: lying still because movement hurts.' },
+  { q: 'Why resuscitate before surgery?', a: 'Anaesthesia worsens shock.' },
+  { q: 'What does air under the diaphragm on erect chest X-ray suggest?', a: 'A perforated hollow viscus.' },
+  { q: 'Which nerves carry visceral and somatic pain?', a: 'Visceral: autonomic fibres. Somatic: somatic nerves.' },
+  { q: 'Describe the pain progression in appendicitis.', a: 'Starts as diffuse visceral pain, then becomes sharp and localised as the peritoneum is irritated.' },
+  { q: 'Give an example of referred pain and a non-abdominal cause of abdominal pain.', a: 'Diaphragm pain felt at the shoulder tip; inferior MI causing epigastric pain.' },
+]} />

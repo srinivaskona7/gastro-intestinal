@@ -1,0 +1,142 @@
+---
+title: "Pancreatitis"
+part: pathology
+group: Pancreas
+order: 20
+summary: "Acute pancreatitis is reversible autodigestion of the pancreas, mostly from gallstones or alcohol; chronic pancreatitis is repeated injury with fibrosis and loss of function."
+highYield:
+  - "Acute causes are gallstones about 50%, alcohol about 40%, and other causes about 10%."
+  - "Presents as a medical emergency with epigastric pain, vomiting and peritonitis; Grey Turner and Cullen signs mean haemorrhage."
+  - "Diagnose with raised amylase and lipase after excluding other acute abdomens; never biopsy."
+  - "About 80% settle with supportive care; 20% are severe with organ failure needing ICU."
+  - "Chronic pancreatitis is mainly alcohol-related and leads to malabsorption and diabetes."
+tags: [acute abdomen, amylase, lipase, Grey Turner, steatorrhoea]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## Acute pancreatitis
+
+### What it is
+
+Acute pancreatitis is inflammation caused by the pancreas **digesting itself** (autodigestion). The inflammation is reversible and may include **necrosis**. In severe cases it triggers a **systemic inflammatory response syndrome**.
+
+### Causes
+
+| Cause | Share | Notes |
+|---|---|---|
+| Gallstones | about 50% | Stone obstructs the ampulla or common bile duct |
+| Alcohol | about 40% | |
+| Others | about 10% | Infections, metabolic (hypercalcaemia from hyperparathyroidism, DKA, uraemia, pregnancy), trauma, ischaemia, duodenal ulcer, scorpion venom, drugs, unidentified |
+
+### Pathogenesis
+
+<Mermaid
+  caption="From obstruction to organ failure"
+  chart={`flowchart TD
+  A["Gallstone or alcohol or other trigger"] --> B["Pancreatic enzymes activated inside gland"]
+  B --> C["Autodigestion"]
+  C --> D["Inflammation, with or without necrosis"]
+  D --> E["Reversible in most"]
+  D --> F["Systemic inflammatory response"]
+  F --> G["Shock"]
+  F --> H["Acute renal failure"]
+  F --> I["ARDS"]`}
+/>
+
+### Clinical features
+
+This is an **acute medical emergency**.
+
+- Epigastric or abdominal pain, brought on by a large meal or alcohol
+- Vomiting
+- Peritonitis with guarding and rigidity
+- With haemorrhage: hypotension and shock, and **Grey Turner's sign** (flank bruising) and **Cullen's sign** (periumbilical bruising)
+
+### Complications
+
+| Local | Systemic |
+|---|---|
+| Pancreatic abscess or infection | Jaundice |
+| Pseudocysts | DIC (disseminated intravascular coagulation) |
+| Duodenal obstruction | ARDS |
+| | Acute renal failure |
+
+### Diagnosis
+
+1. **Exclude other causes of acute abdomen**: appendicitis, diverticulitis, peptic ulcer, cholecystitis, ischaemic bowel and bowel obstruction.
+2. **Serum amylase** is raised within 24 hours.
+3. **Serum lipase** is raised too. Lipase rises early and stays high longer, which makes it useful for late presenters.
+4. **FBC**: neutrophil leucocytosis.
+5. **Alkaline phosphatase** raised if biliary stasis; **bilirubin** raised.
+6. **ERCP or MRCP** if indicated.
+
+<Callout kind="warning" title="Never biopsy">
+Biopsy of the inflamed pancreas is hazardous and is not part of the diagnosis.
+</Callout>
+
+### Prognosis and treatment
+
+About **80%** are self-limiting with supportive treatment. About **20%** are life threatening with one or more organ failures and need ICU.
+
+- **Supportive**: nil by mouth, fluids, electrolytes, analgesia.
+- **Aggressive** for severe disease or organ failure: ICU admission, prophylactic antibiotics if there is necrosis, and rarely surgery.
+
+## Chronic pancreatitis
+
+### What it is
+
+Repeated bouts of mild to moderate pancreatitis that leave **exocrine atrophy and fibrosis**.
+
+### Causes and pathogenesis
+
+**Alcohol abuse** is the main cause. Others are biliary disease, hypercalcaemia, pancreas divisum, familial pancreatitis and cystic fibrosis. Alcohol or another cause obstructs the ducts, which leads to autodigestion and pancreatitis again and again.
+
+### Clinical features
+
+- Intermittent pain
+- Weight loss
+- Steatorrhoea
+- Jaundice
+- Secondary diabetes
+
+Diagnosis follows the same approach as acute disease: exclude other acute abdomens, then check amylase, lipase, FBC, alkaline phosphatase and bilirubin.
+
+### Complications
+
+Progressive destruction of the gland lowers function in two ways.
+
+<Mermaid
+  caption="Loss of pancreatic function"
+  chart={`flowchart LR
+  A["Progressive pancreatic destruction"] --> B["Exocrine failure"]
+  A --> C["Endocrine failure"]
+  B --> D["Enzyme lack, nutritional malabsorption"]
+  C --> E["Less insulin and glucagon, diabetes mellitus"]`}
+/>
+
+Other complications: **pseudocysts, duct obstruction and pancreatic cancer**.
+
+### Treatment
+
+- **Supportive**: nil by mouth when needed, fluids, electrolytes, analgesia.
+- Manage **bile duct disease** if present.
+- If the pancreas has failed: **pancreatic enzyme replacement (Creon Forte)** plus **insulin**.
+
+<Callout kind="pearl">
+Acute pancreatitis is reversible; chronic pancreatitis is not. Chronic disease costs the patient both digestion (steatorrhoea) and glucose control (diabetes).
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'What are the two commonest causes of acute pancreatitis?', a: 'Gallstones (about 50%) and alcohol (about 40%).' },
+  { q: 'What is the basic pathogenesis?', a: 'Autodigestion of the pancreas causing inflammation, with or without necrosis, and possibly a systemic inflammatory response.' },
+  { q: 'What do Grey Turner and Cullen signs indicate?', a: 'Haemorrhage in severe acute pancreatitis, seen as flank and periumbilical bruising.' },
+  { q: 'Which blood tests support the diagnosis and why is biopsy avoided?', a: 'Raised amylase and lipase, with neutrophil leucocytosis; biopsy is hazardous.' },
+  { q: 'What is the outlook of acute pancreatitis?', a: 'About 80% self-limiting; about 20% severe with organ failure needing ICU.' },
+  { q: 'Name local and systemic complications of acute disease.', a: 'Local: abscess, pseudocyst, duodenal obstruction. Systemic: jaundice, DIC, ARDS, acute renal failure.' },
+  { q: 'What defines chronic pancreatitis and its main cause?', a: 'Repeated bouts with exocrine atrophy and fibrosis; alcohol is the main cause.' },
+  { q: 'How does chronic pancreatitis cause both malabsorption and diabetes?', a: 'Destruction of exocrine tissue lowers enzymes; destruction of endocrine tissue lowers insulin and glucagon.' },
+]} />

@@ -1,0 +1,86 @@
+---
+title: "Ischaemic bowel"
+part: pathology
+group: Intestines
+order: 44
+summary: "Loss of blood supply to the bowel, most often from mesenteric thromboembolism, causes severe pain and, if not reperfused quickly, infarction, perforation and sepsis."
+highYield:
+  - "Causes include mesenteric thromboembolism (AF, atherosclerosis), aortic dissection and segmental strangulation."
+  - "Early: sudden severe periumbilical pain, vomiting, forceful defecation and haematochezia if large bowel."
+  - "Later: peritonitis, distension and absent bowel sounds."
+  - "CT or mesenteric angiography is definitive; ABG shows metabolic acidosis."
+  - "Reperfusion is the priority, with decompression, antibiotics and surgery for late signs."
+tags: [mesenteric ischaemia, infarction, acute abdomen]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+**Ischaemic bowel** is injury to the intestine because its blood supply is cut off or inadequate. Left untreated, ischaemia progresses to **infarction** (death of bowel wall).
+
+## Causes
+
+- **Mesenteric thromboembolism**, for example from atrial fibrillation (emboli) or atherosclerosis (thrombosis).
+- **Aortic dissection** occluding the coeliac trunk, superior mesenteric artery (SMA) or inferior mesenteric artery (IMA).
+- **Segmental strangulation**, as in hernia or volvulus.
+
+## Pathogenesis
+
+<Mermaid
+  caption="From occlusion to infarction"
+  chart={`flowchart LR
+  A["Thromboembolism, dissection or strangulation"] --> B["Mesenteric artery occlusion"]
+  B --> C["Mesenteric ischaemia"]
+  C --> D["Bowel infarction"]
+  D --> E["Perforation, sepsis, lactic acidosis"]`}
+/>
+
+## Clinical features
+
+| Stage | Features |
+|---|---|
+| Early | Rapid-onset severe periumbilical pain, nausea and vomiting, forceful defecation, haematochezia if large bowel is involved |
+| Later | Peritonitis (guarding, rigidity, rebound tenderness), abdominal distension, absent bowel sounds |
+
+<Callout kind="warning" title="Pain out of proportion">
+Severe pain with a soft abdomen early on is typical; peritonism means the bowel is already dying. Do not wait for it.
+</Callout>
+
+## Investigations
+
+| Test | Purpose |
+|---|---|
+| ECG | Looks for AF as the embolic source |
+| Coagulation screen | Hypercoagulability |
+| Abdominal X-ray | Thickened bowel wall, pneumatosis intestinalis (gas in the wall) |
+| CT | Definitive |
+| Mesenteric angiogram | Definitive |
+| ABG | Metabolic acidosis |
+
+## Management
+
+The key word is **reperfusion**.
+
+- **Anticoagulation** (warfarin with heparin cover) and **thrombolysis** (tPA).
+- **Decompression** with a nasogastric tube.
+- **Antibiotics**: ampicillin, gentamicin and metronidazole.
+- **Surgery** for late signs or perforation: bowel resection and colostomy.
+- Optional extras: beta-blocker (carvedilol), and digoxin if AF is present.
+
+## Complications
+
+- Perforation
+- Sepsis
+- Lactic acidosis
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Name three causes of ischaemic bowel.', a: 'Mesenteric thromboembolism (AF, atherosclerosis), aortic dissection occluding the coeliac, SMA or IMA, and segmental strangulation by hernia or volvulus.' },
+  { q: 'Which vessels may be occluded?', a: 'Coeliac trunk, superior mesenteric artery and inferior mesenteric artery.' },
+  { q: 'What do early and late presentations look like?', a: 'Early: severe periumbilical pain and vomiting. Late: peritonitis, distension and absent bowel sounds.' },
+  { q: 'Which investigations are definitive?', a: 'CT and mesenteric angiography.' },
+  { q: 'What is the priority in management?', a: 'Reperfusion by anticoagulation or thrombolysis, plus decompression, antibiotics, and surgery if late or perforated.' },
+]} />

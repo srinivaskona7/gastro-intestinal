@@ -1,0 +1,169 @@
+---
+title: "Nutrition basics"
+part: anatomy-physiology
+group: Foundations
+order: 7
+summary: "Energy and nutrient requirements, how food energy is measured and lost, essential nutrients, glycaemic index, types of deficiency and how nutritional status is assessed."
+highYield:
+  - "Optimal nutrition means supply matches requirement; food also provides the \"exercise\" the gut needs."
+  - "Energy available falls in steps: gross, digestible, metabolisable, net."
+  - "Fat gives about 37 kJ/g, carbohydrate 16, protein 17 (net) - and 9 of 20 amino acids are essential."
+  - "Primary deficiency is a poor diet; secondary deficiency is a digestion or absorption problem."
+  - "Assessment combines dietary history, biochemistry, physical examination and anthropometry."
+tags: [nutrition, energy, BMR, glycaemic index, malnutrition, BMI]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What optimal nutrition means
+
+Nutrition is **optimal when the body's requirements equal its supply**. Food covers two kinds of requirement:
+
+- **Maintenance:** the basic needs, reflected by the **basal metabolic rate (BMR)**, the energy spent just to stay alive.
+- **Performance or activity:** extra energy used for movement, thinking and digestion. Food is needed not only for nutrients but also to give the GI tract its own "exercise".
+
+### Routes of giving nutrition
+
+| Route | How |
+|---|---|
+| Self | Eating |
+| Enteral | Nasogastric tube, delivering straight to stomach or jejunum |
+| Parenteral | Catheter into the venous system (for example the subclavian vein) |
+
+## Energy
+
+**BMR** (also called resting metabolic rate) is the energy used when lying down, completely at rest (mentally and physically), in a thermo-neutral environment and in the **post-absorptive state** (nothing being digested, since digestion costs energy).
+
+Food energy is measured in **joules** (usually kJ or MJ). One joule is the energy needed to move 1 kg through 1 m using 1 newton of force. A rate of energy use is in **watts** (1 W = 1 J per second). The older unit, the calorie, equals 4.184 J.
+
+### From food to usable energy
+
+The body harvests food energy efficiently, but some is lost as faeces, urine, methane and heat.
+
+<Mermaid
+  caption="Energy losses between food and body"
+  chart={`flowchart TD
+  A["Gross energy: total in the food"] -->|"minus faecal loss"| B["Digestible energy"]
+  B -->|"minus urine and methane"| C["Metabolisable energy"]
+  C -->|"minus body heat lost"| D["Net energy"]
+  D --> E["Maintenance (BMR)"]
+  D --> F["Movement"]
+  D --> G["Reserves: fat and glycogen"]`}
+/>
+
+| Term | Definition |
+|---|---|
+| Gross energy (GE) | Total energy content of the food |
+| Digestible energy (DE) | GE minus energy lost in faeces |
+| Metabolisable energy (ME) | GE minus faeces, urine and methane (CH4) |
+| Net energy (NE) | ME minus heat lost to surroundings; left for maintenance, movement and storage |
+
+### Energy content of macronutrients
+
+Food energy is quoted as metabolisable energy per unit of **dry matter (DM)**, in kJ/g or MJ/kg.
+
+| Nutrient | Energy | Share of diet |
+|---|---|---|
+| Carbohydrate | 16 kJ/g DM | 55-60% |
+| Protein | 17 kJ/g DM (about 1.5 times carbohydrate) | 15% |
+| Fat | 37 kJ/g DM (about 2.5 times carbohydrate) | 30% |
+
+<Callout kind="pearl">
+Protein's gross value is about 23 kJ/g, but roughly 6 kJ/g is lost in metabolism (nitrogen waste), leaving the 17 kJ/g figure.
+</Callout>
+
+## Why each nutrient class matters
+
+- **Carbohydrates:** mainly energy. Dietary fibre adds faecal bulk, supports regular bowel movements and keeps colonocytes healthy.
+- **Proteins:** 9 of the 20 amino acids are **essential** (the body cannot make them): histidine, isoleucine, leucine, lysine, methionine, phenylalanine, threonine, tryptophan and valine. Methionine is also the precursor of cysteine, and phenylalanine of tyrosine.
+- **Fats:** cannot be removed completely from the diet. Some fatty acids are essential: linoleic acid (plant oils, omega-6) which gives arachidonic acid, a prostaglandin precursor; and linolenic acid (plant oils, omega-3) which gives EPA and DHA. Fats also carry the fat-soluble vitamins.
+- **Vitamins:** fat-soluble A, D, E and K; important water-soluble ones include B12 and biotin (both in fatty acid metabolism) and vitamin C.
+
+## Glycaemic index
+
+The **glycaemic index (GI)** is how strongly a food raises blood glucose over 2 hours, with pure glucose as the reference (100% of the area under the curve). Foods with more complex carbohydrate digest more slowly and have a lower GI.
+
+| | High GI | Low GI |
+|---|---|---|
+| Energy release | Quick and short | Slow and sustained |
+| Carbohydrate type | Simpler | More complex |
+
+## What can go wrong
+
+Advanced malnutrition (obesity, anorexia) is easy to spot because complications show, so the aim is to **diagnose early**, to give support and advice before complications.
+
+<Mermaid
+  caption="Two routes to deficiency"
+  chart={`flowchart LR
+  A["Primary: diet lacks or is short of nutrients"] --> C["Declining nutrient stores"]
+  B["Secondary: digestion, absorption or processing fails"] --> C
+  C --> D["Change in body function"]
+  D --> E["Physical signs and symptoms"]`}
+/>
+
+In secondary deficiency the diet is fine, but the body cannot absorb or use what is there.
+
+## Assessing nutritional status
+
+### Dietary history
+
+Food diary, 24-hour recall, diet history and food frequency questionnaire.
+
+### Biochemical tests
+
+Blood and urine tests may reflect nutritional status directly, or show things that will affect it later (electrolyte balance, acid-base balance, organ function). **Limitations:** results need interpretation, hydration alters them, several tests over time are needed, and levels can be unrelated to nutrition.
+
+**Protein-energy malnutrition (PEM):**
+
+| Marker | Notes |
+|---|---|
+| Serum proteins: albumin, transferrin, transthyretin (binds thyroid hormone), retinol-binding protein (binds vitamin A), clotting factors | Reflect liver function, intake, distribution (cells versus blood) and utilisation. The shorter the half-life, the more sensitive the test |
+| Nitrogen balance | Protein intake minus nitrogen lost in faeces and urine |
+| Urinary creatinine | Proportional to muscle mass |
+| Urinary or blood urea | Rises with increased proteolysis |
+
+**Fat:** lipoprotein levels (triglyceride, phospholipid, cholesterol) - chylomicrons (from intestine), VLDL (high triglyceride; liver to periphery), LDL (high cholesterol), HDL (high protein). Useful for cardiovascular risk.
+
+**Glucose:** blood glucose is only a snapshot, so many readings are needed; urinary glucose suggests blood glucose is high. This sorts patients into normal, impaired or diabetic, followed by a **glucose tolerance test** and/or **HbA1c**. Sustained high glucose glycosylates haemoglobin, so HbA1c reflects about the last **120 days**, the lifespan of a red cell.
+
+**Minerals and vitamins:**
+
+| Nutrient | Assessment |
+|---|---|
+| Iron | Haemoglobin, haematocrit (percentage of blood that is red cells), serum ferritin (stores), transferrin saturation (serum iron over total iron-binding capacity) |
+| Folate | Serum folate; mean corpuscular volume (average red cell size) |
+| Vitamin B12 | Serum B12; **Schilling test** for malabsorption |
+
+In the **Schilling test** the person is first saturated with an injection of B12, then given oral radio-labelled B12, and the labelled B12 in urine is measured. Malabsorption may be due to lack of intrinsic factor.
+
+### Physical examination
+
+Clinical assessment for signs of deficiency or excess.
+
+### Anthropometry (body measurements)
+
+- **Growth charts:** growth (length, weight, height) is plotted in percentiles. The concern is a child who jumps between percentile lines; a boy born on the 25th percentile is expected to stay near it.
+- **Skinfold (pinch) tests** estimate body fat.
+- **BMI** = mass (kg) divided by height (m) squared.
+
+| BMI | Category |
+|---|---|
+| Below 18.5 | Underweight |
+| 18.5-25 | Acceptable |
+| 25-30 | Overweight |
+| 30 or more | Obese |
+
+- **Waist:hip ratio:** recommended about 0.8 for men and 0.9 for women.
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Define BMR and the conditions for measuring it.', a: 'The energy spent just to stay alive, measured lying at complete rest, in a thermo-neutral environment and in the post-absorptive state.' },
+  { q: 'Order the energy terms from largest to smallest and say what is lost at each step.', a: 'Gross, digestible (faecal loss removed), metabolisable (urine and methane removed), net (body heat removed).' },
+  { q: 'Which macronutrient is most energy dense and roughly how much?', a: 'Fat, about 37 kJ/g, about 2.5 times carbohydrate (16 kJ/g); protein nets about 17 kJ/g.' },
+  { q: 'What is the difference between primary and secondary deficiency?', a: 'Primary: the diet itself is inadequate. Secondary: the diet is adequate but digestion, absorption or utilisation is impaired.' },
+  { q: 'Why does a low-GI food give sustained energy?', a: 'Its more complex carbohydrate digests slowly, so glucose enters the blood gradually over a longer period.' },
+  { q: 'Why does HbA1c reflect about 120 days?', a: 'Glucose binds to haemoglobin for the life of the red cell, which is about 120 days.' },
+  { q: 'What does the Schilling test assess?', a: 'Vitamin B12 malabsorption, using oral radio-labelled B12 after B12 saturation, with urinary excretion measured; it may point to lack of intrinsic factor.' },
+]} />

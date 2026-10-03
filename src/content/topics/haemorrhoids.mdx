@@ -1,0 +1,77 @@
+---
+title: "Haemorrhoids"
+part: pathology
+group: Anorectal
+order: 49
+summary: "Swollen anal vascular cushions caused by chronic raised abdominal pressure and incompetent venous valves; the commonest cause of minor rectal bleeding."
+highYield:
+  - "Commonest cause of minor rectal bleeding (over 50%)."
+  - "Chronic raised intra-abdominal pressure dilates veins and makes valves incompetent."
+  - "Internal haemorrhoids bleed painlessly; external ones are painful, with or without itching."
+  - "First line is fibre, fluids, analgesia, hygiene and rest."
+  - "Second line is surgery: banding for internal, excision under general anaesthetic for external."
+tags: [anorectal, rectal bleeding, constipation]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+**Haemorrhoids** are enlarged vascular cushions of the anal canal, either **internal** or **external**. The underlying problem is **incompetent valves in the rectal veins**, so blood pools and the vessels swell.
+
+## Causes and pathogenesis
+
+Anything that causes **chronic raised intra-abdominal pressure** can start the process:
+
+- Chronic constipation
+- Pregnancy
+- Asthma (chronic coughing)
+- Weight lifting
+
+<Mermaid
+  caption="How haemorrhoids form"
+  chart={`flowchart LR
+  A[Chronic raised abdominal pressure] --> B[Lower abdominal veins and valves dilate]
+  B --> C[Valves become incompetent]
+  C --> D[Haemorrhoids]`}
+/>
+
+## Clinical features
+
+Haemorrhoids are the **commonest cause of minor rectal bleeding**, accounting for more than half of cases. Whether they hurt depends on type.
+
+| Type | Presentation |
+|---|---|
+| Internal | Painless rectal bleeding |
+| External | Painful rectal bleeding, with or without itching |
+
+## Management
+
+| Line | Treatment |
+|---|---|
+| First | Dietary fibre, fluids, analgesia, hygiene and rest |
+| Second | Surgery |
+
+Surgery is matched to the pain pattern:
+
+- **Internal haemorrhoids**: **banding**, which is tolerable because the area is painless.
+- **External haemorrhoids**: **excision under general anaesthetic**, because the area is painful.
+
+<Callout kind="pearl">
+Painless bleeding is internal, painful is external. This also decides the operation: banding for internal, excision for external.
+</Callout>
+
+<Callout kind="warning">
+Do not assume rectal bleeding is haemorrhoids; cancer and polyps cause minor bleeding too, so consider further investigation when appropriate.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'What is the underlying mechanism of haemorrhoids?', a: 'Chronic raised abdominal pressure dilates veins and valves, which become incompetent and allow vessels to swell.' },
+  { q: 'Name four triggers of raised abdominal pressure.', a: 'Chronic constipation, pregnancy, asthma and weight lifting.' },
+  { q: 'Why do internal and external haemorrhoids differ in pain?', a: 'Internal ones bleed painlessly; external ones are painful, sometimes with itching.' },
+  { q: 'First-line management?', a: 'Dietary fibre, fluids, analgesia, hygiene and rest.' },
+  { q: 'Which surgery for each type and why?', a: 'Banding for internal (painless); excision under GA for external (painful).' },
+]} />

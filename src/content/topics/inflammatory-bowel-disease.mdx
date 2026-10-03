@@ -1,0 +1,119 @@
+---
+title: "Inflammatory bowel disease"
+part: pathology
+group: Intestines
+order: 39
+summary: "Crohn's disease and ulcerative colitis are chronic, immune-driven inflammatory conditions of the gut that share symptoms but differ in site, depth and complications."
+highYield:
+  - "Crohn's affects any part of the gut from mouth to anus, patchily and transmurally; ulcerative colitis is colon only, continuous and mucosal."
+  - "Crohn's starts at the terminal ileum; ulcerative colitis starts at the rectum and spreads proximally."
+  - "Smoking raises Crohn's risk but protects against ulcerative colitis; appendicectomy protects against ulcerative colitis."
+  - "Fistulae, fever, weight loss and perianal disease are Crohn's; tenesmus and bloody mucus are ulcerative colitis."
+  - "Diagnosis is colonoscopy with biopsy; both carry colorectal cancer risk and need surveillance."
+tags: [Crohn's, ulcerative colitis, autoimmune, colitis]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+**Inflammatory bowel disease (IBD)** covers two chronic conditions: **Crohn's disease (CD)** and **ulcerative colitis (UC)**. Both involve an exaggerated immune response against the gut's own flora, producing long-lasting inflammation.
+
+## Causes and risk factors
+
+- **Genetics and autoimmunity**: about 15% of patients have a family history.
+- **Smoking**: a risk factor for Crohn's but **protective** for ulcerative colitis.
+- **Western lifestyle** is associated with higher rates.
+- **Appendicectomy** is protective for ulcerative colitis.
+- **Breastfeeding** is protective for Crohn's.
+
+## Pathogenesis
+
+<Mermaid
+  caption="General pathogenesis"
+  chart={`flowchart LR
+  A[Genetic susceptibility plus autoimmunity] --> B[Exaggerated response to gut flora]
+  B --> C[Chronic inflammation]
+  C --> D["Crohn's disease"]
+  C --> E["Ulcerative colitis"]`}
+/>
+
+## Features common to both
+
+| Group | Features |
+|---|---|
+| Intestinal | Abdominal pain and severe cramps, vomiting and diarrhoea, rectal bleeding |
+| Extra-intestinal | Primary sclerosing cholangitis, arthritis, pyoderma gangrenosum (skin), eye problems |
+
+A common exam trap: primary biliary cirrhosis is sometimes written in place of primary sclerosing cholangitis. The recognised IBD association is **primary sclerosing cholangitis**, a bile duct disease, particularly with UC.
+
+## Crohn's versus ulcerative colitis
+
+| Feature | Crohn's disease | Ulcerative colitis |
+|---|---|---|
+| Where it starts | Terminal ileum | Rectum, spreading proximally |
+| Extent in gut | Anywhere, mouth to anus | Colon only |
+| Anus involved | Yes | No |
+| Distribution | Patchy, with skip lesions | Continuous |
+| Depth | Can be full thickness | Epithelial lining only |
+| Stool | Porridge-like, sometimes steatorrhoea | Mucus-like with blood |
+| Tenesmus | No | Yes |
+| Fever | Yes | No |
+| Fistulae | Yes | No |
+| Weight loss | Yes | No |
+
+<Mermaid
+  caption="Pattern of involvement"
+  chart={`flowchart TD
+  subgraph CD ["Crohn's disease"]
+    C1[Mouth to anus possible] --> C2[Skip lesions]
+    C2 --> C3[Full thickness wall]
+  end
+  subgraph UC ["Ulcerative colitis"]
+    U1[Begins at rectum] --> U2[Continuous spread up colon]
+    U2 --> U3[Mucosa only]
+  end`}
+/>
+
+Deep, transmural inflammation explains why Crohn's forms fistulae, strictures and perforation, while superficial disease in UC gives bloody mucus and tenesmus (rectal involvement). Malabsorption from small bowel disease explains weight loss and steatorrhoea in Crohn's.
+
+<Callout kind="pearl">
+Remember "Crohn's: Can be anywhere, Can be full thickness, Can fistulate." UC is continuous from the rectum, in the colon only.
+</Callout>
+
+## Diagnosis
+
+**Colonoscopy with biopsy** confirms the diagnosis and shows the pattern of disease.
+
+## Treatment
+
+- **Corticosteroids** (for example prednisone) to control flares.
+- **Immunosuppression and biologics**: infliximab, sulfasalazine, azathioprine and methotrexate (DMARD or chemotherapy-type drugs). Infliximab is an anti-TNF biologic; sulfasalazine is an aminosalicylate.
+- **Surgery**: needed in about 75% of Crohn's and 20% of UC patients.
+- **Yearly colonoscopy surveillance** for colon cancer.
+
+## Complications
+
+| Complication | Notes |
+|---|---|
+| Toxic megacolon | Common in UC, rare in Crohn's; dilation, stasis and gangrene |
+| Bowel perforation | Typically Crohn's |
+| Fistulae | Typically Crohn's |
+| Anal fissures | Typically Crohn's |
+| Colorectal cancer | Risk increased in both |
+
+<Callout kind="warning" title="Toxic megacolon">
+A grossly dilated colon with systemic illness risks perforation and gangrene and needs urgent assessment.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Where does each disease begin, and how far does it spread?', a: 'Crohn\'s starts at the terminal ileum and can involve mouth to anus; UC starts at the rectum and spreads proximally within the colon only.' },
+  { q: 'Why does Crohn\'s form fistulae but UC does not?', a: 'Crohn\'s inflammation can be full thickness, whereas UC is confined to the epithelial lining.' },
+  { q: 'What is the effect of smoking on each disease?', a: 'It is a risk factor for Crohn\'s and protective in ulcerative colitis.' },
+  { q: 'Which symptoms favour UC over Crohn\'s?', a: 'Tenesmus and mucus-like stool with blood; no fever, fistulae or weight loss.' },
+  { q: 'List the extra-intestinal manifestations.', a: 'Primary sclerosing cholangitis, arthritis, pyoderma gangrenosum and eye problems.' },
+  { q: 'Which complications are typical of each?', a: 'Toxic megacolon in UC; perforation, fistulae and anal fissures in Crohn\'s; colorectal cancer risk in both.' },
+]} />

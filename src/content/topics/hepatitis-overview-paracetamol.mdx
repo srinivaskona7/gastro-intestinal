@@ -1,0 +1,126 @@
+---
+title: "Hepatitis overview & paracetamol toxicity"
+part: pathology
+group: Liver & biliary
+order: 27
+summary: "How hepatitis links to cirrhosis and liver cancer, then two non-viral causes in detail, alcoholic hepatitis and paracetamol overdose, with the antidote logic for each."
+highYield:
+  - "Every hepatitis except A and E can progress to cirrhosis and then to hepatic cancer."
+  - "Alcohol is turned into acetaldehyde, a liver toxin that drives inflammation and fibrosis."
+  - "Alcoholic hepatitis gives a raised AST/ALT and a raised GGT relative to ALP."
+  - "Paracetamol overdose exhausts glutathione, so a toxic metabolite kills cells in zone 3 (centrilobular necrosis)."
+  - "N-acetylcysteine replenishes glutathione and is dosed against a nomogram."
+tags: [hepatitis, alcohol, paracetamol, acetylcysteine, liver]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+**Hepatitis** means inflammation of the liver. It can be viral, toxic (alcohol, drugs), autoimmune or metabolic. The important unifying idea is the natural history: persistent inflammation makes scar tissue, scar tissue distorts the liver into nodules (**cirrhosis**), and a cirrhotic liver is at risk of **hepatocellular cancer**. Hepatitis A and E are the exceptions because they cause only acute illness and do not become chronic.
+
+<Mermaid
+  caption="The hepatitis, cirrhosis and cancer chain"
+  chart={`flowchart LR
+  A["Hepatitis (all except A and E)"] --> B["Chronic inflammation"]
+  B --> C["Fibrosis"]
+  C --> D["Cirrhosis"]
+  D --> E["Hepatic cancer"]`}
+/>
+
+This page covers the two commonest non-viral forms. Viral types are on the viral hepatitis page.
+
+## Alcoholic hepatitis
+
+### Causes and risk factors
+
+Risk comes from "high risk" drinking, defined here as more than 50 standard drinks a week in men and more than 35 in women.
+
+### Pathogenesis
+
+Ethanol is metabolised in the liver to **acetaldehyde**, which is directly toxic to hepatocytes. It provokes severe inflammation, and repeated injury leads to **fibrosis**.
+
+### Clinical features
+
+| Finding | Explanation or note |
+|---|---|
+| Jaundice | Failing bilirubin handling and cholestasis |
+| Hepatomegaly | Fatty liver |
+| Splenomegaly | Only if portal hypertension has developed |
+| Dupuytren's contracture | Thickened palmar fascia, a classic alcohol-related sign |
+| Hepatic flap | Asterixis, a sign of encephalopathy |
+| Truncal ataxia | Cerebellar involvement |
+| Wernicke-Korsakoff syndrome | Thiamine deficiency in heavy drinkers |
+| Delirium tremens | Alcohol withdrawal |
+
+### Investigations
+
+- **AST and ALT raised** (hepatocyte injury).
+- **GGT raised out of proportion to ALP** (a raised GGT:ALP ratio points to alcohol rather than bile-duct obstruction).
+
+### Management
+
+- Stop alcohol and avoid hepatotoxic drugs.
+- Give **thiamine plus vitamin B12** if Wernicke-Korsakoff syndrome is present.
+- Give **diazepam** for delirium tremens.
+- Careful fluid management.
+
+<Callout kind="warning" title="Thiamine before glucose">
+In a malnourished heavy drinker, a glucose load can precipitate Wernicke encephalopathy. Replace thiamine first.
+</Callout>
+
+## Paracetamol-induced hepatitis
+
+### Cause
+
+Paracetamol (acetaminophen) overdose.
+
+### Pathogenesis
+
+At normal doses paracetamol is safely conjugated by **glutathione**. In overdose the glutathione stores run out, so free paracetamol (via its toxic metabolite) accumulates and directly poisons hepatocytes. The result is **toxin-mediated centrilobular necrosis**, which is death of cells around the central vein (zone 3), where oxygen and metabolic activity favour toxic metabolite production.
+
+<Mermaid
+  caption="Why overdose injures the liver and how acetylcysteine helps"
+  chart={`flowchart TD
+  A["Paracetamol overdose"] --> B["Glutathione stores depleted"]
+  B --> C["Free toxic paracetamol rises"]
+  C --> D["Centrilobular necrosis"]
+  D --> E["Acute hepatitis"]
+  F["N-acetylcysteine"] -->|"restores glutathione"| B
+  E --> G{"Outcome"}
+  G --> H["Acute hepatic failure and death"]
+  G --> I["Spontaneous recovery"]
+  G --> J["Recovery with acetylcysteine"]`}
+/>
+
+### Clinical features and tests
+
+- Features of acute hepatitis: jaundice, confusion and altered level of consciousness.
+- **AST and ALT raised**, reflecting necrosis.
+- **Bilirubin raised** (predominantly unconjugated in this setting).
+
+### Outcomes
+
+1. Acute hepatic failure, leading to death.
+2. Spontaneous recovery.
+3. Recovery after treatment with N-acetylcysteine.
+
+### Management
+
+**N-acetylcysteine** is a precursor of glutathione, so it restores the conjugating capacity. The dose is titrated against the amount of paracetamol taken, using the **treatment nomogram**.
+
+<Callout kind="pearl">
+Antidote logic: the problem is lost glutathione, so give its precursor. The earlier it is given, the better the liver is protected.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Which hepatitis types do not lead on to cirrhosis?', a: 'Hepatitis A and E, which are acute only. The rest can progress through fibrosis to cirrhosis and hepatic cancer.' },
+  { q: 'How does alcohol injure the liver?', a: 'It is metabolised to acetaldehyde, which is hepatotoxic and causes inflammation, then fibrosis.' },
+  { q: 'Which liver enzyme pattern suggests alcohol?', a: 'Raised AST and ALT with GGT raised relative to ALP.' },
+  { q: 'Why does paracetamol overdose damage the liver?', a: 'It uses up glutathione, so toxic free paracetamol builds up and causes centrilobular necrosis.' },
+  { q: 'Why is N-acetylcysteine the antidote?', a: 'It is a glutathione precursor, restoring the capacity to conjugate paracetamol. Dose follows the nomogram.' },
+  { q: 'Which two drugs treat Wernicke-Korsakoff syndrome and delirium tremens in alcoholic hepatitis?', a: 'Thiamine with B12 for Wernicke-Korsakoff, and diazepam for delirium tremens.' },
+]} />

@@ -1,0 +1,201 @@
+---
+title: "General overview of the GI system"
+part: anatomy-physiology
+group: Foundations
+order: 1
+summary: "The functions, parts, wall layers, peritoneum, blood supply, nerve supply and embryology of the gastrointestinal tract, the framework for every later GI topic."
+highYield:
+  - "The tract is a roughly 9 m tube with four wall layers - mucosa, submucosa, muscularis and serosa."
+  - "Foregut, midgut and hindgut are supplied by the coeliac, superior mesenteric and inferior mesenteric arteries."
+  - "All gut venous blood reaches the liver through the portal vein."
+  - "Intrinsic (enteric) nerves run oesophagus to rectum; the vagus and splanchnic nerves modulate them."
+  - "Referred pain arises from viscero-somatic convergence."
+tags: [anatomy, histology, peritoneum, embryology, blood supply]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What the GI tract does
+
+The gastrointestinal tract (GIT) turns food into usable nutrients and removes what cannot be used. It does seven jobs:
+
+| Function | Meaning |
+|---|---|
+| Ingestion | Taking food in through the mouth |
+| Mechanical breakdown | Chewing and churning that make pieces smaller |
+| Propulsion | Swallowing and movement along the intestines |
+| Chemical digestion | Enzymes and acid split food into molecules |
+| Secretion | Release of mucus, bile and alkaline fluid |
+| Absorption | Nutrients pass from gut lumen into blood or lymph |
+| Excretion (defaecation) | Indigestible residue is eliminated |
+
+<Mermaid
+  caption="Digestion at a glance"
+  chart={`flowchart LR
+  A["Ingestion"] --> B["Mechanical breakdown"]
+  B --> C["Chemical digestion"]
+  C --> D["Absorption"]
+  D --> E["Excretion"]
+  B -.-> F["Propulsion throughout"]
+  C -.-> G["Secretions throughout"]`}
+/>
+
+## Structural overview
+
+The **alimentary canal** is about 9 m long. Working from the top:
+
+| Region | Parts |
+|---|---|
+| Upper tract | Mouth, pharynx |
+| Oesophagus | About 25 cm; stratified squamous lining; upper third striated muscle, lower two thirds smooth muscle |
+| Stomach | Reservoir and mixing chamber |
+| Small intestine | Duodenum, jejunum, ileum |
+| Large intestine | Caecum with the vermiform appendix, ascending, transverse, descending and sigmoid colon, rectum |
+| Anus | Terminal opening |
+
+**Accessory organs** help digestion but food does not pass through them: teeth, tongue, the three salivary glands (parotid, sublingual, submandibular), the liver, the pancreas and the gallbladder.
+
+**Sphincters** act as valves that control passage: upper oesophageal, lower oesophageal, pyloric, ileocaecal, internal anal (smooth muscle) and external anal.
+
+### Rhythm, storage and surface area
+
+- **Pacemaker zones** set the basic electrical rhythm and so the rate of peristalsis in an area: stomach about 3 per minute, duodenum 9-12 per minute, large intestine about 2 per hour.
+- **Temporary storage sites** are the mouth, stomach, colon and rectum.
+- **Plicae, villi and microvilli** are folds at three scales that multiply the absorptive surface.
+
+## The four layers of the wall
+
+Every region of the tube shares the same four-layer plan.
+
+| Layer | Histology | Function |
+|---|---|---|
+| Mucosa | Folds (plicae); simple columnar epithelium with goblet cells; lamina propria of loose areolar tissue; muscularis mucosae (smooth muscle) | Secretes mucin, enzymes and hormones; absorbs nutrients and fluid; protects against acid, bacteria and mechanical stress |
+| Submucosa | Dense connective tissue, nerves, blood vessels, glands | Supplies blood and nerves to the wall |
+| Muscularis | Inner circular and outer longitudinal smooth muscle | Drives peristalsis; forms sphincters that control passage |
+| Serosa (peritoneum) | Areolar connective tissue covered by mesothelium (single squamous layer) | Lubrication, blood and nerve supply, support of the organs |
+
+A double layer of peritoneum is called a **mesentery**.
+
+<Callout kind="pearl">
+Remember the layers from lumen outwards: mucosa, submucosa, muscularis, serosa. Mucosa does the secreting and absorbing; muscularis does the moving.
+</Callout>
+
+## Digestion phases and enzymes
+
+| Site | Agent | Action |
+|---|---|---|
+| Mouth | Chewing; salivary amylase | Mechanical breakdown; starts simple carbohydrate digestion |
+| Stomach | Churning; acid and pepsin | Mechanical breakdown; protein digestion |
+| Liver | Bile | Emulsifies fat |
+| Pancreas | Amylase, lipase, proteases, nucleases | Carbohydrate, fat, protein and DNA/RNA digestion |
+
+**Absorption:** fluid and most nutrients enter blood vessels; fluid and fats enter lymph vessels.
+
+## The abdominal cavity
+
+The cavity is bounded above by the thoracic diaphragm and below by the pelvic floor structures (for example the broad ligament in the female pelvis). Surface landmarks, bony reference points and the abdominal regions are used to place organs and accessory structures on the body surface.
+
+The abdominal wall, superficial to deep:
+
+1. Skin
+2. Superficial fascia, with a fatty layer then a membranous layer
+3. Three muscle layers, each separated by deep fascia: external oblique, internal oblique, transversus abdominis
+4. Transversalis fascia
+5. Parietal peritoneum
+
+## The peritoneum
+
+The peritoneum is a slippery serous membrane lining the abdomino-pelvic cavity.
+
+- **Visceral peritoneum** covers the outer surface of most digestive organs.
+- **Parietal peritoneum** lines the body wall.
+- The **peritoneal cavity** is the thin potential space between them. It holds serous fluid that lubricates mobile organs.
+
+The cavity has a **greater sac** (most of the space; split into supracolic and infracolic compartments) and a smaller **lesser sac** (omental bursa) lying behind the stomach and lesser omentum.
+
+**Mesenteries** are double-layered sheets that tether digestive organs to the body wall and carry vessels, nerves and lymphatics.
+
+| Mesentery | Attaches |
+|---|---|
+| Lesser omentum | Lesser curvature of stomach |
+| Greater omentum | Greater curvature of stomach |
+| Transverse mesocolon | Transverse colon |
+| Mesocolon | Ascending and descending colon |
+| Mesentery proper | Jejunum and ileum |
+
+<Mermaid
+  caption="Intraperitoneal versus retroperitoneal organs"
+  chart={`flowchart TD
+  A["Abdominal organs"] --> B["Intraperitoneal - suspended by mesentery"]
+  A --> C["Retroperitoneal - on the posterior wall"]
+  B --> B1["Stomach, gallbladder"]
+  B --> B2["Jejunum, ileum, caecum"]
+  B --> B3["Transverse and sigmoid colon"]
+  C --> C1["Parts of duodenum"]
+  C --> C2["Most of pancreas"]
+  C --> C3["Ascending and descending colon, rectum"]`}
+/>
+
+<Callout kind="warning" title="Retroperitoneal is not outside the abdomen">
+Retroperitoneal organs lie behind the peritoneal cavity, stuck to the dorsal wall. They are covered by peritoneum on the front only, so they move little.
+</Callout>
+
+## Arterial supply
+
+The gut is divided by embryological origin into three parts, each with its own artery.
+
+| Artery | Region | Structures supplied |
+|---|---|---|
+| Coeliac trunk (foregut) | Pharynx to upper duodenum | Pharynx, oesophagus, stomach, upper duodenum, respiratory tract including lungs, liver, gallbladder, spleen, half of pancreas |
+| Superior mesenteric (midgut) | Lower duodenum to proximal two thirds of transverse colon | Half of pancreas, lower duodenum, jejunum, ileum, caecum, appendix, ascending colon, first two thirds of transverse colon |
+| Inferior mesenteric (hindgut) | Distal third of transverse colon to upper anal canal | Last third of transverse colon, descending and sigmoid colon, rectum, upper anal canal |
+
+## Venous drainage
+
+All of it ends in the **portal vein**, which carries blood to the liver before it returns to the heart.
+
+<Mermaid
+  caption="Venous drainage to the portal vein"
+  chart={`flowchart LR
+  A["Foregut veins: left gastric, right gastric, splenic"] --> P["Portal vein"]
+  B["Superior mesenteric vein (midgut)"] --> P
+  C["Inferior mesenteric vein (hindgut)"] --> D["Splenic vein"]
+  D --> P
+  P --> L["Liver"]`}
+/>
+
+## Nerve supply
+
+- **Intrinsic (enteric) innervation:** plexuses between the two muscle layers and in the submucosa, running from oesophagus to rectum.
+- **Extrinsic innervation:** sympathetic splanchnic nerves and the parasympathetic vagus nerve.
+- **Referred pain:** the viscera have no dedicated sensory pathway to the brain, so pain is relayed through areas of skin and muscle that share spinal input. This is **viscero-somatic convergence**, and it is why gut disease can hurt at a distant site.
+
+## Embryonic development
+
+| Time | Event |
+|---|---|
+| Week 3 | Three germ layers: ectoderm, mesoderm, endoderm |
+| Weeks 3-4 | Endoderm forms the epithelial lining of the primitive gut tube; mesoderm forms the rest of the wall (submucosa and muscularis externa) |
+| Weeks 4-8 | Openings form, glands bud, stomach appears, oesophagus lengthens |
+
+- **Mouth:** the foregut end meets head ectoderm at the **stomodeum**, forming the oral membrane which later breaks down.
+- **Anus:** the hindgut end meets tail ectoderm at the **proctodeum**, forming the cloacal membrane which later breaks through.
+- **Glandular buds:** salivary glands, liver and pancreas bud off and keep their connections, which become ducts.
+- **Stomach:** uneven growth rotates the organ and creates the greater and lesser curvatures.
+- **Oesophagus:** formed from the dorsal tube after the respiratory diverticulum separates; it lengthens as the heart and lungs descend.
+
+<Callout kind="warning" title="Common confusion: the liver">
+The liver is sometimes wrongly listed under the midgut. The liver and pancreas buds arise from the foregut-midgut junction; the liver is supplied by the coeliac trunk and is a foregut structure.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Name the four layers of the GI wall from lumen outwards.', a: 'Mucosa, submucosa, muscularis, serosa (peritoneum).' },
+  { q: 'Which artery supplies the foregut, and what is its lower limit?', a: 'The coeliac trunk, down to the upper duodenum.' },
+  { q: 'Why do retroperitoneal organs move little?', a: 'They are fixed to the dorsal abdominal wall, with peritoneum only on their anterior surface, rather than suspended by a mesentery.' },
+  { q: 'How does inferior mesenteric venous blood reach the liver?', a: 'Through the splenic vein, which joins the portal vein.' },
+  { q: 'What explains referred pain from the gut?', a: 'Viscero-somatic convergence: visceral pain shares pathways with skin and muscle, so it is felt away from the organ.' },
+  { q: 'What do the stomodeum and proctodeum become?', a: 'The mouth and the anus, after their membranes break down.' },
+]} />

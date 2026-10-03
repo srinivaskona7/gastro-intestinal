@@ -1,0 +1,130 @@
+---
+title: "Endocrine pancreatic tumours & MEN"
+part: pathology
+group: Pancreas
+order: 22
+summary: "Islet cell tumours such as gastrinoma and insulinoma, mostly benign, and the MEN1 and MEN2 syndromes in which they cluster with pituitary, parathyroid and adrenal disease."
+highYield:
+  - "Most islet cell tumours are benign; treatment is monitoring, surgery, or hormone and other therapy if surgery is not possible."
+  - "Gastrinoma (Zollinger-Ellison) means excess gastrin, acid hypersecretion, peptic ulcers and chronic diarrhoea; treat with a PPI and resection."
+  - "Insulinoma causes unregulated insulin release and hypoglycaemia; usually a single small tumour and curable by surgery."
+  - "MEN1 (Wermer) is pituitary, parathyroid and pancreas; MEN2 (Sipple) is medullary thyroid cancer, phaeochromocytoma and parathyroid disease."
+tags: [pancreas, islet cell tumour, gastrinoma, insulinoma, MEN]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What they are
+
+The endocrine pancreas is made of the islets of Langerhans, small clusters of hormone-producing cells scattered through the gland. Tumours arising from them are called **islet cell tumours** (or pancreatic adenomas when they are benign). The key points:
+
+- The **majority are benign**.
+- They matter because of the **hormone** they pour out, not because of mass effect.
+- Each tumour type produces one dominant hormone and therefore its own syndrome.
+
+The overall treatment options are:
+
+1. **Monitoring** for small, quiet lesions.
+2. **Surgery** to remove the tumour.
+3. **Hormone therapy** when surgery is not viable.
+4. **Radiation therapy, nuclear medicine or radiofrequency ablation** as further options for tumours that cannot be resected.
+
+## Gastrinoma (Zollinger-Ellison syndrome)
+
+A gastrinoma is a tumour that secretes **gastrin**. Gastrin drives the stomach to make acid, so the tumour produces severe, unrelenting hyperacidity.
+
+<Mermaid
+  caption="How a gastrinoma produces ulcers and diarrhoea"
+  chart={`flowchart LR
+  A[Gastrinoma] --> B[Excess gastrin]
+  B --> C[Gastric acid hypersecretion]
+  C --> D[Peptic ulcers]
+  C --> E["Acid inactivates pancreatic lipase"]
+  C --> F[Mucosal damage]
+  E --> G[Chronic diarrhoea]
+  F --> G`}
+/>
+
+| Aspect | Detail |
+|---|---|
+| Clinical features | Abdominal pain, dyspepsia, chronic diarrhoea |
+| Why diarrhoea | Excess acid inactivates pancreatic enzymes such as lipase, and also damages the intestinal mucosa |
+| Diagnosis | Fasting serum gastrin; endoscopic ultrasound and CT to image and stage the tumour |
+| Treatment | Proton pump inhibitor (omeprazole); surgical removal of the gastrinoma, with about 80% five-year survival |
+| Complication | Malignant potential |
+
+<Callout kind="pearl">
+Think gastrinoma when ulcers are multiple, recurrent, or refractory to treatment, especially with diarrhoea. The tumour is the cause, so the acid must be controlled with a PPI while the tumour is dealt with.
+</Callout>
+
+## Insulinoma
+
+An insulinoma is a pancreatic tumour that makes **too much insulin**. Normal beta cells switch insulin off when glucose falls; tumour cells do not, so insulin keeps being released even when the blood sugar is already too low.
+
+- **Morphology:** usually a single, small tumour in adults.
+- **Mild hypoglycaemia:** anxiety, tachycardia, sweating, hunger and headache (the adrenergic warning symptoms).
+- **Severe hypoglycaemia:** seizures, coma and even death.
+
+| Aspect | Detail |
+|---|---|
+| Pathogenesis | Unregulated insulin production leading to hypoglycaemia |
+| Diagnosis | Blood sugar level with a simultaneous insulin level; CT or MRI of the abdomen; endoscopic ultrasound |
+| Treatment | Surgery, which is curative because these tumours are rarely malignant |
+
+<Callout kind="warning" title="Do not miss the low sugar">
+A blood glucose should be checked at the time of symptoms. The diagnosis rests on finding inappropriately high insulin while the glucose is low.
+</Callout>
+
+## Multiple endocrine neoplasia (MEN)
+
+MEN syndromes are inherited conditions in which tumours arise in several endocrine glands. Two types are described, and islet cell tumours feature in type 1.
+
+<Mermaid
+  caption="Glands involved in MEN1 and MEN2"
+  chart={`flowchart TD
+  M[Multiple endocrine neoplasia] --> M1["MEN1 - Wermer syndrome"]
+  M[Multiple endocrine neoplasia] --> M2["MEN2 - Sipple syndrome"]
+  M1 --> P1[Pituitary adenoma]
+  M1 --> P2["Pancreatic gastrinoma or insulinoma"]
+  M1 --> P3[Parathyroid adenoma]
+  M2 --> T1[Medullary thyroid cancer]
+  M2 --> T2[Phaeochromocytoma]
+  M2 --> T3[Parathyroid hyperplasia or adenoma]`}
+/>
+
+### MEN1 (Wermer syndrome)
+
+Caused by a mutation in the **MEN1 tumour suppressor gene**. About 60% of patients have at least two of the following:
+
+| Tumour | Consequence |
+|---|---|
+| Pituitary adenoma | Bilateral hemianopia (visual field loss from compression of the optic chiasm) |
+| Pancreatic gastrinoma | Peptic ulcer disease |
+| Pancreatic insulinoma | Hypoglycaemia |
+| Parathyroid adenomas | Primary hyperparathyroidism |
+
+### MEN2 (Sipple syndrome)
+
+Caused by a genetic mutation in the MEN2 gene (a gain-of-function mutation of the RET proto-oncogene, not a tumour suppressor). Frequency of findings:
+
+| Tumour | Frequency |
+|---|---|
+| Medullary thyroid cancer | 100% |
+| Phaeochromocytoma (adrenaline-secreting) | 50% |
+| Parathyroid hyperplasia or adenoma (PTH-secreting) | 30% |
+
+<Callout kind="pearl">
+Medullary thyroid cancer is not thyroid hormone secreting: it arises from C cells and secretes calcitonin, so it does not cause thyrotoxicosis. Pancreatic tumours belong to MEN1, not MEN2.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Why does a gastrinoma cause chronic diarrhoea?', a: 'Excess acid inactivates pancreatic enzymes such as lipase and damages the intestinal mucosa, so fat and other nutrients are poorly absorbed.' },
+  { q: 'How is a gastrinoma diagnosed and treated?', a: 'Fasting serum gastrin, with endoscopic ultrasound and CT for imaging and staging; PPI (omeprazole) and surgical removal.' },
+  { q: 'What is the mechanism of an insulinoma?', a: 'Tumour cells make insulin without regard to blood sugar, so hypoglycaemia occurs. Usually one small, rarely malignant tumour, curable by surgery.' },
+  { q: 'Which tumours define MEN1 (Wermer)?', a: 'Pituitary adenoma, pancreatic islet tumours (gastrinoma or insulinoma) and parathyroid adenomas causing primary hyperparathyroidism.' },
+  { q: 'Which tumours define MEN2 (Sipple)?', a: 'Medullary thyroid cancer (100%), phaeochromocytoma (50%) and parathyroid hyperplasia or adenoma (30%).' },
+  { q: 'What are the options when an islet cell tumour cannot be resected?', a: 'Hormone therapy, radiation therapy, nuclear medicine or radiofrequency ablation, plus monitoring.' },
+]} />

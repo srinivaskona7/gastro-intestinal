@@ -1,0 +1,90 @@
+---
+title: "Gastrinoma (Zollinger-Ellison syndrome)"
+part: pathology
+group: Stomach
+order: 17
+summary: "A gastrin-secreting neuroendocrine tumour, usually in the pancreas or duodenum, that drives extreme acid output and causes ulcers that resist normal treatment."
+highYield:
+  - "Gastrin-secreting neuroendocrine tumour of pancreas, duodenum or stomach."
+  - "Excess gastrin drives acid and pepsin excess, giving ulcers that do not respond to usual therapy."
+  - "Chronic diarrhoea occurs because acid inactivates pancreatic lipase and damages the mucosa."
+  - "Diagnose with fasting serum gastrin, then localise with endoscopic ultrasound and CT."
+  - "Treat with a PPI such as omeprazole and surgical removal; the tumour has malignant potential."
+tags: [peptic ulcer, neuroendocrine, gastrin, PPI]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+**Zollinger-Ellison (ZE) syndrome** is the clinical picture produced by a **gastrinoma**: a neuroendocrine adenoma that makes gastrin without any of the normal controls. Gastrin is the hormone that tells the stomach's parietal cells to make acid, so an uncontrolled source means the stomach is bathed in acid all the time.
+
+## Where the tumours sit
+
+Gastrin-secreting tumours are found in:
+
+- the **pancreas**
+- the **duodenum**
+- the **stomach**
+
+## Pathogenesis
+
+The chain of events is short and worth memorising as a sequence.
+
+<Mermaid
+  caption="From tumour to treatment-resistant ulcer and diarrhoea"
+  chart={`flowchart TD
+  A["Gastrinoma in pancreas or duodenum"] --> B["Excess gastrin secreted"]
+  B --> C["Hyperacidity and extra pepsin"]
+  C --> D["Peptic ulcers in stomach and duodenum"]
+  D --> E["Resistant to standard treatment"]
+  C --> F["Acid inactivates pancreatic lipase"]
+  C --> G["Mucosal damage"]
+  F --> H["Chronic diarrhoea"]
+  G --> H
+  D --> I["Ruptured ulcer"]
+  I --> J["Peritonitis, shock, death"]`}
+/>
+
+## Clinical features
+
+| Feature | Why it happens |
+|---|---|
+| Abdominal pain and dyspepsia | Acid and pepsin attacking the mucosa |
+| Peptic ulcer disease with haematemesis | Ulcers erode a vessel and bleed |
+| Ruptured ulcer leading to peritonitis, shock or death | Full-thickness perforation |
+| Chronic diarrhoea | Acid inactivates pancreatic enzymes such as lipase, and the damaged mucosa absorbs poorly |
+
+## Diagnosis
+
+- **Fasting serum gastrin** is the biochemical test; it is raised.
+- **Endoscopic ultrasound and CT** find the tumour and stage it, since these tumours are often tiny and hard to locate.
+
+## Treatment
+
+- A **proton pump inhibitor** (for example omeprazole) switches off acid production and heals the ulcers.
+- **Surgery** removes the gastrinoma. When this is possible, about 80% of patients are alive at five years.
+
+## Complication
+
+The tumour has **malignant potential**, which is why removal, not just acid suppression, is the aim.
+
+<Callout kind="pearl">
+Ulcers that are multiple, in unusual sites, or recur despite proper treatment, especially with diarrhoea, should make you think of gastrinoma and check a fasting gastrin.
+</Callout>
+
+<Callout kind="warning" title="Diarrhoea here is an acid effect">
+The diarrhoea is not from the tumour secreting a toxin. Acid destroys lipase and injures the lining, so fat is poorly digested and absorbed.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'What hormone does a gastrinoma secrete and what does it do?', a: 'Gastrin, which drives parietal cells to produce excess acid and pepsin.' },
+  { q: 'Why are the ulcers in ZE syndrome treatment-resistant?', a: 'The tumour keeps producing gastrin autonomously, so acid output stays high regardless of ordinary therapy.' },
+  { q: 'Explain the chronic diarrhoea.', a: 'Excess acid inactivates pancreatic lipase and damages the mucosa, causing maldigestion and malabsorption.' },
+  { q: 'Which tests diagnose and localise the tumour?', a: 'Fasting serum gastrin to diagnose; endoscopic ultrasound and CT to image and stage.' },
+  { q: 'What are the treatment options?', a: 'A PPI such as omeprazole to block acid, and surgical removal of the gastrinoma (about 80% five-year survival).' },
+  { q: 'What is the worst complication of the ulcers?', a: 'Rupture causing peritonitis, shock and death; bleeding presents as haematemesis.' },
+]} />

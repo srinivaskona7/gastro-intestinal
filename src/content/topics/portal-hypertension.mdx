@@ -1,0 +1,58 @@
+---
+title: "Portal hypertension"
+part: pathology
+group: Liver & biliary
+order: 31
+summary: "Raised pressure in the portal venous system, classified by where the block lies, before, within or after the liver, and how it links to ascites and encephalopathy."
+highYield:
+  - "Classify by site of obstruction: pre-hepatic, intra-hepatic or post-hepatic."
+  - "Cirrhosis is the commonest intra-hepatic cause."
+  - "Schistosomiasis and primary biliary cirrhosis are also intra-hepatic causes."
+  - "Backed-up pressure causes varices, splenomegaly, caput medusae and ascites."
+tags: [portal hypertension, varices, ascites, cirrhosis]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+**Portal hypertension** is raised pressure in the portal vein, which carries blood from the gut and spleen to the liver. When flow through or around the liver is blocked, pressure builds behind the block. The sensible way to learn the causes is by asking where the block sits relative to the liver.
+
+## Causes by site
+
+| Site | Causes | What happens |
+|---|---|---|
+| Pre-hepatic | Portal vein thrombosis or occlusion | Blood backs up into the mesenteric veins |
+| Intra-hepatic | Cirrhosis (alcoholic, viral, biliary, congenital), primary biliary cirrhosis, schistosomiasis | Scarred or damaged liver resists flow |
+| Post-hepatic | IVC obstruction, thrombosis in hepatic veins, alcoholic central-vein sclerosis without cirrhosis | Blood backs up into the hepatic veins and then the liver |
+
+<Mermaid
+  caption="Where the block lies"
+  chart={`flowchart LR
+  A["Gut and spleen"] --> B["Portal vein"]
+  B --> C["Liver sinusoids"]
+  C --> D["Hepatic veins"]
+  D --> E["IVC"]
+  B -.- F["Pre-hepatic: portal vein thrombosis"]
+  C -.- G["Intra-hepatic: cirrhosis, PBC, schistosomiasis"]
+  D -.- H["Post-hepatic: hepatic vein or IVC block"]`}
+/>
+
+## Consequences
+
+Back-pressure opens collateral routes and forces fluid out. The signs listed with cirrhosis follow from this: **splenomegaly**, **caput medusae**, **oesophageal varices**, **haemorrhoids** and **ascites**. Ascites is helped by low albumin and by hepatorenal salt and water retention. Encephalopathy occurs because blood bypasses the liver, so ammonia is not cleared.
+
+<Callout kind="pearl">
+Budd-Chiari and congestive heart failure are post-hepatic mechanisms; schistosomiasis and cirrhosis are intra-hepatic; portal vein clot is pre-hepatic.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'How are the causes of portal hypertension classified?', a: 'By site of obstruction: pre-hepatic, intra-hepatic, post-hepatic.' },
+  { q: 'Name the commonest intra-hepatic cause.', a: 'Cirrhosis, from alcohol, viral, biliary or congenital causes.' },
+  { q: 'Give a pre-hepatic cause and what it does.', a: 'Portal vein thrombosis, which backs blood up into the mesenteric veins.' },
+  { q: 'Name three post-hepatic causes.', a: 'IVC obstruction, hepatic vein thrombosis and alcoholic central-vein sclerosis.' },
+  { q: 'Which signs reflect portal hypertension?', a: 'Splenomegaly, caput medusae, oesophageal varices, haemorrhoids and ascites.' },
+]} />

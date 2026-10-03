@@ -1,0 +1,92 @@
+---
+title: "Parasitic gut infections"
+part: pathology
+group: Systemic & infection
+order: 55
+summary: "Protozoa (Giardia, Cryptosporidium, Entamoeba histolytica) and soil-transmitted helminths cause gut disease by faecal-oral spread and skin penetration."
+highYield:
+  - "Protozoa and helminths spread faecal-oral through dormant cysts in food and water; diagnose with stool microscopy or antigen tests."
+  - "Giardia coats the brush border and causes malabsorption and fatty stools; treat with metronidazole."
+  - "Entamoeba histolytica invades the gut, ulcerates it and causes bloody diarrhoea; treat with metronidazole."
+  - "Soil-transmitted helminths are swallowed as eggs or penetrate skin; albendazole is the treatment."
+tags: [infection, protozoa, helminths, malabsorption]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## General principles
+
+| Aspect | Detail |
+|---|---|
+| Groups | Protozoa and helminths (worms) |
+| Transmission | Faecal-oral: swallowing dormant **cysts** in contaminated food or water |
+| Diagnosis | Stool samples examined for cysts by direct microscopy, or antigen testing |
+| Prevention | Boil water to kill cysts, good hygiene, avoid faecal contact |
+
+<Mermaid
+  caption="Parasite, mechanism and drug"
+  chart={`flowchart LR
+  P["Parasitic gut infection"] --> G["Giardia"]
+  P --> C["Cryptosporidium"]
+  P --> E["Entamoeba histolytica"]
+  P --> H["Helminths"]
+  G --> G1["Coats brush border, malabsorption"]
+  C --> C1["Villous damage, chronic in AIDS"]
+  E --> E1["Invasion, ulcers, bloody diarrhoea"]
+  H --> H1["Eggs swallowed or skin penetration"]
+  G1 --> GT["Metronidazole"]
+  C1 --> CT["Nitazoxanide"]
+  E1 --> ET["Metronidazole"]
+  H1 --> HT["Albendazole"]`}
+/>
+
+## Giardia
+
+**Pathogenesis:** Giardia is **not toxigenic**. Instead it **covers the brush border** of the small intestine, which blocks absorption. Its exact mechanism is mostly unknown, but it may provoke an inflammatory response that disrupts the absorptive surface. Villi are damaged, so crypt cells multiply faster to replace them. This leaves **immature cells on the villus**, which absorb poorly.
+
+**Transmission:** ingestion of cysts from contaminated drinking water or public pools. The cysts **survive chlorination**.
+
+**Diagnosis:** cysts in the stool.
+
+**Complications:** chronic infection and malabsorption, leading to malnutrition and **fatty stools**.
+
+**Treatment:** **metronidazole**.
+
+## Cryptosporidium
+
+**Cryptosporidium** is an oocyst-forming protozoan, often confused with Giardia. It is usually **self-limiting in immunocompetent** people and treated with **nitazoxanide** if needed. In **AIDS patients** it does not clear, so it becomes a **chronic infection**. Diagnosis is by stool examination.
+
+## Entamoeba histolytica (amoebic dysentery)
+
+- **Transmission:** faecal-oral ingestion of cysts.
+- **Pathogenesis:** invades the intestinal wall, causing **ulceration** and **dysentery** (bloody diarrhoea).
+- **Diagnosis:** cysts in stool.
+- **Treatment:** **metronidazole**.
+
+## Helminths
+
+The clinically most important group is the **soil-transmitted helminths**, grouped by route of entry.
+
+| Route | Organisms |
+|---|---|
+| Swallowing eggs | *Ascaris lumbricoides* (roundworm), *Trichuris trichiura* (whipworm) |
+| Active skin penetration | *Strongyloides stercoralis* (threadworm), *Ancylostoma duodenale* (hookworm) |
+
+Treatment is **albendazole**.
+
+<Callout kind="pearl">
+Metronidazole covers Giardia and Entamoeba; albendazole covers the worms. Bloody diarrhoea points to Entamoeba, fatty pale stools to Giardia.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'How are gut protozoa transmitted and diagnosed?', a: 'Faecal-oral spread of cysts; stool microscopy or antigen testing.' },
+  { q: 'How does Giardia cause malabsorption?', a: 'It covers the brush border and damages villi, leaving immature absorptive cells.' },
+  { q: 'Why is chlorinated pool water not always safe?', a: 'Giardia cysts survive chlorination.' },
+  { q: 'Which drug treats Giardia and Entamoeba histolytica?', a: 'Metronidazole.' },
+  { q: 'What does Entamoeba histolytica do to the gut?', a: 'It invades and ulcerates the wall, causing bloody diarrhoea (dysentery).' },
+  { q: 'Which helminths enter through the skin?', a: 'Strongyloides (threadworm) and hookworm.' },
+  { q: 'Who gets chronic Cryptosporidium infection?', a: 'Immunocompromised patients such as those with AIDS.' },
+]} />

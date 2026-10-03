@@ -1,0 +1,76 @@
+---
+title: "Oesophagitis"
+part: pathology
+group: Oesophagus
+order: 9
+summary: "Inflammation of the oesophagus from infection in the immunocompromised, food allergy or acid reflux, each with a distinct appearance and treatment."
+highYield:
+  - "Three causes: infection (Candida, herpes, CMV), allergic (eosinophilic) and GORD."
+  - "Candida gives white plaques; eosinophilic oesophagitis gives furrowing, thickened mucosa and exudate plaques."
+  - "Features are dysphagia, heartburn and oesophageal pain."
+  - "Diagnosis is endoscopy with biopsy; treat Candida with oral fluconazole and allergic disease with inhaled swallowed steroids."
+tags: [oesophagitis, Candida, eosinophilic, GORD]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is and what causes it
+
+**Oesophagitis** is inflammation of the oesophageal lining. The cause decides the appearance and the treatment.
+
+| Cause | Detail |
+|---|---|
+| Infection | In immunocompromised patients: **Candida**, **herpes**, **CMV** |
+| Allergic (eosinophilic) | Food allergy |
+| GORD | Gastro-oesophageal reflux disease, acid washing up into the oesophagus |
+
+## Appearance at endoscopy
+
+| Type | Morphology |
+|---|---|
+| Candida | Characteristic **white plaques** |
+| Eosinophilic | **Mucosal furrowing**, thickened mucosa, plaques of surface exudate |
+
+## Clinical features
+
+- Dysphagia
+- Heartburn
+- Oesophageal pain
+
+These overlap heavily across causes, so the history alone does not identify the type.
+
+## Investigation
+
+- **Endoscopy with biopsy** and microscopy, culture and sensitivity (MCS).
+- **Full blood count with differential**: eosinophilia suggests an allergic cause.
+- **HIV screen**, because infective oesophagitis points to immunocompromise.
+
+## Management
+
+<Mermaid
+  caption="From cause to treatment"
+  chart={`flowchart TD
+  A["Dysphagia, heartburn, pain"] --> B["Endoscopy and biopsy, FBC, HIV screen"]
+  B --> C{"Cause"}
+  C -->|"Candida"| D["Oral fluconazole"]
+  C -->|"Allergic"| E["Inhaled fluticasone or budesonide"]
+  C -->|"GORD"| F["Treat reflux"]`}
+/>
+
+- **Candida:** oral fluconazole.
+- **Allergic:** inhaled fluticasone or budesonide (swallowed rather than breathed in, so the steroid coats the oesophagus).
+
+<Callout kind="pearl">
+Candida oesophagitis in a patient with no obvious reason for immune weakness should prompt an HIV test.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Name the three main causes of oesophagitis.', a: 'Infection in the immunocompromised (Candida, herpes, CMV), allergic or eosinophilic disease from food allergy, and GORD.' },
+  { q: 'What does Candida oesophagitis look like?', a: 'Characteristic white plaques on the mucosa.' },
+  { q: 'What does eosinophilic oesophagitis look like?', a: 'Mucosal furrowing, thickened mucosa and plaques of surface exudate.' },
+  { q: 'Which tests help identify the cause?', a: 'Endoscopy with biopsy, FBC with differential (eosinophilia if allergic) and an HIV screen.' },
+  { q: 'How is each type treated?', a: 'Candida with oral fluconazole; allergic disease with inhaled fluticasone or budesonide.' },
+]} />

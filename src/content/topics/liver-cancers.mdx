@@ -1,0 +1,129 @@
+---
+title: "Liver cancers"
+part: pathology
+group: Liver & biliary
+order: 32
+summary: "Hepatocellular carcinoma is the main primary liver cancer and arises in cirrhosis; liver metastases from breast, bowel, lung and melanoma are far more common overall."
+highYield:
+  - "Hepatocellular carcinoma (HCC) almost always arises on a background of cirrhosis, especially from chronic hepatitis B or C."
+  - "Raised alpha-fetoprotein plus a liver mass on ultrasound in a cirrhotic suggests HCC."
+  - "New decompensation, weight loss or RUQ pain in a known cirrhotic should make you suspect HCC."
+  - "HCC spreads through hepatic and portal veins and lymphatics, to bone and lung; prognosis is poor."
+  - "Secondary (metastatic) tumours are the most common liver malignancy; breast, colorectal, lung and melanoma lead."
+tags: [liver, hepatocellular carcinoma, metastases, alpha-fetoprotein, cirrhosis]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+The liver can host two very different kinds of cancer.
+
+- **Hepatocellular carcinoma (HCC)** is the **primary** liver tumour. It grows from the liver's own cells, the hepatocytes.
+- **Liver metastases** are **secondary** tumours. Cancer from somewhere else has seeded into the liver. They are the most common malignancy found in the liver.
+
+## Hepatocellular carcinoma
+
+### Causes / risk factors
+
+Risk is extreme in two settings:
+
+- **Chronic hepatitis B and C infection**
+- **Cirrhosis** of any cause
+
+### Pathogenesis
+
+Cirrhosis comes first. Long-standing damage (alcohol, viral hepatitis, haemochromatosis) causes scarring and constant cell regeneration, and in that setting a malignant clone eventually emerges. So HCC is essentially a late complication of chronic liver disease.
+
+<Mermaid
+  caption="Route to hepatocellular carcinoma"
+  chart={`flowchart LR
+  A["Alcohol, viral hepatitis, haemochromatosis"] --> B["Chronic injury and regeneration"]
+  B --> C[Cirrhosis]
+  C --> D["Malignant transformation"]
+  D --> E["Hepatocellular carcinoma"]
+  E --> F["Spread via hepatic and portal veins and lymphatics"]
+  F --> G["Bone and lung metastases"]`}
+/>
+
+### Morphology
+
+The tumour may be a **single mass or several**. Under the microscope the cells still look like hepatocytes.
+
+### Clinical features
+
+| Type | Findings |
+|---|---|
+| General features | Fever, night sweats, anorexia, weight loss |
+| Local features | Right upper quadrant pain, jaundice, itch |
+| Signs of the underlying liver disease | Hepatic encephalopathy with flapping tremor, a small nodular liver, ascites |
+
+<Callout kind="warning" title="Think HCC in any cirrhotic who deteriorates">
+The signs above are those of cirrhosis itself. When a known cirrhotic develops them afresh, or gets worse, suspect that an HCC has developed.
+</Callout>
+
+### Investigations
+
+| Test | What it shows |
+|---|---|
+| Serum alpha-fetoprotein | Raised |
+| LFTs | Generally deranged, with everything raised |
+| FBC | Look at the MCV, for infection and for haemolysis (reticulocytes) |
+| Liver ultrasound | A homogeneous mass |
+| FNA and biopsy | Gives the tumour grade |
+| CT or MRI | Staging |
+
+### Management
+
+**Surgery** is the treatment. Chemotherapy and radiotherapy are unhelpful.
+
+### Complications and prognosis
+
+Tumour cells escape via the **hepatic veins, portal veins and lymphatics**, and most often lodge in **bone and lung**. The prognosis is **poor**, with an average survival of about six months from diagnosis.
+
+## Liver metastases
+
+### Causes and pathogenesis
+
+A cancer at a distant site spreads through the blood or by direct seeding and lodges in the liver. The commonest primaries are **breast, colorectal, lung and melanoma**. The liver receives portal blood from the bowel and a rich arterial supply, so it is a frequent landing site.
+
+### Morphology
+
+Macroscopically there are **multiple, clearly demarcated masses**.
+
+### Clinical features
+
+Features overlap with HCC: fever, night sweats, anorexia, weight loss, RUQ pain, jaundice and itch. Advanced disease adds **cachexia**, nausea and hepatic encephalopathy.
+
+### Investigations and management
+
+- **CT** is used mainly for prognosis.
+- **LFTs** are generally raised.
+- If the primary is unknown, tissue sampling is worthwhile because the tumour may turn out to be chemoresponsive.
+- Management is **palliative**: chemotherapy and analgesia.
+
+### Comparing the two
+
+| | HCC | Metastases |
+|---|---|---|
+| Origin | Hepatocytes | Elsewhere (breast, colorectal, lung, melanoma) |
+| Background | Cirrhosis, hepatitis B and C | Any known or hidden primary |
+| Appearance | Single or multiple, hepatocyte-like cells | Multiple, well-demarcated |
+| Marker | Raised alpha-fetoprotein | Not specific |
+| Treatment | Surgery | Palliative chemotherapy and analgesia |
+
+<Callout kind="pearl">
+Primary HCC is the classic liver cancer in exams, but statistically a liver tumour in a non-cirrhotic patient is far more likely to be a metastasis.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'What background condition almost always precedes HCC?', a: 'Cirrhosis (for example alcoholic, viral or haemochromatosis related), with chronic hepatitis B and C carrying extreme risk.' },
+  { q: 'Which tumour marker is raised in HCC?', a: 'Serum alpha-fetoprotein.' },
+  { q: 'Where does HCC metastasise, and by what routes?', a: 'To bone and lungs, via the hepatic and portal veins and the lymphatics.' },
+  { q: 'Which is the most common liver malignancy overall?', a: 'Metastases, mostly from breast, colorectal, lung and melanoma primaries.' },
+  { q: 'Why might a known cirrhotic with new weight loss and RUQ pain worry you?', a: 'They may have developed HCC on top of cirrhosis.' },
+  { q: 'How is management of metastases different from HCC?', a: 'Metastases are managed palliatively with chemotherapy and analgesia; HCC is treated surgically, with chemo and radiotherapy unhelpful.' },
+]} />

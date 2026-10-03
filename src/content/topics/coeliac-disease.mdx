@@ -1,0 +1,100 @@
+---
+title: "Coeliac disease"
+part: pathology
+group: Small bowel
+order: 18
+summary: "Immune-mediated inflammation of the proximal small bowel triggered by gluten, flattening the villi and causing malabsorption; treated with a lifelong gluten-free diet."
+highYield:
+  - "Immune reaction to gluten (prolamins in wheat, barley and rye) damages the proximal small bowel."
+  - "Histology shows villous atrophy, crypt hyperplasia and a flat mucosa."
+  - "Can present at any age, with peaks in infancy and the fifties; women more than men."
+  - "Diagnose with anti-transglutaminase antibodies and duodenal biopsy."
+  - "Lifelong gluten-free diet plus vitamin and mineral replacement; risk of malignancy and bone disease."
+tags: [malabsorption, villous atrophy, gluten, anti-tTG]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+**Coeliac disease** is a chronic inflammation of the **proximal small bowel** set off by **gluten**. It is sometimes loosely called an allergic inflammation, but strictly it is an immune-mediated (autoimmune-type) reaction, which is why it is tested for with antibodies and does not behave like a simple food allergy.
+
+## Cause
+
+People who are immunologically sensitive react to **gluten and related prolamins** found in:
+
+- wheat
+- barley
+- rye
+
+## Pathogenesis and morphology
+
+Repeated exposure causes chronic inflammation of the lining. The villi, which are the finger-like folds that give the bowel its absorptive surface, are lost. The crypts between them compensate by growing.
+
+<Mermaid
+  caption="How gluten leads to malabsorption"
+  chart={`flowchart LR
+  A["Gluten and prolamins in diet"] --> B["Immune sensitivity"]
+  B --> C["Chronic inflammation of proximal small bowel"]
+  C --> D["Villous atrophy"]
+  C --> E["Crypt hyperplasia"]
+  D --> F["Flat mucosa, less absorptive surface"]
+  F --> G["Malabsorption and deficiencies"]`}
+/>
+
+| Histology | Normal | Coeliac |
+|---|---|---|
+| Villi | Tall, finger-like | Atrophic, often absent |
+| Mucosal surface | Folded | Flattened |
+| Crypts | Normal depth | Hyperplastic |
+| Site | Whole small bowel | Mainly proximal |
+
+## Clinical features
+
+**Epidemiology:** it can appear at **any age**, with peaks in **infancy** and in the **fifties**. It is **commoner in women** than men.
+
+Symptoms and signs:
+
+- Fatigue and malaise
+- Diarrhoea, steatorrhoea (fatty stools) or even constipation
+- Abdominal pain, discomfort and bloating
+- Weight loss
+- Angular stomatitis and mouth ulcers (from iron, folate and vitamin deficiency)
+
+## Investigations
+
+- **Duodenal biopsy** showing villous atrophy is the key test.
+- **Immunological testing** for anti-transglutaminase antibodies.
+
+<Callout kind="pearl">
+Test the serology while the patient is still eating gluten. A gluten-free diet started beforehand can make antibodies and biopsy falsely normal.
+</Callout>
+
+## Management
+
+- **Gluten-free diet for life** is the treatment.
+- **Supplements** for deficiencies: vitamins, iron, folate, calcium and vitamin D.
+- Enzyme replacement therapy is a possible future option.
+
+## Complications
+
+- **Ulcerative jejunitis**: fever, abdominal pain, perforation and bleeding.
+- Higher risk of **GI malignancies**.
+- Higher risk of **inflammatory bowel disease**.
+- **Osteomalacia** that can progress to **osteoporosis**, from poor calcium and vitamin D absorption.
+
+<Callout kind="warning" title="New symptoms in known coeliac disease">
+Fever, abdominal pain or bleeding in someone already on a gluten-free diet raises concern for ulcerative jejunitis or malignancy and needs prompt assessment.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Which dietary proteins trigger coeliac disease?', a: 'Gluten and related prolamins in wheat, barley and rye.' },
+  { q: 'What are the histological hallmarks?', a: 'Villous atrophy with a flattened mucosa, and crypt hyperplasia, mainly in the proximal small bowel.' },
+  { q: 'Which two investigations are central?', a: 'Anti-transglutaminase antibodies and duodenal biopsy showing villous atrophy.' },
+  { q: 'Why do patients develop mouth ulcers and anaemia-type signs?', a: 'Malabsorption of iron, folate and vitamins because of the lost absorptive surface.' },
+  { q: 'How is it treated?', a: 'A lifelong gluten-free diet with replacement of vitamins, iron, folate, calcium and vitamin D.' },
+  { q: 'Name four complications.', a: 'Ulcerative jejunitis, GI malignancy, inflammatory bowel disease, and osteomalacia leading to osteoporosis.' },
+]} />

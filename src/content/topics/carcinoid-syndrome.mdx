@@ -1,0 +1,86 @@
+---
+title: "Carcinoid syndrome"
+part: pathology
+group: Intestines
+order: 47
+summary: "Flushing, watery diarrhoea and right-sided heart valve disease caused by a serotonin-secreting neuroendocrine tumour once it has spread to the liver."
+highYield:
+  - "Carcinoid tumours are neuroendocrine tumours that secrete serotonin, bradykinin, histamine and prostaglandins."
+  - "Commonest sites are the appendix, terminal ileum and rectum."
+  - "The tumour is silent until it metastasises; the syndrome follows liver metastases."
+  - "Triad of flushing, chronic watery diarrhoea and right-sided valve lesions (pulmonary stenosis, tricuspid regurgitation)."
+  - "Urinary 5-HIAA confirms excess serotonin; somatostatin analogues control symptoms."
+tags: [neuroendocrine, serotonin, small bowel, right heart]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+A **carcinoid tumour** is a **neuroendocrine tumour** of the intestines whose cells make **serotonin** (5-HT). A primary bowel tumour often causes no symptoms at all. **Carcinoid syndrome** is the set of symptoms produced when the hormones reach the general circulation, which in practice means the tumour has **metastasised**, usually to the liver.
+
+## Where it arises
+
+Three sites account for most cases:
+
+- **Appendix**
+- **Terminal ileum**
+- **Rectum**
+
+## Pathogenesis
+
+The tumour releases several active substances: **serotonin, bradykinin, histamine and prostaglandins**. Together they cause **diarrhoea** and **cardiac complications**.
+
+Hormones made by a gut tumour normally drain through the portal vein to the liver, where they are broken down. Liver metastases release them straight into the hepatic veins and so into the systemic circulation, which is why the syndrome only appears once the tumour has spread.
+
+<Mermaid
+  caption="From tumour to syndrome"
+  chart={`flowchart LR
+  A[Neuroendocrine tumour in gut] --> B[Liver metastases]
+  B --> C["Serotonin, bradykinin, histamine, prostaglandins reach circulation"]
+  C --> D[Flushing]
+  C --> E[Watery diarrhoea and abdominal pain]
+  C --> F[Right-sided valve damage]`}
+/>
+
+## Clinical features
+
+| Feature | Detail |
+|---|---|
+| Before spread | Usually asymptomatic |
+| Skin | Hot flushes |
+| Gut | Chronic watery diarrhoea and abdominal pain |
+| Heart | Right-sided abnormalities: pulmonary stenosis or tricuspid regurgitation |
+| Liver | Hepatomegaly (from metastases) |
+
+<Callout kind="pearl">
+Carcinoid heart disease is **right-sided** because the lungs inactivate the hormones before blood returns to the left heart. Think tricuspid regurgitation and pulmonary stenosis.
+</Callout>
+
+## Investigations
+
+- **CT** to find the tumour and spread.
+- **Ultrasound** to look for liver metastases.
+- **Echocardiography** to detect carcinoid heart disease (valvular disease).
+- **Urine 5-HIAA**, the breakdown product of serotonin, which is raised.
+
+## Management
+
+- **Somatostatin analogues** treat symptoms, reducing flushing and diarrhoea.
+- **Tumour resection**, with or without **cardiac valvuloplasty or repair** when the valves are damaged.
+
+## Complications
+
+The main complication is **metastasis**, which is also what triggers the syndrome. Cardiac valve damage is the other major consequence.
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Why does a carcinoid tumour in the bowel usually cause no syndrome until it metastasises?', a: 'Its hormones drain to the liver and are broken down; only liver metastases release them into the systemic circulation.' },
+  { q: 'Name the three commonest sites.', a: 'Appendix, terminal ileum and rectum.' },
+  { q: 'Which cardiac lesions occur and on which side?', a: 'Right-sided: pulmonary stenosis and tricuspid regurgitation.' },
+  { q: 'What test confirms excess serotonin?', a: 'Urine 5-HIAA, the serotonin metabolite.' },
+  { q: 'How are symptoms controlled?', a: 'Somatostatin analogues reduce flushing and diarrhoea; resection of the tumour, plus valve repair if needed.' },
+  { q: 'Which substances does the tumour secrete?', a: 'Serotonin, bradykinin, histamine and prostaglandins.' },
+]} />

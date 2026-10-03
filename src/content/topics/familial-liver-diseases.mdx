@@ -1,0 +1,109 @@
+---
+title: "Familial liver diseases"
+part: pathology
+group: Liver & biliary
+order: 26
+summary: "Autoimmune hepatitis, primary biliary cholangitis, Gilbert syndrome and haemochromatosis, covering mechanism, features, tests and treatment of each."
+highYield:
+  - "Autoimmune hepatitis gives very high ALT and AST with ANA and anti-liver antibodies; treat with prednisolone and azathioprine."
+  - "Primary biliary cholangitis is autoimmune destruction of intrahepatic bile ducts with raised ALP, GGT, bilirubin and AMA."
+  - "Gilbert syndrome is a benign unconjugated hyperbilirubinaemia with no treatment needed."
+  - "Haemochromatosis is iron overload (HFE mutation) treated by venesection."
+tags: [autoimmune hepatitis, PBC, Gilbert, haemochromatosis]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## Overview
+
+| Disease | Core mechanism | Key test | Main treatment |
+|---|---|---|---|
+| Autoimmune hepatitis | Immune attack on hepatocytes | ALT and AST very high, ANA, anti-liver antibodies | Prednisolone plus azathioprine |
+| Primary biliary cholangitis | Autoimmune destruction of small bile ducts | ALP, GGT, bilirubin high; AMA | Ursodeoxycholic acid, transplant |
+| Gilbert syndrome | Reduced bilirubin conjugation | Isolated unconjugated bilirubin rise | None |
+| Haemochromatosis | Iron overload | Ferritin, transferrin saturation, HFE gene | Venesection |
+
+## Autoimmune hepatitis
+
+**Cause:** an autoimmune response, often found alongside other autoimmune conditions such as pernicious anaemia, thyroiditis, coeliac disease and autoimmune haemolytic anaemia.
+
+<Mermaid
+  caption="Autoimmune hepatitis course"
+  chart={`flowchart LR
+  A[Autoimmune response] --> B[Inflammation]
+  B --> C[Progressive necrosis]
+  C --> D[Fibrosis]
+  D --> E[Cirrhosis]`}
+/>
+
+- **Symptoms:** may be asymptomatic and found incidentally; otherwise fatigue, fever, polyarthritis, pleurisy.
+- **Signs:** jaundice, and signs of cirrhosis such as striae, ascites and acne.
+- **Tests:** markedly raised ALT and AST; ANA positive; anti-liver antibodies.
+- **Treatment:** corticosteroids (prednisolone) and azathioprine, an immunosuppressive drug (sometimes loosely called chemotherapy). Liver transplant if treatment fails.
+- **Prognosis:** about 80% remission with lifelong steroids plus azathioprine.
+
+## Primary biliary cholangitis (PBC)
+
+Also known as chronic non-suppurative destructive cholangitis. The standard name is primary biliary cholangitis (formerly cirrhosis).
+
+<Callout kind="pearl">
+Primary means autoimmune. Secondary biliary disease is due to chronic biliary obstruction.
+</Callout>
+
+- **Cause:** autoimmune; specifics unknown. AMA and ANA are present but the exact pathogenesis is unclear.
+- **Pathogenesis:** chronic, progressive destruction of intrahepatic bile ducts leading to cirrhosis and then liver failure.
+- **Features:** insidious onset, then cholestatic jaundice, fatigue and hepatomegaly.
+- **Tests:** raised bilirubin, ALP and GGT; autoantibodies (ANA and AMA positive).
+- **Treatment:** supportive measures, ursodeoxycholic acid (improves bilirubin and AST and ALT), corticosteroids (prednisone), and fat-soluble vitamin supplements (A, D, E, K). Liver transplant is definitive.
+
+## Gilbert syndrome
+
+A familial, genetic and **benign** condition. The enzyme for bilirubin glucuronidation (conjugation) is deficient, so conjugation runs at roughly 30% of normal. The result is mild unconjugated hyperbilirubinaemia (sometimes labelled pre-hepatic; strictly it is a hepatic conjugation defect).
+
+| Aspect | Detail |
+|---|---|
+| Morphology | No visible liver disease |
+| Symptoms | Usually none; occasional mild jaundice with fasting, infection, stress or exertion |
+| Labs | Raised unconjugated bilirubin; other LFTs normal; normal reticulocyte count, so no haemolysis |
+| Treatment | None needed |
+
+<Callout kind="pearl">
+Normal reticulocytes and normal other LFTs distinguish Gilbert from haemolysis and liver disease.
+</Callout>
+
+## Haemochromatosis
+
+Body iron overload caused by excessive absorption.
+
+| Type | Cause |
+|---|---|
+| Primary (congenital) | HFE gene mutation |
+| Secondary (acquired) | Transfusions, supplements, haemolysis |
+
+<Mermaid
+  caption="Iron deposition and its effects"
+  chart={`flowchart TD
+  A[Excess iron] --> B[Deposited in organs]
+  B --> C[Liver: cirrhosis]
+  B --> D[Heart: cardiomyopathy]
+  B --> E[Endocrine glands: failure, diabetes]
+  B --> F[Joints: arthritis]
+  B --> G[Skin: bronzing]`}
+/>
+
+- **Symptoms:** initially none; early fatigue, arthralgia and loss of libido; later skin bronzing, abdominal pain, hepatomegaly, cirrhosis and heart disease.
+- **Long-term effects:** arthritis, liver disease, heart disease, impotence, early menopause, bronze complexion and diabetes.
+- **Diagnosis:** iron studies (raised ferritin, raised transferrin saturation), LFTs and HFE gene testing.
+- **Treatment:** venesection and a low-iron diet.
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Which autoantibodies and enzymes suggest autoimmune hepatitis?', a: 'ANA and anti-liver antibodies with markedly raised ALT and AST.' },
+  { q: 'What is the treatment and outlook of autoimmune hepatitis?', a: 'Prednisolone plus azathioprine; about 80% remission, transplant if it fails.' },
+  { q: 'What happens to the bile ducts in PBC?', a: 'Autoimmune, progressive destruction of intrahepatic ducts, leading to cirrhosis and liver failure.' },
+  { q: 'Which supplements are given in PBC and why?', a: 'Vitamins A, D, E and K, because cholestasis impairs fat-soluble vitamin absorption.' },
+  { q: 'Why is Gilbert syndrome harmless?', a: 'Conjugation is only mildly reduced (about 30% of normal), giving occasional mild jaundice with otherwise normal tests.' },
+  { q: 'How is haemochromatosis treated, and what organs are damaged?', a: 'Venesection and a low-iron diet; liver, heart, endocrine glands, joints and skin.' },
+]} />

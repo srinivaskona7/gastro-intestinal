@@ -1,0 +1,79 @@
+---
+title: "Pseudomembranous colitis"
+part: pathology
+group: Intestines
+order: 45
+summary: "Antibiotic use lets Clostridium difficile overgrow and release toxins that inflame the colon and form adherent pseudomembranes, causing profuse watery diarrhoea."
+highYield:
+  - "Triggered by antibiotics that wipe out commensal bowel bacteria, allowing C. difficile overgrowth."
+  - "Enterotoxins cause inflammation and a pseudomembrane of fibrous, pus-filled debris."
+  - "Fever, cramps, profuse watery diarrhoea (under 10 per day) and sometimes blood."
+  - "Diagnose by stool C. difficile assay and colonoscopy."
+  - "Stop the antibiotic and treat with metronidazole or vancomycin."
+tags: [C difficile, antibiotic-associated, colitis]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+**Pseudomembranous colitis** is colonic inflammation in which a false membrane (pseudomembrane) coats the mucosa. It is caused by overgrowth of ***Clostridium difficile***, a bacterium that damages the bowel directly through its toxins.
+
+## Cause and pathogenesis
+
+C. difficile is normally held in check by the **commensal bacteria** of the gut. **Antibiotics** kill those commensals, so C. difficile overgrows and produces enterotoxins, which inflame the colon and produce a fibrous pseudomembrane.
+
+<Mermaid
+  caption="How antibiotics lead to pseudomembranes"
+  chart={`flowchart LR
+  A["Antibiotic course"] --> B["Commensal bacteria killed"]
+  B --> C["C. difficile overgrowth"]
+  C --> D["Enterotoxins produced"]
+  D --> E["Inflammation and ulceration"]
+  E --> F["Pseudomembrane forms"]`}
+/>
+
+## Morphology
+
+- Mucosal inflammation, ulceration and bleeding.
+- **Pseudomembranes**: fibrous sacs full of purulent debris that stick firmly to the mucosa.
+
+## Clinical features
+
+- Onset usually within **2 days** of starting an antibiotic, and it can persist for **2 weeks** after stopping.
+- Fever and abdominal cramps.
+- **Profuse watery diarrhoea**, under 10 times a day.
+- Haematochezia.
+
+## Diagnosis
+
+- **Stool sample** for a C. difficile assay.
+- **Colonoscopy** shows the pseudomembranes and also screens for differentials: Crohn's disease, ulcerative colitis and cancer.
+
+## Treatment
+
+1. Stop the causative antibiotic.
+2. Anti-clostridial antibiotic: **metronidazole or vancomycin**.
+3. Probiotics.
+4. Supportive care: rehydration and electrolyte replacement.
+
+<Callout kind="warning">
+Severe disease can lead to toxic megacolon and perforation. A distended, tender abdomen with sudden drop in diarrhoea is an emergency.
+</Callout>
+
+## Complications
+
+- Dehydration and electrolyte imbalance
+- Perforation
+- Toxic megacolon
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Why do antibiotics cause this condition?', a: 'They kill commensal bacteria that normally restrain C. difficile, which then overgrows and releases toxins.' },
+  { q: 'What is a pseudomembrane?', a: 'A fibrous sac of purulent debris that adheres strongly to inflamed, ulcerated colonic mucosa.' },
+  { q: 'What is the typical timing?', a: 'Onset within about 2 days of antibiotics, persisting for up to 2 weeks after stopping.' },
+  { q: 'How is it diagnosed?', a: 'Stool C. difficile assay and colonoscopy, which also excludes Crohn, ulcerative colitis and cancer.' },
+  { q: 'What is the treatment?', a: 'Stop the causative antibiotic, give metronidazole or vancomycin, probiotics and rehydration.' },
+]} />

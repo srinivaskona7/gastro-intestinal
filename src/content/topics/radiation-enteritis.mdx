@@ -1,0 +1,70 @@
+---
+title: "Radiation enteritis"
+part: pathology
+group: Intestines
+order: 46
+summary: "Bowel damage after radiotherapy, usually pelvic, that causes acute symptoms which settle and a chronic form with ischaemia, fibrotic strictures and obstruction."
+highYield:
+  - "A side effect of radiotherapy; pelvic irradiation makes the ileum and rectum most commonly affected."
+  - "Doses above 40 Gray cause muscle atrophy, ischaemia, ulceration and fibrotic strictures."
+  - "Acute symptoms improve within 6 weeks; chronic symptoms last over 3 months."
+  - "Management is symptomatic; surgery only for obstruction or perforation."
+  - "It may leave chronic irritable bowel syndrome."
+tags: [radiotherapy, stricture, enteritis]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+**Radiation enteritis** is injury to the intestine caused by radiotherapy. Because pelvic cancers are commonly irradiated, the **ileum and rectum** are the most often affected parts.
+
+## Pathogenesis
+
+A dose of more than **40 Gray** damages the bowel. The changes follow a progression: muscle fibre atrophy, then ischaemia and ulcerative change, then healing by fibrosis that produces strictures and eventually obstruction.
+
+<Mermaid
+  caption="Progression of radiation injury"
+  chart={`flowchart LR
+  A["Over 40 Gray of radiation"] --> B["Muscle fibre atrophy"]
+  B --> C["Ischaemia and ulceration"]
+  C --> D["Fibrotic strictures"]
+  D --> E["Obstruction"]`}
+/>
+
+## Morphology
+
+- Muscle atrophy
+- Ulcerative changes
+- Fibrotic strictures
+
+## Clinical features
+
+| Phase | Timing | Features |
+|---|---|---|
+| Acute | Improves within 6 weeks of radiation | Nausea, vomiting, diarrhoea, abdominal pain |
+| Chronic | Symptoms for more than 3 months | Mainly pain from obstruction; malabsorption may occur; bowel frequency and tenesmus |
+
+<Callout kind="pearl">
+Acute damage settles by itself; the chronic form comes from fibrosis and can appear months or years after treatment.
+</Callout>
+
+## Treatment
+
+- **Symptomatic** care, as the acute illness is self-limiting.
+- **Surgery only** for obstruction or perforation.
+
+## Complications
+
+It may lead to chronic irritable bowel syndrome.
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Which bowel segments are most affected, and why?', a: 'Ileum and rectum, because pelvic irradiation is common.' },
+  { q: 'What dose threshold causes damage?', a: 'More than 40 Gray.' },
+  { q: 'Outline the pathogenesis.', a: 'Muscle atrophy, ischaemia and ulceration, then fibrotic strictures and obstruction.' },
+  { q: 'How do acute and chronic phases differ?', a: 'Acute: nausea, vomiting, diarrhoea, pain, improving within 6 weeks. Chronic: over 3 months, pain from obstruction, malabsorption, frequency, tenesmus.' },
+  { q: 'When is surgery indicated?', a: 'Only for obstruction or perforation.' },
+]} />

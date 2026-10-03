@@ -1,0 +1,91 @@
+---
+title: "Dysphagia & achalasia"
+part: pathology
+group: Oesophagus
+order: 8
+summary: "Dysphagia is difficulty swallowing, a symptom whose pattern points to its cause; achalasia is a motility disorder with failed peristalsis and poor sphincter relaxation."
+highYield:
+  - "Dysphagia is a symptom, not a disease; odynophagia means painful swallowing."
+  - "Solids only suggests mechanical obstruction; solids and liquids together suggests a motility problem."
+  - "Achalasia causes dysphagia for both solids and liquids from the very start."
+  - "Achalasia is diagnosed with barium swallow and endoscopy, and treated with palliative balloon dilation or surgery."
+tags: [dysphagia, achalasia, oesophagus, motility]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## Dysphagia: a symptom, not a disease
+
+**Dysphagia** means difficulty swallowing. It tells you something is wrong but not what, so the task is to find the cause. Do not confuse it with **odynophagia**, which is *painful* swallowing.
+
+The problem can sit at four sites: **oropharyngeal**, **oesophageal**, **gastro-oesophageal** or **para-oesophageal** (outside the oesophagus, pressing on it).
+
+### Pattern points to cause
+
+| What is hard to swallow | Likely mechanism | Examples |
+|---|---|---|
+| Solids only | Mechanical obstruction | Strictures, tumours |
+| Solids and liquids | Motility disorder | Achalasia, neural (vagus nerve) problems |
+| Liquids only | Pharyngeal disorder | Globus pharyngeus |
+
+<Mermaid
+  caption="Dysphagia: reading the pattern"
+  chart={`flowchart TD
+  A["Difficulty swallowing"] --> B{"Which foods?"}
+  B -->|"Solids only"| C["Mechanical obstruction"]
+  B -->|"Solids and liquids"| D["Motility disorder"]
+  B -->|"Liquids only"| E["Pharyngeal disorder"]
+  C --> C1["Stricture or tumour"]
+  D --> D1["Achalasia or vagal neural problem"]
+  E --> E1["Globus pharyngeus"]`}
+/>
+
+<Callout kind="warning" title="Common confusion">
+Globus pharyngeus is classically a sensation of a lump in the throat without true swallowing difficulty. A liquids-only pattern is a teaching shortcut for pharyngeal causes; in practice also consider neurological causes of oropharyngeal dysphagia.
+</Callout>
+
+## Achalasia
+
+### Causes and pathogenesis
+
+The cause is **unknown**. Proposed mechanisms are autoimmune, neurodegenerative and viral. Damage is often attributed to **vagus nerve dysfunction**, leading to two problems: **absent oesophageal peristalsis (aperistalsis)** and **impaired relaxation of the lower oesophageal sphincter**. Food therefore cannot be pushed along and the sphincter stays tight. (Textbooks locate the underlying defect in loss of inhibitory neurons of the oesophageal wall nerve plexus, with the same functional result.)
+
+<Mermaid
+  caption="How achalasia causes symptoms"
+  chart={`flowchart LR
+  A["Nerve dysfunction"] --> B["No peristalsis"]
+  A --> C["Sphincter fails to relax"]
+  B --> D["Food retained in oesophagus"]
+  C --> D
+  D --> E["Dysphagia to solids and liquids"]
+  D --> F["Night reflux or regurgitation"]
+  F --> G["Aspiration pneumonia"]
+  D --> H["Chest pain from spasm"]`}
+/>
+
+### Clinical features
+
+- **Dysphagia** with a long history, intermittent, affecting **both liquids and solids from the onset**. This early liquid involvement is what separates it from a stricture or tumour.
+- **Reflux**, particularly at night, which can lead to **aspiration pneumonia**.
+- **Chest pain** from oesophageal spasm.
+
+### Investigations and management
+
+| Step | Detail |
+|---|---|
+| Investigations | Barium swallow; endoscopy |
+| Management | Palliative treatment: balloon dilation, or surgery |
+
+Treatment does not restore peristalsis; it relieves the outflow obstruction at the sphincter.
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'What is the difference between dysphagia and odynophagia?', a: 'Dysphagia is difficulty swallowing; odynophagia is painful swallowing.' },
+  { q: 'Dysphagia to solids only suggests what?', a: 'A mechanical obstruction such as a stricture or tumour.' },
+  { q: 'Dysphagia to both solids and liquids from the start suggests what?', a: 'A motility disorder such as achalasia.' },
+  { q: 'Which two abnormalities define achalasia?', a: 'Absent oesophageal peristalsis and impaired relaxation of the lower oesophageal sphincter.' },
+  { q: 'Why can achalasia lead to aspiration pneumonia?', a: 'Retained food refluxes, especially at night, and can be inhaled.' },
+  { q: 'How is achalasia investigated and treated?', a: 'Barium swallow and endoscopy; palliative balloon dilation or surgery.' },
+]} />

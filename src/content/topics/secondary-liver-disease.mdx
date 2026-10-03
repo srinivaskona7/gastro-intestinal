@@ -1,0 +1,115 @@
+---
+title: "Secondary liver disease"
+part: pathology
+group: Liver & biliary
+order: 29
+summary: "Liver injury caused by problems elsewhere, Reye syndrome, pre-eclampsia and HELLP, nutmeg liver from right heart failure, and Budd-Chiari syndrome from hepatic vein occlusion."
+highYield:
+  - "Reye syndrome follows aspirin plus a viral illness in children aged 4 to 12, with encephalopathy and fatty liver but no jaundice."
+  - "HELLP is haemolysis, elevated liver enzymes and low platelets; delivery is definitive treatment."
+  - "Nutmeg liver is zone 3 congestion from right heart failure and can end in cardiac cirrhosis."
+  - "Budd-Chiari is hepatic vein occlusion; the caudate lobe is spared."
+tags: [Reye syndrome, pre-eclampsia, HELLP, nutmeg liver, Budd-Chiari]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+These conditions damage the liver as a consequence of something else: a drug and virus combination, pregnancy, heart failure or a blocked vein.
+
+| Condition | Trigger | Key liver feature |
+|---|---|---|
+| Reye syndrome | Aspirin plus viral URTI in children | Fatty liver, no jaundice |
+| Pre-eclampsia, eclampsia, HELLP | Pregnancy | Hepatocellular necrosis |
+| Nutmeg liver | Right heart failure | Zone 3 congestion |
+| Budd-Chiari | Hepatic vein occlusion | Congestion plus portal hypertension |
+
+## Reye syndrome
+
+**Cause.** A disease of children aged 4 to 12, linked to **aspirin** taken during a viral upper respiratory infection. The exact mechanism is unknown, but it produces acute encephalopathy and liver failure.
+
+**Morphology.** Fatty liver with hepatomegaly, plus cerebral oedema and encephalopathy.
+
+**Clinical features.** Persistent vomiting, then lethargy, irritability, aggression and confusion, progressing to seizures and coma. There is **no jaundice**.
+
+**Treatment and prognosis.** No specific treatment, supportive care only. Most children recover fully. Complications are severe brain damage, respiratory arrest and multi-organ failure.
+
+## Toxaemia of pregnancy
+
+### Pathogenesis
+
+Placental vasoconstrictors cause **endothelial dysfunction** in blood vessels, leading to hypertension.
+
+### Clinical features
+
+- **Pre-eclampsia**: blood pressure above 140/90, proteinuria, and oedema of the face and hands.
+- **Eclampsia**: seizures, with risk of stroke, coma and death.
+
+### Complications
+
+- Poor foetal growth.
+- Fulminant hepatic failure from hepatocellular necrosis.
+- **HELLP syndrome**: **H**aemolysis, **E**levated **L**iver enzymes, **L**ow **P**latelets, causing jaundice, epigastric pain and vomiting.
+
+### Treatment
+
+Bed rest as supportive care; antihypertensives (labetalol); vasodilators and seizure prophylaxis (magnesium sulfate, nifedipine); antenatal corticosteroids (betamethasone) for foetal lung maturity. **Definitive treatment is delivery**, by early induction of labour.
+
+<Callout kind="pearl">
+Magnesium sulfate is mainly used to prevent eclamptic seizures. The only cure for pre-eclampsia is delivering the baby and placenta.
+</Callout>
+
+## Nutmeg liver (congestive hepatopathy)
+
+**Cause.** Congestive cardiac failure, specifically right-sided failure.
+
+**Pathogenesis.** Backed-up pressure in the IVC causes venous stasis and chronic passive congestion of the liver. Hypoperfusion causes necrosis and congestion causes haemorrhage.
+
+**Morphology.** Macroscopically a mottled red and pale "nutmeg" cut surface. Microscopically, **centrilobular (zone 3)** congestion with red blood cells and zone 3 necrosis.
+
+**Clinical features.**
+
+- Symptoms: often none, found on routine liver tests; RUQ pain from stretching of the liver capsule.
+- Signs: firm, smooth hepatomegaly; ascites; pedal oedema; raised JVP; hepatic encephalopathy; jaundice (unconjugated, from hepatocellular dysfunction, haemolysis and canalicular obstruction).
+- Lab: raised AST/ALT.
+- Outcome: severe or chronic disease leads to fibrosis and **cardiac cirrhosis**; fulminant failure is rare.
+
+## Budd-Chiari syndrome
+
+**Cause.** Obstruction of venous outflow from the liver, from occlusion of the hepatic vein by hypercoagulability (for example polycythaemia), thrombophilia, leukaemia or a compressive tumour.
+
+<Mermaid
+  caption="Shared mechanism of nutmeg liver and Budd-Chiari"
+  chart={`flowchart TD
+  A["Right heart failure or hepatic vein occlusion"] --> B["Outflow blocked, pressure backs up"]
+  B --> C["Portal hypertension and congestion"]
+  C --> D["Hypoperfusion"]
+  D --> E["Necrosis"]
+  C --> F["Haemorrhage"]
+  E --> G["Fibrosis and cirrhosis"]
+  F --> G`}
+/>
+
+**Morphology.** Like nutmeg liver: centrizonal congestion and haemorrhage, then centrizonal fibrosis and cirrhosis. The **caudate lobe is spared** because it has its own blood supply and drainage.
+
+**Clinical features.** Abdominal pain, nausea, vomiting, hepatomegaly, ascites, signs of portal hypertension, and a **negative hepatojugular reflux** (unlike cardiac congestion).
+
+**Treatment.** Treat the underlying cause; liver transplant if chronic or fulminant.
+
+<Callout kind="warning" title="Cardiac versus hepatic vein cause">
+Ascites with raised JVP and positive hepatojugular reflux suggests heart failure; ascites with a negative reflux suggests Budd-Chiari.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'What is the classic trigger of Reye syndrome?', a: 'Aspirin given to a child aged 4 to 12 during a viral upper respiratory infection.' },
+  { q: 'Which feature is absent in Reye syndrome despite liver failure?', a: 'Jaundice.' },
+  { q: 'What does HELLP stand for?', a: 'Haemolysis, Elevated Liver enzymes, Low Platelets.' },
+  { q: 'What is the definitive treatment for pre-eclampsia?', a: 'Delivery, by early induction of labour.' },
+  { q: 'Why is the nutmeg liver damage centrilobular?', a: 'Blood backs up from the hepatic veins, so congestion and hypoxia are worst around the central vein (zone 3).' },
+  { q: 'Why is the caudate lobe spared in Budd-Chiari?', a: 'It has an independent blood supply and venous drainage.' },
+  { q: 'What happens with chronic severe congestive hepatopathy?', a: 'Fibrosis and cardiac cirrhosis.' },
+]} />

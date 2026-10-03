@@ -1,0 +1,127 @@
+---
+title: "Gastroenteritis & listeriosis"
+part: pathology
+group: Systemic & infection
+order: 54
+summary: "Bacterial, viral and toxin-mediated causes of infectious diarrhoea, from food poisoning and E. coli to typhoid, cholera, norovirus and rotavirus, plus listeriosis."
+highYield:
+  - "Preformed toxins (Staph aureus, Bacillus cereus) cause vomiting and cramps within about 4 hours."
+  - "EHEC makes verotoxin and can cause haemolytic-uraemic syndrome."
+  - "Dysenteric organisms: Salmonella, Shigella and Entamoeba histolytica."
+  - "Norovirus is the commonest adult cause; rotavirus in children under 3. Treatment is fluid replacement."
+  - "Listeria (soft cheese, cold deli meat) endangers pregnant and immunocompromised people."
+tags: [infection, diarrhoea, food poisoning, paediatrics]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## Overview
+
+Infectious gastroenteritis produces diarrhoea, often with vomiting. The mechanism differs by organism: some release **toxins**, some **invade** the bowel wall, and viruses **destroy enterocytes**.
+
+<Mermaid
+  caption="Main groups of infectious gastroenteritis"
+  chart={`mindmap
+  root((Gastroenteritis))
+    Toxigenic
+      Staph aureus
+      Bacillus cereus
+      ETEC
+      Cholera
+    Invasive or dysenteric
+      Salmonella
+      Shigella
+      Entamoeba histolytica
+      EIEC
+    Toxin plus complications
+      EHEC and HUS
+    Viral
+      Norovirus
+      Rotavirus
+    Other
+      Listeria`}
+/>
+
+## Toxigenic diarrhoea (food poisoning)
+
+| Aspect | Detail |
+|---|---|
+| Organisms | *Staphylococcus aureus* (poor food handling) and *Bacillus cereus* (mostly cereal, i.e. rice and grain foods) |
+| Mechanism | Toxins cause the illness. Some toxins are **heat stable**, so cooking does not make food safe |
+| Onset | Within about 4 hours of eating |
+| Symptoms | Prominent vomiting, stomach cramps, diarrhoea |
+| Diagnosis | History and clinical course. Retrospective epidemiology looks for the common denominator: who ate what? Stool ova, cysts and parasites (OCP) examination if concerned |
+| Treatment | Supportive: fluid and electrolyte replacement. Anti-diarrhoeals are controversial: they ease symptoms but slow expulsion of the toxin |
+
+## Escherichia coli types
+
+| Type | Behaviour | Result |
+|---|---|---|
+| ETEC (enterotoxigenic) | Produces toxins | Traveller's diarrhoea |
+| EIEC (enteroinvasive) | Actively invades and destroys intestinal lining | Traveller's dysentery |
+| EPEC (enteropathogenic) | Sporadic disease in babies and children | Infant diarrhoea |
+| EHEC (enterohaemorrhagic) | Produces verotoxin; destroys platelets and red cells | Haemolytic-uraemic syndrome: kidney failure, bleeding and dysentery |
+
+<Callout kind="warning" title="EHEC is the serious one">
+Verotoxin triggers haemolytic-uraemic syndrome: haemolysis, low platelets and acute kidney failure after bloody diarrhoea.
+</Callout>
+
+## Salmonella (typhoid)
+
+*Salmonella typhi* causes dysentery and can spread to cause **septicaemia**. The classic picture includes fever, **rose spots** on the skin, delirium and **perforation of the bowel**. Management is **ceftriaxone, with or without ciprofloxacin**.
+
+## Cholera
+
+*Vibrio cholerae* causes **profuse rice-water stools**. Management is **fluid replacement**, and the illness is **self-limiting**.
+
+## Dysenteric organisms
+
+Dysentery means bloody diarrhoea from mucosal invasion. The organisms to remember are **Salmonella, Shigella and Entamoeba histolytica**.
+
+## Viral gastroenteritis
+
+- **Norovirus** causes about 80% of adult cases.
+- **Rotavirus** is the main cause in children under 3, spread in day-care centres.
+- Spread is **faecal-oral**.
+
+**Pathogenesis:** the virus destroys enterocytes. Rotavirus also produces a toxic protein, **NSP4**, which stimulates chloride secretion and so blocks water absorption in the gut.
+
+| Feature | Detail |
+|---|---|
+| Incubation | About 2 days |
+| Symptom duration | About 6 days |
+| Infective period | Remains infectious for about 2 days after symptoms end |
+| Symptoms | Projectile vomiting, diarrhoea, and a flu-like illness: fever, irritability, poor feeding, myalgia |
+| Diagnosis | Clinical. Definitive by stool enzyme immunoassay or RT-PCR |
+
+Because of the infective tail, a child with vomiting and diarrhoea should stay home for **more than a week** to limit spread.
+
+### Management
+
+Supportive, with **fluid replacement** as the priority. The **"421 rule"** gives maintenance fluid per hour:
+
+| Body weight band | Rate |
+|---|---|
+| First 10 kg | 4 ml/kg/hr |
+| Second 10 kg | 2 ml/kg/hr |
+| Each kg thereafter | 1 ml/kg/hr |
+
+**Quarantine** matters, especially around immunocompromised or chemotherapy patients.
+
+## Listeriosis
+
+*Listeria monocytogenes* is a **Gram-positive** bacterium found in **soft cheeses and cold deli meats**. It is a particular risk to **pregnant women and immunocompromised people**.
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Why does food poisoning from Staph aureus start so quickly?', a: 'A preformed toxin causes illness, so symptoms (vomiting, cramps) start within about 4 hours; some toxins survive heat.' },
+  { q: 'Why are anti-diarrhoeals controversial in toxigenic diarrhoea?', a: 'They relieve symptoms but may slow expulsion of the toxin.' },
+  { q: 'Which E. coli type causes haemolytic-uraemic syndrome?', a: 'EHEC, through verotoxin.' },
+  { q: 'Contrast ETEC and EIEC.', a: 'ETEC makes toxins (traveller\'s diarrhoea); EIEC invades the gut wall (traveller\'s dysentery).' },
+  { q: 'Which organisms are classically dysenteric?', a: 'Salmonella, Shigella and Entamoeba histolytica.' },
+  { q: 'How does rotavirus block water absorption?', a: 'NSP4 induces chloride secretion, and enterocytes are destroyed.' },
+  { q: 'Apply the 421 rule to a 25 kg child.', a: '40 + 20 + 5 = 65 ml/hr.' },
+  { q: 'Who is most at risk from Listeria, and from what foods?', a: 'Pregnant and immunocompromised people; soft cheeses and cold deli meats.' },
+]} />

@@ -1,0 +1,98 @@
+---
+title: "Jaundice"
+part: pathology
+group: Liver & biliary
+order: 25
+summary: "Yellow discolouration of skin and sclera from excess bilirubin; split into unconjugated (pre-hepatic) and conjugated (obstructive) types, and narrowed down by the clinical context."
+highYield:
+  - "Jaundice (icterus) is yellow skin and sclera caused by excess bilirubin in the blood."
+  - "Unconjugated type is haemolytic or pre-hepatic (haemolysis, Gilbert, newborn); conjugated type is cholestatic or obstructive."
+  - "Obstructive jaundice gives dark urine and pale stools."
+  - "Age, symptoms and exposure history point to the cause."
+tags: [jaundice, bilirubin, cholestasis, hepatitis]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+**Jaundice**, also called **icterus**, is yellow pigmentation of the skin and the sclera (whites of the eyes) caused by **excess bilirubin** in the blood. It is a sign, not a diagnosis. Many diseases cause it, including hepatitis (viral, alcoholic), cancer, gallstones and cholangitis.
+
+Two kinds of hyperbilirubinaemia exist, depending on which form of bilirubin accumulates: **unconjugated** (before the liver conjugates it) or **conjugated** (after conjugation, when it cannot leave via the bile).
+
+<Mermaid
+  caption="Where in the pathway bilirubin backs up"
+  chart={`flowchart LR
+  A[Haem breakdown] --> B[Unconjugated bilirubin]
+  B --> C["Liver conjugation"]
+  C --> D[Conjugated bilirubin]
+  D --> E[Bile ducts]
+  E --> F[Gut]
+  B -. "Upstream defect: unconjugated jaundice" .-> X1[Pre-hepatic]
+  E -. "Downstream block: conjugated jaundice" .-> X2[Obstructive]`}
+/>
+
+## The two patterns
+
+| Feature | Unconjugated (pre-hepatic, haemolytic) | Conjugated (cholestatic, obstructive, post-hepatic) |
+|---|---|---|
+| Problem | Defect upstream of or in conjugation | Defect downstream of conjugation |
+| Common causes | Haemolysis, Gilbert syndrome, physiological jaundice of the newborn | Gallstones, tumour of the head of the pancreas, primary biliary cholangitis, sclerosing cholangitis, liver tumours |
+| LFTs | Raised unconjugated bilirubin | Raised conjugated bilirubin |
+| Urine and stool | Normal or pale urine, normal to dark stools | Dark urine, pale stools |
+
+<Callout kind="warning" title="Urine and stool colour">
+In the obstructive pattern, conjugated bilirubin is water soluble and spills into urine (dark) while less reaches the gut (pale stools). In unconjugated jaundice the bilirubin is bound to albumin and is not filtered, so urine is normal or pale; stools are normal to dark.
+</Callout>
+
+## Investigations
+
+- **FBC:** raised white cells suggest infection.
+- **LFTs:** an obstructive pattern points to the biliary tract.
+- **Amylase:** raised if pancreatitis is suspected.
+- **Blood cultures** if fever suggests infection.
+- **Ultrasound** to look for stones in the duct.
+
+## Narrowing down the cause
+
+<Mermaid
+  caption="Clues that suggest the cause"
+  chart={`flowchart TD
+  J[Jaundice] --> A["Young with malaise"]
+  J --> B["Elderly with weight loss"]
+  J --> C["With abdominal pain"]
+  J --> D["With fevers and rigors"]
+  J --> E["Family history"]
+  A --> A1[Hepatitis]
+  B --> B1[Carcinoma]
+  C --> C1["Biliary obstruction, gallstones"]
+  D --> D1["Cholangitis or liver abscess"]
+  E --> E1[Gilbert syndrome]`}
+/>
+
+| Context | Likely cause |
+|---|---|
+| Young plus malaise | Hepatitis |
+| Elderly plus weight loss | Carcinoma |
+| Abdominal pain | Biliary obstruction (gallstones) |
+| Epidemic of jaundice | Hepatitis A virus |
+| Recent shellfish | Hepatitis A virus |
+| IV drug use, injections, tattoos | Hepatitis B or C |
+| Male-male sex or prostitution (high-risk sexual exposure) | Hepatitis B |
+| Family history of jaundice | Gilbert syndrome |
+| Fevers or rigors | Cholangitis or liver abscess |
+
+<Callout kind="pearl">
+Painless jaundice with weight loss in an older person should raise concern for malignant obstruction, such as pancreatic head cancer.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'What is jaundice?', a: 'Yellow pigmentation of skin and sclera caused by excess bilirubin in the blood (icterus).' },
+  { q: 'Name two causes of unconjugated hyperbilirubinaemia.', a: 'Haemolysis, Gilbert syndrome and physiological jaundice of the newborn.' },
+  { q: 'What do urine and stool look like in obstructive jaundice, and why?', a: 'Dark urine and pale stools: conjugated bilirubin spills into urine and less reaches the gut.' },
+  { q: 'Jaundice with fevers and rigors suggests what?', a: 'Cholangitis or a liver abscess.' },
+  { q: 'Which exposures point to hepatitis A versus B or C?', a: 'Epidemic or shellfish suggests A; IV drug use, tattoos or injections suggest B or C; high-risk sexual exposure suggests B.' },
+]} />

@@ -1,0 +1,82 @@
+---
+title: "Anal fissures"
+part: pathology
+group: Anorectal
+order: 51
+summary: "A crack or tear in the anal canal lining, usually posterior, causing severe pain on defaecation; treated with moisturisers, and sphincterotomy if chronic."
+highYield:
+  - "A crack or tear in the skin of the anal canal from over-stretching."
+  - "80 percent are posterior."
+  - "Pain is the main symptom, then bleeding, itch, constipation and discharge."
+  - "Differentials are Crohn ulcer, syphilis, herpes and cancer."
+  - "Topical moisturisers first; chronic fissures need lateral internal sphincterotomy."
+tags: [anorectal, pain, rectal bleeding]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+An **anal fissure** is a **crack or tear in the skin of the anal canal**. It extends outwards from the anal opening and may be **superficial or deep**. About **80% are posterior**.
+
+## Causes
+
+The lining tears when it is **over-stretched**.
+
+| Group | Triggers |
+|---|---|
+| Adults | Constipation, prolonged diarrhoea, Crohn disease, post-partum, anal sex |
+| Older adults | Relative ischaemia of the anal lining |
+
+## Clinical features
+
+In order of frequency:
+
+1. **Pain** (most prominent)
+2. **Bleeding**
+3. **Itch**
+4. Constipation
+5. Discharge
+
+<Mermaid
+  caption="Fissure cycle and management"
+  chart={`flowchart TD
+  A[Over-stretching of anal lining] --> B[Tear, usually posterior]
+  B --> C[Pain, bleeding, itch]
+  C --> D{Heals?}
+  D -- Yes --> E[Topical moisturisers]
+  D -- Chronic --> F[Lateral internal sphincterotomy]`}
+/>
+
+## Differential diagnosis
+
+A fissure that looks atypical should prompt thought of other causes of anal ulceration:
+
+- **Crohn ulcer**
+- **Syphilis**
+- **Herpes**
+- **Cancer**
+
+<Callout kind="warning">
+A fissure that is off the midline, multiple, or fails to heal should make you think of Crohn disease, infection or malignancy.
+</Callout>
+
+## Management
+
+- **Topical moisturisers** for new fissures.
+- **Chronic** fissures: surgery, specifically **lateral internal sphincterotomy**.
+
+<Callout kind="pearl">
+Fissure causes painful bleeding (pain first), unlike painless internal haemorrhoid bleeding. It accounts for about 18% of minor rectal bleeds.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'What is an anal fissure?', a: 'A crack or tear in the skin of the anal canal, from over-stretching.' },
+  { q: 'Where do most occur?', a: 'Posteriorly, about 80 percent.' },
+  { q: 'Symptom order of frequency?', a: 'Pain, bleeding, itch, then constipation and discharge.' },
+  { q: 'Which conditions mimic a fissure?', a: 'Crohn ulcer, syphilis, herpes and cancer.' },
+  { q: 'Management of a chronic fissure?', a: 'Lateral internal sphincterotomy; acute ones get topical moisturisers.' },
+]} />

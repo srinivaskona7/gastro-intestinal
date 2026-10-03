@@ -1,0 +1,85 @@
+---
+title: "Gastric cancer"
+part: pathology
+group: Stomach
+order: 16
+summary: "Mostly adenocarcinoma arising from H. pylori driven chronic gastritis and metaplasia; silent until advanced, so prognosis is poor."
+highYield:
+  - "About 90% are adenocarcinoma, usually following H. pylori gastritis and metaplasia."
+  - "About 5% are MALT lymphoma; carcinoid and GIST are rare."
+  - "Fungating tumours have heaped-up rolled edges; diffuse type gives a leather bottle stomach."
+  - "Often asymptomatic until advanced, so five-year survival with surgery is under 30%."
+tags: [stomach, adenocarcinoma, H pylori, gastrectomy]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+Gastric cancer is a malignant tumour of the stomach. The great majority are **adenocarcinomas** (glandular neoplasms).
+
+## Causes and pathogenesis
+
+| Type | Share |
+|---|---|
+| Adenocarcinoma (from H. pylori related metaplasia) | About 90% |
+| MALT lymphoma | About 5% |
+| Carcinoid, GI stromal tumour (GIST), others | Rare |
+
+<Mermaid
+  caption="H pylori to fungating adenocarcinoma"
+  chart={`flowchart LR
+  A["H pylori"] --> B["Chronic gastritis"]
+  B --> C["Metaplasia"]
+  C --> D["Adenocarcinoma"]`}
+/>
+
+## Morphology
+
+"Fungating" describes a lesion marked by ulceration and necrosis.
+
+| Pattern | Appearance |
+|---|---|
+| Fungating (polypoid) | Polypoid, ulcerating lesion with heaped-up, rolled edges |
+| Diffuse | Fibrotic scarring thickens the wall, giving a "leather bottle" stomach |
+
+## Clinical features
+
+- Often **asymptomatic until advanced**, hence the poor prognosis.
+- **Early or presenting symptoms**: epigastric pain, nausea, haematemesis, weight loss, lymphadenopathy, anaemia.
+- **Late symptoms**: malignant ascites, jaundice, and features of brain, bone or lung metastases.
+
+## Investigations
+
+- **Gastroscopy with biopsy** to confirm and grade.
+- **CT** to look for metastases and stage.
+- Tumour markers are for monitoring only, not diagnosis.
+
+## Management
+
+- **Surgery**: total gastrectomy with oesophago-jejunostomy, plus sentinel node resection, sometimes with splenectomy.
+- Palliative chemotherapy and/or palliative radiotherapy in some patients.
+
+## Prognosis
+
+Poor: under 30% five-year survival even with surgery.
+
+<Callout kind="warning" title="Late presentation">
+Persistent dyspepsia with weight loss or anaemia, especially in older patients, warrants endoscopy rather than empirical treatment.
+</Callout>
+
+<Callout kind="pearl">
+H. pylori leads to chronic gastritis, then metaplasia, then adenocarcinoma. Tumour markers only monitor; they never diagnose.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'What is the commonest gastric cancer and its usual precursor?', a: 'Adenocarcinoma, following H. pylori chronic gastritis and metaplasia.' },
+  { q: 'What is a leather bottle stomach?', a: 'The diffuse type, with fibrotic scarring that thickens and stiffens the wall.' },
+  { q: 'Why is prognosis poor?', a: 'It is asymptomatic until advanced; five-year survival with surgery is under 30%.' },
+  { q: 'Which late features suggest spread?', a: 'Malignant ascites, jaundice, and brain, bone or lung metastasis symptoms.' },
+  { q: 'What is the role of tumour markers?', a: 'Monitoring only; gastroscopy with biopsy diagnoses and CT stages.' },
+  { q: 'What operation is performed?', a: 'Total gastrectomy with oesophago-jejunostomy plus sentinel node resection, sometimes splenectomy.' },
+]} />

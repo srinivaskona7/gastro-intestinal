@@ -1,0 +1,99 @@
+---
+title: "Hiatus hernia"
+part: pathology
+group: Oesophagus
+order: 12
+summary: "Protrusion of the stomach through the diaphragmatic hiatus into the chest; sliding hernias cause reflux, rolling hernias risk strangulation."
+highYield:
+  - "Cause is a weak or torn hiatus, often combined with raised intra-abdominal pressure."
+  - "95% are sliding hernias, with an incompetent lower oesophageal sphincter and GORD symptoms."
+  - "5% are rolling (paraoesophageal) hernias, with a competent sphincter but a risk of strangulation."
+  - "Most patients are asymptomatic; gastroscopy with biopsy excludes Barrett's and cancer."
+  - "Nissen fundoplication is reserved for severe disease."
+tags: [oesophagus, diaphragm, GORD, fundoplication]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+The oesophagus passes through an opening in the diaphragm called the **hiatus**. In a **hiatus hernia**, part of the stomach moves up through that opening and sits above the diaphragm, in the chest.
+
+## Causes and risk factors
+
+Two things combine:
+
+- A **weakness or tear** in the diaphragmatic hiatus.
+- Possibly a **raised intra-abdominal pressure** (for example obesity, pregnancy, straining) that pushes the stomach upwards.
+
+## Pathogenesis: two types
+
+| Feature | Sliding hernia | Rolling hernia |
+|---|---|---|
+| Frequency | About 95% | About 5% |
+| What moves | Gastro-oesophageal junction and stomach slide up together | Part of the fundus pushes up beside the oesophagus |
+| Gastro-oesophageal junction | Above the diaphragm | Stays in place |
+| Lower oesophageal sphincter | Incompetent | Remains competent |
+| Main problem | Acid reflux (GORD) | Pain from twisting or strangulation |
+| Prevalence | About 30% of people over 50 | Uncommon |
+
+<Mermaid
+  caption="Sliding versus rolling hernia"
+  chart={`flowchart TD
+  A["Weak hiatus plus raised abdominal pressure"] --> B{"What herniates?"}
+  B -- "Junction and stomach slide up" --> C["Sliding hernia, 95 percent"]
+  B -- "Fundus pushes up beside oesophagus" --> D["Rolling hernia, 5 percent"]
+  C --> E["Incompetent sphincter"]
+  E --> F["GORD symptoms"]
+  D --> G["Sphincter still competent"]
+  G --> H["Oesophageal twisting or strangulation"]
+  H --> I["Pain, risk of gastric ischaemia"]`}
+/>
+
+## Clinical features
+
+Most people have **no symptoms**. When symptoms appear they depend on the type and on what the hernia presses on.
+
+- **GORD**: heartburn and regurgitation, typically relieved by standing upright.
+- **Pain** from oesophageal strangulation or twisting (rolling type).
+- **Shortness of breath**, because the herniated stomach interferes with the diaphragm.
+- **Palpitations**, from irritation of the vagus nerve.
+
+## Investigations
+
+| Test | Purpose |
+|---|---|
+| Gastroscopy with biopsy | Visualise the hernia and rule out Barrett's oesophagus and oesophageal cancer |
+| Oesophageal manometry | Measures pressure to detect sphincter incompetence |
+| Barium swallow or CT | Shows the stomach lying above the diaphragm |
+
+## Management
+
+1. **Conservative**: weight loss, dietary change, positional measures (such as raising the head of the bed), smaller meals, and avoiding alcohol and caffeine.
+2. **Medical**: antacids (for example Mylanta), a proton-pump inhibitor (omeprazole), and an antiemetic (metoclopramide).
+3. **Surgery** if severe: **Nissen fundoplication**, done open or laparoscopically, wrapping the upper stomach around the lower oesophagus to strengthen the barrier.
+
+## Complications
+
+- **Barrett's oesophagus**, which may progress to oesophageal cancer (from chronic reflux).
+- **Strangulation of the stomach** in rolling hernias, leading to ischaemia and necrosis.
+
+<Callout kind="warning" title="Rolling hernias can strangulate">
+A rolling hernia may have no reflux at all because the sphincter still works. Sudden severe pain with a known hernia suggests twisting or strangulation and needs urgent assessment.
+</Callout>
+
+<Callout kind="pearl">
+Sliding means reflux (sphincter fails); rolling means strangulation (sphincter fine). The common one is sliding.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Why does a sliding hernia cause reflux?', a: 'The junction moves above the diaphragm, so the lower oesophageal sphincter becomes incompetent.' },
+  { q: 'Why can a rolling hernia be dangerous despite no reflux?', a: 'The fundus lies beside the oesophagus and can twist or strangulate it, causing pain and gastric ischaemia or necrosis.' },
+  { q: 'Which investigation detects sphincter incompetence?', a: 'Oesophageal manometry.' },
+  { q: 'Why is gastroscopy with biopsy done?', a: 'To rule out Barrett\'s oesophagus and oesophageal cancer.' },
+  { q: 'Why can a hiatus hernia cause breathlessness and palpitations?', a: 'It affects the diaphragm (breathlessness) and irritates the vagus nerve (palpitations).' },
+  { q: 'What is the surgical option for severe disease?', a: 'Nissen fundoplication, open or laparoscopic, wrapping the upper stomach round the oesophagus.' },
+]} />

@@ -1,0 +1,126 @@
+---
+title: "Bowel obstruction"
+part: pathology
+group: Intestines
+order: 37
+summary: "A blockage that stops intestinal contents moving on. Symptoms depend on the level of the block, and strangulation (loss of blood supply) turns it into a surgical emergency."
+highYield:
+  - "Classic tetrad is crampy abdominal pain, distension, vomiting and obstipation."
+  - "The higher the block, the earlier and more profuse the vomiting; the lower the block, the greater the distension."
+  - "Strangulation adds fever, tachycardia, leucocytosis, peritonism and early shock."
+  - "Partial small bowel obstruction is usually managed conservatively; complete obstruction needs surgery."
+  - "Mortality climbs from 2% (simple) to 8% (strangulated) to 85% (strangulated and ischaemic)."
+tags: [obstruction, small bowel, strangulation, acute abdomen]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+A **bowel obstruction** is a mechanical blockage of the intestinal lumen. Fluid, gas and food collect above the block, the bowel dilates, and nothing passes below it. **Obstipation** means absolute constipation: no faeces and no flatus.
+
+The usual causes are:
+
+| Site of problem | Examples |
+|---|---|
+| Outside the bowel | Adhesions from previous surgery, hernias, volvulus |
+| In the wall | Tumours, Crohn's strictures, diverticular strictures |
+| In the lumen | Faecal impaction, gallstone ileus, foreign bodies, intussusception |
+
+## Clinical features
+
+Every obstruction produces the same general picture:
+
+- Abdominal distension
+- Nausea and vomiting
+- Crampy (colicky) abdominal pain
+- Possibly obstipation
+
+The pattern then depends on **where** the block is and whether the blood supply is threatened.
+
+### Non-strangulating obstruction
+
+| Level of block | Typical features |
+|---|---|
+| Proximal | Profuse vomiting, often bilious; little distension |
+| Middle | Moderate vomiting, distension, obstipation |
+| Distal | Late **faeculent** vomiting, marked distension, obstipation |
+
+The logic is simple: a high block lets almost nothing through to the stomach to be retained, so vomiting dominates. A low block leaves a long length of bowel to fill, so distension is large and vomiting comes late.
+
+### Strangulating obstruction
+
+Here the bowel wall loses its blood supply (reduced perfusion), which leads to **necrosis**. Look for:
+
+- Early shock
+- Fever, tachycardia and leucocytosis
+- Vomit containing gross or occult blood
+- Peritonitis
+- Possibly melaena
+
+<Mermaid
+  caption="From blockage to strangulation"
+  chart={`flowchart TD
+  A[Luminal blockage] --> B[Bowel above block dilates]
+  B --> C[Fluid and gas collect]
+  C --> D{Blood supply compromised?}
+  D -- No --> E["Simple obstruction: pain, distension, vomiting"]
+  D -- Yes --> F[Reduced perfusion]
+  F --> G[Necrosis]
+  G --> H[Perforation]
+  H --> I[Peritonitis, sepsis, shock]`}
+/>
+
+<Callout kind="warning" title="Strangulation is a surgical emergency">
+Fever, tachycardia, a raised white count, blood in vomit or signs of peritonitis in someone with obstruction mean the bowel may be dying. Delay increases mortality sharply.
+</Callout>
+
+## Investigations
+
+**Imaging**
+
+- **Upright chest X-ray** looks for free air under the diaphragm (perforation).
+- **Abdominal X-ray** shows dilated loops of bowel and air-fluid levels.
+- **CT** is the adjunct that gives the definitive diagnosis, locates the cause and judges severity.
+- **Ultrasound** can be useful in pregnant patients, avoiding radiation.
+
+**Laboratory**
+
+- Chemistry may show dehydration.
+- Leucocytosis, raised serum lactate and LDH, and raised amylase.
+- **Metabolic alkalosis** if a proximal small bowel obstruction causes heavy vomiting (loss of gastric acid).
+- **Metabolic acidosis** if bowel has infarcted (lactate release).
+
+## Management
+
+1. **Nasogastric tube** to decompress the stomach and relieve vomiting and distension.
+2. **Resuscitate**: intravenous fluids and electrolytes to restore haemodynamics.
+3. **Urinary catheter** to monitor fluid balance.
+4. **Surgical referral**.
+5. Partial small bowel obstruction is generally treated **conservatively**; complete small bowel obstruction goes to **surgery**.
+
+## Prognosis and complications
+
+| Type | Mortality |
+|---|---|
+| Non-strangulating | 2% |
+| Strangulating | 8% (25% if more than 36 hours) |
+| Strangulating and ischaemic | 85% |
+
+Complications follow the strangulation pathway: necrosis, then **bowel perforation**, **sepsis** and **hypovolaemia or shock**.
+
+<Callout kind="pearl">
+Vomiting early and heavy means high block; distension large and vomiting faeculent and late means low block. Alkalosis from vomiting is expected, but acidosis suggests infarcted bowel.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Why does a proximal obstruction cause profuse vomiting but little distension?', a: 'Only a short length of bowel lies above the block, so it cannot hold much, and contents are returned to the stomach quickly.' },
+  { q: 'What features suggest strangulation rather than simple obstruction?', a: 'Fever, tachycardia, leucocytosis, early shock, blood in vomit, peritonitis and possibly melaena, from reduced perfusion and necrosis.' },
+  { q: 'Which acid-base disturbance goes with heavy vomiting from a proximal block, and which with infarction?', a: 'Metabolic alkalosis with heavy vomiting; metabolic acidosis with bowel infarction.' },
+  { q: 'Which imaging test is definitive and what do plain films show?', a: 'CT gives the diagnosis, cause and severity. Abdominal X-ray shows dilated loops and air-fluid levels; upright chest film looks for free air.' },
+  { q: 'How does management differ between partial and complete small bowel obstruction?', a: 'Partial is generally conservative (NG tube, fluids); complete needs surgery.' },
+  { q: 'How does mortality change with strangulation?', a: 'About 2% without strangulation, 8% with it (25% beyond 36 hours), and 85% if the bowel is also ischaemic.' },
+]} />

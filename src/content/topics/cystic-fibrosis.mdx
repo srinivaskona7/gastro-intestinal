@@ -1,0 +1,90 @@
+---
+title: "Cystic fibrosis (GI features)"
+part: pathology
+group: Systemic & infection
+order: 53
+summary: "An autosomal recessive CFTR chloride-channel defect that makes exocrine secretions thick and salty, damaging the lungs, pancreas, gut, reproductive ducts and sweat glands."
+highYield:
+  - "Autosomal recessive CFTR mutation on chromosome 7; about 1 in 25 people carry it."
+  - "Defective chloride channel gives thick, salty secretions in lungs, pancreas, intestines and skin."
+  - "Pancreatic duct blockage leads to chronic pancreatic failure and malabsorption."
+  - "Genetic testing is definitive; treat with enzymes, salt, ADEK vitamins, physiotherapy, mucolytics and antibiotics."
+tags: [genetics, pancreas, malabsorption, respiratory]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+**Cystic fibrosis (CF)** is an inherited disease of **exocrine glands**. Their secretions become abnormally thick and salty, so ducts block and organs are slowly damaged. The lungs, pancreas, intestines and skin are affected most.
+
+## Cause
+
+CF is a **simple autosomal recessive** condition caused by mutation of the **CFTR gene on chromosome 7**. A child needs two faulty copies. Roughly **1 in 25 people are carriers**.
+
+## Pathogenesis
+
+CFTR codes for an **active chloride channel**, which normally helps regulate the salt content of secretions. When it fails, the secretions turn thick and salty. They then obstruct the narrow ducts of the organs that make them.
+
+<Mermaid
+  caption="From CFTR mutation to multi-organ disease"
+  chart={`flowchart TD
+  A["CFTR mutation, chromosome 7"] --> B["Faulty chloride channel"]
+  B --> C["Thick, salty exocrine secretions"]
+  C --> D["Lungs: thick mucus, infections"]
+  C --> E["Pancreas: duct blocked"]
+  C --> F["Intestines: poor digestion"]
+  C --> G["Vas deferens: blocked"]
+  C --> H["Sweat glands: salty sweat"]
+  E --> I["Chronic pancreatic failure"]
+  F --> J["Malnutrition"]
+  G --> K["Infertility"]
+  H --> L["Hyponatraemia if salt not replaced"]`}
+/>
+
+## Clinical features
+
+| Organ | What happens |
+|---|---|
+| Lungs | Thicker mucus and poor clearance cause frequent infections. Crepitations (crackles) and rhonchi (wheezy, rattling sounds) are heard on the stethoscope |
+| Pancreas | A blocked pancreatic duct causes subclinical pancreatitis, which progresses to chronic pancreatic failure |
+| Intestines | Poor digestion and malabsorption lead to malnutrition |
+| Reproductive ducts | Obstructed vas deferens causes infertility |
+| Sweat glands | Salty sweat; hyponatraemia (low sodium) if salt is not replaced |
+
+## Investigations
+
+- **Spirometry** shows an **obstructive pattern** with reduced FEV1.
+- **Chest X-ray** shows **gas trapping and hyperinflation**.
+- **Genetic testing** is the **definitive** test.
+
+## Management
+
+| Problem | Treatment |
+|---|---|
+| Pancreatic insufficiency | Enzyme replacement (for example Creon Forte) |
+| Salt loss | Salt tablets |
+| Fat-soluble vitamin deficiency | Vitamins A, D, E and K (ADEK) |
+| Sputum retention | Chest physiotherapy: percussion and postural drainage |
+| Viscous mucus | Mucolytics such as DNase, which breaks down extracellular DNA and lowers mucus viscosity |
+| Recurrent infection | Antibiotics, for example tobramycin |
+
+## Prognosis
+
+Median life expectancy is about **40 years**.
+
+<Callout kind="pearl">
+Fat malabsorption is why ADEK vitamins are replaced: A, D, E and K are fat-soluble and are lost with undigested fat.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'Which gene and chromosome are involved in CF, and how is it inherited?', a: 'CFTR on chromosome 7, autosomal recessive.' },
+  { q: 'What does CFTR normally do?', a: 'It forms an active chloride channel that regulates salt in secretions.' },
+  { q: 'How does CF lead to malabsorption?', a: 'Thick secretions block the pancreatic duct, causing pancreatic failure and poor digestion.' },
+  { q: 'Why can sweat be dangerous in CF?', a: 'It is salty, so sodium loss can cause hyponatraemia if not replaced.' },
+  { q: 'What is the definitive test?', a: 'Genetic testing.' },
+  { q: 'Why give ADEK vitamins and enzymes?', a: 'Fat malabsorption lowers fat-soluble vitamins; enzymes replace failing pancreatic secretion.' },
+]} />

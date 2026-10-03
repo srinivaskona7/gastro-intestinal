@@ -1,0 +1,90 @@
+---
+title: "Appendicitis"
+part: pathology
+group: Intestines
+order: 41
+summary: "Inflammation of the appendix, usually from luminal obstruction by a faecolith, causing migratory pain to the right iliac fossa and needing appendicectomy."
+highYield:
+  - "Obstruction (often a faecolith) leads to stasis, infection, gangrene and perforation."
+  - "Pain starts around the umbilicus and migrates to the right iliac fossa."
+  - "Signs: Rovsing's, psoas, obturator and McBurney's point tenderness."
+  - "Ultrasound or CT confirms; FBC shows neutrophilia with raised ESR and CRP."
+  - "Treat with fluids, antibiotics and appendicectomy, open or laparoscopic."
+tags: [acute abdomen, right iliac fossa, faecolith, surgery]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+**Appendicitis** is acute inflammation of the vermiform appendix. The cause is often idiopathic (not identified), but the usual mechanism is blockage of the lumen.
+
+## Pathogenesis
+
+A **faecolith** (hard faecal pellet) obstructs the appendix. Mucus builds up and the appendix cannot drain (stasis), bacteria multiply (infection), the wall loses its blood supply (gangrene), and finally it **perforates**.
+
+<Mermaid
+  caption="Course of untreated appendicitis"
+  chart={`flowchart LR
+  A[Faecolith] --> B[Lumen obstructed]
+  B --> C[Stasis]
+  C --> D[Infection]
+  D --> E[Gangrene]
+  E --> F[Perforation]
+  F --> G[Peritonitis and sepsis]`}
+/>
+
+## Morphology
+
+The appendix is enlarged and inflamed.
+
+## Clinical features
+
+The classic story: pain begins **around the umbilicus** (visceral pain from the midgut) and then **moves to the right iliac fossa (RIF)** when the inflamed appendix irritates the parietal peritoneum.
+
+Other symptoms: nausea, vomiting, anorexia and occasionally diarrhoea. On examination there is RIF pain, tenderness and guarding.
+
+| Sign | How it is elicited |
+|---|---|
+| Rovsing's | Pressing the left iliac fossa causes more pain in the RIF |
+| Psoas | Pain on extending, flexing or rotating the hip (irritated psoas muscle, typically with a retrocaecal appendix) |
+| McBurney's | Deep tenderness at McBurney's point in the RIF |
+| Obturator | Pain on rotation of the flexed hip (pelvic appendix) |
+| Referred rebound | Rebound tenderness felt in the LIF, though worst in the RIF |
+
+<Callout kind="pearl">
+Rovsing's sign: press on the left, hurt on the right. Psoas and obturator signs reflect the appendix's position relative to those muscles.
+</Callout>
+
+## Diagnosis
+
+- **Ultrasound or CT** shows an enlarged, thickened appendix.
+- **FBC**: raised white cells with neutrophilia.
+- Raised **ESR and CRP**.
+
+## Treatment
+
+1. **Haemodynamic stabilisation** with fluids, plus group and hold (save a blood sample for cross-match).
+2. **Prophylactic antibiotics**: ampicillin, gentamicin and metronidazole.
+3. **Appendicectomy**, open or laparoscopic.
+
+## Complications
+
+- Perforation
+- Sepsis
+
+<Callout kind="warning" title="Perforation">
+Sudden relief of pain followed by fever, rigidity and tachycardia can mean perforation and peritonitis. Surgery should not be delayed.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'What is the usual mechanism of appendicitis?', a: 'A faecolith obstructs the lumen, causing stasis, infection, gangrene and possible perforation.' },
+  { q: 'Describe the classic pain pattern.', a: 'Periumbilical pain that migrates to the right iliac fossa.' },
+  { q: 'What does a positive Rovsing sign show?', a: 'Pressing the left iliac fossa causes pain in the right iliac fossa.' },
+  { q: 'What do the psoas and obturator signs test?', a: 'Pain on hip movement (extension for psoas, rotation of the flexed hip for obturator), reflecting an inflamed appendix touching those muscles.' },
+  { q: 'Which investigations support the diagnosis?', a: 'Ultrasound or CT showing a thickened appendix; neutrophilia with raised ESR and CRP.' },
+  { q: 'What is the definitive treatment?', a: 'Appendicectomy, open or laparoscopic, with fluids and antibiotics.' },
+]} />

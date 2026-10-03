@@ -1,0 +1,111 @@
+---
+title: "Helicobacter pylori"
+part: pathology
+group: Stomach
+order: 15
+summary: "A urease-producing Gram-negative bacterium that colonises the stomach and duodenum, causing gastritis, ulcers and gastric cancer."
+highYield:
+  - "Urease makes ammonia to neutralise acid; flagella and adhesins let it reach the epithelium."
+  - "CagA, delivered by a type IV secretion system, disrupts tight junctions and promotes inflammation."
+  - "It is a class I (definite) carcinogen."
+  - "Diagnosis is by biopsy, serology or the carbon-13 urea breath test."
+  - "Treatment is a PPI plus combined antibiotics; cure rate is under 80% and no vaccine exists."
+tags: [stomach, H pylori, urease, ulcer, carcinogen]
+---
+import Callout from '../../components/Callout.astro';
+import Mermaid from '../../components/Mermaid.astro';
+import Flashcards from '../../components/Flashcards.astro';
+
+## What it is
+
+**Helicobacter pylori (HP)** is a Gram-negative, spiral-shaped bacterium that lives in the stomach lining. It is found in about **75% of patients with peptic ulcer disease**.
+
+| Feature | Detail |
+|---|---|
+| Transmission | Oral-oral, faecal-oral, and vertical (mother to child) |
+| Where it colonises | First part of the duodenum, then antrum, then gastro-oesophageal junction |
+| Urease | Produces ammonia to neutralise stomach acid |
+| Oxygen need | Microaerophilic (dislikes high oxygen) |
+| Growth | Metabolically fastidious, so it grows slowly |
+| Carcinogen status | Class I, a definite carcinogen |
+
+It is carcinogenic because chronic inflammation and long exposure to reactive oxygen species cause **metaplasia and dysplasia** of gastric cells, which can progress to adenocarcinoma.
+
+## Pathogenesis
+
+Where the bacteria settle decides which ulcer develops.
+
+<Mermaid
+  caption="Two routes to ulcer"
+  chart={`flowchart TD
+  A["H pylori"] --> B["Colonises corpus"]
+  A --> C["Colonises antrum"]
+  B --> D["Gastritis and epithelial damage"]
+  D --> E["Acid exposure"]
+  E --> F["Gastric ulcer"]
+  C --> G["Antral gastritis, fewer D cells and less somatostatin"]
+  G --> H["Less inhibition of G cells, more gastrin"]
+  H --> I["More histamine mediated acid from parietal cells"]
+  I --> J["Duodenal acidity, gastric metaplasia, HP colonises, duodenitis"]
+  J --> K["Duodenal ulcer"]`}
+/>
+
+**Gastric ulcer route**: HP colonises the corpus, causing gastritis and damaging the epithelium, which is then exposed to acid. Loss of antral D cells (and somatostatin) also reduces inhibition of G cells, so gastrin and histamine-mediated acid secretion from parietal cells rise and potentiate the ulcer.
+
+**Duodenal ulcer route**: raised stomach acid and HP colonising the antrum cause gastritis. Fewer D cells and less somatostatin mean less G cell inhibition, so more gastrin and more histamine-driven acid. The duodenum becomes more acidic, develops metaplasia, is colonised by HP, becomes inflamed (duodenitis) and ulcerates.
+
+## Adaptations and pathogenicity factors
+
+| Factor | Role |
+|---|---|
+| Carbohydrate metabolism | Can use glucose; has pyruvate and fumarate pathways |
+| Urease | Hydrolyses urea to ammonia and bicarbonate, neutralising acid |
+| Motility | Flagellin gives powerful swimming |
+| Adhesins | Stick to the epithelium, where pH is less acidic |
+| Type IV secretion system | A molecular syringe injecting cytotoxins such as **CagA** |
+| CagA effects | Interferes with epithelial tight junctions (leaky barrier), induces COX-2 and prostaglandins (inflammation), triggers inflammatory cytokines |
+
+## Clinical features
+
+- Worldwide distribution, highest in less developed countries and linked to low socioeconomic status.
+- Infection rates are high in the elderly.
+- If untreated it becomes chronic, so the person is infected for life.
+- HP-related diseases include gastritis, peptic ulcer, gastric adenocarcinoma and MALT lymphoma.
+
+## Diagnosis
+
+- **Gastric biopsy**: histology and culture.
+- **Serology**: detects antibodies against HP antigens (gel electrophoresis).
+- **Carbon-13 urea breath test**: the patient drinks urea labelled with carbon-13. HP urease splits it and the labelled carbon appears in CO2, which is detected in exhaled breath. A positive result proves urease, and therefore HP, is present.
+
+## Treatment
+
+- **Combined triple antibiotics plus a PPI**. The PPI lowers harmful acid; the antibiotics kill the bacteria.
+- A **bismuth chelate** preparation is toxic to HP, blocks adherence to mucosa and inhibits its proteolytic enzymes.
+- Cure rate is below 80% and antibiotic resistance is rising, which drives the push for a vaccine.
+
+<Callout kind="warning" title="Resistance">
+Eradication fails in a sizeable minority and resistance is increasing. Confirm cure rather than assuming it.
+</Callout>
+
+## Vaccine progress
+
+- Works in some animal models, but results in humans are poor.
+- More than 100 antigens identified.
+- Protection does not depend on antibodies, so the mechanism is unclear; CD4 T cells are implicated.
+- Unknown whether a safe vaccine is feasible; post-immunisation gastritis is a problem and efficacy evidence in humans is minimal.
+
+<Callout kind="pearl">
+Urease is the key trick: it protects the bacterium from acid and is also the basis of the breath test.
+</Callout>
+
+## Self-test
+
+<Flashcards cards={[
+  { q: 'How does urease help H. pylori survive?', a: 'It splits urea into ammonia and bicarbonate, neutralising the surrounding acid.' },
+  { q: 'Why is H. pylori a class I carcinogen?', a: 'Chronic inflammation and reactive oxygen species cause metaplasia and dysplasia, leading to adenocarcinoma.' },
+  { q: 'What does CagA do?', a: 'Delivered by the type IV secretion system, it disrupts tight junctions, induces COX-2 and prostaglandins, and triggers cytokines.' },
+  { q: 'Explain the carbon-13 urea breath test.', a: 'Labelled urea is split by HP urease; labelled CO2 in exhaled breath shows urease, hence HP, is present.' },
+  { q: 'What is first-line treatment?', a: 'A PPI with combined triple antibiotics; bismuth may be added.' },
+  { q: 'Why is there no vaccine yet?', a: 'Poor human results, unclear protective mechanism, and post-immunisation gastritis.' },
+]} />
