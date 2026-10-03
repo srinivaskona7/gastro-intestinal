@@ -47,7 +47,7 @@ const raw = {
     { id: 'haemorrhoid-external', name: 'External haemorrhoid (below the dentate line)', fill: '#6f5aa8', stroke: '#3e2e74',
       d: 'M372,450 C394,438 414,452 410,472 C406,488 382,488 372,478 Z' },
     { id: 'dentate-line', name: 'Dentate (pectinate) line', d: 'M321,411 C327,406 331,415 337,409 C343,404 346,414 352,409 C356,406 358,410 359,411', tube: 3, fill: '#fff6dc', stroke: '#5a3a2c' },
-    { id: 'fissure', name: 'Anal fissure (posterior midline)', fill: '#b3171a', stroke: '#6b0b0d', d: 'M359,418 L351,438 L359,466 Z' },
+    { id: 'fissure', name: 'Anal fissure (posterior midline; schematic)', fill: '#b3171a', stroke: '#6b0b0d', d: 'M359,418 L351,438 L359,466 Z' },
     { id: 'fistula-tract', name: 'Transsphincteric fistula tract', d: 'M322,409 C306,414 294,430 282,448 C272,462 264,474 258,482', tube: 4.5, fill: '#2e9e5b', stroke: '#15502e' }
   ],
   over: `
