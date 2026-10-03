@@ -29,7 +29,6 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.js'))) {
       err(file, `labels "${ls[i].text}" and "${ls[j].text}" overlap`);
 }
 console.log(`${n - bad > 0 && !bad ? 'OK' : 'FAIL'}: ${n} figure(s) checked`);
-process.exit(bad ? 1 : 0);
 
 // Every <Anatomy> in the topic pages must name a real figure and real part ids.
 {
@@ -69,3 +68,4 @@ process.exit(bad ? 1 : 0);
   if (bad.length) { console.error('FAIL plates:\n' + bad.join('\n')); process.exit(1); }
   console.log(`OK: ${Object.keys(d.plates).length} plate(s) checked`);
 }
+if (bad) process.exit(1);
